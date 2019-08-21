@@ -2436,28 +2436,6 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
         <sharedTo />
     </listViews>
     <listViews>
-        <fullName>All_Open_Opportunities</fullName>
-        <columns>OPPORTUNITY.NAME</columns>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>RepContact__c</columns>
-        <columns>OPPORTUNITY.STAGE_NAME</columns>
-        <columns>OPPORTUNITY.NEXT_STEP</columns>
-        <columns>Product__c</columns>
-        <columns>OPPORTUNITY.CLOSE_DATE</columns>
-        <columns>LastActivityDate__c</columns>
-        <columns>OPPORTUNITY.AMOUNT</columns>
-        <columns>OPPORTUNITY.RECORDTYPE</columns>
-        <columns>OPPORTUNITY.LAST_UPDATE</columns>
-        <columns>CORE.USERS.FULL_NAME</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>OPPORTUNITY.RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Opportunity.Empower_Leads</value>
-        </filters>
-        <label>All Open Opportunities</label>
-    </listViews>
-    <listViews>
         <fullName>MyNatixisAdvisorOpportunities</fullName>
         <columns>OPPORTUNITY.NAME</columns>
         <columns>ACCOUNT.NAME</columns>
@@ -2828,6 +2806,28 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
         <sharedTo>
             <group>SalesSDU</group>
         </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Opportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>RepContact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.NEXT_STEP</columns>
+        <columns>Product__c</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>LastActivityDate__c</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.RECORDTYPE</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Open Opportunities</label>
     </listViews>
     <recordTypes>
         <fullName>AIA</fullName>

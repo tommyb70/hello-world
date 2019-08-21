@@ -1,5 +1,5 @@
 global class AccountShareBatch implements Database.Batchable<sObject>, Database.Stateful{
-// This Batch update the Territories with the corresponding role id for Account Territories
+// This Batch update the Territories with the corresponding role id
    public String query;
    public set<id> GAccountIds = new set<id>();  
    public integer AScount = 0;

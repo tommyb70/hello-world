@@ -3665,7 +3665,7 @@ varchar(255)</description>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OWNER_NAME</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel><enableHistory>true</enableHistory>
+    <sharingModel>Private</sharingModel>
     <fieldSets>
         <fullName>RKExportToExcel__Export_To_Excel</fullName>
         <description>This Field Set is used to specify the fields in the Export To Excel button on the Case List Views</description>
