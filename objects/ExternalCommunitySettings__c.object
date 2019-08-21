@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AccountPrefix__c</fullName>
+        <description>Used to prefix the Account.Name for End Client contact accounts. These accounts are automatically created for community users to control sharing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to prefix the Account.Name for End Client contact accounts. These accounts are automatically created for community users to control sharing.</inlineHelpText>
+        <label>AccountPrefix</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BatchJobCCemails__c</fullName>
+        <description>Additional emails addresses for statement notify batch jobs , separated by ; ( semicolon)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional emails addresses for statement notify batch jobs , separated by ; ( semicolon)</inlineHelpText>
+        <label>BatchJobCCemails</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BatchNotifyFAJobNumberOfDays__c</fullName>
+        <description>BatchNotifyFAJobNumberOfDays  - number of days for FA  to include in the query.  Used in CommunitiesNotifyNewStatementsBatch.apxc</description>
+        <externalId>false</externalId>
+        <inlineHelpText>FA's and End Clients will be notified of files created within the last 'n' days.  Since we run the batch job nightly, this should be set to 1.  If we run the batch job weekly, it should be set to 7.</inlineHelpText>
+        <label>BatchNotifyFAJobNumberOfDays</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BatchNotifyFASendAllorNone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When submitting the emails for delivery, if this flag is true then whole batch is submitted but in case error in any submission in any email nothing will be submitted. 
+If this flag is false then individual errors would not impact the whole batch.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When submitting the emails for delivery, if this flag is true then whole batch is submitted but in case error in any submission in any email nothing will be submitted. If this flag is false then individual errors would not impact the whole batch.</inlineHelpText>
+        <label>BatchNotifyFASendAllorNone</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BatchUserJobNumberOfDays__c</fullName>
+        <description>BatchUserJobNumberOfDays  to query for job.  Used in the parameter LAST_N_DAYS.  By default , it is one.  Used in CommunitiesReactivateUserBatch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Users that were modified in the last 'n' days get picked up for processing to determine if they should be reactivated. Since we run the batch job nightly, this should be set to 1. If we run the batch job weekly, it should be set to 7.</inlineHelpText>
+        <label>BatchUserJobNumberOfDays</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CommunityInternalSender__c</fullName>
+        <description>To addresses for Batch jobs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the email address that batch completion emails should go to.  This should be dat@ngam.natixis.com unless you are testing.</inlineHelpText>
+        <label>CommunityInternalSender</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CommunitySenderDisplayName__c</fullName>
+        <description>CommunitySenderDisplayName for emails.  Necessary for sending the notification that new statements have been posted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the email from name on the notification to FA's that new statements have been posted.  This should always be Portal Solutions unless branding changes.</inlineHelpText>
+        <label>CommunitySenderDisplayName</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CommunitySenderEmail__c</fullName>
+        <description>Email for sending the comunity email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the email from address on the notification to FA's that new statements have been posted. This should always be Portal Solutions unless branding changes</inlineHelpText>
+        <label>CommunitySenderEmail</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactObjectEmailField__c</fullName>
+        <description>The field on conatct obejct to use for user email address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When values in this field change, the email address on the associated community user is updated.</inlineHelpText>
+        <label>ContactObjectEmailField</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndClientCommunityAccountName__c</fullName>
+        <description>The name of the Account (Firms Office) to which End Client/Interested 3rd Party community contacts will belong.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The name of the Account (Firms Office) to which new End Client/Interested 3rd Party community contacts belong.  This should always be NGAM DISTRIBUTION, L.P., PORTAL END CLIENTS</inlineHelpText>
+        <label>EndClientCommunityAccountName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndClientOwnerId__c</fullName>
+        <description>Specify the owner of end client accounts and contacts (OwnerId)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The OwnerId of End Client accounts and contacts.  This should be set to "Portal Natixis" user SFID.  It controls row-level security for viewing and editing End Client contacts/accounts through a sharing rule.</inlineHelpText>
+        <label>EndClientOwnerId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExternalEmailTemplate__c</fullName>
+        <description>Email's template developer name use for sending the emails to EndClient</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The email template used for notifying community users of new statements.</inlineHelpText>
+        <label>ExternalEmailTemplateDevName</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InactivateDaysForUserLogin__c</fullName>
+        <defaultValue>180</defaultValue>
+        <description>Inactivate the users after x numbers of days</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Users that have not logged in after this number of days are inactivated in a nightly batch job.</inlineHelpText>
+        <label>InactivateDaysForUserLogin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MPAWebServicePassword__c</fullName>
+        <description>Field to hold the password for MPA web service</description>
+        <externalId>false</externalId>
+        <label>MPA Web Service password</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MPAWebServiceUsername__c</fullName>
+        <description>Field to hold the username for web service</description>
+        <externalId>false</externalId>
+        <label>MPA Web Service Username</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PemissionSetForEndClient__c</fullName>
+        <description>Permission set for end user, Comma delimited string wth permission set's api names</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Permission Set that is assigned to End Client contact user records during setup of Financial Account Contact (type = End Client).</inlineHelpText>
+        <label>PemissionSetForEndClient</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PermissionSetsForFAUser__c</fullName>
+        <description>Permission set for FA user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Permission Set that is assigned to Financial Advisor contact user records during setup of Financial Account Contact (type = Financial Advisor).</inlineHelpText>
+        <label>PermissionSetsForFAUser</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PotalUserName__c</fullName>
+        <description>Portal user name</description>
+        <externalId>false</externalId>
+        <label>PotalUserName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileForEndClient__c</fullName>
+        <description>profile for end client or 3 party</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Profile that is assigned to End Client contact user records during setup of Financial Account Contact (type = End Client).</inlineHelpText>
+        <label>ProfileForEndClient</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileForFAUser__c</fullName>
+        <description>Profile name for FA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Profile that is assigned to Financial Advisor contact user records during setup of Financial Account Contact (type = Financial Advisor).</inlineHelpText>
+        <label>ProfileForFAUser</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TestUserEmail__c</fullName>
+        <description>Use Test email to create user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If UseTestEmail is set to 'Y', this is the "to" email that will be used in the place of all community user email addresses.</inlineHelpText>
+        <label>TestUserEmail</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UpdateVestMarkEmailInUserRecord__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>If this field is checked and vestmark email is updated on  contact record,  update the community user record with this new email.vestmark</description>
+        <externalId>false</externalId>
+        <label>UpdateVestMarkEmailInUserRecord</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>UseMPANamedCredential__c</fullName>
+        <description>UseMPANamedCredential  , use the url from MPA or MPA_TEST based on the value from this field</description>
+        <externalId>false</externalId>
+        <label>UseMPANamedCredential</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UseTestEmail__c</fullName>
+        <description>For testing use, test email from custom setting Value Y or N</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If set to 'Y', the email address in TestUserEmail setting will be used for all email communications that would normally be sent to the community user.  IMPORTANT: This should be set to Y for all sandbox instances!</inlineHelpText>
+        <label>UseTestEmail</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserNameFormat__c</fullName>
+        <description>UserNameFormat for user record</description>
+        <externalId>false</externalId>
+        <label>UserNameFormat</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>To the custom setting for external communities</description>
+    <enableFeeds>false</enableFeeds>
+    <label>ExternalCommunitySettings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

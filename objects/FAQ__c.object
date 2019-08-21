@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if this FAQ is active (inactive FAQs are not displayed in community)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this FAQ is active (inactive FAQs are not displayed in community)</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AllContactRecordTypes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, this FAQ will show up for contacts of all record types.  If this is checked, you cannot have a Contact Record Type indicator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, this FAQ will show up for contacts of all record types.  If this is checked, you cannot have a Contact Record Type indicator.</inlineHelpText>
+        <label>All Contact Record Types</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Answer__c</fullName>
+        <description>Answer to the Question</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Answer to the Question</inlineHelpText>
+        <label>Answer</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CommunityName__c</fullName>
+        <description>Community name to which this FAQ belongs.  Determines in which community the FAQ displays.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Community name to which this FAQ belongs.  Determines in which community the FAQ displays.</inlineHelpText>
+        <label>Community Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactRecordType__c</fullName>
+        <description>If this FAQ is specific to a certain contact record type, indicate here.  FAQs will only appear to contacts of this record type in the community.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this FAQ is specific to a certain contact record type, indicate here.  FAQs will only appear to contacts of this record type in the community.</inlineHelpText>
+        <label>Contact Record Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Affiliate</fullName>
+                    <default>false</default>
+                    <label>Affiliate</label>
+                </value>
+                <value>
+                    <fullName>End Client</fullName>
+                    <default>false</default>
+                    <label>End Client</label>
+                </value>
+                <value>
+                    <fullName>Rep/Contact</fullName>
+                    <default>false</default>
+                    <label>Rep/Contact</label>
+                </value>
+                <value>
+                    <fullName>Team</fullName>
+                    <default>false</default>
+                    <label>Team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HeaderText__c</fullName>
+        <description>The header text under which an FAQ will display.  Only available on record types of header.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The header text under which an FAQ will display</inlineHelpText>
+        <label>Header Text</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Header__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The header to which this FAQ belongs.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The header to which this FAQ belongs.  If there is no value in this field, FAQ will appear at the top of the page without a header.</inlineHelpText>
+        <label>Header</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Headers have a record type of Header</errorMessage>
+            <filterItems>
+                <field>FAQ__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Header</value>
+            </filterItems>
+            <infoMessage>Headers have a record type of Header</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FAQ__c</referenceTo>
+        <relationshipLabel>FAQs</relationshipLabel>
+        <relationshipName>FAQs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <description>Question</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Question</inlineHelpText>
+        <label>Question</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SortOrder__c</fullName>
+        <description>Determines the sort order of FAQs; if multiple FAQs have the same sort order, the display of FAQs will be dependent on which FAQ the database returns first.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the sort order of FAQs; if multiple FAQs have the same sort order, the display of FAQs will be dependent on which FAQ the database returns first.</inlineHelpText>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used to capture Frequently Asked Questions for communities.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>FAQ</label>
+    <nameField>
+        <displayFormat>FAQ-{0000000}</displayFormat>
+        <label>FAQ Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>FAQs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SortOrder__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CommunityName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AllContactRecordTypes__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ContactRecordType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>HeaderText__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Question__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Active__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CommunityName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AllContactRecordTypes__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ContactRecordType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>HeaderText__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Question__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>Active__c</searchFilterFields>
+        <searchFilterFields>CommunityName__c</searchFilterFields>
+        <searchFilterFields>AllContactRecordTypes__c</searchFilterFields>
+        <searchFilterFields>ContactRecordType__c</searchFilterFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CommunityName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AllContactRecordTypes__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ContactRecordType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>HeaderText__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Question__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>CommunityName__c</columns>
+        <columns>Active__c</columns>
+        <columns>SortOrder__c</columns>
+        <columns>AllContactRecordTypes__c</columns>
+        <columns>ContactRecordType__c</columns>
+        <columns>HeaderText__c</columns>
+        <columns>Question__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Details</fullName>
+        <columns>NAME</columns>
+        <columns>CommunityName__c</columns>
+        <columns>Active__c</columns>
+        <columns>SortOrder__c</columns>
+        <columns>AllContactRecordTypes__c</columns>
+        <columns>ContactRecordType__c</columns>
+        <columns>HeaderText__c</columns>
+        <columns>Question__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>FAQ__c.FAQ</value>
+        </filters>
+        <label>Details</label>
+    </listViews>
+    <listViews>
+        <fullName>Headers</fullName>
+        <columns>NAME</columns>
+        <columns>CommunityName__c</columns>
+        <columns>Active__c</columns>
+        <columns>SortOrder__c</columns>
+        <columns>AllContactRecordTypes__c</columns>
+        <columns>ContactRecordType__c</columns>
+        <columns>HeaderText__c</columns>
+        <columns>Question__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>FAQ__c.Header</value>
+        </filters>
+        <label>Headers</label>
+    </listViews>
+    <recordTypes>
+        <fullName>FAQ</fullName>
+        <active>true</active>
+        <description>Use this for Frequently Asked Questions (FAQs)</description>
+        <label>FAQ</label>
+        <picklistValues>
+            <picklist>ContactRecordType__c</picklist>
+            <values>
+                <fullName>Affiliate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rep%2FContact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Header</fullName>
+        <active>true</active>
+        <description>Use this for headers under which FAQs appear</description>
+        <label>Header</label>
+        <picklistValues>
+            <picklist>ContactRecordType__c</picklist>
+            <values>
+                <fullName>Affiliate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rep%2FContact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>FAQs_Either_All_or_Contact_Rec_Type</fullName>
+        <active>true</active>
+        <description>FAQs must apply to All Contact Record Types or a single record type - not both.</description>
+        <errorConditionFormula>AllContactRecordTypes__c &amp;&amp; 
+NOT(ISBLANK(TEXT( ContactRecordType__c)))</errorConditionFormula>
+        <errorMessage>FAQs must apply to All Contact Record Types or a single record type - not both.</errorMessage>
+    </validationRules>
+</CustomObject>

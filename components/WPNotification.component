@@ -1,0 +1,11 @@
+<apex:component >
+    <div style="float:right;">
+            <div>
+                <apex:image value="{!$Resource.Notification_Placeholder}"/>
+            	<h4 style="position:absolute; margin-left: -14%; margin-top: .3%; font-size: 18px;">
+                    Notification
+                </h4>
+                <input type="checkbox" class="notification" checked="checked" style="text-decoration: none; width: 36px; height: 32px; border: 1px solid black; background: #fff; display: inline-block; margin-bottom: -.2%;"/>
+            </div>
+        </div>
+</apex:component>

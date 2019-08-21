@@ -1,0 +1,3459 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayouts>
+        <fullName>PRCG_Research_Note</fullName>
+        <fields>Name</fields>
+        <fields>RecordTypeId</fields>
+        <fields>Security__c</fields>
+        <fields>OwnerId</fields>
+        <fields>DateTimePublished__c</fields>
+        <label>PRCG Research Note</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>PRCG_Research_Note_Asset_Class_Note</fullName>
+        <fields>Name</fields>
+        <fields>RecordTypeId</fields>
+        <fields>AssetClass__c</fields>
+        <fields>OwnerId</fields>
+        <fields>DateTimePublished__c</fields>
+        <label>PRCG Research Note: Asset Class Note</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Abstract__c</fullName>
+        <externalId>false</externalId>
+        <label>Abstract</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>The approval status of the Security Research</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter or update the approval status of the Security Research</inlineHelpText>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>true</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Under Review</fullName>
+                    <default>false</default>
+                    <label>Under Review</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AssetClass__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Class</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bank Loans</fullName>
+                    <default>false</default>
+                    <label>Bank Loans</label>
+                </value>
+                <value>
+                    <fullName>Convertibles</fullName>
+                    <default>false</default>
+                    <label>Convertibles</label>
+                </value>
+                <value>
+                    <fullName>Emerging Markets Debt</fullName>
+                    <default>false</default>
+                    <label>Emerging Markets Debt</label>
+                </value>
+                <value>
+                    <fullName>Emerging Markets Equity</fullName>
+                    <default>false</default>
+                    <label>Emerging Markets Equity</label>
+                </value>
+                <value>
+                    <fullName>Frontier Markets</fullName>
+                    <default>false</default>
+                    <label>Frontier Markets</label>
+                </value>
+                <value>
+                    <fullName>High Yield</fullName>
+                    <default>false</default>
+                    <label>High Yield</label>
+                </value>
+                <value>
+                    <fullName>Intermediate-Term Bond</fullName>
+                    <default>false</default>
+                    <label>Intermediate-Term Bond</label>
+                </value>
+                <value>
+                    <fullName>International Developed Equity</fullName>
+                    <default>false</default>
+                    <label>International Developed Equity</label>
+                </value>
+                <value>
+                    <fullName>International Small Cap Equity</fullName>
+                    <default>false</default>
+                    <label>International Small Cap Equity</label>
+                </value>
+                <value>
+                    <fullName>Investment Grade</fullName>
+                    <default>false</default>
+                    <label>Investment Grade</label>
+                </value>
+                <value>
+                    <fullName>Long/Short Credit</fullName>
+                    <default>false</default>
+                    <label>Long/Short Credit</label>
+                </value>
+                <value>
+                    <fullName>Long/Short Equity</fullName>
+                    <default>false</default>
+                    <label>Long/Short Equity</label>
+                </value>
+                <value>
+                    <fullName>Managed Futures</fullName>
+                    <default>false</default>
+                    <label>Managed Futures</label>
+                </value>
+                <value>
+                    <fullName>Market Neutral</fullName>
+                    <default>false</default>
+                    <label>Market Neutral</label>
+                </value>
+                <value>
+                    <fullName>MLP</fullName>
+                    <default>false</default>
+                    <label>MLP</label>
+                </value>
+                <value>
+                    <fullName>Mortgages/Agencies</fullName>
+                    <default>false</default>
+                    <label>Mortgages/Agencies</label>
+                </value>
+                <value>
+                    <fullName>Multialternative</fullName>
+                    <default>false</default>
+                    <label>Multialternative</label>
+                </value>
+                <value>
+                    <fullName>Multisector Bond</fullName>
+                    <default>false</default>
+                    <label>Multisector Bond</label>
+                </value>
+                <value>
+                    <fullName>Municipal Bond</fullName>
+                    <default>false</default>
+                    <label>Municipal Bond</label>
+                </value>
+                <value>
+                    <fullName>Nontraditional Bond</fullName>
+                    <default>false</default>
+                    <label>Nontraditional Bond</label>
+                </value>
+                <value>
+                    <fullName>Option Writing</fullName>
+                    <default>false</default>
+                    <label>Option Writing</label>
+                </value>
+                <value>
+                    <fullName>Precious Metals</fullName>
+                    <default>false</default>
+                    <label>Precious Metals</label>
+                </value>
+                <value>
+                    <fullName>Preferreds</fullName>
+                    <default>false</default>
+                    <label>Preferreds</label>
+                </value>
+                <value>
+                    <fullName>Real Estate</fullName>
+                    <default>false</default>
+                    <label>Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Short-Term Bond</fullName>
+                    <default>false</default>
+                    <label>Short-Term Bond</label>
+                </value>
+                <value>
+                    <fullName>US Government</fullName>
+                    <default>false</default>
+                    <label>US Government</label>
+                </value>
+                <value>
+                    <fullName>US Large Cap Equity</fullName>
+                    <default>false</default>
+                    <label>US Large Cap Equity</label>
+                </value>
+                <value>
+                    <fullName>US Mid Cap Equity</fullName>
+                    <default>false</default>
+                    <label>US Mid Cap Equity</label>
+                </value>
+                <value>
+                    <fullName>US Small Cap Equity</fullName>
+                    <default>false</default>
+                    <label>US Small Cap Equity</label>
+                </value>
+                <value>
+                    <fullName>UST Inflation Protected</fullName>
+                    <default>false</default>
+                    <label>UST Inflation Protected</label>
+                </value>
+                <value>
+                    <fullName>World Bond</fullName>
+                    <default>false</default>
+                    <label>World Bond</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Attachment1FileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Attachment 1 File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attachment2FileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Attachment 2 File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attachment3FileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Attachment 3 File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DateTimePublished__c</fullName>
+        <externalId>false</externalId>
+        <label>Date/Time Published</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>HasReplacementFund__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( ReplacementFund1__c ), FALSE, TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Replacement Fund?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LinkToRecord__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_300, FIND( '/services', $Api.Partner_Server_URL_300))+ Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Link to Record</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MorningstarCategoryGroup__c</fullName>
+        <externalId>false</externalId>
+        <label>Morningstar Category Group</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MorningstarCategoryGroup</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MorningstarCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Morningstar Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>MorningstarCategoryGroup__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>MorningstarCategory</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Large Value</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Large Blend</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Large Growth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Mid-Cap Value</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Mid-Cap Blend</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Mid-Cap Growth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Small Value</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Small Blend</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Small Growth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Equity</controllingFieldValue>
+                <valueName>Leveraged Net Long</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Communications</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Consumer Cyclical</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Consumer Defensive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Energy Limited Partnership</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Equity Energy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Equity Precious Metals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Financial</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Global Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Health</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Industrials</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Infrastructure</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Natural Resources</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Technology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Utilities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sector Equity</controllingFieldValue>
+                <valueName>Miscellaneous Sector</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Allocation--15% to 30% Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Allocation--30% to 50% Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Allocation--50% to 70% Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Allocation--70% to 85% Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Allocation--85%+ Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Convertibles</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>World Allocation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Tactical Allocation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2000-2010</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2015</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2020</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2025</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2030</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2035</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2040</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2045</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2050</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2055</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date 2060+</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocation</controllingFieldValue>
+                <valueName>Target-Date Retirement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Foreign Large-Value</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Foreign Large-Blend</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Foreign Large-Growth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Foreign Small/Mid-Value</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Foreign Small/Mid-Blend</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Foreign Small/Mid-Growth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>World Stock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Diversified Emerging Markets</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Diversified Pacific/Asia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Miscellaneous Region</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Europe Stock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Latin America Stock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Pacific/Asia ex-Japan Stock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>China Region</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>India Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>International Equity</controllingFieldValue>
+                <valueName>Japan Stock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Bear Market</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Multicurrency</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Single Currency</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Long-Short Credit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Long-Short Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Market Neutral</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Multialternative</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Managed Futures</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Option Writing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Volatility</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading-Leveraged Commodities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading--Inverse Commodities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading--Leveraged Debt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading--Inverse Debt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading--Leveraged Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading--Inverse Equity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alternative</controllingFieldValue>
+                <valueName>Trading--Miscellaneous</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commodities</controllingFieldValue>
+                <valueName>Commodities Agriculture</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commodities</controllingFieldValue>
+                <valueName>Commodities Broad Basket</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commodities</controllingFieldValue>
+                <valueName>Commodities Energy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commodities</controllingFieldValue>
+                <valueName>Commodities Industrial Metals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commodities</controllingFieldValue>
+                <valueName>Commodities Miscellaneous</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commodities</controllingFieldValue>
+                <valueName>Commodities Precious Metals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Long Government</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Intermediate Government</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Short Government</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Inflation-Protected Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Long-Term Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Intermediate-Term Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Short-Term Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Ultrashort Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Bank Loan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Stable Value</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Corporate Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Preferred Stock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>High-Yield Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Multisector Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>World Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Emerging-Markets Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Emerging-Markets Local-Currency Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Taxable Bond</controllingFieldValue>
+                <valueName>Nontraditional Bond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni National Long</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni National Intermediate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni National Short</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>High-Yield Muni</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni Single State Long</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni Single State Intermediate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni Single State Short</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni California Long</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni California Intermediate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni Massachusetts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni New Jersey</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni New York Long</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni New York Intermediate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni Ohio</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Municipal Bond</controllingFieldValue>
+                <valueName>Muni Pennsylvania</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Money Market</controllingFieldValue>
+                <valueName>Taxable Money Market</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Money Market</controllingFieldValue>
+                <valueName>Tax-Free Money Market</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Money Market</controllingFieldValue>
+                <valueName>Prime Money Market</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NoteHtmlFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Note Html File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoteTextFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Note Text File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <externalId>false</externalId>
+        <label>Note</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PRCCommentaryHtmlFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>PRC Commentary Html File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRCCommentaryTextFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>PRC Commentary Text File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRCCommentary__c</fullName>
+        <externalId>false</externalId>
+        <label>PRC Commentary</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PeopleHtmlFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>People Html File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PeopleTextFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>People Text File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>People__c</fullName>
+        <externalId>false</externalId>
+        <label>People</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PerformanceHtmlFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Performance Html File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PerformanceTextFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Performance Text File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Performance__c</fullName>
+        <externalId>false</externalId>
+        <label>Performance</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ProcessHtmlFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Html File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProcessTextFileName__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Text File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process__c</fullName>
+        <description>Process Notes associated with the Security Research</description>
+        <externalId>false</externalId>
+        <label>Process</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Publish__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to publish this note to non-PRCG users of Salesforce; if unchecked, this note cannot be seen by non-PRCG users</inlineHelpText>
+        <label>Publish?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RelatedSymbols__c</fullName>
+        <description>Related Symbols of the Security Research</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter any related symbols, separated by semi-colons</inlineHelpText>
+        <label>Related Symbols</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ReplacementFund1FullName__c</fullName>
+        <externalId>false</externalId>
+        <formula>ReplacementFund1__r.LegalNamewithTicker__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Replacement Fund 1 Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReplacementFund1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The primary Replacement Fund related to the Security Research</description>
+        <externalId>false</externalId>
+        <label>Replacement Fund 1</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>PRCG Research Notes</relationshipLabel>
+        <relationshipName>PRCGResearchNotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ReplacementFund2FullName__c</fullName>
+        <externalId>false</externalId>
+        <formula>ReplacementFund2__r.LegalNamewithTicker__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Replacement Fund 2 Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReplacementFund2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Replacement Fund 2 of the Security Research</description>
+        <externalId>false</externalId>
+        <label>Replacement Fund 2</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>PRCG Research Notes (Replacement Fund 2)</relationshipLabel>
+        <relationshipName>PRCGResearchNotes2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SecurityAssetType__c</fullName>
+        <externalId>false</externalId>
+        <formula>Security__r.AssetType__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Asset Type from the Security object</inlineHelpText>
+        <label>Security Asset Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SecurityMorningstarCategory__c</fullName>
+        <externalId>false</externalId>
+        <formula>Security__r.MorningstarCategory__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Morningstar Category from the Security object</inlineHelpText>
+        <label>Security Morningstar Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Security__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Security</label>
+        <referenceTo>Security__c</referenceTo>
+        <relationshipLabel>PRCG Research Notes</relationshipLabel>
+        <relationshipName>PRCGResearchNotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sentiment__c</fullName>
+        <description>Sentiment associated with the Securities Research</description>
+        <externalId>false</externalId>
+        <label>Sentiment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>true</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Complement</fullName>
+                    <default>false</default>
+                    <label>Complement</label>
+                </value>
+                <value>
+                    <fullName>Replacement</fullName>
+                    <default>false</default>
+                    <label>Replacement</label>
+                </value>
+                <value>
+                    <fullName>Underweight</fullName>
+                    <default>false</default>
+                    <label>Underweight</label>
+                </value>
+                <value>
+                    <fullName>Overweight</fullName>
+                    <default>false</default>
+                    <label>Overweight</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ticker__c</fullName>
+        <description>The Security Ticker Symbol (identifier)</description>
+        <externalId>false</externalId>
+        <formula>Security__r.Ticker__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Ticker Symbol from the Security object</inlineHelpText>
+        <label>Ticker</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>PRCG_Research_Note</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Holds research related to a Security; this data is authored by PRCG.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>PRCG Research Note</label>
+    <nameField>
+        <label>Subject</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>PRCG Research Notes</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Ticker__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Security__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>MorningstarCategory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AssetClass__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Approval_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Ticker__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Security__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>MorningstarCategory__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AssetClass__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.LAST_NAME</lookupDialogsAdditionalFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>Ticker__c</searchFilterFields>
+        <searchFilterFields>MorningstarCategory__c</searchFilterFields>
+        <searchFilterFields>AssetClass__c</searchFilterFields>
+        <searchFilterFields>Sentiment__c</searchFilterFields>
+        <searchFilterFields>OWNER.LAST_NAME</searchFilterFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Ticker__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Security__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Abstract__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SecurityAssetType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SecurityMorningstarCategory__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.LAST_NAME</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All_Asset_Class_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>AssetClass__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>DateTimePublished__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>PRCGResearchNote__c.AssetClassNote</value>
+        </filters>
+        <label>All Asset Class Notes</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Competitor_Intel_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>Security__c</columns>
+        <columns>Ticker__c</columns>
+        <columns>SecurityAssetType__c</columns>
+        <columns>SecurityMorningstarCategory__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>DateTimePublished__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>PRCGResearchNote__c.CompetitorIntelNote</value>
+        </filters>
+        <label>All Competitor Intel Notes</label>
+    </listViews>
+    <listViews>
+        <fullName>All_PRC_Analyst_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>Security__c</columns>
+        <columns>Ticker__c</columns>
+        <columns>SecurityMorningstarCategory__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>DateTimePublished__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>PRCGResearchNote__c.PRCAnalystNote</value>
+        </filters>
+        <label>All PRC Analyst Notes</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Research_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Security__c</columns>
+        <columns>Ticker__c</columns>
+        <columns>AssetClass__c</columns>
+        <columns>SecurityMorningstarCategory__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>DateTimePublished__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Research Notes</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Asset_Class_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>DateTimePublished__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>PRCGResearchNote__c.AssetClassNote</value>
+        </filters>
+        <label>My Asset Class Notes</label>
+        <sharedTo>
+            <group>PRCG</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Competitor_Intel_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>DateTimePublished__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>PRCGResearchNote__c.CompetitorIntelNote</value>
+        </filters>
+        <label>My Competitor Intel Notes</label>
+        <sharedTo>
+            <group>PRCG</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_PRC_Analyst_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>DateTimePublished__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>PRCGResearchNote__c.PRCAnalystNote</value>
+        </filters>
+        <label>My PRC Analyst Notes</label>
+        <sharedTo>
+            <group>PRCG</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Research_Notes</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>DateTimePublished__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Research Notes</label>
+        <sharedTo>
+            <group>PRCG</group>
+        </sharedTo>
+    </listViews>
+    <recordTypes>
+        <fullName>AssetClassNote</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>PRCG_Research_Note_Asset_Class_Note</compactLayoutAssignment>
+        <description>Use this for Asset Class Notes</description>
+        <label>Asset Class Note</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AssetClass__c</picklist>
+            <values>
+                <fullName>Bank Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convertibles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Markets Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Markets Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Frontier Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Yield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Developed Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Small Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investment Grade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long%2FShort Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long%2FShort Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgages%2FAgencies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multialternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multisector Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nontraditional Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Writing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferreds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Large Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Mid Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Small Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UST Inflation Protected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Bond</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MorningstarCategoryGroup__c</picklist>
+            <values>
+                <fullName>Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sector Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Equity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MorningstarCategory__c</picklist>
+            <values>
+                <fullName>Allocation--15%25 to 30%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--30%25 to 50%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--50%25 to 70%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--70%25 to 85%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--85%25%2B Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bear Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Broad Basket</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Industrial Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Cyclical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Defensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convertibles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diversified Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diversified Pacific%2FAsia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging-Markets Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging-Markets Local-Currency Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Limited Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Europe Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-Yield Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-Yield Muni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inflation-Protected Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Latin America Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leveraged Net Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Short Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Short Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Sector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multialternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multicurrency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multisector Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni California Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni California Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Massachusetts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New Jersey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New York Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New York Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natural Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nontraditional Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Writing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific%2FAsia ex-Japan Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prime Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2000-2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2025</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2035</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2045</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2055</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2060%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date Retirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax-Free Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Leveraged Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Leveraged Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading-Leveraged Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultrashort Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volatility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Stock</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sentiment__c</picklist>
+            <values>
+                <fullName>Neutral</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Overweight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underweight</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CompetitorIntelNote</fullName>
+        <active>true</active>
+        <description>Use this for Competitor Intel Notes</description>
+        <label>Competitor Intel Note</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AssetClass__c</picklist>
+            <values>
+                <fullName>Bank Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convertibles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Markets Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Markets Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Frontier Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Yield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Developed Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Small Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investment Grade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long%2FShort Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long%2FShort Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgages%2FAgencies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multialternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multisector Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nontraditional Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Writing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferreds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Large Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Mid Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Small Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UST Inflation Protected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Bond</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MorningstarCategoryGroup__c</picklist>
+            <values>
+                <fullName>Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sector Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Equity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MorningstarCategory__c</picklist>
+            <values>
+                <fullName>Allocation--15%25 to 30%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--30%25 to 50%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--50%25 to 70%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--70%25 to 85%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--85%25%2B Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bear Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Broad Basket</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Industrial Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Cyclical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Defensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convertibles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diversified Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diversified Pacific%2FAsia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging-Markets Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging-Markets Local-Currency Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Limited Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Europe Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-Yield Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-Yield Muni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inflation-Protected Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Latin America Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leveraged Net Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Short Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Short Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Sector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multialternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multicurrency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multisector Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni California Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni California Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Massachusetts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New Jersey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New York Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New York Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natural Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nontraditional Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Writing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific%2FAsia ex-Japan Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prime Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2000-2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2025</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2035</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2045</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2055</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2060%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date Retirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax-Free Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Leveraged Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Leveraged Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading-Leveraged Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultrashort Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volatility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Stock</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sentiment__c</picklist>
+            <values>
+                <fullName>Complement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neutral</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PRCAnalystNote</fullName>
+        <active>true</active>
+        <description>Use this for PRC Analyst Notes</description>
+        <label>PRC Analyst Note</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AssetClass__c</picklist>
+            <values>
+                <fullName>Bank Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convertibles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Markets Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Markets Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Frontier Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Yield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Developed Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Small Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investment Grade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long%2FShort Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long%2FShort Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgages%2FAgencies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multialternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multisector Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nontraditional Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Writing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferreds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Large Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Mid Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Small Cap Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UST Inflation Protected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Bond</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MorningstarCategoryGroup__c</picklist>
+            <values>
+                <fullName>Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sector Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Equity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MorningstarCategory__c</picklist>
+            <values>
+                <fullName>Allocation--15%25 to 30%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--30%25 to 50%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--50%25 to 70%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--70%25 to 85%25 Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocation--85%25%2B Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bear Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Broad Basket</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Industrial Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commodities Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Cyclical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Defensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convertibles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diversified Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diversified Pacific%2FAsia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging-Markets Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging-Markets Local-Currency Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Limited Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Precious Metals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Europe Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Large-Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Small%2FMid-Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-Yield Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-Yield Muni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inflation-Protected Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Latin America Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leveraged Net Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Short Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Short Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Cap Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Sector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multialternative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multicurrency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multisector Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni California Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni California Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Massachusetts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni National Short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New Jersey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New York Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni New York Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Intermediate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Long</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni Single State Short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natural Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nontraditional Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Writing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific%2FAsia ex-Japan Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prime Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-Term Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2000-2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2025</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2035</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2045</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2055</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date 2060%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target-Date Retirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax-Free Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable Money Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Inverse Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Leveraged Debt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Leveraged Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading--Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading-Leveraged Commodities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultrashort Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volatility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>World Stock</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sentiment__c</picklist>
+            <values>
+                <fullName>Complement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neutral</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

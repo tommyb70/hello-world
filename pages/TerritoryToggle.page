@@ -1,0 +1,5 @@
+<apex:page controller="UserTerritoryPicklist" lightningStylesheets="true" >
+<apex:form >
+ <c:UserTerritorySB />   
+</apex:form>
+</apex:page>

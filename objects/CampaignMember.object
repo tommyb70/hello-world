@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ConvertLead</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CreateOpportunity</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AdvisorConsentAudit__c</fullName>
+        <description>This field tracks when the Advisor Consent field was checked.  It is filled in by a process builder.</description>
+        <externalId>false</externalId>
+        <label>Advisor Consent Audit</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AdvisorConsent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that the contact has agreed to participate in this campaign despite their decision to opt-out of email communicates.</inlineHelpText>
+        <label>Advisor Consent</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attended__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>To Track attendance</inlineHelpText>
+        <label>Attended</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CampaignContactInd__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(CampaignId) &amp; CASESAFEID(ContactId)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CampaignContactInd</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignIsActive__c</fullName>
+        <externalId>false</externalId>
+        <formula>Campaign.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CampaignStatus__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(Campaign.Status)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City</fullName>
+    </fields>
+    <fields>
+        <fullName>CompanyOrAccount</fullName>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country</fullName>
+    </fields>
+    <fields>
+        <fullName>DateAddedtoList__c</fullName>
+        <description>Datetime indicating when the campaign member was added to the list of invitees.  Stamped by process builder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the date when the campaign member was added to the list of invitees.</inlineHelpText>
+        <label>Date Added to List</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DateCancelled__c</fullName>
+        <description>Datetime indicating when the campaign member cancelled a registration to the event. Stamped by process builder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates when the campaign member cancelled a registration to the event.</inlineHelpText>
+        <label>Date Cancelled</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DateDeclined__c</fullName>
+        <description>Datetime indicating when the campaign member declined the invitation to the event. Stamped by process builder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates when the campaign member declined the invitation to the event.</inlineHelpText>
+        <label>Date Declined</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DateRegistered__c</fullName>
+        <description>Datetime indicating when the campaign member registered for the event.  Stamped by process builder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates when the campaign member was registered for the event.</inlineHelpText>
+        <label>Date Registered</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DateSentInvitation__c</fullName>
+        <description>Datetime indicating when the campaign member was sent an invitation to the event.  Stamped by process builder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates when the campaign member was sent an invitation to the event.</inlineHelpText>
+        <label>Date Sent Invitation</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>EmailOptOut__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.HasOptedOutOfEmail</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email Opt-Out</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+    </fields>
+    <fields>
+        <fullName>FirstName</fullName>
+    </fields>
+    <fields>
+        <fullName>FirstRespondedDate</fullName>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+    </fields>
+    <fields>
+        <fullName>HasResponded</fullName>
+    </fields>
+    <fields>
+        <fullName>InvitedByChannel__c</fullName>
+        <description>Channel of the user in the Invited By field.  Updated whenever Invited By is updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Channel of the user in the Invited By field.  Updated whenever Invited By is updated.</inlineHelpText>
+        <label>Invited By Channel</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvitedByEmail__c</fullName>
+        <description>The current email of the user in the "Invited By" field</description>
+        <externalId>false</externalId>
+        <formula>InvitedBy__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The current email of the user in the "Invited By" field</inlineHelpText>
+        <label>Invited By Email</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvitedByName__c</fullName>
+        <description>The name of the user in the "Invited By" field</description>
+        <externalId>false</externalId>
+        <formula>InvitedBy__r.FirstName &amp;" "&amp; InvitedBy__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The name of the user in the "Invited By" field</inlineHelpText>
+        <label>Invited By Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvitedByPersonalizationText__c</fullName>
+        <description>Text that will be included in event invitations</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text that will be included in event invitations</inlineHelpText>
+        <label>Invited By Personalization Text</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>InvitedByTerritory__c</fullName>
+        <description>Activity Territory of the user in the Invited By field.  Updated whenever Invited By is updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Territory of the user in the Invited By field.  Updated whenever Invited By is updated.</inlineHelpText>
+        <label>Invited By Territory</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvitedByZone__c</fullName>
+        <description>Activity Zone of the user in the Invited By field.  Updated whenever Invited By is updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Zone of the user in the Invited By field.  Updated whenever Invited By is updated.</inlineHelpText>
+        <label>Invited By Zone</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvitedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>User who invited the member to be in this campaign (i.e., invited the invitee to an event)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User who invited the member to be in this campaign (i.e., invited the invitee to an event)</inlineHelpText>
+        <label>Invited By</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Value does not exist or does not match filter criteria.  Invited by must be an active user of Salesforce.</errorMessage>
+            <filterItems>
+                <field>User.IsActive</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LastCallDate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.LastCallDate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Call Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LastMeetingDate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.LastMeetingDate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Meeting Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LastName</fullName>
+    </fields>
+    <fields>
+        <fullName>LeadId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+    </fields>
+    <fields>
+        <fullName>MyCampaignMember__c</fullName>
+        <description>If the logged in user either created the record or is in the "Invited By" field, this checkbox is true.</description>
+        <externalId>false</externalId>
+        <formula>OR( $User.Id =  CreatedBy.Id , $User.Id =  InvitedBy__r.Id )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>My Campaign Member</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <description>Concatenated Rep Contact First and Last Name. Cretae to be able to remove the out of box fields that drill down to the Campaign Members details page that is not needed for the Static List process</description>
+        <externalId>false</externalId>
+        <formula>Contact.FirstName&amp;" "&amp;  LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NewTask__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/00T/e?who_id='  &amp;  ContactId &amp;
+'&amp;what_id=' &amp;  Contact.AccountId &amp;
+'&amp;CF00NF000000CtBm4_lkid=' &amp;  CASESAFEID(CampaignId) &amp;
+'&amp;CF00NF000000CtBm4=' &amp; Campaign.Name &amp;
+'&amp;tsk12=Completed&amp;type=Call - Informative&amp;sfdc.override=1', 'Create Call Activity')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contacted ?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NotApplicable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Not Applicable ?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Objective__c</fullName>
+        <externalId>false</externalId>
+        <formula>Campaign.Objective__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Objective</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Placebo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used in the POC Call Campaign to Track if this is a placebo member</description>
+        <externalId>false</externalId>
+        <label>Placebo</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PostalCode</fullName>
+    </fields>
+    <fields>
+        <fullName>PrimaryTerritory__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.PrimaryTerritory__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Territory</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordTypeOfCampaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>Campaign.RecordType.DeveloperName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Type of Campaign</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RegistrationType__c</fullName>
+        <externalId>false</externalId>
+        <label>Registration Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Invited Guest/Client</fullName>
+                    <default>false</default>
+                    <label>Invited Guest/Client</label>
+                </value>
+                <value>
+                    <fullName>Retirement</fullName>
+                    <default>false</default>
+                    <label>Retirement</label>
+                </value>
+                <value>
+                    <fullName>NJF: Client (Fri Only or Sat a/o Sun)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Client (Fri Only or Sat a/o Sun)</label>
+                </value>
+                <value>
+                    <fullName>NJF: Client (Fri Only)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Client (Fri Only)</label>
+                </value>
+                <value>
+                    <fullName>NJF: Client (One-day)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Client (One-day)</label>
+                </value>
+                <value>
+                    <fullName>NJF: Client (Sat AND Sun)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Client (Sat AND Sun)</label>
+                </value>
+                <value>
+                    <fullName>NJF: Client (Sat or Sun)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Client (Sat or Sun)</label>
+                </value>
+                <value>
+                    <fullName>NJF: Client (Three-day)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Client (Three-day)</label>
+                </value>
+                <value>
+                    <fullName>NJF: Natixis Assoc/Affiliate/Partner</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Natixis Assoc/Affiliate/Partner</label>
+                </value>
+                <value>
+                    <fullName>NJF: Natixis Executive</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Natixis Executive</label>
+                </value>
+                <value>
+                    <fullName>NJF: Natixis Host/Staff</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NJF: Natixis Host/Staff</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Salutation</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Campaign.StartDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>State</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Street</fullName>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+    </fields>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <sharingModel>ControlledByCampaign</sharingModel>
+    <validationRules>
+        <fullName>Allow_Registration_Type_False</fullName>
+        <active>true</active>
+        <description>If the campaign has Allow Registration Types = FALSE, prohibit selection of Registration Type</description>
+        <errorConditionFormula>NOT( Campaign.AllowRegistrationTypes__c ) &amp;&amp; NOT(ISBLANK(TEXT( RegistrationType__c )))</errorConditionFormula>
+        <errorDisplayField>RegistrationType__c</errorDisplayField>
+        <errorMessage>This campaign does not allow the selection of Registration Type.  Please set to none to continue.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Add_Event_Mbr_If_Bounce</fullName>
+        <active>true</active>
+        <description>Event campaign members cannot be added if their email address has bounced.</description>
+        <errorConditionFormula>IF(AND($Setup.NGAMSettingsHierarchy__c.ByPassEventCampMemberValidationRules__c == false, 
+Campaign.Parent.CventCampaign__c == false), false , AND(RecordTypeOfCampaign__c = "Event", 
+NOT(ISBLANK( Contact.EmailBouncedDate ))))</errorConditionFormula>
+        <errorMessage>This contact/rep has had their email bounce.  Please contact the rep for a new email address before adding them to the event campaign.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Add_Event_Mbr_If_Opt_Out</fullName>
+        <active>true</active>
+        <description>Event campaign members cannot be added if they have opted out of Pardot Emails unless user manually overrides using the Override checkbox.</description>
+        <errorConditionFormula>If(AND($Setup.NGAMSettingsHierarchy__c.ByPassEventCampMemberValidationRules__c == false, 
+Campaign.Parent.CventCampaign__c == false),false,
+AND(RecordTypeOfCampaign__c = "Event" &amp;&amp;
+Contact.HasOptedOutOfEmail &amp;&amp;
+NOT( AdvisorConsent__c)))</errorConditionFormula>
+        <errorDisplayField>AdvisorConsent__c</errorDisplayField>
+        <errorMessage>This advisor has opted out of email communications.  By checking this box, you attest that you have received the advisor's consent to participate in communications related to this campaign.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Add_Event_Mbr_if_No_Email</fullName>
+        <active>true</active>
+        <description>Event campaign members cannot be added if they don't have an email address.</description>
+        <errorConditionFormula>If(OR($Setup.NGAMSettingsHierarchy__c.ByPassEventCampMemberValidationRules__c,NOT(Campaign.Parent.CventCampaign__c)),false,
+AND(RecordTypeOfCampaign__c = "Event" &amp;&amp;
+ISBLANK( Contact.Email )))</errorConditionFormula>
+        <errorMessage>Please add an email address to the Contact/Rep before adding this campaign member.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Add_Event_Mbr_if_No_Pardot_Sync</fullName>
+        <active>false</active>
+        <description>If a contact is not syncing to Pardot, user cannot add them to Event Campaign.</description>
+        <errorConditionFormula>RecordTypeOfCampaign__c = "Event" &amp;&amp;
+ISBLANK( Contact.pi__url__c )</errorConditionFormula>
+        <errorMessage>This Contact/Rep is not being synched to Pardot.  Please wait for 10 minutes and try to add the member again.  If the problem persists, submit an IT Service ticket before adding the rep to the event campaign.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Change_Event_Reg_Type</fullName>
+        <active>false</active>
+        <description>User cannot change the event registration type after an invitation has been sent from CVent</description>
+        <errorConditionFormula>RecordTypeOfCampaign__c = "Event" &amp;&amp;  TEXT(Status) != "Added to List" &amp;&amp; ISCHANGED( RegistrationType__c )</errorConditionFormula>
+        <errorDisplayField>RegistrationType__c</errorDisplayField>
+        <errorMessage>You may not change the Registration Type after an invitation has been sent.  Please contact Event Planning to switch registration types.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Use_Pers_Text_in_Non_Event</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordTypeOfCampaign__c &lt;&gt; "Event" &amp;&amp;
+ISCHANGED( InvitedByPersonalizationText__c )</errorConditionFormula>
+        <errorMessage>You can only use Personalization Text with Event campaigns</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Enforce_Registration_Type</fullName>
+        <active>true</active>
+        <description>If campaign has Enforce Registration Type = TRUE, ensure Registration Type is not null</description>
+        <errorConditionFormula>Campaign.EnforceRegistrationTypes__c &amp;&amp; ISBLANK(TEXT( RegistrationType__c ))</errorConditionFormula>
+        <errorDisplayField>RegistrationType__c</errorDisplayField>
+        <errorMessage>This campaign requires a Registration Type to be selected.  Please navigate to the Contact/Rep, and add a row to "Campaign History".</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Event_Member_Must_Have_Invited_By</fullName>
+        <active>true</active>
+        <description>Event campaign members must have an invited by</description>
+        <errorConditionFormula>If(AND($Setup.NGAMSettingsHierarchy__c.ByPassEventCampMemberValidationRules__c == false, 
+Campaign.Parent.CventCampaign__c == false),false, AND( RecordTypeOfCampaign__c = "Event" &amp;&amp;
+ISBLANK(  InvitedBy__c ) &amp;&amp;
+ISCHANGED (InvitedBy__c)))</errorConditionFormula>
+        <errorDisplayField>InvitedBy__c</errorDisplayField>
+        <errorMessage>All event campaign members must have an Invited By.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Event_Member_Status_Add_Change</fullName>
+        <active>true</active>
+        <description>Non-system admins cannot change event member status or add a member in a status other than Added to List.</description>
+        <errorConditionFormula>If(OR($Setup.NGAMSettingsHierarchy__c.ByPassEventCampMemberValidationRules__c,NOT(Campaign.Parent.CventCampaign__c)),false, AND( RecordTypeOfCampaign__c = "Event"
+&amp;&amp; OR(ISCHANGED(Status),AND(ISNEW(),NOT(ISPICKVAL(Status,'Added to List'))))))</errorConditionFormula>
+        <errorMessage>You cannot change an event campaign member status or add a member in a status other than Added to List.</errorMessage>
+    </validationRules>
+</CustomObject>

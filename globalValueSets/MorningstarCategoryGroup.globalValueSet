@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>U.S. Equity</fullName>
+        <default>false</default>
+        <label>U.S. Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Sector Equity</fullName>
+        <default>false</default>
+        <label>Sector Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocation</fullName>
+        <default>false</default>
+        <label>Allocation</label>
+    </customValue>
+    <customValue>
+        <fullName>International Equity</fullName>
+        <default>false</default>
+        <label>International Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternative</fullName>
+        <default>false</default>
+        <label>Alternative</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities</fullName>
+        <default>false</default>
+        <label>Commodities</label>
+    </customValue>
+    <customValue>
+        <fullName>Taxable Bond</fullName>
+        <default>false</default>
+        <label>Taxable Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Municipal Bond</fullName>
+        <default>false</default>
+        <label>Municipal Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Money Market</fullName>
+        <default>false</default>
+        <label>Money Market</label>
+    </customValue>
+    <masterLabel>Morningstar Category Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

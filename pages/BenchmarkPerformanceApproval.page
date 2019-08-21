@@ -1,0 +1,97 @@
+<!--
+ * @author Pratibha Potluri
+ * @Created Date: 08/30/2018
+ * @description : this vf page will show the Benchmark performance records for approvals based on the selection. 
+-->
+
+<apex:page controller="BenchmarkPerformanceApprovalController" sidebar="false" lightningStylesheets="true">
+  <script type="text/javascript"> 
+     function selectAllCheckboxes(obj,receivedInputID){ 
+         var inputCheckBox = document.getElementsByTagName("input"); 
+         for(var i=0; i<inputCheckBox.length; i++){ 
+            if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){ 
+               inputCheckBox[i].checked = obj.checked; 
+            } 
+         } 
+     } 
+     function setSelectAllCheckboxesFalse(receivedInputID){ 
+         var inputCheckBox = document.getElementsByTagName("input"); 
+         for(var i=0; i<inputCheckBox.length; i++){ 
+             if(inputCheckBox[i].id.indexOf(receivedInputID)===-1){ 
+                inputCheckBox[i].checked = false; 
+             } 
+         } 
+     } 
+  </script> 
+
+  <apex:form id="mainform"> 
+    <apex:pageBlock id="pb"> 
+    <apex:pageBlockButtons location="bottom">
+      <apex:actionStatus startText="Approving rows " stopText=" Done " id="counterStatus1" > 
+             <apex:facet name="start" >Approving Rows... <img src="/apexpages/devmode/img/saveStatus.gif" /> </apex:facet> 
+             <apex:facet name="stop"> 
+                <apex:commandButton action="{!approveSelected}" value="Approve" reRender="counterStatus1, mainform" status="counterStatus1" rerender="counterStatus1, mainform" 
+                 Oncomplete="setSelectAllCheckboxesFalse('inputId')"/> 
+             </apex:facet> 
+         </apex:actionStatus> 
+    </apex:pageBlockButtons>
+     <apex:pageMessages />      
+     <apex:pageBlockSection columns="1"> 
+     
+        <apex:pageBlockSectionItem > 
+           <apex:outputLabel value="Benchmark Name" for="inputSource"/> 
+           <apex:selectList size="1" value="{!benchMarkSelection}" id="inputSource"> 
+                 <apex:actionSupport event="onchange" action="{!BenchmarkSelections}" rerender="mainform"/> 
+                 <apex:selectOptions value="{!benchMarkSelections}"/> 
+           </apex:selectList> 
+        </apex:pageBlockSectionItem> 
+        
+        <apex:pageBlockSectionItem > 
+           <apex:outputLabel value="Date"/> 
+           <apex:selectList size="1" value="{!selectedDate}" > 
+                 <apex:actionSupport event="onchange" action="{!asOfDateSelections}" rerender="mainform"/> 
+                 <apex:selectOptions value="{!asOfDates}"/> 
+           </apex:selectList> 
+        </apex:pageBlockSectionItem> 
+               
+        <apex:pageBlockSectionItem > 
+        <apex:outputLabel ></apex:outputLabel>
+           <apex:actionStatus startText="Retrieving rows " stopText=" Done " id="counterStatus" > 
+              <apex:facet name="start" >Getting Rows... <img src="/apexpages/devmode/img/saveStatus.gif" /> </apex:facet> 
+              <apex:facet name="stop"> 
+                <apex:commandButton title="Get Rows" value="Get Rows" action="{!go}" status="counterStatus" rerender="counterStatus, mainform" Oncomplete="setSelectAllCheckboxesFalse('inputId')"/> 
+              </apex:facet> 
+           </apex:actionStatus> 
+       </apex:pageBlockSectionItem> 
+       
+    </apex:pageBlockSection> 
+   </apex:pageBlock>
+    
+   <apex:pageBlock > 
+      <apex:outputText value="No items to approve ... Please make selection and press Get Rows" rendered="{!!anyToApprove}"></apex:outputText> 
+      <apex:pageBlockTable value="{!wrapBencPerfList}" var="pcWrap" title="Unapproved Characteristics" rendered="{!anyToApprove}" width="100%"> 
+         <apex:column width="2"> 
+            <apex:facet name="header"> 
+               <apex:inputCheckbox onclick="selectAllCheckboxes(this,'inputId')" id="headerSelect" /> 
+            </apex:facet> 
+            <apex:inputCheckbox value="{!pcWrap.selected}" id="inputId"/> 
+         </apex:column> 
+         <apex:column headerValue="Name" width="80"> 
+            <apex:outputLink value="{!URLFOR($Action.BenchmarkPerformanceApproval__c.View, pcWrap.bp.Id)}" target="_blank" id="pURL"> 
+               <apex:outputText value="{!pcWrap.bp.Benchmark__r.LegalName__c}" > 
+               </apex:outputText> 
+            </apex:outputLink> 
+           </apex:column> 
+        <apex:column headervalue="As of Date" width="50"> 
+        <apex:outputField value="{!pcWrap.bp.AsOfDate__c}"/>
+        </apex:Column>
+         <apex:column headervalue="Inception Date" width="50"> 
+        <apex:outputField value="{!pcWrap.bp.InceptionDate__c}"/>
+        </apex:Column>
+          <apex:column headervalue="Share Classes" width="200"> 
+        <apex:outputField value="{!pcWrap.bp.Tickers__c}"/>
+        </apex:Column>
+     </apex:pageBlockTable> 
+  </apex:pageBlock> 
+ </apex:form> 
+</apex:page>

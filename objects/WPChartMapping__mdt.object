@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ChartType__c</fullName>
+        <description>The type of chart displayed</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The type of chart displayed</inlineHelpText>
+        <label>Chart Type</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number__c</fullName>
+        <description>The number of the chart on the page</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The number of the chart on the page</inlineHelpText>
+        <label>Number</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PageName__c</fullName>
+        <description>Name of the page the chart is displayed on</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Name of the page the chart is displayed on</inlineHelpText>
+        <label>Page Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportID__c</fullName>
+        <description>The ID of the Report with the chart data to be displayed</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The ID of the Report with the chart data to be
+			displayed</inlineHelpText>
+        <label>Report ID</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Custom Metadata definition for the mapping of Wheel
+		Planning charts</description>
+    <label>Chart Report Mapping</label>
+    <pluralLabel>Chart Report Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,10 @@
+<apex:component >
+<apex:attribute name="MyRecordId" description="Id of Record" type="ID" required="true"/>
+<apex:panelGrid columns="5" id="theGrid" cellpadding="2" >
+       <analytics:reportChart hideOnError="true" reportId="00OF0000006HeHt" size="tiny" showRefreshButton="false" filter="{column:'Account.MarsAccountId__c', operator:'equals', value:'{!MyRecordId}'}"></analytics:reportChart>
+       <analytics:reportChart hideOnError="true" reportId="00OF0000006HeHt" size="tiny" showRefreshButton="false" filter="{column:'Account.MarsAccountId__c', operator:'equals', value:'{!MyRecordId}'}"></analytics:reportChart>  
+       <analytics:reportChart hideOnError="true" reportId="00OF0000006HeHt" size="tiny" showRefreshButton="false" filter="{column:'Account.MarsAccountId__c', operator:'equals', value:'{!MyRecordId}'}"></analytics:reportChart>  
+       <analytics:reportChart hideOnError="true" reportId="00OF0000006HeHt" size="tiny" showRefreshButton="false" filter="{column:'Account.MarsAccountId__c', operator:'equals', value:'{!MyRecordId}'}"></analytics:reportChart>  
+       <analytics:reportChart hideOnError="true" reportId="00OF0000006HeHt" size="tiny" showRefreshButton="false" filter="{column:'Account.MarsAccountId__c', operator:'equals', value:'{!MyRecordId}'}"></analytics:reportChart>  
+</apex:panelGrid>
+</apex:component>

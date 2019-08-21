@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call Campaign</fullName>
+        <default>false</default>
+        <label>Call Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Static List</fullName>
+        <default>true</default>
+        <label>Static List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Personal Campaign</fullName>
+        <default>false</default>
+        <label>Personal Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Manager Campaign</fullName>
+        <default>false</default>
+        <label>Sales Manager Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference</fullName>
+        <default>false</default>
+        <label>Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seminar</fullName>
+        <default>false</default>
+        <label>Seminar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training Session</fullName>
+        <default>false</default>
+        <label>Training Session</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show</fullName>
+        <default>false</default>
+        <label>Trade Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dinner</fullName>
+        <default>false</default>
+        <label>Dinner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Political Event</fullName>
+        <default>false</default>
+        <label>Political Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Forum</fullName>
+        <default>false</default>
+        <label>Forum</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fundraiser/Benefit</fullName>
+        <default>false</default>
+        <label>Fundraiser/Benefit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Save the Date</fullName>
+        <default>false</default>
+        <label>Save the Date</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Celebration</fullName>
+        <default>false</default>
+        <label>Celebration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Holiday</fullName>
+        <default>false</default>
+        <label>Holiday</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reunion</fullName>
+        <default>false</default>
+        <label>Reunion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sports Event</fullName>
+        <default>false</default>
+        <label>Sports Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other/General</fullName>
+        <default>false</default>
+        <label>Other/General</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Incentive Trip</fullName>
+        <default>false</default>
+        <label>Incentive Trip</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webinar</fullName>
+        <default>false</default>
+        <label>Webinar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>POC Call Campaign</fullName>
+        <default>false</default>
+        <label>POC Call Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digital Selling</fullName>
+        <default>false</default>
+        <label>Digital Selling</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digital Selling Conference</fullName>
+        <default>false</default>
+        <label>Digital Selling Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digital Selling Territory-Specific</fullName>
+        <default>false</default>
+        <label>Digital Selling Territory-Specific</label>
+    </standardValue>
+</StandardValueSet>

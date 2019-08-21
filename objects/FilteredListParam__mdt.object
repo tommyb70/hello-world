@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>FieldName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FilterDefaultValue__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Filter Default Value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FilterLabel__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Filter Label</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FilterOperation__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Filter Operation</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>equals</fullName>
+                    <default>true</default>
+                    <label>equals</label>
+                </value>
+                <value>
+                    <fullName>not equal to</fullName>
+                    <default>false</default>
+                    <label>not equal to</label>
+                </value>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>greater than</fullName>
+                    <default>false</default>
+                    <label>greater than</label>
+                </value>
+                <value>
+                    <fullName>less or equal</fullName>
+                    <default>false</default>
+                    <label>less or equal</label>
+                </value>
+                <value>
+                    <fullName>greater or equal</fullName>
+                    <default>false</default>
+                    <label>greater or equal</label>
+                </value>
+                <value>
+                    <fullName>contains</fullName>
+                    <default>false</default>
+                    <label>contains</label>
+                </value>
+                <value>
+                    <fullName>does not contain</fullName>
+                    <default>false</default>
+                    <label>does not contain</label>
+                </value>
+                <value>
+                    <fullName>starts with</fullName>
+                    <default>false</default>
+                    <label>starts with</label>
+                </value>
+                <value>
+                    <fullName>includes</fullName>
+                    <default>false</default>
+                    <label>includes</label>
+                </value>
+                <value>
+                    <fullName>excludes</fullName>
+                    <default>false</default>
+                    <label>excludes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FilteredListConfiguration__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Filtered List Configuration</label>
+        <referenceTo>FilteredListConfiguration__mdt</referenceTo>
+        <relationshipLabel>Filtered List Params</relationshipLabel>
+        <relationshipName>Filtered_List_Params</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsEnableb__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Enableb</label>
+        <type>Checkbox</type>
+    </fields>
+    <description>A configuration filter for a filter list column (right block in main list).</description>
+    <label>Filtered List Param</label>
+    <pluralLabel>Filtered List Params</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AccreditedInvestor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked by user if this request is justified by the Firm Office being an Accredited Investor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please confirm this justification using the descriptions that appear after saving the record</inlineHelpText>
+        <label>Accredited Investor</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ApprovalDate__c</fullName>
+        <description>The date that the request was approved; set by approval process</description>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ApprovalStatus__c</fullName>
+        <description>The current approval status of the private placement request</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>true</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Under Review</fullName>
+                    <default>false</default>
+                    <label>Under Review</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ExpirationDate__c</fullName>
+        <description>Date when approval expires</description>
+        <externalId>false</externalId>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FirmOffice__c</fullName>
+        <externalId>false</externalId>
+        <label>Firm Office</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Private Placements are only authorized for accounts at the Branch or Home Office level</errorMessage>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Private Placement Requests</relationshipLabel>
+        <relationshipName>Private_Placement_Requests</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>FirmType__c</fullName>
+        <externalId>false</externalId>
+        <formula>FirmOffice__r.RecordType.DeveloperName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Firm/Office Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MyRequest__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Requestor__r.Id =  $User.Id , TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>My Request</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>QualifiedPurchaser__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked by user if this request is justified by the Firm Office being a Qualified Purchaser</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please confirm this justification using the descriptions that appear after saving the record</inlineHelpText>
+        <label>Qualified Purchaser</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RepresentsIndividuals__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked by user if this request is for a consultant and the consultant represents individuals</description>
+        <externalId>false</externalId>
+        <label>Represents Individuals</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RepresentsInstitutions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked by user if this request is for a consultant and the consultant represents investors</description>
+        <externalId>false</externalId>
+        <label>Represents Institutions</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Requestor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Used for email alert.  Specifically added because there is no way to load "created by" and there is no owner on this field since it is MD with Account.  Needed primarily for initial data conversion.</description>
+        <externalId>false</externalId>
+        <label>Requestor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>PrivatePlacementRequests</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SophisticatedInvestor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked by user if this request is justified by the Firm Office being an Sophisticated Investor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please confirm this justification using the descriptions that appear after saving the record</inlineHelpText>
+        <label>Sophisticated Investor</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used to track private placement requests and approvals.  Approved private placement requests allow a firm and its contacts to purchase private placement products.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Private Placement Request</label>
+    <nameField>
+        <displayFormat>PPR-{000000}</displayFormat>
+        <label>Reference #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Private Placement Requests</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>FirmOffice__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FirmType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ApprovalStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ApprovalDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ExpirationDate__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FirmOffice__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FirmType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ApprovalStatus__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ApprovalDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ExpirationDate__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>ApprovalStatus__c</searchFilterFields>
+        <searchFilterFields>FirmType__c</searchFilterFields>
+        <searchFilterFields>ApprovalDate__c</searchFilterFields>
+        <searchFilterFields>ExpirationDate__c</searchFilterFields>
+        <searchFilterFields>QualifiedPurchaser__c</searchFilterFields>
+        <searchFilterFields>AccreditedInvestor__c</searchFilterFields>
+        <searchFilterFields>SophisticatedInvestor__c</searchFilterFields>
+        <searchFilterFields>RepresentsIndividuals__c</searchFilterFields>
+        <searchFilterFields>RepresentsInstitutions__c</searchFilterFields>
+        <searchResultsAdditionalFields>FirmOffice__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FirmType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ApprovalStatus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ApprovalDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ExpirationDate__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Private_Placement_Req_All</fullName>
+        <columns>NAME</columns>
+        <columns>FirmOffice__c</columns>
+        <columns>FirmType__c</columns>
+        <columns>ApprovalStatus__c</columns>
+        <columns>ApprovalDate__c</columns>
+        <columns>ExpirationDate__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Private Placement Req - All</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Private_Placement_Req_Approved</fullName>
+        <columns>NAME</columns>
+        <columns>FirmOffice__c</columns>
+        <columns>FirmType__c</columns>
+        <columns>ApprovalStatus__c</columns>
+        <columns>ApprovalDate__c</columns>
+        <columns>ExpirationDate__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <label>My Private Placement Req - Approved</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Private_Placement_Req_Draft</fullName>
+        <columns>NAME</columns>
+        <columns>FirmOffice__c</columns>
+        <columns>FirmType__c</columns>
+        <columns>ApprovalStatus__c</columns>
+        <columns>ApprovalDate__c</columns>
+        <columns>ExpirationDate__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </filters>
+        <label>My Private Placement Req - Draft</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Private_Placement_Req_Expired</fullName>
+        <columns>NAME</columns>
+        <columns>FirmOffice__c</columns>
+        <columns>FirmType__c</columns>
+        <columns>ApprovalStatus__c</columns>
+        <columns>ApprovalDate__c</columns>
+        <columns>ExpirationDate__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Expired</value>
+        </filters>
+        <label>My Private Placement Req - Expired</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Private_Placement_Req_Expiring_Soon</fullName>
+        <columns>NAME</columns>
+        <columns>FirmOffice__c</columns>
+        <columns>FirmType__c</columns>
+        <columns>ApprovalStatus__c</columns>
+        <columns>ApprovalDate__c</columns>
+        <columns>ExpirationDate__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ExpirationDate__c</field>
+            <operation>equals</operation>
+            <value>NEXT_N_DAYS:30</value>
+        </filters>
+        <filters>
+            <field>ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <label>My Private Placement Req - Expiring Soon</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Private_Placement_Req_Under_Review</fullName>
+        <columns>NAME</columns>
+        <columns>FirmOffice__c</columns>
+        <columns>FirmType__c</columns>
+        <columns>ApprovalStatus__c</columns>
+        <columns>ApprovalDate__c</columns>
+        <columns>ExpirationDate__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Under Review</value>
+        </filters>
+        <label>My Private Placement Req - Under Review</label>
+    </listViews>
+    <validationRules>
+        <fullName>Consultant_Required_Fields</fullName>
+        <active>true</active>
+        <description>If the firm office is type of consultant, the user must provide either Represents Investors or Represents Individuals or both.</description>
+        <errorConditionFormula>(FirmOffice__r.RecordType.DeveloperName = "Consultant") &amp;&amp;
+NOT( RepresentsIndividuals__c ) &amp;&amp;
+NOT( RepresentsInstitutions__c )</errorConditionFormula>
+        <errorMessage>This Firm Office is categorized as a Consultant.  Please indicate whether the consultant represents individuals or investors or both.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Firm_Types_Not_Allowed</fullName>
+        <active>true</active>
+        <description>Limits the firm types for which a private placement may be requested.</description>
+        <errorConditionFormula>TEXT(FirmOffice__r.Type) &lt;&gt; "Home" &amp;&amp;
+TEXT(FirmOffice__r.Type) &lt;&gt; "Branch" &amp;&amp;
+TEXT(FirmOffice__r.Type) &lt;&gt; "Consultant"</errorConditionFormula>
+        <errorMessage>You may only request private placement approval for Firm Types of Home, Branch, or Consultant.  Please change the Firm for which you are requesting approval or cancel this request.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>One_Justification_Required</fullName>
+        <active>true</active>
+        <description>At least one Justification checkbox must be on</description>
+        <errorConditionFormula>NOT( AccreditedInvestor__c ) &amp;&amp; NOT( QualifiedPurchaser__c ) &amp;&amp; NOT( SophisticatedInvestor__c )</errorConditionFormula>
+        <errorMessage>You must choose at least one Justification</errorMessage>
+    </validationRules>
+</CustomObject>

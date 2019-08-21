@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="TableauVFExtension" lightningStylesheets="true">
+    <apex:pageBlock rendered="{! !ISNULL(Account.TableauDashboardProfile__c) && !ISNULL(Account.EDWDurKey__c)}">
+    <apex:canvasApp applicationName="Sparkler_Connector" 
+                    height="768px" 
+                    width="100%" 
+                    parameters="
+                                {
+                                'ts.javascriptLib': '{!tableauDomain}/javascripts/api/viz_v1.js',       
+                                'ts.name': '{!Account.TableauDashboardProfile__c}',
+                                'ts.tabs': 'yes',
+                                'ts.toolbar': 'no',
+                                'ts.hostUrl':'https://{!tableauDomain}/',
+                                'ts.siteRoot':'',
+                                'ts.trustedTicket.host':'{!tableauDomain}',
+                                'ts.filter':'Office_ID={!Account.EDWDurKey__c}'
+                                }" />
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{! ISNULL(Account.TableauDashboardProfile__c) || ISNULL(Account.EDWDurKey__c)}">
+        <apex:pageBlockSection >
+            <b>{!tableauParametersNotAvailableMsg}</b>
+            </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

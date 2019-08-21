@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Active</fullName>
+        <default>false</default>
+        <label>Active</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubmitted</fullName>
+        <default>false</default>
+        <label>Unsubmitted</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted</fullName>
+        <default>false</default>
+        <label>Submitted</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Need More Info</fullName>
+        <default>false</default>
+        <label>Need More Info</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ready To QC</fullName>
+        <default>false</default>
+        <label>Ready To QC</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Review by a team leader</fullName>
+        <default>false</default>
+        <label>Review by a team leader</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>with Affiliate</fullName>
+        <default>false</default>
+        <label>with Affiliate</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>with Subject Matter Expert (internal)</fullName>
+        <default>false</default>
+        <label>with Subject Matter Expert (internal)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>with Legal</fullName>
+        <default>false</default>
+        <label>with Legal</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>QC Completed</fullName>
+        <default>false</default>
+        <label>QC Completed</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Analytic Completed</fullName>
+        <default>false</default>
+        <label>Analytic Completed</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduled</fullName>
+        <default>false</default>
+        <label>Scheduled</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Needs More Information</fullName>
+        <default>false</default>
+        <label>Needs More Information</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress-Vestmark</fullName>
+        <default>false</default>
+        <label>In Progress-Vestmark</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Returned for Revision</fullName>
+        <default>false</default>
+        <label>Returned for Revision</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Needs Signature</fullName>
+        <default>false</default>
+        <label>Needs Signature</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete</fullName>
+        <default>false</default>
+        <label>Complete</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Launched</fullName>
+        <default>false</default>
+        <label>Closed Launched</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled not Launched</fullName>
+        <default>false</default>
+        <label>Cancelled not Launched</label>
+        <closed>true</closed>
+    </standardValue>
+</StandardValueSet>

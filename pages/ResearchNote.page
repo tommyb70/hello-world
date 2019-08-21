@@ -1,0 +1,20 @@
+<apex:page standardController="Case" tabStyle="Case" extensions="PRCGResearchNotes" lightningStylesheets="true">
+    <apex:pageBlock >
+        <apex:pageBlockTable style="width:100%" value="{!PRCGNotes}" var="li">  
+            <apex:column style="width:200px" value="{!li.Security__r.Name}"/> 
+            <apex:column style="width:50px" value="{!li.Security__r.Ticker__c}"/> 
+            <apex:column style="width:300px" headerValue="Subject">
+                <apex:outputlink target="_blank" value="/{!li.Id}">{!li.Name}</apex:outputlink>
+            </apex:column>
+            <apex:column style="width:500px" value="{!li.Abstract__c}"/> 
+            <apex:column style="width:75px" headerValue="Owner Last Name">
+                <apex:outputText value="{!li.Owner.LastName}" />
+            </apex:column>-->
+            <apex:column style="width:100px" headerValue="Created Date">
+                <apex:outputText value="{0,date,MM/dd/yyyy}">
+                    <apex:param value="{!li.CreatedDate}" />
+                </apex:outputText>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

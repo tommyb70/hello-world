@@ -1,0 +1,144 @@
+<apex:page showHeader="false" sidebar="false" docType="html-5.0" standardController="Task" extensions="TaskExtension" lightningStylesheets="true" standardStylesheets="false" >
+<div id="_sl_loading"></div>
+<apex:stylesheet value="/resource/SLDS0120/assets/styles/salesforce-lightning-design-system-vf.css"/>
+<apex:includeLightning /> 
+<apex:outputPanel styleClass="slds">
+    <div class="slds-page-header" role="banner">
+        <div >
+            <div class="slds-has-flexi-truncate">
+                <p class="slds-text-heading--label">Task</p>
+                <div class="slds-grid">
+                    <div class="slds-grid slds-type-focus slds-no-space">
+                        <h1 class="slds-text-heading--medium slds-truncate" title="">New Task</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-no-flex slds-align-bottom">
+                <div class="sf1_buttons" role="group">
+                    <button  class="slds-button slds-button--neutral" onclick="js_save()" >Save</button>
+                    <button  class="slds-button slds-button--neutral" onclick="js_cancel()">Cancel</button>
+                </div>  
+            </div>
+        </div>
+    </div>  
+
+
+    <div id="SL_ObjectEditSFX" />
+        
+
+       
+
+
+
+
+    
+    <script>
+    var sJSON = '{!$CurrentPage.parameters.predefine}',
+        aPreset = sJSON != '' ? JSON.parse('{!$CurrentPage.parameters.predefine}') : {},
+        oCMP;
+//    console.log('{' + '{!$CurrentPage.parameters.predefine}' + '}');
+    console.log(aPreset);
+    aPreset.ownerid = '{!$User.id}';
+    aPreset.ownerid_text = '{!$User.FirstName} {!$User.LastName}';
+    $Lightning.use("c:SL_TaskViewAPP", function() {
+        $Lightning.createComponent("c:SL_ObjectEdit",{ 
+                'simpleObject' : "Task", 
+                'simpleTitle' : '', 
+                'simpleFieldSet' : 'Lightning_Task_Edit', 
+                'recordId' :  '{!Task.id}',
+                'simpleLabels' : {'activitydate' : 'Date', 'whoid' : 'Rep/Contact', 'isreminderset' : 'Reminder ?', 'ownerid' : 'Owner', 
+                    'whatid' : 'Firm/Office', 
+                    'description' : 'Comments'
+                },
+                'simpleRequired' : 'activitydate,whoid,type,ownerid,description',
+                'simpleEnabledFields' : 'activitydate,whoid,isreminderset,'
+                        + '{!IF(is_ic_inbound, 'activitytype__c,activitysubtype__c,activitypoints__c' , 'type')},'
+                        + 'opportunity__c,campaign__c,ownerid,whatid,description',
+                'simpleReadonly' : 'whatid',
+                'simpleSaveSuccess' : function(data) {
+                    sforce.one.navigateToSObject(data.id);
+                },
+                'simpleAfterLoad' : function(){
+                    turnLoading(-1);
+                },
+                'simplePredefined' : aPreset,
+                'hideButtons' : true
+            },
+            "SL_ObjectEditSFX",
+            function(cmp) {
+                oCMP = cmp;
+            }
+        );
+    });
+
+    var js_save = function(sStatus) {
+        turnLoading(1);
+        oCMP.save({error : function(){turnLoading(-1)}});
+    }
+
+    var js_cancel = function(){
+        turnLoading(1);
+        sforce.one.back();
+    }
+    
+
+    var nLoading = 1;
+    var turnLoading = function(nStep){
+        return;
+        var nPrev = nLoading;
+        nLoading += nStep;
+        if (nLoading <= 0 && nPrev > 0) {
+          document.getElementById('_sl_loading').style.display = 'none';
+        } else if (nLoading > 0 && nPrev == 0) {
+          document.getElementById('_sl_loading').style.display = 'block';
+        }
+
+    }
+    </script>
+    
+    <style>
+    /*.sf1_buttons {
+        text-align:center;
+    }
+
+    .uiButton--default.uiButton{
+        font-size: 16px;
+        color: #44596c;
+        text-shadow: none;
+        margin: 0;
+        padding: 4px 14px;
+        height: 35px;
+        font-size: 16px;
+        font-family: 'ProximaNovaSoft-Regular';
+        font-weight: normal;
+        border: 1px solid #bbc0c4;
+        border-radius: 5px;
+        background: -moz-linear-gradient(#ffffff,#f1f1f1);
+        background: -webkit-linear-gradient(#ffffff,#f1f1f1);
+        background: -ms-linear-gradient(#ffffff,#f1f1f1);
+        background: linear-gradient(#ffffff,#f1f1f1);
+        box-shadow: none;
+        text-align: center;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+     
+    .uiButton--default.uiButton:active {
+        background: #e9e9e9;
+    
+    }*/
+    #_sl_loading{
+      /*display: block;
+      position: fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      top:0;
+      z-index:999;
+      background: url('/img/loading32.gif') center center no-repeat rgba(0,0,0,0.1);
+*/
+    }
+    </style>
+</apex:outputPanel>
+</apex:page>

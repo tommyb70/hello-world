@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>CRDId__c</fullName>
+        <description>CRD Id as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CRD Id as entered by the contact via the website</inlineHelpText>
+        <label>CRD Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CompanyName__c</fullName>
+        <description>Company Name as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Company Name as entered by the contact via the website</inlineHelpText>
+        <label>Company Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactIdCookieValue__c</fullName>
+        <externalId>false</externalId>
+        <label>ContactIdCookieValue</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Contact for this Contact Web Profile</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact for this Contact Web Profile</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact Web Profiles</relationshipLabel>
+        <relationshipName>ContactWebProfiles</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Email as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email as entered by the contact via the website</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstName__c</fullName>
+        <description>First Name as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First Name as entered by the contact via the website</inlineHelpText>
+        <label>First Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastName__c</fullName>
+        <description>Last Name as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Name as entered by the contact via the website</inlineHelpText>
+        <label>Last Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NotApprovedDatetime__c</fullName>
+        <description>Datetime that this Contact Web Profile was set to Not Approved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Datetime that this Contact Web Profile was set to Not Approved</inlineHelpText>
+        <label>Not Approved Datetime</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>NotApproved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The contact is not approved to access protected content via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The contact is not approved to access protected content via the website</inlineHelpText>
+        <label>Not Approved</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <description>Phone as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Phone as entered by the contact via the website</inlineHelpText>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>RegistrationSource__c</fullName>
+        <description>The initial source Contact Web Profile data when the person first signed up for access to website exclusive content (i.e., LinkedIn vs Website)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The initial source Contact Web Profile data when the person first signed up for access to website exclusive content (i.e., LinkedIn vs Website)</inlineHelpText>
+        <label>Registration Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <description>State as entered by the contact via the website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State as entered by the contact via the website</inlineHelpText>
+        <label>State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VerifiedDatetime__c</fullName>
+        <description>Datetime that this Contact Web Profile was set to Verified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Datetime that this Contact Web Profile was set to Verified</inlineHelpText>
+        <label>Verified Datetime</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Verified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if the contact has verified their email address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the contact has verified their email address</inlineHelpText>
+        <label>Verified</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores information collected by the Natixis website for access to FA exclusive content</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Contact Web Profile</label>
+    <nameField>
+        <displayFormat>CWP-{000000}</displayFormat>
+        <label>Reference #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contact Web Profiles</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CompanyName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Email__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FirstName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LastName__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FirstName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LastName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Email__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CompanyName__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

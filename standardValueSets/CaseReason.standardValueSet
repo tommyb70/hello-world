@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>User didn&apos;t attend training</fullName>
+        <default>false</default>
+        <label>User didn&apos;t attend training</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complex functionality</fullName>
+        <default>false</default>
+        <label>Complex functionality</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing problem</fullName>
+        <default>false</default>
+        <label>Existing problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Instructions not clear</fullName>
+        <default>false</default>
+        <label>Instructions not clear</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New problem</fullName>
+        <default>false</default>
+        <label>New problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Broken link</fullName>
+        <default>false</default>
+        <label>Broken link</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Calculations</fullName>
+        <default>false</default>
+        <label>Calculations</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Enhancement</fullName>
+        <default>false</default>
+        <label>Enhancement</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Error message</fullName>
+        <default>false</default>
+        <label>Error message</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Login help</fullName>
+        <default>false</default>
+        <label>Login help</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Navigation</fullName>
+        <default>false</default>
+        <label>Navigation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>System performance</fullName>
+        <default>false</default>
+        <label>System performance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>System unavailable</fullName>
+        <default>false</default>
+        <label>System unavailable</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>System Error/Failure</fullName>
+        <default>false</default>
+        <label>System Error/Failure</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Performance Problem</fullName>
+        <default>false</default>
+        <label>Performance Problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Functionality Question</fullName>
+        <default>false</default>
+        <label>Functionality Question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Interpretation Question</fullName>
+        <default>false</default>
+        <label>Interpretation Question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

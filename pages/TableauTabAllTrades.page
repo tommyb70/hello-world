@@ -1,0 +1,15 @@
+<apex:page controller="TableauVFController" action="{!getTableauDomain}" lightningStylesheets="true">
+    <apex:canvasApp applicationName="Sparkler_Connector" 
+                    height="536px" 
+                    width="100%" 
+                    parameters="
+                                {
+                                'ts.javascriptLib': '{!tableauDomain}/javascripts/api/viz_v1.js',       
+                                'ts.name': 'AllTrades_0/MYRegionSalesWithGOALS',
+                                'ts.tabs': 'yes',
+                                'ts.toolbar': 'yes',
+                                'ts.hostUrl':'https://{!tableauDomain}/',
+                                'ts.siteRoot':'',
+                                'ts.trustedTicket.host':'{!tableauDomain}'
+                                }" />
+</apex:page>

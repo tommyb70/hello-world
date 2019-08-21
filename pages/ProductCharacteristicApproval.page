@@ -1,0 +1,117 @@
+<apex:page controller="ProductCharApprovalController" lightningStylesheets="true">
+    <script type="text/javascript">
+    function selectAllCheckboxes(obj,receivedInputID){
+        var inputCheckBox = document.getElementsByTagName("input");    
+        for(var i=0; i<inputCheckBox.length; i++){          
+            if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){                                     
+                inputCheckBox[i].checked = obj.checked;
+            }
+        }
+    }
+    function setSelectAllCheckboxesFalse(receivedInputID){
+        var inputCheckBox = document.getElementsByTagName("input");    
+        for(var i=0; i<inputCheckBox.length; i++){          
+            if(inputCheckBox[i].id.indexOf(receivedInputID)===-1){                                     
+                inputCheckBox[i].checked = false;
+            }
+        }
+    }
+    </script>
+    <apex:form id="mainform">
+        <apex:pageBlock id="pb">
+            <apex:pageMessages />
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >        
+                    <apex:outputLabel value="Source" for="inputSource"/>
+                    <apex:selectList size="1" value="{!choiceSource}" id="inputSource">
+                        <apex:actionSupport event="onchange" action="{!selections}" rerender="mainform"/>
+                        <apex:selectOptions value="{!SourceSelections}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >        
+                    <apex:outputLabel value="Type" for="inputType"/>
+                    <apex:selectList size="1" value="{!choiceType}" id="inputType">
+                        <apex:actionSupport event="onchange" action="{!selections}"  rerender="mainform"/>
+                        <apex:selectOptions value="{!TypeSelections}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>        
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Product" for="inputProduct"/>
+                    <apex:selectList size="1" value="{!choiceProduct}" id="inputProduct">
+                        <apex:actionSupport event="onchange" action="{!selections}" rerender="mainform"/>
+                        <apex:selectOptions value="{!productSelections}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:actionStatus startText="Retrieving rows " stopText=" Done " id="counterStatus" > 
+                        <apex:facet name="start" >Getting Rows... <img src="/apexpages/devmode/img/saveStatus.gif" /> </apex:facet> 
+                        <apex:facet name="stop"> 
+                            <apex:commandButton title="Get Rows" value="Get Rows" action="{!go}" status="counterStatus" rerender="counterStatus, mainform" Oncomplete="setSelectAllCheckboxesFalse('inputId')"/> 
+                        </apex:facet> 
+                    </apex:actionStatus> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:actionStatus startText="Approving rows " stopText=" Done " id="counterStatus1" > 
+                        <apex:facet name="start" >Approving Rows... <img src="/apexpages/devmode/img/saveStatus.gif" /> </apex:facet> 
+                        <apex:facet name="stop"> 
+                    <apex:commandButton action="{!approveSelected}" value="Approve" reRender="counterStatus1, mainform" status="counterStatus1" rerender="counterStatus1, mainform"
+                                        Oncomplete="setSelectAllCheckboxesFalse('inputId')"/>
+
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:outputText value="No items to approve ... Please make selection and press Get Rows" rendered="{! !anyToApprove}"></apex:outputText>
+            <apex:pageBlockTable value="{!wrapProdCharList}" var="pcWrap" title="Unapproved Top Ten Holdings"
+                                 rendered="{!anyToApprove && (choiceType == 'Top ten holdings' || choiceSource == 'State Street Top 10 Holdings File')}" width="100%">
+                <apex:column width="2">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox onclick="selectAllCheckboxes(this,'inputId')" id="headerSelect" />
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!pcWrap.selected}" id="inputId"/>
+                </apex:column>
+                <apex:column headerValue="Name" width="80">
+                    <apex:outputLink value="{!URLFOR($Action.ProductCharacteristic__c.View, pcWrap.pc.Id)}" target="_blank" id="pURL">
+                        <apex:outputText value="{!pcWrap.pc.Name}" >
+                        </apex:outputText> 
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!pcWrap.pc.Type__c}" width="100"/>
+                <apex:column value="{!pcWrap.pc.AsOfDate__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.PublishDate__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.Product__r.LegalName__c}" width="200"/>
+                <apex:column value="{!pcWrap.pc.Rank__c}" width="5"/>
+                <apex:column value="{!pcWrap.pc.SecurityId__c}" width="10"/>
+                <apex:column value="{!pcWrap.pc.SecurityName__c}" width="200"/>
+                <apex:column value="{!pcWrap.pc.SecurityDescription__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.CouponRate__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.MaturityDate__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.PercentOfPortfolio__c}" width="70"/>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!wrapProdCharList}" var="pcWrap" title="Unapproved Characteristics" rendered="{!anyToApprove && choiceType != 'Top ten holdings' && choiceSource != 'State Street Top 10 Holdings File'}" width="100%">
+                <apex:column width="2">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox onclick="selectAllCheckboxes(this,'inputId')" id="headerSelect" />
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!pcWrap.selected}" id="inputId"/>
+                </apex:column>
+                <apex:column headerValue="Name" width="80">
+                    <apex:outputLink value="{!URLFOR($Action.ProductCharacteristic__c.View, pcWrap.pc.Id)}" target="_blank" id="pURL">
+                        <apex:outputText value="{!pcWrap.pc.Name}" >
+                        </apex:outputText> 
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!pcWrap.pc.Type__c}" width="100"/>
+                <apex:column value="{!pcWrap.pc.AsOfDate__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.PublishDate__c}" width="70"/>
+                <apex:column value="{!pcWrap.pc.Product__r.LegalName__c}" width="200"/>
+                <apex:column value="{!pcWrap.pc.Level1__c}" width="80"/>
+                <apex:column value="{!pcWrap.pc.Level2__c}" width="80"/>
+                <apex:column value="{!pcWrap.pc.Level3__c}" width="80"/>
+                <apex:column value="{!pcWrap.pc.PercentOfPortfolio__c}" width="70"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

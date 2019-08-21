@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>ABSOLUTE ASIA AM</fullName>
+        <default>false</default>
+        <label>ABSOLUTE ASIA AM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AEW</fullName>
+        <default>false</default>
+        <label>AEW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AIA</fullName>
+        <default>false</default>
+        <label>AIA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ALPHA SIMPLEX</fullName>
+        <default>false</default>
+        <label>ALPHA SIMPLEX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AURORA</fullName>
+        <default>false</default>
+        <label>AURORA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CASPIAN</fullName>
+        <default>false</default>
+        <label>CASPIAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CASPIAN CAPITAL MGT</fullName>
+        <default>false</default>
+        <label>CASPIAN CAPITAL MGT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DELAFIELD</fullName>
+        <default>false</default>
+        <label>DELAFIELD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GATEWAY</fullName>
+        <default>false</default>
+        <label>GATEWAY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GIA</fullName>
+        <default>false</default>
+        <label>GIA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HANSBERGER</fullName>
+        <default>false</default>
+        <label>HANSBERGER</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HARRIS</fullName>
+        <default>false</default>
+        <label>HARRIS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HARRIS ALTERNATIVES</fullName>
+        <default>false</default>
+        <label>HARRIS ALTERNATIVES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LOOMIS</fullName>
+        <default>false</default>
+        <label>LOOMIS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATIXIS</fullName>
+        <default>false</default>
+        <label>NATIXIS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATIXIS AM</fullName>
+        <default>false</default>
+        <label>NATIXIS AM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATIXIS INTL FUNDS (DUBLIN) I</fullName>
+        <default>false</default>
+        <label>NATIXIS INTL FUNDS (DUBLIN) I</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATIXIS INTL FUNDS (DUBLIN) II</fullName>
+        <default>false</default>
+        <label>NATIXIS INTL FUNDS (DUBLIN) II</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATIXIS INTL FUNDS (LUX) I</fullName>
+        <default>false</default>
+        <label>NATIXIS INTL FUNDS (LUX) I</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NOT APPLICABLE</fullName>
+        <default>false</default>
+        <label>NOT APPLICABLE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SNYDER</fullName>
+        <default>false</default>
+        <label>SNYDER</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VAUGHAN NELSON</fullName>
+        <default>false</default>
+        <label>VAUGHAN NELSON</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WESTPEAK</fullName>
+        <default>false</default>
+        <label>WESTPEAK</label>
+    </standardValue>
+</StandardValueSet>

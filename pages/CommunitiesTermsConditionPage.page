@@ -1,0 +1,87 @@
+<apex:page docType="html-5.0" id="loginPage" controller="CommunitiesTermsConditionController" showHeader="false"
+           sidebar="false" standardStylesheets="false" title="{!$Label.site.site_login} ">
+    <apex:stylesheet value="{!URLFOR($Resource.mpa, 'styles/lib.css')}"></apex:stylesheet>
+    <apex:stylesheet value="{!URLFOR($Resource.mpa, 'styles/main.css')}"></apex:stylesheet>
+    
+    <apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/lib.js')}"></apex:includescript>
+    <apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/templates.js')}"></apex:includescript>
+    
+     <apex:form >
+        <div role="banner">
+			<div class="container">
+				<nav class="navbar navbar-inverse" role="navigation">
+					<h2 class="branding">
+						<a href="http://ngam.natixis.com">
+                            	<img class="flush-top" src="{!URLFOR($Resource.mpa,
+                                             '/images/logos/logo-ngam-large.png')}"
+                                 srcset="{!URLFOR($Resource.mpa,
+                                             '/images/logos/logo-ngam-large@2x.png 2x')}"
+                                 alt="Natixis Global Asset Management"/>
+						</a>
+					</h2>
+					<nav class="nav-main largescreen-only one-nav-item">
+				    </nav>
+				</nav>
+			</div>
+		</div>
+        <div class="login-wrap">
+			<div class="row">
+				<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h3>Please read and accept terms and conditions !</h3>
+                    
+                <div class="form">
+                    <apex:pageMessages id="error"/>
+                    <fieldset>
+						<div class="field-wrapper">
+                    <label ></label>
+                   <apex:outputText value="{!TextFileContentAsString}" escape="false"> </apex:outputText>
+         
+                            
+                     <!--       <embed width="100%" height="100%" src="/sfc/#version?selectedDocumentId=069290000000ejC" 
+                                   type="application/pdf"/>  -->
+
+                            
+                <!--   <apex:iframe width="100%" height="100%" src="/sfc/servlet.shepherd/version/download/068290000000gOD?asPdf=false&amp;operationContext=CHATTER">
+
+</apex:iframe> -->
+                            
+                         <!--   <object width="100%" height="100%" data="/sfc/#version?selectedDocumentId=069290000000ejC" type="application/pdf">
+<iframe width="100%" height="100%" src="/sfc/#version?selectedDocumentId=069290000000ejC" style="border: currentColor; border-image: none;">
+This browser does not support PDFs. Please download the PDF to view it: <a href="/sfc/#version?selectedDocumentId=069290000000ejC">Download PDF</a>
+</iframe>
+</object> -->
+
+                       
+                        </div>
+                </fieldset>
+                        <fieldset>
+                       <label >I have read and accepted terms and conditions</label>
+                      <apex:inputCheckbox required="true" value="{!accepted}" >  
+                            <apex:actionSupport event="onchange" rerender="nextbutton"/>
+                         </apex:inputCheckbox>
+                  
+                    </fieldset>
+                    <fieldset class="split-buttons">
+                         <apex:commandButton id="nextbutton" action="{!NextAction}" value="Next"
+                                        styleClass="button-primary u-full-width"/>
+                        
+                      <!--  <apex:commandButton action="{!CancelAction }" value="Cancel"
+                                        styleClass="button-primary u-full-width"/> -->
+                       
+					</fieldset>
+                    </div>
+                    
+               <!-- <div class="links">
+                    <a href="https://login.salesforce.com/customercommunity/ForgotPassword">Forgot your password?</a> | <a href="https://login.salesfrce.com/customercommunity/CommunitiesSelfReg">JReset Password</a>
+                </div>  -->
+                <div class="footer">Powered by <a href="http://www.ngam.natixis.com">Natixis</a></div>
+                </div>
+            
+                </div>
+        </div> <!-- .wrapper -->
+    </apex:form>
+     <script type="text/javascript">
+    
+    </script>
+    
+</apex:page>

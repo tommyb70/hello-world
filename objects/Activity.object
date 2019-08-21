@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Action_Plan_Task__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Action Plan Task</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ActivityComments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto populates with the first 255 characters of the Comments field.</inlineHelpText>
+        <label>Activity Comments</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ActivityDateProxy__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Proxy Date Field to do rollups and other reporting operations on the Task when OOB Activity Date Field is not available.</inlineHelpText>
+        <label>ActivityDateProxy</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActivityId__c</fullName>
+        <externalId>false</externalId>
+        <formula>CaseSafeId( Id )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ActivityId</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivityPoints__c</fullName>
+        <description>Populated by Process Builder based on Criteria set by sales management</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is read-only and populated by an automated process that assigns points based on criteria that can vary and is set by sales management. If you feel the points are incorrect, update the activity record and the points will recalculate when saved.</inlineHelpText>
+        <label>Activity Points</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivitySource__c</fullName>
+        <description>Captures the Source of the Activity</description>
+        <externalId>false</externalId>
+        <label>Activity Source</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Artemus</fullName>
+                    <default>false</default>
+                    <label>Artemus</label>
+                </value>
+                <value>
+                    <fullName>BlackBerryCRM</fullName>
+                    <default>false</default>
+                    <label>BlackBerryCRM</label>
+                </value>
+                <value>
+                    <fullName>Broadridge</fullName>
+                    <default>false</default>
+                    <label>Broadridge</label>
+                </value>
+                <value>
+                    <fullName>Civicomm</fullName>
+                    <default>false</default>
+                    <label>Civicomm</label>
+                </value>
+                <value>
+                    <fullName>FI360</fullName>
+                    <default>false</default>
+                    <label>FI360</label>
+                </value>
+                <value>
+                    <fullName>GlobalConnect</fullName>
+                    <default>false</default>
+                    <label>GlobalConnect</label>
+                </value>
+                <value>
+                    <fullName>GPS</fullName>
+                    <default>false</default>
+                    <label>GPS</label>
+                </value>
+                <value>
+                    <fullName>Harte Hanks</fullName>
+                    <default>false</default>
+                    <label>Harte Hanks</label>
+                </value>
+                <value>
+                    <fullName>Outlook Integration</fullName>
+                    <default>false</default>
+                    <label>Outlook Integration</label>
+                </value>
+                <value>
+                    <fullName>Portfolio</fullName>
+                    <default>false</default>
+                    <label>Portfolio</label>
+                </value>
+                <value>
+                    <fullName>User Created</fullName>
+                    <default>false</default>
+                    <label>User Created</label>
+                </value>
+                <value>
+                    <fullName>Process CPE</fullName>
+                    <default>false</default>
+                    <label>Process CPE</label>
+                </value>
+                <value>
+                    <fullName>Outlook Email Svc</fullName>
+                    <default>false</default>
+                    <label>Outlook Email Svc</label>
+                </value>
+                <value>
+                    <fullName>Salesforce1</fullName>
+                    <default>false</default>
+                    <label>Salesforce1</label>
+                </value>
+                <value>
+                    <fullName>Seismic</fullName>
+                    <default>false</default>
+                    <label>Seismic</label>
+                </value>
+                <value>
+                    <fullName>Digital Campaign</fullName>
+                    <default>false</default>
+                    <label>Digital Campaign</label>
+                </value>
+                <value>
+                    <fullName>Engage</fullName>
+                    <default>false</default>
+                    <label>Engage</label>
+                </value>
+                <value>
+                    <fullName>Break Out</fullName>
+                    <default>false</default>
+                    <label>Break Out</label>
+                </value>
+                <value>
+                    <fullName>Small Conf. Follow Up</fullName>
+                    <default>false</default>
+                    <label>Small Conf. Follow Up</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ActivitySubType__c</fullName>
+        <description>The dependent field on Type IC to drive value visibility</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select a Type field to view valid Sub Types</inlineHelpText>
+        <label>Activity Sub Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ActivityType__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Affiliate Request</fullName>
+                    <default>false</default>
+                    <label>Affiliate Request</label>
+                </value>
+                <value>
+                    <fullName>Product/Promotional</fullName>
+                    <default>false</default>
+                    <label>Product/Promotional</label>
+                </value>
+                <value>
+                    <fullName>Follow-Up/Service</fullName>
+                    <default>false</default>
+                    <label>Follow-Up/Service</label>
+                </value>
+                <value>
+                    <fullName>Solutions</fullName>
+                    <default>false</default>
+                    <label>Solutions</label>
+                </value>
+                <value>
+                    <fullName>Roadshow</fullName>
+                    <default>false</default>
+                    <label>Roadshow</label>
+                </value>
+                <value>
+                    <fullName>Other/Voicemail</fullName>
+                    <default>false</default>
+                    <label>Other/Voicemail</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Research</fullName>
+                    <default>false</default>
+                    <label>Research</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Product/Promotional</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Follow-Up/Service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Solutions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <valueName>Roadshow</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <valueName>Marketing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Other/Voicemail</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Research</controllingFieldValue>
+                <valueName>Research</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ActivityType__c</fullName>
+        <description>Used to control the Sub Type field and not displayed in the UI. The out of box field Type is displayed in the UI.</description>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Meeting</fullName>
+                    <default>false</default>
+                    <label>Meeting</label>
+                </value>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Research</fullName>
+                    <default>false</default>
+                    <label>Research</label>
+                </value>
+                <value>
+                    <fullName>Transportation</fullName>
+                    <default>false</default>
+                    <label>Transportation</label>
+                </value>
+                <value>
+                    <fullName>Hotel</fullName>
+                    <default>false</default>
+                    <label>Hotel</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CampaignDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CampaignName__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_IDs__c</fullName>
+        <externalId>true</externalId>
+        <label>Campaign IDs</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Names__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Names</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CanStayOpen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CanStayOpen</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CaseSubject__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case__r.Subject</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Case Subject</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Client_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Existing Client</fullName>
+                    <default>false</default>
+                    <label>Existing Client</label>
+                </value>
+                <value>
+                    <fullName>New Business</fullName>
+                    <default>false</default>
+                    <label>New Business</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ContCount__c</fullName>
+        <externalId>false</externalId>
+        <label>ContCount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DTFlag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>For Dummy Updates</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For Dummy Updates</inlineHelpText>
+        <label>DTFlag</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ExistingClient__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Existing Client</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Firm__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Firm</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FollowUpDate__c</fullName>
+        <description>Used to migrate historical data</description>
+        <externalId>false</externalId>
+        <label>Follow-Up Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FollowUp__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for migrating historical data</description>
+        <externalId>false</externalId>
+        <label>Follow-Up</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GlobalConnectId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Global Connect Id</description>
+        <externalId>true</externalId>
+        <label>Global Connect Id</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LastAssignedOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Captures the owner of the activity before a transfer of a parent object (whatId) so that the activity can be reassigned back to the owner after the transfer.  This should not be exposed to users.</description>
+        <externalId>false</externalId>
+        <label>Last Assigned Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RetainOwner</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LastFA_AffiliateMeetingDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Last FA/Affiliate Meeting Date</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LegacyRecord__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('https://secure-slsomxuxa.crmondemand.com/OnDemand/user/TaskDetail?OMRET0=ActivitiesList%3fActivitiesList.LAYOUT%3dTaskList%2520HomeList%26OMTGT%3dActivitiesList%26OMTHD%3dshowlist&amp;TaskDetailForm.Id=' + SynergyRowId__c +'&amp;OCTYPE=Approval&amp;OMTGT=TaskDetailForm&amp;OMTHD=ActivityDetailNav&amp;OMCBO=Action', SynergyRowId__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Legacy Record</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MarkForDeletion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox is used in a process to batch delete activities. The box is checked by sales people who have open activities assigned to them that they ultimately can not act on. Also used by Civicomm if they accidentally create an incorrect activity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this box if you would like a periodic process to run and delete the activity.</inlineHelpText>
+        <label>Mark for Deletion</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MarsOfficeId__c</fullName>
+        <externalId>true</externalId>
+        <label>Mars Office Id</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MaterialsandPresentations__c</fullName>
+        <externalId>false</externalId>
+        <label>Materials and Presentations</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>My_Region__c</fullName>
+        <description>The logged in users' ActivityTerritoryMARSName__c  or ActivityRegionDept__c are equal to the region on the task.</description>
+        <externalId>false</externalId>
+        <formula>OR($User.ActivityRegionDept__c = OwnerRegionMARS__c, $User.ActivityTerritoryMARSName__c = OwnerRegionMARS__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>My Region</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NewBusiness__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>New Business</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NumberofActivities__c</fullName>
+        <description>Power of One field to aid in reporting</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of Activities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OportunitySynergyRowId__c</fullName>
+        <description>Temporary Field for DT rework</description>
+        <externalId>true</externalId>
+        <label>OportunitySynergyRowId</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OwnerChannelFormula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityChannelName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Channel Formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerChannelId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityChannelId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Channel Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerChannel__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Channel</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerName__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.FirstName  &amp;  " "  &amp; $User.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerRegionMARS__c</fullName>
+        <description>Populated with a trigger based on the owner's region.</description>
+        <externalId>false</externalId>
+        <label>Owner Region MARS</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerRole__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Role</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritoryFormula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityTerritoryName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Territory Formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritoryId__c</fullName>
+        <description>The owner's activity territory id at the time of activity creation</description>
+        <externalId>false</externalId>
+        <label>Owner Territory Id</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritoryMARS__c</fullName>
+        <description>The owner activity territory based on the MARS name at the time of activity creation</description>
+        <externalId>false</externalId>
+        <label>Owner Territory MARS</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritory__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Territory</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerUserId__c</fullName>
+        <externalId>false</externalId>
+        <label>OwnerUserId</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerZoneFormula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityZoneId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Zone Formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerZone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Zone</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductList__c</fullName>
+        <description>A Semicolon Separated Group of Product Ids.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A Semicolon Separated Group of Product Ids.</inlineHelpText>
+        <label>Product List</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductsSelected__c</fullName>
+        <description>Aggregate the Products selected into this one field comma separated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A read-only field that aggregates the Products selected into this one field with comma separated values.</inlineHelpText>
+        <label>Products Selected</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Products__c</fullName>
+        <description>Names of products associated with the activity; set by trigger</description>
+        <externalId>false</externalId>
+        <label>Products</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RepContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rep/Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RequestArtemusID__c</fullName>
+        <description>Auto populated with the Artemus Request ID as it appears on the Opportunity record that was created for the PRCG CPE Process</description>
+        <externalId>false</externalId>
+        <label>Artemus Request ID</label>
+        <length>38</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RetURL__c</fullName>
+        <externalId>false</externalId>
+        <label>RetURL</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShortSubject__c</fullName>
+        <description>Value manually entered by users and displayed as part of the Event creation n the Affiliate request process. It is also displayed on the Trumba calendar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This value appears on the Trumba Calendar.  Please enter the subject in the following format:  Affiliate, Speaker, Firm, Event Type</inlineHelpText>
+        <label>Short Subject</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StartDate2__c</fullName>
+        <description>Same as Start Date or Activity Date.  Used to enable group by in reports that display start date in column.</description>
+        <externalId>false</externalId>
+        <formula>ActivityDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Same as Start Date or Activity Date.  Used to enable group by in reports that display start date in column.</inlineHelpText>
+        <label>Start Date 2</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SynergyAccountId__c</fullName>
+        <externalId>true</externalId>
+        <label>SynergyAccountId</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SynergyContactId__c</fullName>
+        <externalId>true</externalId>
+        <label>SynergyContactId</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SynergyRowId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Synergy Row Id</description>
+        <externalId>true</externalId>
+        <label>SynergyRowId</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>TaskHeader__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(Status) &amp; if( MarkForDeletion__c , " - Marked For Deletion","")</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Task Header</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaskTemplateId__c</fullName>
+        <description>Lookup link to Task Template</description>
+        <externalId>true</externalId>
+        <label>Task Template Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Travel__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(Case__r.Type, 'Travel'), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Travel</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TypeGroup__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(ActivityType__c , "Call") ,"Call", 
+IF( ISPICKVAL(ActivityType__c , "Meeting") ,"Meeting","Other"
+))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Type Group</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>USOffshoreActivityOwner__c</fullName>
+        <description>This field is populated with the name of the Owner in the international Salesforce system</description>
+        <externalId>false</externalId>
+        <label>US Offshore Activity Owner</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserModified__c</fullName>
+        <externalId>false</externalId>
+        <label>User Modified</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Product__r.ProductType__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vehicle</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zone__c</fullName>
+        <externalId>false</externalId>
+        <label>Zone</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <enableFeeds>false</enableFeeds>
+    <searchLayouts>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyTeamsActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>My Team's Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today's Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,18 @@
+<apex:page standardController="Case">
+    <apex:includeScript value="../../soap/ajax/20.0/connection.js"/>
+    <script>
+    sforce.connection.sessionId='{!GETSESSIONID()}';
+    var caseObj = new sforce.SObject("Case"); 
+    caseObj.Id = '{!Case.Id}';
+    caseObj.OwnerId = '{!$User.Id}'
+    
+    var result = sforce.connection.update([caseObj]);
+    
+    if (result[0].success =='false') {
+        alert (result[0].errors.message);
+    } else {
+        window.opener.location.href = "/{!Case.Id}";
+        window.self.close();
+    }
+    </script>
+</apex:page>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Add</fullName>
+        <default>false</default>
+        <label>Add</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Added to List</fullName>
+        <default>false</default>
+        <label>Added to List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended</fullName>
+        <default>false</default>
+        <label>Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+        <label>Contacted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - Call Campaign</fullName>
+        <default>false</default>
+        <label>Contacted - Call Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined</fullName>
+        <default>false</default>
+        <label>Declined</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interested</fullName>
+        <default>false</default>
+        <label>Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invitation Sent</fullName>
+        <default>false</default>
+        <label>Invitation Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invited</fullName>
+        <default>false</default>
+        <label>Invited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No-Show</fullName>
+        <default>false</default>
+        <label>No-Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Applicable</fullName>
+        <default>false</default>
+        <label>Not Applicable</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Applicable - Call Campaign</fullName>
+        <default>false</default>
+        <label>Not Applicable - Call Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered</fullName>
+        <default>false</default>
+        <label>Registered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Remove</fullName>
+        <default>false</default>
+        <label>Remove</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Invitation</fullName>
+        <default>false</default>
+        <label>Sent Invitation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>To Contact</fullName>
+        <default>false</default>
+        <label>To Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>To Contact - Call Campaign</fullName>
+        <default>false</default>
+        <label>To Contact - Call Campaign</label>
+    </standardValue>
+</StandardValueSet>

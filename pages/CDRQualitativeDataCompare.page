@@ -1,0 +1,37 @@
+<apex:page standardController="CDRQualitativeData__c" extensions="CDRQualitativeDataCompareExt" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >        
+                    Comparing: <apex:outputText value="{!controlCDR.Name}"/>
+                </apex:pageBlockSectionItem>        
+                <apex:pageBlockSectionItem >
+                    To: <apex:selectList size="1" value="{!compareCDRId}">
+                        <apex:actionSupport event="onchange" action="{!compare}" reRender="compareBlock"/>
+                        <apex:selectOptions value="{!CDRSelectOptions}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    Display all values (not just differences) <apex:inputCheckbox value="{!dispAllValues}">
+                        <apex:actionSupport event="onclick" action="{!compare}" reRender="compareBlock"/>
+                    </apex:inputCheckbox>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock id="compareBlock">
+            
+            <apex:pageBlockTable value="{!comparison}" var="c" id="ctable">
+                <apex:column value="{!c.FieldName}" width="20%"/>
+                <apex:column width="40%">
+                    <apex:outputText value="{!c.ControlValue}" escape="false" />
+                </apex:column>
+                <apex:column width="40%">
+                    <apex:outputText value="{!c.CompareValue}" escape="false" />
+                </apex:column>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

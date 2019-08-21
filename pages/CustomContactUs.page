@@ -1,0 +1,25 @@
+<apex:page id="CustomCommunitiesContactUs" 
+               showHeader="false"
+           sidebar="false" standardStylesheets="false" title="Contact US"
+            applyBodyTag="false" docType="html-5.0">
+ 
+<head>
+    <apex:stylesheet value="{!URLFOR($Resource.mpa, 'styles/lib.css')}"></apex:stylesheet>
+    <apex:stylesheet value="{!URLFOR($Resource.mpa, 'styles/main.css')}"></apex:stylesheet> 
+</head>
+
+<body data-ng-app="clientPortal">
+   <ui-view name='sprite' style="display:none;"></ui-view>
+    <!-- <div data-ng-include src="'{!URLFOR($Resource.mpa)}/images/icons/sprite/icons.svg'" ></div> -->
+    <ui-view></ui-view> 
+
+    <apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/lib.js')}"></apex:includescript>
+    <apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/templates.js')}"></apex:includescript>
+    <apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/main.js')}"></apex:includescript>
+    <c:ngForce ></c:ngForce>
+
+    <script>
+        var globalStaticResourcePath = '{!URLFOR($Resource.mpa)}';     
+    </script>
+</body>
+</apex:page>

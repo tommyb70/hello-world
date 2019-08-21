@@ -1,0 +1,60 @@
+<apex:page docType="html-5.0" id="customCommunityFileNotFound" controller="CustomCommunityErrorController"  showHeader="false"
+           sidebar="false" standardStylesheets="false" title="{!$Label.site.site_login} ">
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.mpa, 'styles/lib.css')}"></apex:stylesheet>
+        <apex:stylesheet value="{!URLFOR($Resource.mpa, 'styles/main.css')}"></apex:stylesheet>
+    </head>
+    
+    <!-- <apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/lib.js')}"></apex:includescript>
+<apex:includescript value="{!URLFOR($Resource.mpa, 'scripts/templates.js')}"></apex:includescript> -->
+    
+    <apex:form >
+        
+        <header role="banner" class="no-nav">
+            <div class="container">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <h2 class="branding">
+                        <a href="">
+                            <img class="flush-top" src="{!URLFOR($Resource.mpa,
+                                                        '/images/logos/MPA_Logo.jpg')}" alt="MPA Managed Portfolio Advisors"></img>
+                    </a>
+                </h2>
+                <nav class="nav-main largescreen-only one-nav-item">
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <div class="login-wrap">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                
+                <p>Oops! something went wrong. Please contact us to report the error</p>
+                <div class="form">
+                    <apex:pageMessages id="error"/>
+                    <fieldset>
+                        <div class="field-wrapper">
+                            <apex:outputText styleClass="title" value="{!$Label.site.page_not_found_detail}">
+                                <apex:param value="{!$Site.OriginalUrl}"/>
+                            </apex:outputText>
+                        </div> 
+                        
+                        <div class="field-wrapper">
+                            <apex:outputText escape="false" value="Please "></apex:outputText>
+                            <apex:outputLink value="mailto:clientservice@mpa.natixis.com">email us</apex:outputLink>
+                            <apex:outputText escape="false" value=" if you need any assistance"></apex:outputText>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="split-buttons">
+                        
+                    </fieldset>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </div> <!-- .wrapper -->
+</apex:form>
+
+</apex:page>

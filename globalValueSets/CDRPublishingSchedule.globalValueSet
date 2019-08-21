@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Never</fullName>
+        <default>true</default>
+        <label>Never</label>
+    </customValue>
+    <customValue>
+        <fullName>Immediately</fullName>
+        <default>false</default>
+        <label>Immediately</label>
+    </customValue>
+    <customValue>
+        <fullName>7th Business Day</fullName>
+        <default>false</default>
+        <label>7th Business Day</label>
+    </customValue>
+    <customValue>
+        <fullName>8th Calendar Day</fullName>
+        <default>false</default>
+        <label>8th Calendar Day</label>
+    </customValue>
+    <customValue>
+        <fullName>1st Business Day After the Following Month-End</fullName>
+        <default>false</default>
+        <label>1st Business Day After the Following Month-End</label>
+    </customValue>
+    <customValue>
+        <fullName>10th Business Day After Quarter-End</fullName>
+        <default>false</default>
+        <label>10th Business Day After Quarter-End</label>
+    </customValue>
+    <description>Used in Apex to control publishing schedule of product characteristics</description>
+    <masterLabel>CDR Publishing Schedule</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

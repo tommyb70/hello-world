@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DictionaryItemAPIName__c</fullName>
+        <externalId>false</externalId>
+        <formula>DictionaryItem__r.APIName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dictionary Item API Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DictionaryItemLabel__c</fullName>
+        <externalId>false</externalId>
+        <formula>DictionaryItem__r.Label__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dictionary Item Label</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DictionaryItemMetadataIdentifier__c</fullName>
+        <externalId>false</externalId>
+        <formula>DictionaryItem__r.MetadataIdentifier__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dictionary Item Metadata Identifier</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DictionaryItem__c</fullName>
+        <externalId>false</externalId>
+        <label>Dictionary Item</label>
+        <referenceTo>DictionaryItem__c</referenceTo>
+        <relationshipName>DictionaryItemSourcesAndTargets</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ExternalSystemContact__c</fullName>
+        <externalId>false</externalId>
+        <label>External System Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FrequencyDetails__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequency Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequency</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                    <label>Daily</label>
+                </value>
+                <value>
+                    <fullName>Weekly</fullName>
+                    <default>false</default>
+                    <label>Weekly</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semi-Annually</fullName>
+                    <default>false</default>
+                    <label>Semi-Annually</label>
+                </value>
+                <value>
+                    <fullName>Yearly</fullName>
+                    <default>false</default>
+                    <label>Yearly</label>
+                </value>
+                <value>
+                    <fullName>On Demand</fullName>
+                    <default>false</default>
+                    <label>On Demand</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>JobNames__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Name(s)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PseudoCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Pseudo Code</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SFDCContact__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFDCRole__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Source</fullName>
+                    <default>false</default>
+                    <label>Source</label>
+                </value>
+                <value>
+                    <fullName>Target</fullName>
+                    <default>false</default>
+                    <label>Target</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>System__c</fullName>
+        <externalId>false</externalId>
+        <label>System</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MARS</fullName>
+                    <default>false</default>
+                    <label>MARS</label>
+                </value>
+                <value>
+                    <fullName>Seismic Outlook Plug-in</fullName>
+                    <default>false</default>
+                    <label>Seismic Outlook Plug-in</label>
+                </value>
+                <value>
+                    <fullName>EDW</fullName>
+                    <default>false</default>
+                    <label>EDW</label>
+                </value>
+                <value>
+                    <fullName>SFDC</fullName>
+                    <default>false</default>
+                    <label>SFDC</label>
+                </value>
+                <value>
+                    <fullName>Manual Entry</fullName>
+                    <default>false</default>
+                    <label>Manual Entry</label>
+                </value>
+                <value>
+                    <fullName>Data Load</fullName>
+                    <default>false</default>
+                    <label>Data Load</label>
+                </value>
+                <value>
+                    <fullName>SFDC Outlook Plug-In</fullName>
+                    <default>false</default>
+                    <label>SFDC Outlook Plug-In</label>
+                </value>
+                <value>
+                    <fullName>Email to Salesforce</fullName>
+                    <default>false</default>
+                    <label>Email to Salesforce</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approval Process</fullName>
+                    <default>false</default>
+                    <label>Approval Process</label>
+                </value>
+                <value>
+                    <fullName>Batch Apex</fullName>
+                    <default>false</default>
+                    <label>Batch Apex</label>
+                </value>
+                <value>
+                    <fullName>Declarative Roll-up</fullName>
+                    <default>false</default>
+                    <label>Declarative Roll-up</label>
+                </value>
+                <value>
+                    <fullName>Flow</fullName>
+                    <default>false</default>
+                    <label>Flow</label>
+                </value>
+                <value>
+                    <fullName>Informatica Cloud Mapping</fullName>
+                    <default>false</default>
+                    <label>Informatica Cloud Mapping</label>
+                </value>
+                <value>
+                    <fullName>Periodic Data Load</fullName>
+                    <default>false</default>
+                    <label>Periodic Data Load</label>
+                </value>
+                <value>
+                    <fullName>Process Builder</fullName>
+                    <default>false</default>
+                    <label>Process Builder</label>
+                </value>
+                <value>
+                    <fullName>Trigger</fullName>
+                    <default>false</default>
+                    <label>Trigger</label>
+                </value>
+                <value>
+                    <fullName>User (Manual)</fullName>
+                    <default>false</default>
+                    <label>User (Manual)</label>
+                </value>
+                <value>
+                    <fullName>Validation Rule</fullName>
+                    <default>false</default>
+                    <label>Validation Rule</label>
+                </value>
+                <value>
+                    <fullName>Visualforce Controller or Extension</fullName>
+                    <default>false</default>
+                    <label>Visualforce Controller or Extension</label>
+                </value>
+                <value>
+                    <fullName>Web Service - Asynchronous</fullName>
+                    <default>false</default>
+                    <label>Web Service - Asynchronous</label>
+                </value>
+                <value>
+                    <fullName>Web Service - Synchronous</fullName>
+                    <default>false</default>
+                    <label>Web Service - Synchronous</label>
+                </value>
+                <value>
+                    <fullName>Workflow</fullName>
+                    <default>false</default>
+                    <label>Workflow</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>The sources,targets, and other references (apex, process builders) of dictionary items</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Dictionary Item Reference</label>
+    <nameField>
+        <displayFormat>DIR-{0000000}</displayFormat>
+        <label>Reference #</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Dictionary Item References</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <recordTypes>
+        <fullName>Data_Entry</fullName>
+        <active>true</active>
+        <description>References in business processes where a user provides data and updates values manually</description>
+        <label>Data Entry</label>
+        <picklistValues>
+            <picklist>Frequency__c</picklist>
+            <values>
+                <fullName>On Demand</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDCRole__c</picklist>
+            <values>
+                <fullName>Target</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>System__c</picklist>
+            <values>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email to Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual Entry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SFDC Outlook Plug-In</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Periodic Data Load</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User %28Manual%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Integration</fullName>
+        <active>true</active>
+        <description>References in integrations from external systems that move data into or out of Salesforce</description>
+        <label>Integration</label>
+        <picklistValues>
+            <picklist>Frequency__c</picklist>
+            <values>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Demand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Annually</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDCRole__c</picklist>
+            <values>
+                <fullName>Source</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>System__c</picklist>
+            <values>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email to Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SFDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SFDC Outlook Plug-In</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seismic Outlook Plug-in</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Informatica Cloud Mapping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Service - Asynchronous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Service - Synchronous</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SFDC_Business_Logic</fullName>
+        <active>true</active>
+        <description>References in Apex Classes, Batch Processes, Triggers, Process Builders, Workflows, Flows, etc.</description>
+        <label>SFDC Business Logic</label>
+        <picklistValues>
+            <picklist>Frequency__c</picklist>
+            <values>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Demand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Annually</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDCRole__c</picklist>
+            <values>
+                <fullName>Target</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>System__c</picklist>
+            <values>
+                <fullName>SFDC</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Batch Apex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declarative Roll-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process Builder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation Rule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visualforce Controller or Extension</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

@@ -1,0 +1,284 @@
+<apex:page standardController="Task" extensions="TaskExtension" tabStyle="Task" standardStylesheets="true" docType="html-5.0">
+    
+   
+    <apex:form rendered="{!!isSF1}">
+        <apex:pageBlock id="tskpage" title="Task - {!Task.TaskHeader__c}" mode="maindetail">
+            <apex:pageMessages id="showmsg"></apex:pageMessages>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!TaskEdit}" value="Edit" onclick="setSubActivityList();"/>
+                <!--<apex:commandButton action="{!upload}" value="Add Attachment"/> -->
+                <apex:commandButton action="{!FollowUpActivity}" value="Create Follow-Up Activity"/>
+                <apex:commandButton action="{!del}" value="Delete" rendered="{!Task.MarkForDeletion__c!=true}"/>
+            </apex:pageBlockButtons>
+            
+            
+            
+            <div>
+     <!--       <div class="classic_form"> -->
+                <apex:pageBlockSection columns="2" title="Detail" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Date" for="task__date"/>
+                        <apex:outputField value="{!Task.ActivityDate}" id="task__date"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Rep/Contact" for="task__rep"/>
+                        <apex:outputField value="{!Task.WhoId}" id="task__rep" />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem rendered="{!NOT(is_ic_inbound)}">
+                        <apex:outputLabel value="Type" for="task__type"/>
+                        <apex:outputField value="{!Task.Type}" id="task__type"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem rendered="{!is_ic_inbound}" >
+                        <apex:outputLabel value="Activity Type" for="task_activitytype"/>
+                        <apex:outputField value="{!Task.ActivityType__c}"  id="task_activitytype"/>
+                    </apex:pageBlockSectionItem>       
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Opportunity" for="task__opp"/>
+                        <apex:outputField value="{!Task.Opportunity__c}" id="task__opp"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem rendered="{!is_ic_inbound }"  >
+                        <apex:outputLabel value="Activity SubType" for="task__ActivitySubType"/>
+                        <apex:outputField value="{!Task.ActivitySubType__c}"  id="task__activitysubtype"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!is_ic_inbound }" >
+                    </apex:pageBlockSectionItem>
+                    
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Reminder ?" for="task__isremind"/> 
+                        <apex:outputField value="{!Task.ReminderDateTime}" id="task__isremind"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Campaign" for="task__camp"/>
+                        <apex:outputField value="{!Task.Campaign__c}" id="task__camp"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Owner" for="task__owner"/>
+                        <apex:outputField value="{!Task.ownerid}" id="task__owner"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Firm/Office" for="task__acct"/>
+                        <apex:outputField value="{!Task.WhatId}" id="task__acct"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Campaign Names" for="task__campName"/>
+                        <apex:outputField value="{!Task.Campaign_Names__c}" id="task__campName"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Campaign Ids" for="task__campId"/>
+                        <apex:outputField value="{!Task.Campaign_IDs__c}" id="task__campId"/>
+                    </apex:pageBlockSectionItem>       
+                    
+                    <apex:pageBlockSectionItem rendered="{!is_ic_inbound }" >
+                        <apex:outputLabel value="Activity Points" for="task__activitypoints"/> 
+                        <apex:outputField value="{!Task.ActivityPoints__c}"  id="task__activitypoints"  />              
+                    </apex:pageBlockSectionItem>
+                    
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="2" title="Comments">  
+                    <apex:outputField value="{!Task.Description}"/>
+                    
+                </apex:pageBlockSection>
+            </div>
+            <apex:pageBlockSection id="multiple" columns="1" title="Multiple Products & Contacts" rendered="true"> 
+                <!--<div class="_tab_switch">
+                    <span tab="products" class="_active" onclick="switch_tab(this)">Products</span>
+                    <span tab="contacts" onclick="switch_tab(this)">Contacts</span>
+                </div>
+                
+                <div class="_tab_body">
+                    <div tab="products" class="_active"><iframe id="gridFrame" scrolling="auto" height="385" width="100%" frameborder="0" src="/apex/GBLite__grid?gname=Products&fpf=ActivityId__c&fpv={!Task.id}&sbb=1&sh=0&ssb=0"></iframe></div>
+                    <div tab="contacts"><iframe id="gridFrame" scrolling="auto" height="385" width="100%" frameborder="0" src="/apex/GBLite__grid?gname=Contacts&fpf=ActivityId__c&fpv={!Task.id}&sbb=1&sh=0&ssb=0"></iframe></div>
+                </div> -->
+                
+                <apex:include pageName="GBTabs_ActivityProductsContacts"/>
+
+                <!--            <apex:tabPanel switchType="client" selectedTab="tabdetails" id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+<apex:tab label="Products">
+<iframe id="gridFrame" scrolling="auto" height="385" width="100%" frameborder="0" src="/apex/GBLite__grid?gname=Products&fpf=ActivityId__c&fpv={!Task.id}&sbb=1&sh=0&ssb=0"></iframe>
+</apex:tab>
+<apex:tab label="Contacts">
+<iframe id="gridFrame" scrolling="auto" height="385" width="100%" frameborder="0" src="/apex/GBLite__grid?gname=Contacts&fpf=ActivityId__c&fpv={!Task.id}&sbb=1&sh=0&ssb=0"></iframe>
+</apex:tab>
+
+</apex:tabPanel>-->
+                
+            </apex:pageBlockSection>
+            <div class="classic_form">
+                <apex:pageBlockSection columns="2" title="Created By"> 
+                    <apex:outputField value="{!Task.UserModified__c}" label="Created By (Offshore)"/>
+                    <apex:outputField value="{!Task.createdbyid}" label="Created By"/>
+                    <apex:outputField value="{!Task.LegacyRecord__c}" label="Legacy Record"/>
+                    <apex:outputField value="{!Task.LastModifiedDate}" label="Last Modified"/>         
+                </apex:pageBlockSection>
+            </div>
+            
+            <apex:inputHidden value="{!Task.Status}"/>
+            <apex:inputHidden value="{!Task.MarkForDeletion__c}"/>
+            <apex:inputHidden value="{!Task.ActivitySource__c}"/>
+            <apex:inputHidden value="{!is_ic_inbound}"/>
+            
+            
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+    <apex:include pageName="TaskView_SFX" rendered="{!isSF1}" />
+    
+    
+    
+    <apex:relatedList list="Attachments"  subject="{!$CurrentPage.parameters.id}" />
+    <apex:relatedList subject="{!Task.Id}" list="AttachedContentDocuments" />
+    
+    
+    <script>
+    
+    function addLoadEvent(func)  {  
+        var sfload = window.onload;   
+        if (typeof window.onload != 'function')  
+        {   
+            window.onload = func;  
+        }   
+        else 
+        {   
+            window.onload = function()    
+            {  
+                if (sfload)      {   sfload();     }      
+                func();  
+            }   
+        } 
+        
+    }     
+    addLoadEvent(function()   
+                 {    
+                     setSubActivityList();
+                     
+                 }); 
+    function setSubActivityList(){
+        
+        var isICinbound = '{!is_ic_inbound}';
+        var isinbound = '{!is_inbound}';          
+        if( isICinbound  == 'true' && isinbound == 'false')
+        {
+            try {
+            if(pl != null && pl != "undefined" && pl != 'undefined' && pl != undefined )
+            {
+                var i = pl.vals_00NF000000CsHpN_012F0000000WZWl.indexOf("Advisor Web Portal");
+                if(i != -1) {
+                     pl.vals_00NF000000CsHpN_012F0000000WZWl[i]='';
+                    // pl.vals_00NF000000CsHpN_012F0000000WZWl.splice(i, 1);
+                }
+                
+                i=-1;
+                i = pl.vals_00NF000000CsHpN_012F0000000WZWl.indexOf("Advisor Web Portal");
+                if(i != -1) {
+                    // pl.vals_00NF000000CsHpN_012F0000000WZWl.splice(i, 1);
+                     pl.vals_00NF000000CsHpN_012F0000000WZWl[i]='';
+                }
+            }
+           }
+            catch(err) {
+   
+}
+            
+        }
+        
+    }    
+    var switch_tab = function(el) {
+        var sTab = el.getAttribute('tab'),
+            aTabBodies = document.querySelectorAll('._tab_body > div'),
+            aTabs = document.querySelectorAll('._tab_switch > span');
+        for (var nI = 0; nI < aTabBodies.length; nI++) {
+            if (aTabBodies[nI].getAttribute('tab') != sTab) {
+                aTabBodies[nI].className = '';
+                aTabs[nI].className = '';
+            } else {
+                aTabBodies[nI].className = '_active';
+                aTabs[nI].className = '_active';
+            }
+        }
+    }
+    setSubActivityList();
+    </script>
+    
+    <style>
+        ._tab_switch{
+        
+        }
+        
+        ._tab_switch > span{
+        display:inline-block;
+        color: #000;
+        font-size: 11px;
+        font-family: Arial,Verdana,sans-serif;
+        padding: 2px 10px 2px 10px;
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        background-repeat: repeat-x;
+        background-position: top;
+        cursor: pointer;
+        background-color: #ADCDAD;
+        background-image: url(/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.images.TabGradientB/DATB/eAH7-PHj2rNrmQAXcAT9);
+        border-color:#ADCDAD;
+        }
+        
+        ._tab_switch > span._active{
+        
+        background-image: url(/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.images.TabGradientA/DATB/eAFbe3btx48fmQAVbAT9);
+        background-color: #f1f1f1;
+        border-bottom-color:transparent;
+        
+        
+        }
+        
+        ._tab_body{
+        background: rgb(241, 241, 241);
+        padding:10px;
+        }
+        ._tab_body > div{
+        display:none;
+        }
+        
+        ._tab_body > div._active{
+        display:block;
+        }
+        
+        .sf1_buttons {
+        text-align:center;
+        }
+        .sf1_buttons .btn{
+        font-size: 16px;
+        color: #44596c;
+        text-shadow: none;
+        margin: 0;
+        padding: 4px 14px;
+        height: 35px;
+        font-size: 16px;
+        font-family: 'ProximaNovaSoft-Regular';
+        font-weight: normal;
+        border: 1px solid #bbc0c4;
+        border-radius: 5px;
+        background: -moz-linear-gradient(#ffffff,#f1f1f1);
+        background: -webkit-linear-gradient(#ffffff,#f1f1f1);
+        background: -ms-linear-gradient(#ffffff,#f1f1f1);
+        background: linear-gradient(#ffffff,#f1f1f1);
+        box-shadow: none;
+        text-align: center;
+        cursor: pointer;
+        box-sizing: border-box;
+        }
+        
+        .sf1_buttons .btn:active {
+        background: #e9e9e9;
+        
+        }
+        
+    </style>
+    
+</apex:page>

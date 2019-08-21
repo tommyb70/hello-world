@@ -1,0 +1,7 @@
+<apex:page standardController="Opportunity" recordSetVar="Opportunitys" tabStyle="Opportunity" lightningStylesheets="true">
+<apex:form >
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:UserTerritory />   
+</apex:form>
+   <apex:enhancedList customizable="true" type="Opportunity" height="750" rowsPerPage="25" id="OpportunityList" />
+ 
+</apex:page>

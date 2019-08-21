@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ApexSystemUserOrProfile__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox is used in Apex to determine if a user or profile has admin rights to bypass error messages. Normally, this is checked for System Administrator profile and NGAM Integration profile only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This checkbox is used in Apex to determine if a user or profile has admin rights to bypass error messages. Normally, this is checked for System Administrator profile and NGAM Integration profile only.</inlineHelpText>
+        <label>Apex System User Or Profile</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ByPassAccountValidationRules__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Allows entity to by-pass validation rules on Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows entity to by-pass validation rules on Account</inlineHelpText>
+        <label>By-Pass Account Validation Rules</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ByPassEventCampMemberValidationRules__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>By-Pass Event CampMember ValidationRules</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CannotCUDActivityAfterDays__c</fullName>
+        <description>Controls how many days after the activity date of a task or date of a corresponding activity contact or activity product a user can create, update, or delete an activity.  Used in trigger and validation rules.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls how many days after the activity date of a task or date of a corresponding activity contact or activity product a user can create, update, or delete an activity.</inlineHelpText>
+        <label>Cannot CUD Activity After Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DictionaryItemVFPageView__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If any profile user need to access complete Dictionary Item record details then this check box needs to be checked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this profile user need to access complete Dictionary Item record details on the VF page then this check box needs to be checked.</inlineHelpText>
+        <label>Dictionary Item VF Page View</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>InitiateEmailOptInCanBeSetToFalse__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, the entity can set the Initiate Email Opt-In flag on Contact to false; meant to ensure that automations in Pardot set this flag - not users.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, the entity can set the Initiate Email Opt-In flag on Contact to false; meant to ensure that automations in Pardot set this flag - not general users.</inlineHelpText>
+        <label>Initiate Email Opt-In Can Be Set To Fals</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <label>NGAM Settings - Hierarchy</label>
+    <visibility>Protected</visibility>
+</CustomObject>

@@ -1,0 +1,2 @@
+<apex:page standardController="Account" recordSetVar="accounts" lightningStyleSheets="true" showHeader="true" sidebar="true" extensions="MapItAccountController" action="{!Redirect}">
+</apex:page>

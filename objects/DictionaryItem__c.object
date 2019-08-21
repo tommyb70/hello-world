@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayouts>
+        <fullName>Dictionary_Item</fullName>
+        <fields>MetadataIdentifier__c</fields>
+        <fields>Label__c</fields>
+        <fields>APIName__c</fields>
+        <fields>ParentDictionaryItemAPIName__c</fields>
+        <label>Dictionary Item</label>
+    </compactLayouts>
+    <fields>
+        <fullName>APIName__c</fullName>
+        <description>The API Name of the component</description>
+        <externalId>false</externalId>
+        <label>API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BusinessDefinition__c</fullName>
+        <description>The definition of the component that is published to users</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The definition of the component that is published to users</inlineHelpText>
+        <label>Business Definition</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BusinessOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The business owner of the component</description>
+        <externalId>false</externalId>
+        <label>Business Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DictionaryBusinessOwner</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ByteLength__c</fullName>
+        <description>For variable-length fields (including binary fields), returns the maximum size of the field, in bytes</description>
+        <externalId>false</externalId>
+        <label>Byte Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRUDSecurityNotes__c</fullName>
+        <description>Notes on CRUD security for the component; usually used only for objects</description>
+        <externalId>false</externalId>
+        <label>CRUD Security Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CalculatedFormula__c</fullName>
+        <description>The formula specified for this field</description>
+        <externalId>false</externalId>
+        <label>Calculated Formula</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CompoundFieldName__c</fullName>
+        <externalId>false</externalId>
+        <label>Compound Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Custom__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is a custom component</description>
+        <externalId>false</externalId>
+        <label>Custom</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Deprecated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Deprecated</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DeprecationNotes__c</fullName>
+        <externalId>false</externalId>
+        <label>Deprecation Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DeprecationSuspect__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Deprecation Suspect</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DevelopmentNotes__c</fullName>
+        <description>To track notes that should not appear in the description.</description>
+        <externalId>false</externalId>
+        <label>Development Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Digits__c</fullName>
+        <description>The maximum number of digits specified for the field</description>
+        <externalId>false</externalId>
+        <label>Digits</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldSecurityNotes__c</fullName>
+        <description>Notes for the field level security of this component; only used for Fields</description>
+        <externalId>false</externalId>
+        <label>Field Security Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieldTripName__c</fullName>
+        <description>Name of the FieldTrip analysis that was run to produce the "Populated On" data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the FieldTrip analysis that was run to produce the "Populated On" data</inlineHelpText>
+        <label>FieldTrip Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldType__c</fullName>
+        <description>The display type of the field</description>
+        <externalId>false</externalId>
+        <label>Field Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto Number</fullName>
+                    <default>false</default>
+                    <label>Auto Number</label>
+                </value>
+                <value>
+                    <fullName>Checkbox</fullName>
+                    <default>false</default>
+                    <label>Checkbox</label>
+                </value>
+                <value>
+                    <fullName>Currency</fullName>
+                    <default>false</default>
+                    <label>Currency</label>
+                </value>
+                <value>
+                    <fullName>Date</fullName>
+                    <default>false</default>
+                    <label>Date</label>
+                </value>
+                <value>
+                    <fullName>Date/Time</fullName>
+                    <default>false</default>
+                    <label>Date/Time</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Formula</fullName>
+                    <default>false</default>
+                    <label>Formula</label>
+                </value>
+                <value>
+                    <fullName>Hierarchy</fullName>
+                    <default>false</default>
+                    <label>Hierarchy</label>
+                </value>
+                <value>
+                    <fullName>Long Text Area</fullName>
+                    <default>false</default>
+                    <label>Long Text Area</label>
+                </value>
+                <value>
+                    <fullName>Lookup</fullName>
+                    <default>false</default>
+                    <label>Lookup</label>
+                </value>
+                <value>
+                    <fullName>Master-Detail</fullName>
+                    <default>false</default>
+                    <label>Master-Detail</label>
+                </value>
+                <value>
+                    <fullName>Number</fullName>
+                    <default>false</default>
+                    <label>Number</label>
+                </value>
+                <value>
+                    <fullName>Percent</fullName>
+                    <default>false</default>
+                    <label>Percent</label>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+                <value>
+                    <fullName>Picklist</fullName>
+                    <default>false</default>
+                    <label>Picklist</label>
+                </value>
+                <value>
+                    <fullName>Picklist (Multi-Select)</fullName>
+                    <default>false</default>
+                    <label>Picklist (Multi-Select)</label>
+                </value>
+                <value>
+                    <fullName>Rich Text Area</fullName>
+                    <default>false</default>
+                    <label>Rich Text Area</label>
+                </value>
+                <value>
+                    <fullName>Roll-Up Summary</fullName>
+                    <default>false</default>
+                    <label>Roll-Up Summary</label>
+                </value>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>false</default>
+                    <label>Text</label>
+                </value>
+                <value>
+                    <fullName>Text (Encrypted)</fullName>
+                    <default>false</default>
+                    <label>Text (Encrypted)</label>
+                </value>
+                <value>
+                    <fullName>Text Area</fullName>
+                    <default>false</default>
+                    <label>Text Area</label>
+                </value>
+                <value>
+                    <fullName>Time</fullName>
+                    <default>false</default>
+                    <label>Time</label>
+                </value>
+                <value>
+                    <fullName>URL</fullName>
+                    <default>false</default>
+                    <label>URL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HelpText__c</fullName>
+        <description>The content of the field-level help</description>
+        <externalId>false</externalId>
+        <label>Help Text</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsCalculated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is a formula field</description>
+        <externalId>false</externalId>
+        <label>Calculated</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Justification__c</fullName>
+        <description>Why this component is necessary</description>
+        <externalId>false</externalId>
+        <label>Justification</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>KeyPrefix__c</fullName>
+        <description>The three-character prefix code for the object. Record IDs are prefixed with three-character codes that specify the type of the object (for example, accounts have a prefix of 001 and opportunities have a prefix of 006).</description>
+        <externalId>false</externalId>
+        <label>Key Prefix</label>
+        <length>3</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label__c</fullName>
+        <description>The label of the component</description>
+        <externalId>false</externalId>
+        <label>Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastBusinessReviewBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Last Business Review By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DictionaryItemReviews</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LastBusinessReviewDate__c</fullName>
+        <description>The datetime that this component was reviewed by the business</description>
+        <externalId>false</externalId>
+        <label>Last Business Review Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LastTechnicalReviewBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The user who performed the last technical review of the component</description>
+        <externalId>false</externalId>
+        <label>Last Technical Review By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DictionaryTechnicalReviews</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LastTechnicalReviewDate__c</fullName>
+        <description>The datetime that the component was last reviewed by the technical team</description>
+        <externalId>false</externalId>
+        <label>Last Technical Review Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Length__c</fullName>
+        <description>The maximum size of the field for the field in Unicode characters (not bytes) or 40, whichever is less. The maximum value returned by the getLength() method is 40, even if the field’s maximum length is greater than 40.</description>
+        <externalId>false</externalId>
+        <label>Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MetadataIdentifier__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>The unique id used to connect this component to SFDC standard metadata</description>
+        <externalId>true</externalId>
+        <label>Metadata Identifier</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>NeedsBusinessReview__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field to aid in reporting which components need to be reviewed by the business</description>
+        <externalId>false</externalId>
+        <label>Needs Business Review</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NeedsTechnicalReview__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Needs Technical Review</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfPublishedChildren__c</fullName>
+        <externalId>false</externalId>
+        <label>Number Of Published Children</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberOfReferences__c</fullName>
+        <externalId>false</externalId>
+        <label>Number Of References</label>
+        <summaryForeignKey>DictionaryItemReference__c.DictionaryItem__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ParentDictionaryItemAPIName__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentDictionaryItem__r.APIName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Dictionary Item API Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentDictionaryItemLabel__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentDictionaryItem__r.Label__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Dictionary Item Label</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentDictionaryItemMetadataId__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentDictionaryItem__r.MetadataIdentifier__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Dictionary Item Metadata Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentDictionaryItem__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Parent of Dictionary Item (i.e., a Field's Parent Dictionary Item is an Object)</description>
+        <externalId>false</externalId>
+        <label>Parent Dictionary Item</label>
+        <referenceTo>DictionaryItem__c</referenceTo>
+        <relationshipLabel>Dictionary Items (Parent Dictionary Item)</relationshipLabel>
+        <relationshipName>DictionaryItems</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PluralLabel__c</fullName>
+        <description>The plural label of the component; used primarily for objects</description>
+        <externalId>false</externalId>
+        <label>Plural Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PopulatedOnPercent__c</fullName>
+        <externalId>false</externalId>
+        <label>Populated On (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PopulatedOn__c</fullName>
+        <externalId>false</externalId>
+        <label>Populated On</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PopulationLastAnalyzed__c</fullName>
+        <externalId>false</externalId>
+        <label>Population Last Analyzed</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Precision__c</fullName>
+        <description>The maximum number of digits that can be stored, including all numbers to the left and to the right of the decimal point (but excluding the decimal point character)</description>
+        <externalId>false</externalId>
+        <label>Precision</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PrivacyNotes__c</fullName>
+        <externalId>false</externalId>
+        <label>Privacy Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Publish__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This component is published to the user Data Dictionary</description>
+        <externalId>false</externalId>
+        <label>Publish</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecordSecurityNotes__c</fullName>
+        <description>Notes about record security of this component; usually only applicable to objects</description>
+        <externalId>false</externalId>
+        <label>Record Security Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ReferenceTo__c</fullName>
+        <description>The parent object of this field</description>
+        <externalId>false</externalId>
+        <label>Reference To</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFDXArtifact__c</fullName>
+        <description>The artifact to which this component belongs</description>
+        <externalId>false</externalId>
+        <label>SFDX Artifact</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CDR</fullName>
+                    <default>false</default>
+                    <label>CDR</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Scale__c</fullName>
+        <description>The number of digits to the right of the decimal point</description>
+        <externalId>false</externalId>
+        <label>Scale</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechnicalOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technical Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DictionaryItemTechnicalOwners</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Dictionary_Item</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Data dictionary</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Dictionary Item</label>
+    <nameField>
+        <displayFormat>DI-{000000}</displayFormat>
+        <label>Reference #</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Dictionary Items</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APIName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Label__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ParentDictionaryItemAPIName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Custom__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Publish__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APIName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Label__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ParentDictionaryItem__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ParentDictionaryItemLabel__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ParentDictionaryItemAPIName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Publish__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>FieldType__c</searchFilterFields>
+        <searchFilterFields>ParentDictionaryItemAPIName__c</searchFilterFields>
+        <searchFilterFields>ParentDictionaryItemLabel__c</searchFilterFields>
+        <searchFilterFields>Publish__c</searchFilterFields>
+        <searchFilterFields>Custom__c</searchFilterFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APIName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ParentDictionaryItemAPIName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Label__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Custom__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Publish__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>Added_Recently_Fields</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>APIName__c</columns>
+        <columns>ParentDictionaryItemAPIName__c</columns>
+        <columns>Custom__c</columns>
+        <columns>TechnicalOwner__c</columns>
+        <columns>BusinessOwner__c</columns>
+        <columns>LastTechnicalReviewBy__c</columns>
+        <columns>LastTechnicalReviewDate__c</columns>
+        <columns>Justification__c</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>DictionaryItem__c.Field</value>
+        </filters>
+        <label>Added Recently - Fields</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Label__c</columns>
+        <columns>FieldType__c</columns>
+        <columns>ParentDictionaryItemLabel__c</columns>
+        <columns>IsActive__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Custom_Objects</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Label__c</columns>
+        <columns>APIName__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Custom__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>DictionaryItem__c.Object</value>
+        </filters>
+        <label>Custom Objects</label>
+    </listViews>
+    <listViews>
+        <fullName>Objects</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Label__c</columns>
+        <columns>APIName__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>DictionaryItem__c.Object</value>
+        </filters>
+        <label>Objects</label>
+    </listViews>
+    <listViews>
+        <fullName>Recently_Updated_Fields</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>APIName__c</columns>
+        <columns>ParentDictionaryItemAPIName__c</columns>
+        <columns>Custom__c</columns>
+        <columns>TechnicalOwner__c</columns>
+        <columns>BusinessOwner__c</columns>
+        <columns>LastTechnicalReviewBy__c</columns>
+        <columns>LastTechnicalReviewDate__c</columns>
+        <columns>Justification__c</columns>
+        <columns>Description__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>DictionaryItem__c.Field</value>
+        </filters>
+        <label>Recently Updated - Fields</label>
+    </listViews>
+    <listViews>
+        <fullName>Standard_Objects</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Label__c</columns>
+        <columns>APIName__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Custom__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>DictionaryItem__c.Object</value>
+        </filters>
+        <label>Standard Objects</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Field</fullName>
+        <active>true</active>
+        <description>Use for Fields</description>
+        <label>Field</label>
+        <picklistValues>
+            <picklist>FieldType__c</picklist>
+            <values>
+                <fullName>Auto Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date%2FTime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formula</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hierarchy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lookup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master-Detail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist %28Multi-Select%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rich Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roll-Up Summary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text %28Encrypted%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>URL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDXArtifact__c</picklist>
+            <values>
+                <fullName>CDR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Object</fullName>
+        <active>true</active>
+        <description>Use for objects</description>
+        <label>Object</label>
+        <picklistValues>
+            <picklist>FieldType__c</picklist>
+            <values>
+                <fullName>Auto Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date%2FTime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formula</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hierarchy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lookup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master-Detail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist %28Multi-Select%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rich Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roll-Up Summary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text %28Encrypted%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>URL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDXArtifact__c</picklist>
+            <values>
+                <fullName>CDR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PicklistValue</fullName>
+        <active>true</active>
+        <description>Use for field picklist values</description>
+        <label>Picklist Value</label>
+        <picklistValues>
+            <picklist>FieldType__c</picklist>
+            <values>
+                <fullName>Auto Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date%2FTime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formula</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hierarchy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lookup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master-Detail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist %28Multi-Select%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rich Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roll-Up Summary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text %28Encrypted%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>URL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDXArtifact__c</picklist>
+            <values>
+                <fullName>CDR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>RecordType</fullName>
+        <active>true</active>
+        <description>Use for objects</description>
+        <label>Record Type</label>
+        <picklistValues>
+            <picklist>FieldType__c</picklist>
+            <values>
+                <fullName>Auto Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Date%2FTime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formula</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hierarchy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lookup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master-Detail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picklist %28Multi-Select%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rich Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roll-Up Summary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text %28Encrypted%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>URL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SFDXArtifact__c</picklist>
+            <values>
+                <fullName>CDR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>CannotUnpublishWithPublishedChildren</fullName>
+        <active>true</active>
+        <errorConditionFormula>!Publish__c &amp;&amp;  NumberOfPublishedChildren__c  &gt; 0</errorConditionFormula>
+        <errorDisplayField>Publish__c</errorDisplayField>
+        <errorMessage>This Dictionary Item has published children.  Unpublish them before unpublishing this record.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ParentsMustBePublished</fullName>
+        <active>true</active>
+        <description>If you try and publish a child item that has a parent (or that parent has a parent) that is not published, do not allow it.</description>
+        <errorConditionFormula>AND(Publish__c, OR(
+NOT(ParentDictionaryItem__r.ParentDictionaryItem__r.Publish__c),NOT(ParentDictionaryItem__r.Publish__c)))</errorConditionFormula>
+        <errorDisplayField>Publish__c</errorDisplayField>
+        <errorMessage>In order to publish this item, its parent (and parent's parent) must be published first.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used in PB to initiate time-based workflow which sets Published__c to TRUE 0 Days after PublishDate__c</description>
+        <externalId>false</externalId>
+        <label>Approved</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AsOfDate__c</fullName>
+        <description>The as of date of the Product Characteristic; set via integrations during creation</description>
+        <externalId>false</externalId>
+        <label>As Of Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cap__c</fullName>
+        <externalId>false</externalId>
+        <label>Cap</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CharacteristicsDataType__c</fullName>
+        <description>Loaded during integration; used in trigger to formulate Product Characteristics Output Text and Index Characteristics Output Text</description>
+        <externalId>false</externalId>
+        <label>Characteristics Data Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Integer</fullName>
+                    <default>false</default>
+                    <label>Integer</label>
+                </value>
+                <value>
+                    <fullName>Decimal</fullName>
+                    <default>false</default>
+                    <label>Decimal</label>
+                </value>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>false</default>
+                    <label>Text</label>
+                </value>
+                <value>
+                    <fullName>Percent</fullName>
+                    <default>false</default>
+                    <label>Percent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CouponRate__c</fullName>
+        <description>Set via integrations during create if applicable</description>
+        <externalId>false</externalId>
+        <label>Coupon Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExpirationDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Gross__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IndexCharacteristicsDecimal__c</fullName>
+        <description>Holds the decimal (percent, integer, decimal) for the index from the characteristics file if the related value if a number; otherwise this is null.  Loaded from integration.</description>
+        <externalId>false</externalId>
+        <label>Index Characteristics Decimal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IndexCharacteristicsInteger__c</fullName>
+        <externalId>false</externalId>
+        <label>Index Characteristics Integer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IndexCharacteristicsOutputText__c</fullName>
+        <description>Created by trigger on insert</description>
+        <externalId>false</externalId>
+        <label>Index Characteristics Output Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IndexCharacteristicsText__c</fullName>
+        <description>Holds the text from the index characteristics file if the related value if a text; otherwise this is null.  Loaded from integration.</description>
+        <externalId>false</externalId>
+        <label>Index Characteristics Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level1FullDescription__c</fullName>
+        <description>Full description of Level 1; created during integration</description>
+        <externalId>false</externalId>
+        <label>Level 1 Full Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level1__c</fullName>
+        <description>Direct load from integration source</description>
+        <externalId>false</externalId>
+        <label>Level 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level2__c</fullName>
+        <description>Direct load from integration source</description>
+        <externalId>false</externalId>
+        <label>Level 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level3__c</fullName>
+        <description>Direct load from integration source</description>
+        <externalId>false</externalId>
+        <label>Level 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Long__c</fullName>
+        <externalId>false</externalId>
+        <label>Long</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MaturityDate__c</fullName>
+        <description>Set via integrations during create if applicable</description>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Net__c</fullName>
+        <externalId>false</externalId>
+        <label>Net</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PercentContributionToVolatility__c</fullName>
+        <description>Direct load from integration source</description>
+        <externalId>false</externalId>
+        <label>Percent Contribution To Volatility</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PercentExposure__c</fullName>
+        <description>Direct load from integration source</description>
+        <externalId>false</externalId>
+        <label>Percent Exposure</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PercentOfIndexDataAvailable__c</fullName>
+        <externalId>false</externalId>
+        <label>Percent Of Index Data Available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PercentOfIndex__c</fullName>
+        <description>Direct load from integration source</description>
+        <externalId>false</externalId>
+        <label>Percent Of Index</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PercentOfPortfolioDataAvailable__c</fullName>
+        <externalId>false</externalId>
+        <label>Percent Of Portfolio Data Available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PercentOfPortfolio__c</fullName>
+        <description>Direct load from integration</description>
+        <externalId>false</externalId>
+        <label>Percent Of Portfolio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductCharacteristicsDecimal__c</fullName>
+        <description>Holds the decimal (percent, integer, decimal) for the product from the characteristics file if the related value if a number; otherwise this is null.  Loaded from integration.</description>
+        <externalId>false</externalId>
+        <label>Product Characteristics Decimal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductCharacteristicsInteger__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Characteristics Integer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductCharacteristicsOutputText__c</fullName>
+        <description>Created by trigger on insert</description>
+        <externalId>false</externalId>
+        <label>Product Characteristics Output Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductCharacteristicsText__c</fullName>
+        <description>Holds the text from the product characteristics file if the related value if a text; otherwise this is null.  Loaded from integration.</description>
+        <externalId>false</externalId>
+        <label>Product Characteristics Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Set via integrations during create.  Represents the Product to which this Product Characteristic belongs.</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Product Characteristics</relationshipLabel>
+        <relationshipName>ProductCharacteristics</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PublishDate__c</fullName>
+        <description>Set by Apex, used in PB to set Published__c</description>
+        <externalId>false</externalId>
+        <label>Publish Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Published__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Controls sharing for Product Characteristic records</description>
+        <externalId>false</externalId>
+        <label>Published</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PublishingSchedule__c</fullName>
+        <description>Used in Apex to set PublishDate__c</description>
+        <externalId>false</externalId>
+        <label>Publishing Schedule</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>CDRPublishingSchedule</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rank__c</fullName>
+        <description>Used for Top Ten Holdings; highest percentage of holdings for a Product and As Of Date is Rank 1, for example.</description>
+        <externalId>false</externalId>
+        <label>Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SecurityDescription__c</fullName>
+        <description>Set via integrations during create if applicable</description>
+        <externalId>false</externalId>
+        <label>Security Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SecurityId__c</fullName>
+        <description>Set via integrations during create if applicable</description>
+        <externalId>false</externalId>
+        <label>Security Id</label>
+        <length>9</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SecurityName__c</fullName>
+        <description>Set via integrations during create if applicable</description>
+        <externalId>false</externalId>
+        <label>Security Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Short__c</fullName>
+        <externalId>false</externalId>
+        <label>Short</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SortOrder__c</fullName>
+        <description>Used to sort rows with the same Product, Type, and As Of Date.  Set via integrations during create if applicable or by custom setting.</description>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceFileName__c</fullName>
+        <description>The name of the file used to load this product characteristics row.  Set during the integration.  Useful in conjunction with As Of Date for targeting deletes.</description>
+        <externalId>false</externalId>
+        <label>Source File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <description>Set by integration on create</description>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FundAdmin Characteristics File</fullName>
+                    <default>false</default>
+                    <label>FundAdmin Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>FundAdmin Expenses File</fullName>
+                    <default>false</default>
+                    <label>FundAdmin Expenses File</label>
+                </value>
+                <value>
+                    <fullName>IPM ASG Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM ASG Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>IPM LSMAI Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM LSMAI Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>IPM LSSA Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM LSSA Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>IPM LSSFR Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM LSSFR Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>IPM McDonnell Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM McDonnell Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>IPM Mirova Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM Mirova Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>IPM MPT Port Stats File</fullName>
+                    <default>false</default>
+                    <label>IPM MPT Port Stats File</label>
+                </value>
+                <value>
+                    <fullName>IPM NSFF Characteristics File</fullName>
+                    <default>false</default>
+                    <label>IPM NSFF Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>Loomis Characteristics File</fullName>
+                    <default>false</default>
+                    <label>Loomis Characteristics File</label>
+                </value>
+                <value>
+                    <fullName>State Street Top 10 Holdings File</fullName>
+                    <default>false</default>
+                    <label>State Street Top 10 Holdings File</label>
+                </value>
+                <value>
+                    <fullName>FactSet Equity Characteristics File</fullName>
+                    <default>false</default>
+                    <label>FactSet Equity Characteristics File</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TurnoverDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Turnover Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Turnover__c</fullName>
+        <externalId>false</externalId>
+        <label>Turnover</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Set via integrations during create.</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asset Allocation</fullName>
+                    <default>false</default>
+                    <label>Asset Allocation</label>
+                </value>
+                <value>
+                    <fullName>Asset Classes and Segments</fullName>
+                    <default>false</default>
+                    <label>Asset Classes and Segments</label>
+                </value>
+                <value>
+                    <fullName>Characteristics</fullName>
+                    <default>false</default>
+                    <label>Characteristics</label>
+                </value>
+                <value>
+                    <fullName>Country</fullName>
+                    <default>false</default>
+                    <label>Country</label>
+                </value>
+                <value>
+                    <fullName>Coupon</fullName>
+                    <default>false</default>
+                    <label>Coupon</label>
+                </value>
+                <value>
+                    <fullName>Coupon detail</fullName>
+                    <default>false</default>
+                    <label>Coupon detail</label>
+                </value>
+                <value>
+                    <fullName>Credit quality</fullName>
+                    <default>false</default>
+                    <label>Credit quality</label>
+                </value>
+                <value>
+                    <fullName>Currency</fullName>
+                    <default>false</default>
+                    <label>Currency</label>
+                </value>
+                <value>
+                    <fullName>Duration</fullName>
+                    <default>false</default>
+                    <label>Duration</label>
+                </value>
+                <value>
+                    <fullName>Duration detail</fullName>
+                    <default>false</default>
+                    <label>Duration detail</label>
+                </value>
+                <value>
+                    <fullName>Environmental projects breakdown</fullName>
+                    <default>false</default>
+                    <label>Environmental projects breakdown</label>
+                </value>
+                <value>
+                    <fullName>ESG Opinion</fullName>
+                    <default>false</default>
+                    <label>ESG Opinion</label>
+                </value>
+                <value>
+                    <fullName>Expenses</fullName>
+                    <default>false</default>
+                    <label>Expenses</label>
+                </value>
+                <value>
+                    <fullName>Exposure summary</fullName>
+                    <default>false</default>
+                    <label>Exposure summary</label>
+                </value>
+                <value>
+                    <fullName>Global Sector</fullName>
+                    <default>false</default>
+                    <label>Global Sector</label>
+                </value>
+                <value>
+                    <fullName>Holdings</fullName>
+                    <default>false</default>
+                    <label>Holdings</label>
+                </value>
+                <value>
+                    <fullName>Industry</fullName>
+                    <default>false</default>
+                    <label>Industry</label>
+                </value>
+                <value>
+                    <fullName>Long Positions</fullName>
+                    <default>false</default>
+                    <label>Long Positions</label>
+                </value>
+                <value>
+                    <fullName>Market capitalization</fullName>
+                    <default>false</default>
+                    <label>Market capitalization</label>
+                </value>
+                <value>
+                    <fullName>Maturity</fullName>
+                    <default>false</default>
+                    <label>Maturity</label>
+                </value>
+                <value>
+                    <fullName>Maturity detail</fullName>
+                    <default>false</default>
+                    <label>Maturity detail</label>
+                </value>
+                <value>
+                    <fullName>Number of holdings</fullName>
+                    <default>false</default>
+                    <label>Number of holdings</label>
+                </value>
+                <value>
+                    <fullName>Portfolio composition</fullName>
+                    <default>false</default>
+                    <label>Portfolio composition</label>
+                </value>
+                <value>
+                    <fullName>Portfolio exposures</fullName>
+                    <default>false</default>
+                    <label>Portfolio exposures</label>
+                </value>
+                <value>
+                    <fullName>Portfolio Factor Exposures Summary</fullName>
+                    <default>false</default>
+                    <label>Portfolio Factor Exposures Summary</label>
+                </value>
+                <value>
+                    <fullName>Property Type</fullName>
+                    <default>false</default>
+                    <label>Property Type</label>
+                </value>
+                <value>
+                    <fullName>Region</fullName>
+                    <default>false</default>
+                    <label>Region</label>
+                </value>
+                <value>
+                    <fullName>Sector</fullName>
+                    <default>false</default>
+                    <label>Sector</label>
+                </value>
+                <value>
+                    <fullName>Sector-LS</fullName>
+                    <default>false</default>
+                    <label>Sector-LS</label>
+                </value>
+                <value>
+                    <fullName>Short Positions</fullName>
+                    <default>false</default>
+                    <label>Short Positions</label>
+                </value>
+                <value>
+                    <fullName>State</fullName>
+                    <default>false</default>
+                    <label>State</label>
+                </value>
+                <value>
+                    <fullName>Strategy Allocation</fullName>
+                    <default>false</default>
+                    <label>Strategy Allocation</label>
+                </value>
+                <value>
+                    <fullName>Theme</fullName>
+                    <default>false</default>
+                    <label>Theme</label>
+                </value>
+                <value>
+                    <fullName>Top ten holdings</fullName>
+                    <default>false</default>
+                    <label>Top ten holdings</label>
+                </value>
+                <value>
+                    <fullName>Turnover</fullName>
+                    <default>false</default>
+                    <label>Turnover</label>
+                </value>
+                <value>
+                    <fullName>Sector detail</fullName>
+                    <default>false</default>
+                    <label>Sector detail</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Units__c</fullName>
+        <description>Units associated with the product characteristic data row</description>
+        <externalId>false</externalId>
+        <label>Units</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Holds characteristics about products for the CDR</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Product Characteristic</label>
+    <nameField>
+        <displayFormat>PC-{0000000}</displayFormat>
+        <label>Reference #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Characteristics</pluralLabel>
+    <searchLayouts />
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

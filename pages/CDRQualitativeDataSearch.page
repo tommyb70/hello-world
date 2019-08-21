@@ -1,0 +1,111 @@
+<apex:page controller="CDRQualitativeDataSearchExt" sidebar="false" lightningStylesheets="true">
+    <apex:form >
+        <script>        
+            function recordStatusChange(){
+                changerecordStatusChange();
+            }
+        </script>
+        <apex:actionFunction name="changerecordStatusChange" action="{!recordStatusChange}" reRender="pg,pbId"/>        
+        <apex:pageBlock id="pg">
+            
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockButtons location="Bottom" >
+                <apex:commandButton value="Search" action="{!Search}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection columns="2"> 
+                               
+              <apex:selectList value="{!CDRData.RecordtypeId}" multiselect="false" size="1" onchange="recordStatusChange();">
+                <apex:selectOptions value="{!recordtypeValues}" />
+              </apex:selectList> 
+                
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel >Status</apex:outputLabel>
+                  <apex:panelGrid columns="3" id="status">
+                    <apex:selectList value="{!statusLeftSelected}" multiselect="true" style="width:200px" size="5">
+                       <apex:selectOptions value="{!statusunSelectedValues}" />
+                    </apex:selectList>
+                    <apex:panelGroup >
+                       <br/>
+                       <apex:image value="{!$Resource.CDRQualitativeStatusmultiselected}">
+                         <apex:actionSupport event="onclick" action="{!statusSelectclick}" reRender="status"/>
+                       </apex:image>
+                       <br/><br/>
+                       <apex:image value="{!$Resource.CDRQualitativeStatusmultiunselected}">
+                         <apex:actionSupport event="onclick" action="{!statusUnselectclick}" reRender="status"/>
+                       </apex:image>
+                    </apex:panelGroup>
+                    <apex:selectList value="{!statusRightSelected}" multiselect="true" style="width:200px" size="5">
+                      <apex:selectOptions value="{!statusSelectedValues}" />
+                    </apex:selectList>
+                  </apex:panelGrid>
+              </apex:pageBlockSectionItem>   
+                                          
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'Contact' || recordtypeName == 'Contact-Additional Info' || 
+                                                    recordtypeName == 'Firm-Contact'|| recordtypeName == 'Product-Contact'}">
+                  <apex:outputLabel >Contact</apex:outputLabel>
+                  <apex:selectList value="{!ContactOptionsSelection}" multiselect="false" size="1">
+                     <apex:selectOptions value="{!ContactOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'Firm' || recordtypeName == 'Firm-Additional Info' || 
+                                                   recordtypeName == 'Firm-Child Firm' || recordtypeName == 'Firm-Contact' || recordtypeName == 'Firm-Product'}">
+                  <apex:outputLabel >Account</apex:outputLabel>
+                  <apex:selectList value="{!FirmOptionsSelection}" multiselect="false" size="1">
+                     <apex:selectOptions value="{!FirmOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'ETF' || recordtypeName == 'Firm-Product' || recordtypeName == 'Mutual Fund' || 
+                                                    recordtypeName == 'Product-Additional Info' || recordtypeName == 'Product-Benchmark' || recordtypeName == 'Product-Child Product' ||
+                                                    recordtypeName == 'Product-Contact' || recordtypeName == 'Share Class'}">
+                  <apex:outputLabel >Product</apex:outputLabel>
+                  <apex:selectList value="{!ProductOptionsSelection}" multiselect="false" size="1">
+                     <apex:selectOptions value="{!productOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'Firm-Child Firm'}">
+                  <apex:outputLabel >Child Account</apex:outputLabel>
+                  <apex:selectList value="{!ChildAccountOptionsSelection}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!ChildAccountOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'Product-Child Product'}">
+                  <apex:outputLabel >Child Product</apex:outputLabel>
+                  <apex:selectList value="{!ChildProductOptionsSelection}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!ChildProductOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'Benchmark' || recordtypeName == 'Benchmark-Additional Info' ||
+                                                   recordtypeName == 'Product-Benchmark'}">
+                  <apex:outputLabel >Benchmark</apex:outputLabel>
+                  <apex:selectList value="{!BenchmarkOptionsSelection}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!BenchmarkOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>              
+              
+              <apex:pageBlockSectionItem rendered="{!recordtypeName  == 'Additional Info' || recordtypeName == 'Firm-Additional Info' || recordtypeName == 'Benchmark-Additional Info' 
+                                                    || recordtypeName == 'Contact-Additional Info' || recordtypeName == 'Product-Additional Info'}">
+                  <Apex:outputLabel >Additional Info</Apex:outputLabel>
+                  <apex:selectList value="{!AdditionalInfoOptionsSelection}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!AdditionalInfoOptions}" />
+                  </apex:selectList>  
+              </apex:pageBlockSectionItem>   
+                    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:outputPanel id="pbId">
+            <apex:pageBlock title="CDR Qualitative Data" rendered="{!showData}">
+                <apex:pageBlockTable value="{!LstCDRData}" var="CDR">
+                    <apex:column headerValue="Name">
+                      <apex:outputLink value="/{!CDR.Id}" target="_blank">{!CDR.Name}</apex:outputLink>
+                    </apex:column>
+                </apex:pageBlockTable>            
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

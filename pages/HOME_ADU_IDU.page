@@ -1,0 +1,73 @@
+<apex:page name="Home Report Links" controller="UserData" lightningStylesheets="true">
+<style>
+   .colstyle {width:33.33%}
+</style>
+<apex:pageBlock title="Sales Reports" >
+            <center>
+            <apex:panelGrid columns="3" id="theGrid" width="75%" cellspacing="2" cellpadding="2" columnClasses="colstyle">
+                <apex:outputText value="Sales" style="font-weight: bold"/>
+                <apex:outputText value="Opportunities & Activities" style="font-weight: bold"/>
+                <apex:outputText value="Other" style="font-weight: bold"/>
+                
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/AllTrades_0/AllTerritorySalesWithGOALS?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no" id="Link11" target="_blank">Daily Sales Reports</apex:outputLink>
+<!--                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/AllTrades_0/MYRegionSalesWithGOALS?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no" id="Link11" target="_blank">Daily Sales Reports</apex:outputLink> -->
+                <apex:outputLink value="/00OF0000006Ii2S" id="Link12" target="_blank">Activity Details</apex:outputLink>
+                <apex:outputLink value="/00OF0000006SGiZ" id="Link13" target="_blank">Advisor Portal - Advisor by Territory and Status</apex:outputLink>
+                
+               <apex:outputLink value="https://services.ngam.natixis.com/SalesRpt/MySalesByProduct.aspx?book={!$User.PrimaryTerritory__c}" id="Link21" target="_blank">My Sales by Product - Contact/Rep</apex:outputLink>
+                <apex:outputLink value="/00O2A000006aOPP" id="Link22" target="_blank">Activity Sales Team</apex:outputLink>
+                <apex:outputLink value="/00OF0000006SGia" id="Link23" target="_blank">Advisor Portal - Request For or Remove License</apex:outputLink>
+                
+                <apex:outputLink value="/apex/gblite__Grid?gname=Firm Sales" id="Link31" target="_blank">My Sales by Product - Firm/Office</apex:outputLink>
+                <apex:outputLink value="/00O2A000006aOPQ" id="Link32" target="_blank">Activity Sales Team - Open</apex:outputLink>
+                <apex:outputLink value="/00OF0000006SKP8" id="Link33" target="_blank">All Contacts - Sales Emails</apex:outputLink>
+              
+                <apex:outputLink value="/00OF0000006Ii2Y" id="Link41" target="_blank">Top Producers - Contact/Rep</apex:outputLink>
+                <apex:outputLink value="/00O2A000007LoY1" id="Link42" target="_blank">Activities for Digital Selling and Conference</apex:outputLink>
+                <apex:outputLink value="/00OF0000006IPnT" id="Link43" target="_blank">Campaign Static List</apex:outputLink>
+                
+                 <apex:outputLink value="/00OF0000006Ii2X" id="Link51" target="_blank">Top Producers - Firm/Office</apex:outputLink> 
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/DialsandContacts-AveragesandPoints/ICsandRDsCurrentMonth?:embed=yes" id="Link52" target="_blank">Average Dials, Contacts and Points Reports</apex:outputLink>
+                <apex:outputLink value="/00O2A000007HekU" id="Link53" target="_blank">Contacts with AUM Greater Than 10M</apex:outputLink> 
+                
+                
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/ETFTracking/ETFDashboard?:embed=y&:showShareOptions=true&:display_count=no&:showVizHome=no" id="Link61" target="_blank">Natixis ETF Sales and Assets – Last Month</apex:outputLink>
+                <apex:outputLink value="/01ZF0000000US2z" id="Link62" target="_blank">Individual Dashboard</apex:outputLink>
+                <apex:outputLink value="/00O2A000006aIAE" id="Link63" target="_blank">Firm Filing Grid</apex:outputLink> 
+               
+               <apex:outputLink value="https://nportal.sharepoint.com/:x:/r/sites/BusOps/Business%20Operations/Intermediary%20Platform%20Grids/Firm%20Availability%20-%20ETFs.xlsx?d=w04bd80fd7e704b1bb2dd6723a7bbb3ae&csf=1&e=obdAXr" id="Link71" target="_blank">ETF Firm Availability</apex:outputLink>
+                <apex:outputLink value="/00O2A000007YiLm" id="Link72" target="_blank">Open Activity Follow Up</apex:outputLink> 
+                <apex:outputLink value="/00OF0000006Ifgz" id="Link73" target="_blank">Holiday Cards and Gifts List</apex:outputLink>
+                
+                <apex:outputText value="Events" style="font-weight: bold" id="Link81"/>
+                <apex:outputLink value="/00O2A000007BtAi" id="Link82" target="_blank">Opportunities – AIA for DU</apex:outputLink>  
+                <apex:outputLink value="/00OF0000006IoWo" id="Link83" target="_blank">Product of Interest</apex:outputLink> 
+                
+          
+                <apex:outputLink value="http://www.cvent.com/d/jfqrwf/2R" id="Link91" target="_blank">Full Event Request</apex:outputLink>   
+                <apex:outputLink value="/00OF0000006IbtT" id="Link92" target="_blank">Opportunities - My Open</apex:outputLink>                  
+                <apex:outputLink value="/00O2A000007C2VB" id="Link93" target="_blank">Sales Coverage ADU FDU RADU</apex:outputLink>                     
+                
+                <apex:outputLink value="http://www.cvent.com/d/m5q4nb/2R" id="Link101" target="_blank">Invitation Only Request</apex:outputLink>
+                <apex:outputLink value="" id="Link102"/> 
+                <apex:outputLink value="/00O2A000006pqwq" id="Link103" target="_blank">Sales Coverage RCDU</apex:outputLink>  
+                             
+                <apex:outputLink value="/01Z2A00000032MV" id="Link111" target="_blank">Event Campaign Dashboard</apex:outputLink> 
+                <apex:outputLink value="" id="Link112"/>
+                <apex:outputLink value="/00O2A000007LbjV" id="Link113" target="_blank">Campaigns – Digital Selling</apex:outputLink>    
+                
+                     
+                <apex:outputLink value="" id="Link121"/>
+                <apex:outputLink value="" id="Link122"/>                 
+                <apex:outputLink value="/00O2A000006vB1s" id="Link123" target="_blank">Campaigns – Conferences</apex:outputLink>    
+                
+                <apex:outputLink value="" id="Link131"/>
+                <apex:outputLink value="" id="Link132"/>
+                <apex:outputLink value="/00O2A000007LX9X" id="Link133" target="_blank">Private Placements Expiring Next 60 Days</apex:outputLink>
+                
+                
+                 
+            </apex:panelGrid>
+            </center>
+        </apex:pageBlock>
+</apex:page>

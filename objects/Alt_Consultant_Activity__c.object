@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayouts>
+        <fullName>Alt_Consultant_Activity</fullName>
+        <fields>Activity_Date__c</fields>
+        <fields>Type__c</fields>
+        <fields>Contact__c</fields>
+        <fields>FirmOfficeName__c</fields>
+        <fields>OwnerId</fields>
+        <label>Alt Consultant Activity</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Activity_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date that the Meeting, Conference, Call, etc. occured</inlineHelpText>
+        <label>Activity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the notes from the ineteraction.</inlineHelpText>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact/Rep</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Alt Consultant Activities</relationshipLabel>
+        <relationshipName>Alt_Consultant_Activities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FirmOfficeName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.FirmOfficeName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Firm/Office Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Firm__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Firm__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Firm</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Follow_up__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to filter on Activities that you would like to follow-up on</inlineHelpText>
+        <label>Follow up</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SalesPerson__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Person</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.ActivityTerritoryZoneName__c</field>
+                <operation>contains</operation>
+                <value>MRD,RD1,RD2,RD3</value>
+            </filterItems>
+            <infoMessage>Search for the sales person that you traveled with.</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Alt_Consultant_Activities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Activity type of the interaction.</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>CE Presentation</fullName>
+                    <default>false</default>
+                    <label>CE Presentation</label>
+                </value>
+                <value>
+                    <fullName>Conference: Break-out</fullName>
+                    <default>false</default>
+                    <label>Conference: Break-out</label>
+                </value>
+                <value>
+                    <fullName>Conference: Main Stage</fullName>
+                    <default>false</default>
+                    <label>Conference: Main Stage</label>
+                </value>
+                <value>
+                    <fullName>Meeting 1 on 1</fullName>
+                    <default>false</default>
+                    <label>Meeting 1 on 1</label>
+                </value>
+                <value>
+                    <fullName>Meeting group</fullName>
+                    <default>false</default>
+                    <label>Meeting group</label>
+                </value>
+                <value>
+                    <fullName>Webex</fullName>
+                    <default>false</default>
+                    <label>Webex</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Alt_Consultant_Activity</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Created to track and report on the Alternative Investment Consultants activities for their analysis</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Alt Consultant Activity</label>
+    <nameField>
+        <displayFormat>ALTACT-{000000}</displayFormat>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Alt Consultant Activities</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Activity_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FirmOfficeName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Comments__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.FIRST_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.LAST_NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Activity_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FirmOfficeName__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Comments__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Follow_up__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.FIRST_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.LAST_NAME</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Activity_Date__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>FirmOfficeName__c</searchFilterFields>
+        <searchFilterFields>Follow_up__c</searchFilterFields>
+        <searchFilterFields>OWNER.FIRST_NAME</searchFilterFields>
+        <searchFilterFields>OWNER.LAST_NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>AllAltConsultantActivities</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Date__c</columns>
+        <columns>Type__c</columns>
+        <columns>FirmOfficeName__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Follow_up__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Alt Consultant Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyAltConsultantActivities</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Date__c</columns>
+        <columns>Type__c</columns>
+        <columns>FirmOfficeName__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Follow_up__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Alt Consultant Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyFollowUpActivities</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Date__c</columns>
+        <columns>Type__c</columns>
+        <columns>FirmOfficeName__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Follow_up__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Follow_up__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Follow Up Activities</label>
+    </listViews>
+</CustomObject>

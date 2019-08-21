@@ -1,0 +1,227 @@
+<apex:page standardController="Product2" extensions="ProdPerfProductExt" id="mainpage" docType="html-5.0" lightningStylesheets="true">
+    
+    <style>
+        .rt{
+        text-align:right;
+        vertical-align:bottom;
+        }
+        .lf{
+        text-align:left;
+        vertical-align:bottom;
+        }
+        .ct{
+        text-align:center;
+        }
+        .vab{
+        vertical-align:bottom;
+        }
+    </style>
+    
+    <apex:pageBlock >
+        <apex:form id="mainform">
+            <apex:pageMessages />
+            <apex:pageBlockSection columns="3">
+                <apex:pageBlockSectionItem >        
+                    <apex:outputLabel value="As Of Date"/>
+                    <apex:input type="date" value="{!ppd}" id="aod" size="10" onfocus="DatePicker.pickDate(false, this, false);" />
+                </apex:pageBlockSectionItem>        
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton action="{!getProductPerf}" value="Go" reRender="mainform" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+            <br />
+            <apex:pageBlockSection columns="3">
+                <apex:outputField label="Total Net Assets" value="{!pp.TotalNetAssets__c}" />
+                <apex:outputField label="Shares Outstanding" value="{!pp.SharesOutstanding__c}" />
+                <br/>
+            </apex:pageBlockSection> 
+            <br />
+            <apex:pageBlockTable value="{!dailyPerf}" var="dPerf" id="dp" styleClass="rt">
+                <apex:column value="{!dPerf.RowHeader}" styleclass="lf"/>
+                <apex:column headerClass="rt" headerValue="{!asOfDateDisp}" width="100">
+                    <apex:outputText value="{0,number,currency}">
+                        <apex:param value="{!ROUND(dPerf.Price,2)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!prevDateDisp}" width="100">
+                    <apex:outputText value="{0,number,$##0.00}">
+                        <apex:param value="{!ROUND(dPerf.PreviousPrice,2)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="Price Change ($)" width="100">
+                    <apex:outputText value="{0,number,$##0.00}">
+                        <apex:param value="{!ROUND(dPerf.Change,2)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="Price Change (%)" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerf.PercentChange,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="Distribution" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerf.Distribution/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                
+                <apex:column headerClass="rt" headerValue="7-Day" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerf.X7Day/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="30-Day SEC Subsidized" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerf.SECSub/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>                
+                
+                <apex:column headerClass="rt" headerValue="30-Day SEC Unsubsidized" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerf.SECUnSub/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>      
+                
+                <apex:column headerClass="rt" headerValue="SEC Tax-Equivalent Yield" width="100" rendered="{!dispTaxEqYield}"> 
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerf.SECTax/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>                
+                
+                
+            </apex:pageBlockTable>
+            <br />
+            <apex:pageBlockTable value="{!dailyPerfROR}" var="dPerfROR" id="dr" styleClass="rt">
+                <apex:column value="{!dPerfROR.RowHeader}" width="150" styleClass="lf"/>
+                <apex:column width="50" headerClass="lf" headerValue="As Of Date">
+                    <apex:outputLink value="{!URLFOR($Action.ProductPerformance__c.View, dPerfROR.RId)}" rendered="{!NOT(ISNULL(dPerfROR.RId))}" target="_blank" id="pURL">
+                        <apex:outputText value="{!dPerfROR.RD}">
+                        </apex:outputText> 
+                    </apex:outputLink>
+                    <apex:outputText value="" rendered="{!ISNULL(dPerfROR.RId)}"></apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="MTD" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.MTD/100,7),4)}" />
+                    </apex:outputText> 
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="QTD" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.QTD/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="YTD" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.YTD/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="1 Month" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.M1/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="3 Month" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.M3/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="1 Year" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.Y1/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="3 Year" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.Y3/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>                
+                <apex:column headerClass="rt" headerValue="5 Year" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.Y5/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="10 Year" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.Y10/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" width="100">
+                    <apex:facet name="header">
+                        Inception<br/>({!inceptionDt})
+                    </apex:facet>
+                    
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(dPerfROR.Incept/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column> 
+                
+            </apex:pageBlockTable>
+            <br />
+            <apex:pageBlockTable value="{!annualPerf}" var="aPerf" id="ap" styleClass="rt">
+                <apex:column value="{!aPerf.RowHeader}" width="200" styleClass="lf"/>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY0}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y0/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY1}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y1/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY2}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y2/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY3}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y3/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="{!annualPerfY4}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y4/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY5}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y5/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY6}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y6/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                
+                <apex:column headerClass="rt" headerValue="{!annualPerfY7}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y7/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY8}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y8/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" headerValue="{!annualPerfY9}" width="100">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(aPerf.Y9/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+            <br/>
+            <apex:pageBlockSection columns="1">
+                <apex:outputText value="{!threadbackPerfFN}" />
+            </apex:pageBlockSection>
+            
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

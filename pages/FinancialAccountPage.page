@@ -1,0 +1,183 @@
+<apex:page standardController="FinancialAccount__c"
+           extensions="FinancialAccountNewController" id="faNewPage" lightningStylesheets="true">       
+    <apex:form id="mainform">
+        <apex:pageMessages id="messageBlock" ></apex:pageMessages>
+        <apex:actionFunction name="CallApexMethod" action="{!getDataSync}" reRender="selectAccount,mainform" />
+         <apex:actionFunction name="resetForm" action="{!resetForm}" reRender="selectAccount,mainform" />
+        <apex:actionFunction name="showMessage" action="{!showMessage}" rerender="messageBlock">
+              <apex:param name="errorLevel" assignTo="{!errorLevel}" value="" />
+              <apex:param name="messageName" assignTo="{!messageName}" value="" />
+         </apex:actionFunction>
+        <apex:pageBlock >
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlock >
+                
+                <apex:pageBlockSection columns="2" title="Required fields" id="mainPageBlock">
+                    
+                    <apex:pageBlockSectionItem >
+                        <!--  <apex:actionRegion > -->
+                        <apex:outputLabel value="Account Name" for="fa_AccountName"/>
+                        <apex:inputText value="{!acc.AccountNameEncrypted__c}" maxlength="30" styleClass="inputClass"
+                                         required="true" id="fa_AccountName"  onkeypress="return onKeyup_TxtFieldcom(event);"   >
+                            <!-- <apex:actionSupport action="{!getDataSync}" reRender="selectAccount,form" event= "onmousedown"/> -->
+                        </apex:inputText>
+                        <!-- </apex:actionRegion> -->
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:commandButton action="{!getDataSync}" 
+                                            value="Fetch Data - Data central"
+                                            status="loadStatus" onclick="validateLength();"
+                                            id="theFetch" reRender="selectAccount,mainform" />
+                        <!--  oncomplete="noRecordsFound({!hasRecords});" /> -->
+                        <c:LoadingBox ></c:LoadingBox>                   
+                    </apex:pageBlockSectionItem>
+                   
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Select Account" for="selectAccount" rendered="{!hasRecords}"/>
+                        <apex:selectList id="selectAccount"  multiselect="false" size="1" value="{!selectedId}" rendered="{!hasRecords}">
+                            <apex:actionSupport event="onchange" action="{!populateResponse}"  reRender="details,mainform"/>
+                            <apex:selectOptions value="{!responseRecords}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            
+            <apex:pageBlockSection columns="2" title="Details for selected Items" id="details">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Account Name" for="fa_result"/>
+                    <apex:outputField value="{!acc.AccountNameEncrypted__c}"
+                                      id="fa_result"  />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Account Type" for="fa_AccountType"/>
+                    <apex:outputField value="{!acc.AccountType__c}" id="fa_AccountType" />
+                </apex:pageBlockSectionItem> 
+                
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Account Id" for="fa_AccountId"/>
+                    <apex:outputField value="{!acc.AccountId__c}" id="fa_AccountId" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Account Title" for="fa_AccountTitle"/>
+                    <apex:outputField value="{!acc.AccountTitleEncrypted__c}" id="fa_AccountTitle" />
+                </apex:pageBlockSectionItem> 
+                
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Inception Date" for="fa_InceptionDate"/>
+                    <apex:outputField value="{!acc.InceptionDate__c}" id="fa_InceptionDate" />
+                </apex:pageBlockSectionItem>   
+                
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Manager" for="fa_Manager"/>
+                    <apex:outputField value="{!acc.Manager__c}" id="fa_Manager" />
+                </apex:pageBlockSectionItem> 
+                
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Custodian" for="fa_Custodian"/>
+                    <apex:outputField value="{!acc.Custodian__c}" id="fa_Custodian" />
+                </apex:pageBlockSectionItem> 
+                
+                
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Model Strategy Name" for="fa_ModelOrStrategyName"/>
+                    <apex:outputField value="{!acc.ModelOrStrategyName__c}" id="fa_ModelOrStrategyName" />
+                </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="Is RSA Account" for="fa_RSAAccount"/>
+                    <apex:outputField value="{!acc.RSAAccount__c}" id="fa_RSAAccount" />
+                </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem >            
+                    <apex:outputLabel value="EndClients" for="fa_EndClients"/>
+                    <apex:outputField value="{!acc.EndClients__c}" id="fa_EndClients" />
+                </apex:pageBlockSectionItem> 
+            </apex:pageBlockSection>            
+            
+            
+        </apex:pageBlock>
+    </apex:form>
+    <script type="text/javascript">
+   
+    function onKeyup_TxtFieldcom(e)
+    {  
+       
+        var keynum = 0;
+        if (window.event) {
+            keynum = window.event.keyCode;
+        }else if(e.which){
+            keynum = e.which;
+        } else
+           { if(e.charCode) keynum = e.charCode; }       
+        if(keynum == 13)
+        {              
+            var val =  document.getElementsByClassName('inputClass')[0].value;
+            console.log( val );
+            if(val.length < 3) 
+              {
+                  if(confirm('There not enough characters in search and you may get limit exceeed warning. Do you want to refine your search and try again?')) {
+                   return false;
+                 }
+              }
+            CallApexMethod();    
+            return false;
+        }
+        return true;
+    }
+    </script>
+    <script type="text/javascript">
+    function validateLength()
+    { 
+        var val =  document.getElementsByClassName('inputClass')[0].value;
+            console.log( val );
+            if(val.length < 3) 
+              {
+                  showMessage('WARNING', 'There not enough characters in search and you may get limit exceeed warning.');
+                  
+              }
+    }
+
+    
+    /* 
+     $( document ).ready(function() {
+        console.log( "ready!" );
+         });
+    
+    function validateLength(e)
+    { 
+        var val =  document.getElementsByClassName('inputClass')[0].value;
+            console.log( val );
+            if(val.length < 3) 
+              {
+                  if(confirm('There not enough characters in search and you may get limit exceeed warning. Do you want to refine your search and try again?')) {
+                   return false;
+                 }
+             }
+    }
+    function noRecordsFound(){
+            var helloWord = {!hasRecords};
+            alert('test');
+            if(helloWord == false){
+                alert('No records matching with search criteria. Please refine your search and try again.');
+                return false;
+            }     
+        }
+    
+     
+        function onlyOneRecordFound(){
+            if('{!responseRecords.size}' == 1){
+                alert('No Matching Records');
+                return false;
+            }     
+        }
+    */
+    </script>
+    
+</apex:page>

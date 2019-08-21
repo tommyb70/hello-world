@@ -1,0 +1,14 @@
+<apex:component controller="UserTerritoryPicklist" allowDML="true">
+
+    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:selectList value="{!PrimaryTerritory}" size="1" id="PrimaryTerritory" rendered="{!showme}">
+        <apex:selectOptions value="{!UserTerritory}"/>
+    </apex:selectList>-->
+    
+    <!--<apex:outputText rendered="{!showme ==false}">{!PrimaryTerritoryName}</apex:outputText>-->
+    <apex:outputText >{!PrimaryTerritoryName}</apex:outputText>
+        
+    <!--<apex:commandbutton action="{!newDef}" value="Set as Default Territory" rendered="{!showme}"/>
+    <apex:commandbutton action="{!ViewAll}" value="{!VieAllLabel}" rendered="{!showme}"/>-->
+
+</apex:component>

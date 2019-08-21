@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Advisor Academy</fullName>
+        <default>false</default>
+        <label>Advisor Academy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fiduciary Services</fullName>
+        <default>false</default>
+        <label>Fiduciary Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Global Relations</fullName>
+        <default>false</default>
+        <label>Global Relations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Independent</fullName>
+        <default>false</default>
+        <label>Independent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opportunity Owner</fullName>
+        <default>false</default>
+        <label>Opportunity Owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opportunity Requestor</fullName>
+        <default>false</default>
+        <label>Opportunity Requestor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Overlay</fullName>
+        <default>false</default>
+        <label>Overlay</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRCG Analyst</fullName>
+        <default>false</default>
+        <label>PRCG Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRCG Consultant</fullName>
+        <default>false</default>
+        <label>PRCG Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retirement</fullName>
+        <default>false</default>
+        <label>Retirement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Wirehouse</fullName>
+        <default>false</default>
+        <label>Wirehouse</label>
+    </standardValue>
+</StandardValueSet>

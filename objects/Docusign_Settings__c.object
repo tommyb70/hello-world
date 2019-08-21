@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DSXPartnerApplication__c</fullName>
+        <description>Version of DocuSign</description>
+        <externalId>false</externalId>
+        <label>DSXPartnerApplication</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EmailBody__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Body</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EmailSubject__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Subject</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Point__c</fullName>
+        <externalId>false</externalId>
+        <label>End Point</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>IntegratorKey__c</fullName>
+        <externalId>false</externalId>
+        <label>IntegratorKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Password__c</fullName>
+        <externalId>false</externalId>
+        <label>Password</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SendDocuSignMessageFromAttachments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox controls whether the trigger on attachments sends a message/document request to DocuSign on insert.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This checkbox controls whether the trigger on attachments sends a message/document request to DocuSign on insert.</inlineHelpText>
+        <label>Send DocuSign Message From Attachments</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SendDocuSignMessageFromFiles__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox controls whether the trigger on files (ContentDocumentLink) sends a message/document request to DocuSign on insert.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This checkbox controls whether the trigger on files (ContentDocumentLink) sends a message/document request to DocuSign on insert.</inlineHelpText>
+        <label>Send DocuSign Message from Files</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SigningGroupID__c</fullName>
+        <externalId>false</externalId>
+        <label>Signing Group ID</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Username__c</fullName>
+        <description>DocuSign Username - email address</description>
+        <externalId>false</externalId>
+        <label>Username</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <label>Docusign Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

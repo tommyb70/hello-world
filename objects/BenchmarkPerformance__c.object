@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AsOfDate__c</fullName>
+        <description>Performance date that is represented on the Benchmark Performance row.  Direct load from integration.</description>
+        <externalId>false</externalId>
+        <label>As Of Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Benchmark__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Benchmark that is represented on the Benchmark Performance row.  Direct loaded during integration based on Product's external id for source file.</description>
+        <externalId>false</externalId>
+        <label>Benchmark</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Benchmark Performance</relationshipLabel>
+        <relationshipName>BenchmarkPerformance</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ExternalID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>External Id that provides uniqueness to the Benchmark Performance row.  Direct load from integration. Concatenation of Benchmark Id, Inception Date, and As Of Date.</description>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>80</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FileType__c</fullName>
+        <externalId>false</externalId>
+        <label>File Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                    <label>Daily</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>InceptionDate__c</fullName>
+        <description>Inception date that is represented on the Benchmark Performance row.  Direct load from integration.  Used to match share classes to correct row bc benchmark performance since inception is matched to share class inception date.</description>
+        <externalId>false</externalId>
+        <label>Inception Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MTD__c</fullName>
+        <externalId>false</externalId>
+        <label>MTD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>QTD__c</fullName>
+        <externalId>false</externalId>
+        <label>QTD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ReturnSinceInceptionAnnualized__c</fullName>
+        <externalId>false</externalId>
+        <label>Return Since Inception Annualized</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ReturnSinceInceptionCumulative__c</fullName>
+        <externalId>false</externalId>
+        <label>Return Since Inception Cumulative</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SinceInception__c</fullName>
+        <externalId>false</externalId>
+        <label>Since Inception</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SourceFile__c</fullName>
+        <externalId>false</externalId>
+        <label>Source File</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IPM Manual Benchmark Performance File</fullName>
+                    <default>false</default>
+                    <label>IPM Manual Benchmark Performance File</label>
+                </value>
+                <value>
+                    <fullName>FactSet Daily Benchmark Performance File</fullName>
+                    <default>false</default>
+                    <label>FactSet Daily Benchmark Performance File</label>
+                </value>
+                <value>
+                    <fullName>FactSet Monthly Benchmark Performance File</fullName>
+                    <default>false</default>
+                    <label>FactSet Monthly Benchmark Performance File</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tickers__c</fullName>
+        <externalId>false</externalId>
+        <label>Tickers</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalGross__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Gross</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>TotalNet__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Net</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Touch__c</fullName>
+        <description>Used to cause trigger to fire.</description>
+        <externalId>false</externalId>
+        <label>Touch</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X10Year__c</fullName>
+        <externalId>false</externalId>
+        <label>10 Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X1DayGross__c</fullName>
+        <externalId>false</externalId>
+        <label>1 Day Gross</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X1DayNet__c</fullName>
+        <externalId>false</externalId>
+        <label>1 Day Net</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X1DayPriceChange__c</fullName>
+        <externalId>false</externalId>
+        <label>1 Day Price Change</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>X1Month__c</fullName>
+        <externalId>false</externalId>
+        <label>1 Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X1Year__c</fullName>
+        <externalId>false</externalId>
+        <label>1 Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X3Month__c</fullName>
+        <externalId>false</externalId>
+        <label>3 Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X3Year__c</fullName>
+        <externalId>false</externalId>
+        <label>3 Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X5Year__c</fullName>
+        <externalId>false</externalId>
+        <label>5 Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>YTD__c</fullName>
+        <externalId>false</externalId>
+        <label>YTD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores performance for benchmarks</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Benchmark Performance</label>
+    <nameField>
+        <displayFormat>BP-{0000000}</displayFormat>
+        <label>Reference #</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Benchmark Performance</pluralLabel>
+    <searchLayouts />
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

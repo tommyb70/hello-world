@@ -1,0 +1,31 @@
+<apex:page standardController="Task" showHeader="false" sidebar="false" title="ActivityProductsContacts">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_ActivityProductsContacts" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "ActivityProductsContacts",
+	"tabs": [
+		{
+			"name": "Products",
+			"content": "{!gridPage}gname=Products&amp;fpf=ActivityId__c&amp;fpv={!Task.id}&amp;sbb=1&amp;sh=0&amp;ssb=0",
+			"id": 1559673217585
+		},
+		{
+			"name": "Contacts",
+			"content": "{!gridPage}gname=Contacts&amp;fpf=ActivityId__c&amp;fpv={!Task.id}&amp;sbb=1&amp;sh=0&amp;ssb=0",
+			"id": 1559673310227
+		}
+	],
+	"id": 1559673217583,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Task",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

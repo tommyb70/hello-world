@@ -1,0 +1,5 @@
+<apex:page standardController="Product2" tabStyle="Product2" lightningStylesheets="true">
+
+   <apex:enhancedList type="Product2" height="750" rowsPerPage="25" id="ProductList" />
+
+</apex:page>

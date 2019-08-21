@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>ActualStartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BusinessSponsorRequestor__c</fullName>
+        <description>To identify if it is business sponsor or requestor</description>
+        <externalId>false</externalId>
+        <label>Business Sponsor/Requestor</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate__c</fullName>
+        <description>A closed date of project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date that the project was closed or cancelled</inlineHelpText>
+        <label>Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <description>To descript the different kind of department</description>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Affiliate Request</fullName>
+                    <default>false</default>
+                    <label>Affiliate Request</label>
+                </value>
+                <value>
+                    <fullName>DAT</fullName>
+                    <default>false</default>
+                    <label>DAT</label>
+                </value>
+                <value>
+                    <fullName>Data Ops</fullName>
+                    <default>false</default>
+                    <label>Data Ops</label>
+                </value>
+                <value>
+                    <fullName>Event Planning</fullName>
+                    <default>false</default>
+                    <label>Event Planning</label>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                    <label>IT</label>
+                </value>
+                <value>
+                    <fullName>Legal &amp; Compliance</fullName>
+                    <default>false</default>
+                    <label>Legal &amp; Compliance</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>MPA/Client Services</fullName>
+                    <default>false</default>
+                    <label>MPA/Client Services</label>
+                </value>
+                <value>
+                    <fullName>Natixis</fullName>
+                    <default>false</default>
+                    <label>Natixis</label>
+                </value>
+                <value>
+                    <fullName>Natixis Canada</fullName>
+                    <default>false</default>
+                    <label>Natixis Canada</label>
+                </value>
+                <value>
+                    <fullName>PRCG</fullName>
+                    <default>false</default>
+                    <label>PRCG</label>
+                </value>
+                <value>
+                    <fullName>Product Ops</fullName>
+                    <default>false</default>
+                    <label>Product Ops</label>
+                </value>
+                <value>
+                    <fullName>Sales General</fullName>
+                    <default>false</default>
+                    <label>Sales General</label>
+                </value>
+                <value>
+                    <fullName>Sales Management</fullName>
+                    <default>false</default>
+                    <label>Sales Management</label>
+                </value>
+                <value>
+                    <fullName>Training and Development</fullName>
+                    <default>false</default>
+                    <label>Training and Development</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>A short description for the project</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Effort__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(LevelOfEffort__c,"Less than 2 Weeks"),"Minimal",
+   IF(ISPICKVAL(LevelOfEffort__c,"2 - 4 Weeks"),"Moderate",
+     IF(ISPICKVAL(LevelOfEffort__c,"Greater than 4 Weeks"),"Major","")))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Effort</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EnhancementOrProject__c</fullName>
+        <description>The type of the project</description>
+        <externalId>false</externalId>
+        <label>Enhancement Or Project</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Project</fullName>
+                    <default>false</default>
+                    <label>Project</label>
+                </value>
+                <value>
+                    <fullName>Enhancement</fullName>
+                    <default>false</default>
+                    <label>Enhancement</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FunctionalContacts__c</fullName>
+        <description>The description of Functional contact of the team</description>
+        <externalId>false</externalId>
+        <label>Functional Contact(s)</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HighLevelRequirements__c</fullName>
+        <description>Description of high level requirements</description>
+        <externalId>false</externalId>
+        <label>High Level Requirements</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LevelOfEffortWeeks__c</fullName>
+        <description>1 day = 0.2</description>
+        <externalId>false</externalId>
+        <label>Level of Effort (weeks)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LevelOfEffort__c</fullName>
+        <externalId>false</externalId>
+        <label>Level of Effort</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Less than 2 Weeks</fullName>
+                    <default>false</default>
+                    <label>Less than 2 Weeks</label>
+                </value>
+                <value>
+                    <fullName>2 - 4 Weeks</fullName>
+                    <default>false</default>
+                    <label>2 - 4 Weeks</label>
+                </value>
+                <value>
+                    <fullName>Greater than 4 Weeks</fullName>
+                    <default>false</default>
+                    <label>Greater than 4 Weeks</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LinktoSharePointfolder__c</fullName>
+        <description>Providing link to SharePoint folder</description>
+        <externalId>false</externalId>
+        <label>Link to SharePoint Folder</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>NextStepsResolutionComments__c</fullName>
+        <description>If the stage of the project is Completed or Cancelled, have the formula display the Resolution Comments, otherwise have it display the Next Steps</description>
+        <externalId>false</externalId>
+        <formula>IF (
+     OR (ISPICKVAL( Stage__c, "Completed"),
+         ISPICKVAL( Stage__c, "Cancelled")),
+     ResolutionDetails__c,
+      NextSteps__c 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Next Steps/Resolution Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NextSteps__c</fullName>
+        <description>Description for the next steps of the project</description>
+        <externalId>false</externalId>
+        <label>Next Steps</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <description>To descript the priority level of the project</description>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ProjectedStartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Projected Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ReportTo__c</fullName>
+        <description>Used to filter so that only projects related to specific status meetings are shown on reports.</description>
+        <externalId>false</externalId>
+        <label>Report To</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>false</default>
+                    <label>Sales</label>
+                </value>
+                <value>
+                    <fullName>Sales and Marketing</fullName>
+                    <default>false</default>
+                    <label>Sales and Marketing</label>
+                </value>
+                <value>
+                    <fullName>Natixis Canada</fullName>
+                    <default>false</default>
+                    <label>Natixis Canada</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RequestedDate__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>When the business requested the project</inlineHelpText>
+        <label>Requested Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ResolutionDetails__c</fullName>
+        <description>To descript the details of the resolution.</description>
+        <externalId>false</externalId>
+        <label>Resolution Details</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>To descript the stage of the project</description>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Proposed</fullName>
+                    <default>true</default>
+                    <label>Proposed</label>
+                </value>
+                <value>
+                    <fullName>NotStarted</fullName>
+                    <default>false</default>
+                    <label>Not Started (Approved)</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Stalled</fullName>
+                    <default>false</default>
+                    <label>Stalled</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Ongoing</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Ongoing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StatusIndicator__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE( Status__c, 
+"Green", "/img/samples/light_green.gif",
+"Yellow", "/img/samples/light_yellow.gif",
+"Red", "/img/samples/light_red.gif", 
+"/s.gif"), 
+"status color")</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status Indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>To descript the status of the project</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <default>true</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TargetDateClosedDate__c</fullName>
+        <description>If the stage of the project is Completed or Cancelled, have the formula display the Closed Date, otherwise have it display the Target Date.</description>
+        <externalId>false</externalId>
+        <formula>IF ( 
+     OR (ISPICKVAL( Stage__c, "Completed"), 
+         ISPICKVAL( Stage__c, "Cancelled")), 
+       ClosedDate__c , 
+       TargetDate__c  
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Target Date/Closed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TargetDate__c</fullName>
+        <description>Showing the target dates</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When the project will be in production.  This should be updated as the project progresses.</inlineHelpText>
+        <label>Target Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TechnicalResource1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technical Resource 1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ProjectsTechnicalResource1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TechnicalResource2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technical Resource 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ProjectsTechnicalResource2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TechnicalResource3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technical Resource 3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ProjectsTechnicalResource3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Timing__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(TargetDate__c)),
+CASE(MONTH( TargetDate__c), 
+1, "Q1" , 
+2, "Q1", 
+3, "Q1", 
+4, "Q2", 
+5, "Q2", 
+6, "Q2", 
+7, "Q3", 
+8, "Q3", 
+9, "Q3", 
+10, "Q4", 
+11, "Q4", 
+12, "Q4",
+"") 
+&amp; " " &amp;
+TEXT(YEAR(TargetDate__c )),
+"")</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Timing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                    <label>Maintenance</label>
+                </value>
+                <value>
+                    <fullName>New Product or Service</fullName>
+                    <default>false</default>
+                    <label>New Product or Service</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This Object is to help Veronika and Tom track what do they work</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <label>Project</label>
+    <nameField>
+        <label>Project Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>TargetDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Stage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TargetDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.FIRST_NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Stage__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TargetDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.FIRST_NAME</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Stage__c</searchFilterFields>
+        <searchFilterFields>TargetDate__c</searchFilterFields>
+        <searchFilterFields>OWNER.FIRST_NAME</searchFilterFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TargetDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>InProgressAllProjects</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>In Progress All Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>InProgressMyProjects</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>In Progress My Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Legal_Complaince_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>BusinessSponsorRequestor__c</columns>
+        <columns>Description__c</columns>
+        <columns>FunctionalContacts__c</columns>
+        <columns>NextSteps__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Legal &amp; Compliance</value>
+        </filters>
+        <label>Legal &amp; Complaince Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Open_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>Status__c</columns>
+        <columns>Timing__c</columns>
+        <columns>Description__c</columns>
+        <columns>TechnicalResource1__c</columns>
+        <columns>TechnicalResource2__c</columns>
+        <columns>TechnicalResource3__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>My Open Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Type__c</columns>
+        <columns>Effort__c</columns>
+        <columns>LevelOfEffort__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>FunctionalContacts__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress,Proposed,Approved</value>
+        </filters>
+        <label>Open Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Proposed_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>In Progress,Stalled,Cancelled,Completed</value>
+        </filters>
+        <label>Proposed &amp; Approved Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Queued_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Priority__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>Status__c</columns>
+        <columns>Department__c</columns>
+        <columns>StatusIndicator__c</columns>
+        <columns>FunctionalContacts__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Stalled,Cancelled,Completed</value>
+        </filters>
+        <label>Queued Projects - Open</label>
+        <queue>SFDC_Projects</queue>
+    </listViews>
+    <listViews>
+        <fullName>Queued_ProjectsBC</fullName>
+        <columns>NAME</columns>
+        <columns>Priority__c</columns>
+        <columns>Stage__c</columns>
+        <columns>FunctionalContacts__c</columns>
+        <columns>BusinessSponsorRequestor__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Stalled,Cancelled,Completed</value>
+        </filters>
+        <label>Queued Projects - Brian Caitlyn</label>
+    </listViews>
+    <listViews>
+        <fullName>SFDC_Projects_Project</fullName>
+        <filterScope>Queue</filterScope>
+        <label>SFDC Projects</label>
+        <queue>SFDC_Projects</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Status_Reporting_Internal_Only</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ReportTo__c</field>
+            <operation>excludes</operation>
+            <value>Sales,Sales and Marketing,NGAM Canada</value>
+        </filters>
+        <label>Status Reporting - Internal Only</label>
+    </listViews>
+    <listViews>
+        <fullName>Status_Reporting_Natixis_Canada</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ReportTo__c</field>
+            <operation>includes</operation>
+            <value>Natixis Canada</value>
+        </filters>
+        <label>Status Reporting - Natixis Canada</label>
+    </listViews>
+    <listViews>
+        <fullName>Status_Reporting_Sales</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ReportTo__c</field>
+            <operation>includes</operation>
+            <value>Sales</value>
+        </filters>
+        <label>Status Reporting - Sales</label>
+    </listViews>
+    <listViews>
+        <fullName>Status_Reporting_Sales_and_Marketing</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Stage__c</columns>
+        <columns>TargetDate__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ReportTo__c</field>
+            <operation>includes</operation>
+            <value>Sales and Marketing</value>
+        </filters>
+        <label>Status Reporting - Sales and Marketing</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,6 @@
+<apex:page standardController="Campaign" lightningStyleSheets="true" tabStyle="Campaign" recordSetVar="campaigns">
+
+
+   <apex:enhancedList type="Campaign" height="750" rowsPerPage="10" id="CampaignList" />
+
+</apex:page>

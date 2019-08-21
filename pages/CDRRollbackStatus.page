@@ -1,0 +1,7 @@
+<apex:page standardController="CDRQualitativeData__c" extensions="CDRRollbackStatusExt" action="{!autoRun}" lightningStylesheets="true"> 
+<apex:form id="mainform"> 
+<apex:pageMessages escape="false"/> 
+<br/> 
+<Apex:commandButton value="Cancel" action="{!cancelChange}"/>
+</apex:form> 
+</apex:page>

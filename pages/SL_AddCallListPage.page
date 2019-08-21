@@ -1,0 +1,4 @@
+<apex:page standardController="Account" recordSetVar="accounts" lightningStyleSheets="true" showHeader="true" sidebar="true"
+    extensions="SL_ctrl_ListViewHomePage" action="{!Redirect}">
+
+</apex:page>

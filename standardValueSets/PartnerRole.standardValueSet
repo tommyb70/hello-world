@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+        <reverseRole>Consultant For</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Affliliate</fullName>
+        <default>false</default>
+        <label>Affliliate</label>
+        <reverseRole>Affliliate For</reverseRole>
+    </standardValue>
+</StandardValueSet>

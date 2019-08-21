@@ -1,0 +1,10 @@
+<apex:page standardController="CDRQualitativeData__c" lightningStylesheets="true" extensions="CDRApprovalSubmissionExt" action="{!autoRun}">
+    <apex:form id="mainform"> 
+       <apex:outputLabel rendered="{!messageError != null}">
+          <center><b>
+            <apex:outputText escape="false" value="{!messageError}">
+            </apex:outputText>
+          </b></center>
+       </apex:outputLabel>
+    </apex:form> 
+</apex:page>

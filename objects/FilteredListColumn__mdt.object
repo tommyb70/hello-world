@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ColumnLabel__c</fullName>
+        <description>The label that will display in the column header for this column.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The label that will display in the column header for this column.</inlineHelpText>
+        <label>Column Label</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldName__c</fullName>
+        <description>The name of the field on the object to display. May not be used by custom lightning components but is required in most cases.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The name of the field on the object to display. May not be used by custom lightning components but is required in most cases.</inlineHelpText>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Value_Add_Symb__c</fullName>
+        <description>Show Additional symbol to each value in column (For exmaple: % or $)</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Show Additional symbol to each value in column (For exmaple: % or $)</inlineHelpText>
+        <label>Field Value Add Symb</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FilteredListConfiguration__c</fullName>
+        <description>The filtered list to display this column on.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The filtered list to display this column on.</inlineHelpText>
+        <label>Filtered List Configuration</label>
+        <referenceTo>FilteredListConfiguration__mdt</referenceTo>
+        <relationshipLabel>Filtered List Columns</relationshipLabel>
+        <relationshipName>FilteredListColumns</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsLink__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If this is checked and the field is a lookup it will display in the component as a clickable link that will direct the user to that record.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>If this is checked and the field is a lookup it will display in the component as a clickable link that will direct the user to that record.</inlineHelpText>
+        <label>Is Link</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LightningComponentName__c</fullName>
+        <description>If this column is controlled by a lightning component add it's name here and it will show up in the column instead of the field.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>If this column is controlled by a lightning component add it's name here and it will show up in the column instead of the field.</inlineHelpText>
+        <label>Lightning Component Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LightningComponentParams__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Lightning Component Params</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ordering__c</fullName>
+        <description>Where should this column be? Higher numbers are later in the columns.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Where should this column be? Higher numbers are later in the columns.</inlineHelpText>
+        <label>Ordering</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <description>A configuration record for a filtered list column.</description>
+    <label>Filtered List Column</label>
+    <pluralLabel>Filtered List Columns</pluralLabel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>Filtered_List_Columns_Order</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>NamespacePrefix</columns>
+        <columns>Ordering__c</columns>
+        <columns>ColumnLabel__c</columns>
+        <columns>LightningComponentName__c</columns>
+        <columns>LightningComponentParams__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Filtered List Columns Order</label>
+    </listViews>
+</CustomObject>

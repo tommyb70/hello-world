@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>ActivityTerritory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Activity Territory</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>InternalWholesaler__c</fullName>
+        <description>Internal Wholesaler from the Territory object.</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.InternalWholesaler__r.FirstName &amp; " " &amp; Territory__r.InternalWholesaler__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Internal Wholesaler</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MARSTerritoryName_c__c</fullName>
+        <description>Formula field to User Territories that uses the Territory lookup to display MARS Territory Name</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.TerritoryName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MARS Territory Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerProfileName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Profile.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Profile Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PrimaryTerritory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary Territory</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RoleId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.RoleId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TerrGroupId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.GroupId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TerrGroupId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryManager__c</fullName>
+        <description>Territory Manager from the Territory object</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.TerritoryManager__r.FirstName &amp;" "&amp;  Territory__r.TerritoryManager__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryStatus__c</fullName>
+        <description>Status of the territory record</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Territory__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryType__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Territory__r.TerritoryType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Territory</label>
+        <referenceTo>Territory__c</referenceTo>
+        <relationshipLabel>User Territories</relationshipLabel>
+        <relationshipName>User_Territories1</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>User_Territories1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Wholesaler1__c</fullName>
+        <description>Wholesaler 1 from the Territory object</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.Wholesaler1__r.FirstName &amp; " " &amp; Territory__r.Wholesaler1__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Wholesaler 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zoning__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Zone</label>
+        <referenceTo>Zone__c</referenceTo>
+        <relationshipLabel>User Territories</relationshipLabel>
+        <relationshipName>User_Territories</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <label>User Territory</label>
+    <nameField>
+        <displayFormat>UT-{00000000}</displayFormat>
+        <label>User Territory Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>User Territories</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>PrimaryTerritory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Territory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OwnerProfileName__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ActivityTerritory__c</columns>
+        <columns>TerritoryName__c</columns>
+        <columns>PrimaryTerritory__c</columns>
+        <columns>OwnerProfileName__c</columns>
+        <columns>User__c</columns>
+        <columns>Territory__c</columns>
+        <columns>Zoning__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <sharedTo>
+            <role>a02F000000DHHoGIAX</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Blank_Zone</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>TerritoryName__c</columns>
+        <columns>PrimaryTerritory__c</columns>
+        <columns>Zoning__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Zoning__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Blank Zone</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Territories</fullName>
+        <columns>NAME</columns>
+        <columns>PrimaryTerritory__c</columns>
+        <columns>TerritoryName__c</columns>
+        <columns>User__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PrimaryTerritory__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Territories</label>
+    </listViews>
+    <validationRules>
+        <fullName>Can_Not_Update_Record</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(ISCHANGED( Territory__c ), ISCHANGED( Zoning__c ), ISCHANGED(  ActivityTerritory__c  ))</errorConditionFormula>
+        <errorMessage>Can Not Update User Territory Record, Please Delete and Insert</errorMessage>
+    </validationRules>
+</CustomObject>

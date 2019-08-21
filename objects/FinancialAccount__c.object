@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AccountBilling__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Account_Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Billing</inlineHelpText>
+        <label>Account Billing</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountClassificationCode__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Account_Classification_Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Special classification code associated with the account. User entered value.</inlineHelpText>
+        <label>Account Classification Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountERISA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Account_ERISA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked is Yes, Empty is No</inlineHelpText>
+        <label>Account ERISA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AccountId__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Account_Id</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Id of the Financial Account in Data Central. DEPRECATED will be removed in Version 8.0.</inlineHelpText>
+        <label>Account Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>AccountNameEncrypted__c</fullName>
+        <description>Unique Vestmark Account name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unique Vestmark Account name</inlineHelpText>
+        <label>Account Name</label>
+        <length>30</length>
+        <maskChar>X</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>AccountShortName__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Account_Short_Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Short name of the account</inlineHelpText>
+        <label>Account Short Name</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountTitleEncrypted__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Account_Title</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Legal title of the account</inlineHelpText>
+        <label>Account Title</label>
+        <length>175</length>
+        <maskChar>X</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>AccountType__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Type (e.g. Standard, Model, user-defined)</inlineHelpText>
+        <label>Account Type</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AlertSummary__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Alert_Summary</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A summary list of alerts</inlineHelpText>
+        <label>Alert Summary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AllowUnmanaged__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Allow_Unmanaged</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked is Yes, Empty is No</inlineHelpText>
+        <label>Allow Unmanaged</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AssetClass__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Asset_Class</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the asset class</inlineHelpText>
+        <label>Asset Class</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AvoidWashSales__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Avoid_Wash_Sales</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check is Yes, Empty is No</inlineHelpText>
+        <label>Avoid Wash Sales</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Benchmark1__c</fullName>
+        <description>Benchmark1</description>
+        <externalId>false</externalId>
+        <label>Benchmark1</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benchmark2__c</fullName>
+        <description>Benchmark2</description>
+        <externalId>false</externalId>
+        <label>Benchmark2</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benchmark3__c</fullName>
+        <externalId>false</externalId>
+        <label>Benchmark3</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benchmark4__c</fullName>
+        <externalId>false</externalId>
+        <label>Benchmark4</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benchmark5__c</fullName>
+        <externalId>false</externalId>
+        <label>Benchmark5</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChangedManager__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Changed_Manager</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The old manager</inlineHelpText>
+        <label>Changed Manager</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChangedModel__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Changed_Model</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The old strategy or model associated with this account. Currently, this is blank. Reserved for future use.</inlineHelpText>
+        <label>Changed Model</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChangedStyle__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Changed_Style</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The old style</inlineHelpText>
+        <label>Changed Style</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClearingFirmAccountNumber__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Clearing_Firm_Account_Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The clearing firm specific account number</inlineHelpText>
+        <label>Clearing Firm Account Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClearingFirm__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Clearing_Firm</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The clearing firm for the account, if there is one</inlineHelpText>
+        <label>Clearing Firm</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClientAccountNumber__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Client_Account_Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sponsor account number</inlineHelpText>
+        <label>Client Account Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClientRiskTolerance__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Client_Risk_Tolerance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The client risk tolerance</inlineHelpText>
+        <label>Client Risk Tolerance</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contacts_with_Access__c</fullName>
+        <description>Number of contacts who currently have access to this Financial Account via the community.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of contacts who currently have access to this Financial Account via the community.</inlineHelpText>
+        <label>Contacts with Access</label>
+        <summaryFilterItems>
+            <field>FinancialAccountContact__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Current</value>
+        </summaryFilterItems>
+        <summaryForeignKey>FinancialAccountContact__c.Financial_Account__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CreateDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Create Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CustodianAccountNumber__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Custodian_Account_Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The custodian specific account number</inlineHelpText>
+        <label>Custodian Account Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Custodian__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Custodian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The custodian of the account, if there is one</inlineHelpText>
+        <label>Custodian</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DCFA_Email__c</fullName>
+        <description>Financial Advisory email address from Data Central</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Advisory email address from Data Central</inlineHelpText>
+        <label>Data Central - FA Email</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DCFA_Name__c</fullName>
+        <description>Financial Account name from Data Central</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Account name from Data Central</inlineHelpText>
+        <label>Data Central - FA Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DailyROR__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Daily_ROR</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Daily rate of return</inlineHelpText>
+        <label>Daily ROR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscretionToBeginDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Discretion_To_Begin_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date when trading should start or resume (if it has previously been suspended)</inlineHelpText>
+        <label>Discretion To Begin Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DiscretionToEndDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Discretion_To_End_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date on which to halt trading</inlineHelpText>
+        <label>Discretion To End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Discretion__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Discretion</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the account manager or sleeve manager has discretion.</inlineHelpText>
+        <label>Discretion</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndClients__c</fullName>
+        <description>Concatenated field of all End Clients with Status = Current in Financial Account Contact.  Maintained by Rollup Summaries.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Concatenated field of all current End Clients in Financial Account Contact.</inlineHelpText>
+        <label>End Client(s)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EstimatedNetWorth__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Estimated_Net_Worth</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated net worth</inlineHelpText>
+        <label>Estimated Net Worth</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FederalTaxRate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Federal_Tax_Rate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The federal tax rate for the account</inlineHelpText>
+        <label>Federal Tax Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstTradeDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.First_Trade_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date of the first trade</inlineHelpText>
+        <label>First Trade Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FirstTradeValue__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.First_Trade_Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The account value when the first trade was transacted in Vestmark</inlineHelpText>
+        <label>First Trade Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FreeToTrade__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Free_To_Trade</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked is Yes, Empty is No</inlineHelpText>
+        <label>Free To Trade</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FromInceptionROR__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.From_Inception_ROR</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate of Return since inception</inlineHelpText>
+        <label>From Inception ROR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HeldContributions__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Held_Contributions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of held contributions</inlineHelpText>
+        <label>Held Contributions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InceptionDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Inception_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the account was added to the Vestmark system</inlineHelpText>
+        <label>Inception Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>InceptionValue__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Inception_Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The account value at inception – an expected account value, if provided</inlineHelpText>
+        <label>Inception Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvestmentStyle__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Investment_Style</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If it is a SMA, the investment style name. If it is a MSP, the overlay style name</inlineHelpText>
+        <label>Investment Style</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastMetricsDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Last_Metrics_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date and time metrics were last updated</inlineHelpText>
+        <label>Last Metrics Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LastReconDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Last_Recon_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date and time the account was last successfully reconciled</inlineHelpText>
+        <label>Last Recon Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LastUpdateDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Last_Update_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date and time the account was last updated</inlineHelpText>
+        <label>Last Update Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LifecycleStep__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Lifecycle_Step</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The step in the lifecycle that the account is in.</inlineHelpText>
+        <label>Lifecycle Step</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ManageTaxAware__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Manage_Tax_Aware</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if Yes, Empty if No</inlineHelpText>
+        <label>Manage Tax Aware</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ManagedAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Managed Account</label>
+        <referenceTo>ManagedAccount__c</referenceTo>
+        <relationshipLabel>Financial Accounts</relationshipLabel>
+        <relationshipName>Financial_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Manager__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Manager</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If it is a SMA, the investment manager name. If it is a MSP, the overlay manager name</inlineHelpText>
+        <label>Manager</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MarginCollateral__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Margin_Collateral</description>
+        <externalId>false</externalId>
+        <label>Margin Collateral</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ModelDescription__c</fullName>
+        <description>Model Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Model Description</inlineHelpText>
+        <label>Model Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ModelOrStrategyName__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Model_Or_Strategy_Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If it is a SMA, the model the account follows. If it is a MSP, the strategy name.</inlineHelpText>
+        <label>Model or Strategy Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MonthlyROR__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Monthly_ROR</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Month to Date return</inlineHelpText>
+        <label>Monthly ROR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MultiSleeve__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Multi_Sleeve.  1 if multi-sleeve account, 0 if single sleeve</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if multi-sleeve account, Empty if single sleeve</inlineHelpText>
+        <label>Multi Sleeve</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MunicipalStateCode__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Municipal_State_Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The two letter code of the state</inlineHelpText>
+        <label>Municipal State Code</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MunicipalState__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Municipal_State</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The name of the state</inlineHelpText>
+        <label>Municipal State</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OldClientNumber__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Old_Client_Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If there was a client account number change, holds the old number</inlineHelpText>
+        <label>Old Client Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpenedDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Opened_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the account was opened with the sponsor.</inlineHelpText>
+        <label>Opened Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OpenedValue__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Opened_Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The actual account value at the time the account was opened.</inlineHelpText>
+        <label>Opened Value</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PendingWithdrawals__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Pending_Withdrawals</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of pending withdrawals</inlineHelpText>
+        <label>Pending Withdrawals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PerformanceAsOfDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Performance_As_Of_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the performance was last updated as of</inlineHelpText>
+        <label>Performance As Of Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PerformanceEndDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Performance_End_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date past which the account is no longer valid for performance</inlineHelpText>
+        <label>Performance End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PerformanceStartDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Performance_Start_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date as of which performance returns are calculated in Vestmark</inlineHelpText>
+        <label>Performance Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Program</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sponsor program name</inlineHelpText>
+        <label>Program</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProxyVoting__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Proxy_Voting</description>
+        <externalId>false</externalId>
+        <inlineHelpText>No Proxy Voting, Proxy Voting, Shared Proxy Voting</inlineHelpText>
+        <label>Proxy Voting</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSAAccount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, indicates that this Financial Account is an RSA account.  Checking this box will affect how the Financial Account appears in the community.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, indicates that this Financial Account is an RSA account.  Checking this box will affect how the Financial Account appears in the community.</inlineHelpText>
+        <label>RSA Account</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ReconStatus__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Recon_Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The recon status: Yes, Ywt, No</inlineHelpText>
+        <label>Recon Status</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RiskTolerance__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Risk_Tolerance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of the account's risk tolerance</inlineHelpText>
+        <label>Risk Tolerance</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SellingRule__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Selling_Rule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>FIFO, HighCost</inlineHelpText>
+        <label>Selling Rule</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceType__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Source_Type</description>
+        <externalId>false</externalId>
+        <label>Source Type</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SponsorCode__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Sponsor_Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The sponsor code</inlineHelpText>
+        <label>Sponsor Code</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sponsor__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Sponsor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sponsor name</inlineHelpText>
+        <label>Sponsor</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StateAware__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Integration: NTXS_CUST_ACCOUNTS.State_Aware</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked is Yes, Empty is No</inlineHelpText>
+        <label>State Aware</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>StateTaxRate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.State_Tax_Rate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The state tax rate for the account</inlineHelpText>
+        <label>State Tax Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaxStatus__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Tax_Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Taxable or Nontaxable</inlineHelpText>
+        <label>Tax Status</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerminationDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Termination_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the account was terminated in the Vestmark system</inlineHelpText>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TerminationValue__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Termination_Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The account value when the account was terminated</inlineHelpText>
+        <label>Termination Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThirdPartyName__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Third_Party_Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The third party name</inlineHelpText>
+        <label>Third Party Name</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThirdPartyName_del__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Third_Party_Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The third party name</inlineHelpText>
+        <label>Third Party Name</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThirdPartyNumber__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Third_Party_Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The third party specific client account number</inlineHelpText>
+        <label>Third Party Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThirdPartyNumber_del__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Third_Party_Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The third party specific client account number from Data Central</inlineHelpText>
+        <label>Third Party Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TimeHorizon__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Time_Horizon</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the horizon</inlineHelpText>
+        <label>Time_Horizon</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalAnnualIncome__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Total_Annual_Income</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Annual Income Estimate</inlineHelpText>
+        <label>Total Annual Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalCash__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Total_Cash</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total cash value</inlineHelpText>
+        <label>Total Cash</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalValue__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Total_Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total account value</inlineHelpText>
+        <label>Total Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TradeAuthorizationDate__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Trade_Authorization_Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date that trading originally can begin</inlineHelpText>
+        <label>Trade Authorization Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TradingSuspended__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Trading_Suspended</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not Set, Not Suspended, All Suspended, Buy Suspended, Sell Suspended</inlineHelpText>
+        <label>Trading Suspended</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UnmanagedValue__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.Unmanaged_Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of unmanaged assets</inlineHelpText>
+        <label>Unmanaged Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined10__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined10</description>
+        <externalId>false</externalId>
+        <label>User Defined10</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined1__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined1</description>
+        <externalId>false</externalId>
+        <label>User Defined1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined2__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined2</description>
+        <externalId>false</externalId>
+        <label>User Defined2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined3__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined3</description>
+        <externalId>false</externalId>
+        <label>User Defined3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined4__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined4</description>
+        <externalId>false</externalId>
+        <label>User Defined4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined5__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined5</description>
+        <externalId>false</externalId>
+        <label>User Defined5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined6__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined6</description>
+        <externalId>false</externalId>
+        <label>User Defined6</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined7__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined7</description>
+        <externalId>false</externalId>
+        <label>User Defined7</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined8__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined8</description>
+        <externalId>false</externalId>
+        <label>User Defined8</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserDefined9__c</fullName>
+        <description>Integration: NTXS_CUST_ACCOUNTS.User_Defined9</description>
+        <externalId>false</externalId>
+        <label>User Defined9</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ViewableinCommunity__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>If checked, this Financial Account can be viewed in Community</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, this Financial Account can be viewed in Community</inlineHelpText>
+        <label>Viewable in Community</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used in community to display Financial Account data to community users.  This object's data is sourced from Data Central and maintained via integration.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Financial Account</label>
+    <nameField>
+        <label>Account</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Financial Accounts</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>AccountNameEncrypted__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AccountTitleEncrypted__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AccountType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LifecycleStep__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contacts_with_Access__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>Forward</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>AccountNameEncrypted__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AccountTitleEncrypted__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AccountType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LifecycleStep__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contacts_with_Access__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>SponsorCode__c</searchFilterFields>
+        <searchFilterFields>AccountType__c</searchFilterFields>
+        <searchFilterFields>LifecycleStep__c</searchFilterFields>
+        <searchFilterFields>Contacts_with_Access__c</searchFilterFields>
+        <searchResultsAdditionalFields>AccountNameEncrypted__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AccountTitleEncrypted__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AccountType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LifecycleStep__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contacts_with_Access__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>AccountType__c</columns>
+        <columns>LifecycleStep__c</columns>
+        <columns>Contacts_with_Access__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>AccountNameEncrypted__c</columns>
+        <columns>AccountTitleEncrypted__c</columns>
+        <columns>AccountType__c</columns>
+        <columns>ModelOrStrategyName__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Financial_Accounts_Active</fullName>
+        <columns>NAME</columns>
+        <columns>AccountNameEncrypted__c</columns>
+        <columns>AccountTitleEncrypted__c</columns>
+        <columns>AccountType__c</columns>
+        <columns>LifecycleStep__c</columns>
+        <columns>Contacts_with_Access__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LifecycleStep__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>RSAAccount__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Financial Accounts - Active</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Financial_Accounts_Contact_Access</fullName>
+        <columns>NAME</columns>
+        <columns>AccountNameEncrypted__c</columns>
+        <columns>AccountTitleEncrypted__c</columns>
+        <columns>AccountType__c</columns>
+        <columns>LifecycleStep__c</columns>
+        <columns>Contacts_with_Access__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Contacts_with_Access__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>RSAAccount__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Financial Accounts - Contact Access</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Financial_Accounts_RSA</fullName>
+        <columns>NAME</columns>
+        <columns>AccountNameEncrypted__c</columns>
+        <columns>AccountTitleEncrypted__c</columns>
+        <columns>AccountType__c</columns>
+        <columns>LifecycleStep__c</columns>
+        <columns>RSAAccount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RSAAccount__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Financial Accounts - RSA</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+</CustomObject>

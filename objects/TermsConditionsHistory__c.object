@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>ContentVersionId__c</fullName>
+        <description>Content Version ID for Terms and Conditions at the time of row creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Content Version ID for Terms and Conditions at the time of row creation</inlineHelpText>
+        <label>Content Version ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TCFileDownLoadUrl__c</fullName>
+        <description>URL to download the Terms and Conditions that were accepted</description>
+        <externalId>false</externalId>
+        <formula>'/sfc/servlet.shepherd/version/download/' &amp; ContentVersionId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TC File Down Load URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TermsConditionsAccepted__c</fullName>
+        <description>Date/time that the T&amp;Cs were accepted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/time that the T&amp;Cs were accepted</inlineHelpText>
+        <label>Terms Conditions Accepted</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TermsConditionsDeclined__c</fullName>
+        <description>Datetime that the Terms and Conditions were declined.</description>
+        <externalId>false</externalId>
+        <label>Terms Conditions Declined</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TermsConditionsEffective__c</fullName>
+        <description>The Effective Date of the Terms and Conditions at the time the history row was created.</description>
+        <externalId>false</externalId>
+        <label>Terms and Conditions Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>User that accepted the T&amp;Cs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User that accepted the T&amp;Cs</inlineHelpText>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Terms_Conditions_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tracks each time a user accepts Terms &amp; Conditions.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Terms Conditions History</label>
+    <nameField>
+        <displayFormat>TCA-{0000000}</displayFormat>
+        <label>Reference #</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Terms Conditions History</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

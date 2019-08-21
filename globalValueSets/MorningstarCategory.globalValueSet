@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Large Value</fullName>
+        <default>false</default>
+        <label>Large Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Blend</fullName>
+        <default>false</default>
+        <label>Large Blend</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Growth</fullName>
+        <default>false</default>
+        <label>Large Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Cap Value</fullName>
+        <default>false</default>
+        <label>Mid-Cap Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Cap Blend</fullName>
+        <default>false</default>
+        <label>Mid-Cap Blend</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Cap Growth</fullName>
+        <default>false</default>
+        <label>Mid-Cap Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Value</fullName>
+        <default>false</default>
+        <label>Small Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Blend</fullName>
+        <default>false</default>
+        <label>Small Blend</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Growth</fullName>
+        <default>false</default>
+        <label>Small Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>Leveraged Net Long</fullName>
+        <default>false</default>
+        <label>Leveraged Net Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Communications</fullName>
+        <default>false</default>
+        <label>Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Cyclical</fullName>
+        <default>false</default>
+        <label>Consumer Cyclical</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Defensive</fullName>
+        <default>false</default>
+        <label>Consumer Defensive</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Limited Partnership</fullName>
+        <default>false</default>
+        <label>Energy Limited Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>Equity Energy</fullName>
+        <default>false</default>
+        <label>Equity Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Equity Precious Metals</fullName>
+        <default>false</default>
+        <label>Equity Precious Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial</fullName>
+        <default>false</default>
+        <label>Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Real Estate</fullName>
+        <default>false</default>
+        <label>Global Real Estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Health</fullName>
+        <default>false</default>
+        <label>Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrials</fullName>
+        <default>false</default>
+        <label>Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure</fullName>
+        <default>false</default>
+        <label>Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Natural Resources</fullName>
+        <default>false</default>
+        <label>Natural Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology</fullName>
+        <default>false</default>
+        <label>Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Utilities</fullName>
+        <default>false</default>
+        <label>Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous Sector</fullName>
+        <default>false</default>
+        <label>Miscellaneous Sector</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocation--15% to 30% Equity</fullName>
+        <default>false</default>
+        <label>Allocation--15% to 30% Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocation--30% to 50% Equity</fullName>
+        <default>false</default>
+        <label>Allocation--30% to 50% Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocation--50% to 70% Equity</fullName>
+        <default>false</default>
+        <label>Allocation--50% to 70% Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocation--70% to 85% Equity</fullName>
+        <default>false</default>
+        <label>Allocation--70% to 85% Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocation--85%+ Equity</fullName>
+        <default>false</default>
+        <label>Allocation--85%+ Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Convertibles</fullName>
+        <default>false</default>
+        <label>Convertibles</label>
+    </customValue>
+    <customValue>
+        <fullName>World Allocation</fullName>
+        <default>false</default>
+        <label>World Allocation</label>
+    </customValue>
+    <customValue>
+        <fullName>Tactical Allocation</fullName>
+        <default>false</default>
+        <label>Tactical Allocation</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2000-2010</fullName>
+        <default>false</default>
+        <label>Target-Date 2000-2010</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2015</fullName>
+        <default>false</default>
+        <label>Target-Date 2015</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2020</fullName>
+        <default>false</default>
+        <label>Target-Date 2020</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2025</fullName>
+        <default>false</default>
+        <label>Target-Date 2025</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2030</fullName>
+        <default>false</default>
+        <label>Target-Date 2030</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2035</fullName>
+        <default>false</default>
+        <label>Target-Date 2035</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2040</fullName>
+        <default>false</default>
+        <label>Target-Date 2040</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2045</fullName>
+        <default>false</default>
+        <label>Target-Date 2045</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2050</fullName>
+        <default>false</default>
+        <label>Target-Date 2050</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2055</fullName>
+        <default>false</default>
+        <label>Target-Date 2055</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date 2060+</fullName>
+        <default>false</default>
+        <label>Target-Date 2060+</label>
+    </customValue>
+    <customValue>
+        <fullName>Target-Date Retirement</fullName>
+        <default>false</default>
+        <label>Target-Date Retirement</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Large-Value</fullName>
+        <default>false</default>
+        <label>Foreign Large-Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Large-Blend</fullName>
+        <default>false</default>
+        <label>Foreign Large-Blend</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Large-Growth</fullName>
+        <default>false</default>
+        <label>Foreign Large-Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Small/Mid-Value</fullName>
+        <default>false</default>
+        <label>Foreign Small/Mid-Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Small/Mid-Blend</fullName>
+        <default>false</default>
+        <label>Foreign Small/Mid-Blend</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Small/Mid-Growth</fullName>
+        <default>false</default>
+        <label>Foreign Small/Mid-Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>World Stock</fullName>
+        <default>false</default>
+        <label>World Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified Emerging Markets</fullName>
+        <default>false</default>
+        <label>Diversified Emerging Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified Pacific/Asia</fullName>
+        <default>false</default>
+        <label>Diversified Pacific/Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous Region</fullName>
+        <default>false</default>
+        <label>Miscellaneous Region</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe Stock</fullName>
+        <default>false</default>
+        <label>Europe Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin America Stock</fullName>
+        <default>false</default>
+        <label>Latin America Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>Pacific/Asia ex-Japan Stock</fullName>
+        <default>false</default>
+        <label>Pacific/Asia ex-Japan Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>China Region</fullName>
+        <default>false</default>
+        <label>China Region</label>
+    </customValue>
+    <customValue>
+        <fullName>India Equity</fullName>
+        <default>false</default>
+        <label>India Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan Stock</fullName>
+        <default>false</default>
+        <label>Japan Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>Bear Market</fullName>
+        <default>false</default>
+        <label>Bear Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Multicurrency</fullName>
+        <default>false</default>
+        <label>Multicurrency</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Currency</fullName>
+        <default>false</default>
+        <label>Single Currency</label>
+    </customValue>
+    <customValue>
+        <fullName>Long-Short Credit</fullName>
+        <default>false</default>
+        <label>Long-Short Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Long-Short Equity</fullName>
+        <default>false</default>
+        <label>Long-Short Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Market Neutral</fullName>
+        <default>false</default>
+        <label>Market Neutral</label>
+    </customValue>
+    <customValue>
+        <fullName>Multialternative</fullName>
+        <default>false</default>
+        <label>Multialternative</label>
+    </customValue>
+    <customValue>
+        <fullName>Managed Futures</fullName>
+        <default>false</default>
+        <label>Managed Futures</label>
+    </customValue>
+    <customValue>
+        <fullName>Option Writing</fullName>
+        <default>false</default>
+        <label>Option Writing</label>
+    </customValue>
+    <customValue>
+        <fullName>Volatility</fullName>
+        <default>false</default>
+        <label>Volatility</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading-Leveraged Commodities</fullName>
+        <default>false</default>
+        <label>Trading-Leveraged Commodities</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading--Inverse Commodities</fullName>
+        <default>false</default>
+        <label>Trading--Inverse Commodities</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading--Leveraged Debt</fullName>
+        <default>false</default>
+        <label>Trading--Leveraged Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading--Inverse Debt</fullName>
+        <default>false</default>
+        <label>Trading--Inverse Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading--Leveraged Equity</fullName>
+        <default>false</default>
+        <label>Trading--Leveraged Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading--Inverse Equity</fullName>
+        <default>false</default>
+        <label>Trading--Inverse Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading--Miscellaneous</fullName>
+        <default>false</default>
+        <label>Trading--Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities Agriculture</fullName>
+        <default>false</default>
+        <label>Commodities Agriculture</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities Broad Basket</fullName>
+        <default>false</default>
+        <label>Commodities Broad Basket</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities Energy</fullName>
+        <default>false</default>
+        <label>Commodities Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities Industrial Metals</fullName>
+        <default>false</default>
+        <label>Commodities Industrial Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities Miscellaneous</fullName>
+        <default>false</default>
+        <label>Commodities Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodities Precious Metals</fullName>
+        <default>false</default>
+        <label>Commodities Precious Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Long Government</fullName>
+        <default>false</default>
+        <label>Long Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Intermediate Government</fullName>
+        <default>false</default>
+        <label>Intermediate Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Short Government</fullName>
+        <default>false</default>
+        <label>Short Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Inflation-Protected Bond</fullName>
+        <default>false</default>
+        <label>Inflation-Protected Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Long-Term Bond</fullName>
+        <default>false</default>
+        <label>Long-Term Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Intermediate-Term Bond</fullName>
+        <default>false</default>
+        <label>Intermediate-Term Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Short-Term Bond</fullName>
+        <default>false</default>
+        <label>Short-Term Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Ultrashort Bond</fullName>
+        <default>false</default>
+        <label>Ultrashort Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Loan</fullName>
+        <default>false</default>
+        <label>Bank Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Stable Value</fullName>
+        <default>false</default>
+        <label>Stable Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Bond</fullName>
+        <default>false</default>
+        <label>Corporate Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Preferred Stock</fullName>
+        <default>false</default>
+        <label>Preferred Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>High-Yield Bond</fullName>
+        <default>false</default>
+        <label>High-Yield Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Multisector Bond</fullName>
+        <default>false</default>
+        <label>Multisector Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>World Bond</fullName>
+        <default>false</default>
+        <label>World Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Emerging-Markets Bond</fullName>
+        <default>false</default>
+        <label>Emerging-Markets Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Emerging-Markets Local-Currency Bond</fullName>
+        <default>false</default>
+        <label>Emerging-Markets Local-Currency Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Nontraditional Bond</fullName>
+        <default>false</default>
+        <label>Nontraditional Bond</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni National Long</fullName>
+        <default>false</default>
+        <label>Muni National Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni National Intermediate</fullName>
+        <default>false</default>
+        <label>Muni National Intermediate</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni National Short</fullName>
+        <default>false</default>
+        <label>Muni National Short</label>
+    </customValue>
+    <customValue>
+        <fullName>High-Yield Muni</fullName>
+        <default>false</default>
+        <label>High-Yield Muni</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni Single State Long</fullName>
+        <default>false</default>
+        <label>Muni Single State Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni Single State Intermediate</fullName>
+        <default>false</default>
+        <label>Muni Single State Intermediate</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni Single State Short</fullName>
+        <default>false</default>
+        <label>Muni Single State Short</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni California Long</fullName>
+        <default>false</default>
+        <label>Muni California Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni California Intermediate</fullName>
+        <default>false</default>
+        <label>Muni California Intermediate</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni Massachusetts</fullName>
+        <default>false</default>
+        <label>Muni Massachusetts</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni New Jersey</fullName>
+        <default>false</default>
+        <label>Muni New Jersey</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni New York Long</fullName>
+        <default>false</default>
+        <label>Muni New York Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni New York Intermediate</fullName>
+        <default>false</default>
+        <label>Muni New York Intermediate</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni Ohio</fullName>
+        <default>false</default>
+        <label>Muni Ohio</label>
+    </customValue>
+    <customValue>
+        <fullName>Muni Pennsylvania</fullName>
+        <default>false</default>
+        <label>Muni Pennsylvania</label>
+    </customValue>
+    <customValue>
+        <fullName>Taxable Money Market</fullName>
+        <default>false</default>
+        <label>Taxable Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax-Free Money Market</fullName>
+        <default>false</default>
+        <label>Tax-Free Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Prime Money Market</fullName>
+        <default>false</default>
+        <label>Prime Money Market</label>
+    </customValue>
+    <masterLabel>Morningstar Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

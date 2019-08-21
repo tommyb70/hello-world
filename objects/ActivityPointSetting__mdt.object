@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ActivitySource__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Activity Source</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivitySubType__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Activity SubType</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivityType__c</fullName>
+        <description>Custom Activity Type field value (not the standard Type field on Activity)</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Custom Activity Type field value (not the standard Type field on Activity)</inlineHelpText>
+        <label>Activity Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Points__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Points</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TestCase__c</fullName>
+        <description>Type YES is if this is a test case.  Test cases are used in the apex test class to make sure that all iterations of the logic are covered.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Test Case</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Configuration for the calculation of activity points.  These configurations are related to values on Task at time of creation or update.  Blanks act as wild-cards.  Please do not delete rows that are marked as Test Cases.</description>
+    <label>Activity Point Setting</label>
+    <pluralLabel>Activity Point Settings</pluralLabel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All_Full_View</fullName>
+        <columns>MasterLabel</columns>
+        <columns>ActivityType__c</columns>
+        <columns>ActivitySubType__c</columns>
+        <columns>ActivitySource__c</columns>
+        <columns>Points__c</columns>
+        <columns>TestCase__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All - Full View</label>
+    </listViews>
+</CustomObject>

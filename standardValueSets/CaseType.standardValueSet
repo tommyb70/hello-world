@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Account Investment Change</fullName>
+        <default>false</default>
+        <label>Account Investment Change</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account Opening</fullName>
+        <default>false</default>
+        <label>Account Opening</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Active Share Analysis</fullName>
+        <default>false</default>
+        <label>Active Share Analysis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Add New Firm</fullName>
+        <default>false</default>
+        <label>Add New Firm</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Add New Office</fullName>
+        <default>false</default>
+        <label>Add New Office</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Add New Rep</fullName>
+        <default>false</default>
+        <label>Add New Rep</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ad Hoc Request</fullName>
+        <default>false</default>
+        <label>Ad Hoc Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bulk Investment Strategy Swap</fullName>
+        <default>false</default>
+        <label>Bulk Investment Strategy Swap</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bulk Request</fullName>
+        <default>false</default>
+        <label>Bulk Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Comprehensive Portfolio Evaluation</fullName>
+        <default>false</default>
+        <label>Comprehensive Portfolio Evaluation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DDQ</fullName>
+        <default>false</default>
+        <label>DDQ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Diversification Test</fullName>
+        <default>false</default>
+        <label>Diversification Test</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Failure</fullName>
+        <default>false</default>
+        <label>Failure</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fund Comparison</fullName>
+        <default>false</default>
+        <label>Fund Comparison</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Home Office</fullName>
+        <default>false</default>
+        <label>Home Office</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interest Rate Stress Test</fullName>
+        <default>false</default>
+        <label>Interest Rate Stress Test</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IPM External Request</fullName>
+        <default>false</default>
+        <label>IPM External Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IPM Internal Request</fullName>
+        <default>false</default>
+        <label>IPM Internal Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maintenance Firm</fullName>
+        <default>false</default>
+        <label>Maintenance Firm</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maintenance Office</fullName>
+        <default>false</default>
+        <label>Maintenance Office</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maintenance Rep</fullName>
+        <default>false</default>
+        <label>Maintenance Rep</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maintenance Static List</fullName>
+        <default>false</default>
+        <label>Maintenance Static List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Merge Firms</fullName>
+        <default>false</default>
+        <label>Merge Firms</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Merge Offices</fullName>
+        <default>false</default>
+        <label>Merge Offices</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Merge Reps</fullName>
+        <default>false</default>
+        <label>Merge Reps</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Model Update Request</fullName>
+        <default>false</default>
+        <label>Model Update Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Model Request</fullName>
+        <default>false</default>
+        <label>New Model Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Requestor</fullName>
+        <default>false</default>
+        <label>New Requestor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Onsite</fullName>
+        <default>false</default>
+        <label>Onsite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRCG Research Request</fullName>
+        <default>false</default>
+        <label>PRCG Research Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request</fullName>
+        <default>false</default>
+        <label>Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Restriction Update</fullName>
+        <default>false</default>
+        <label>Restriction Update</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RFI</fullName>
+        <default>false</default>
+        <label>RFI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RFP</fullName>
+        <default>false</default>
+        <label>RFP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tax Harvest</fullName>
+        <default>false</default>
+        <label>Tax Harvest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Termination</fullName>
+        <default>false</default>
+        <label>Termination</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Update to Requestor</fullName>
+        <default>false</default>
+        <label>Update to Requestor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webex</fullName>
+        <default>false</default>
+        <label>Webex</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Withdrawal</fullName>
+        <default>false</default>
+        <label>Withdrawal</label>
+    </standardValue>
+</StandardValueSet>

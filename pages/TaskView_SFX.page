@@ -1,0 +1,335 @@
+<apex:page showHeader="false" sidebar="false" standardController="Task" extensions="TaskExtension"  standardStylesheets="false" 
+    docType="html-5.0"
+>
+<div id="_sl_loading"></div>
+<apex:includeLightning /> 
+
+<apex:stylesheet value="/resource/SLDS0120/assets/styles/salesforce-lightning-design-system-vf.css"/>
+
+<apex:form rendered="{!isSF1}" styleClass="slds">
+    
+     
+    
+    
+        <div class="slds-page-header" role="banner">
+            <div >
+                <div class="slds-has-flexi-truncate">
+                    <p class="slds-text-heading--label">Task</p>
+                    <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+                            <h1 class="slds-text-heading--medium slds-truncate" title="">{!Task.TaskHeader__c}</h1>
+                        </div>
+                    </div>
+                </div> 
+                <div class="slds-no-flex slds-align-bottom">
+                    <div class="sf1_buttons" role="group"  id="SL_View_Buttons" style="display:-webkit-flex;">
+                        <button  class="slds-button slds-button--neutral" onclick="js_edit()"  type="button">Edit</button>
+                        <button  class="slds-button slds-button--neutral" onclick="js_upload()" type="button">Add Attachment</button>
+                        <button  class="slds-button slds-button--neutral" onclick="js_followup()" type="button">Create Follow-Up</button>
+                        <button  class="slds-button slds-button--neutral" onclick="js_del()" type="button">Delete</button>
+                    </div>
+                    <div class="sf1_buttons" role="group" style="display:none" id="SL_Edit_Buttons">
+                      <apex:outputPanel rendered="{!Task.status == 'Completed'}" layout="none">
+                           <button  class="slds-button slds-button--neutral slds-button--small" onclick="return js_save(event)">Save</button>
+                      </apex:outputPanel>
+                      <apex:outputPanel rendered="{!Task.status == 'Open'}" layout="none">
+                           <button  class="slds-button slds-button--neutral slds-button--small" onclick="return js_save(event)" >Save as Open</button>
+                      </apex:outputPanel>
+                      <apex:outputPanel rendered="{!Task.status == 'Open'}" layout="none">
+                        <button  class="slds-button slds-button--neutral slds-button--small" onclick="return js_save(event, 'Completed')">
+                           Save as Completed</button>
+                      </apex:outputPanel>
+                        <button  class="slds-button slds-button--neutral slds-button--small" onclick="return js_cancel_edit(event)">&nbsp;Cancel&nbsp;&nbsp;</button>
+                      <button  class="slds-button slds-button--neutral slds-button--small" onclick="return js_upload(event)">Add Attachment</button>
+                     <apex:outputPanel rendered="{!Task.MarkForDeletion__c != true}" layout="none">
+                          <button  class="slds-button slds-button--neutral slds-button--small" onclick="return js_del(event)">Delete</button>
+                     </apex:outputPanel>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+      
+        <div id="SL_ObjectViewSFX" />
+        <div id="SL_ObjectEditSFX" style="display:none"/>
+
+        
+
+       
+
+        <div class="_tab_switch">
+            <span tab="products" class="_active" onclick="switch_tab(this)">Products</span>
+            <span tab="contacts" onclick="switch_tab(this)">Contacts</span>
+        </div>
+    
+        <div class="_tab_body">
+            <div tab="products" class="_active">
+                <iframe id="gridFrame" scrolling="auto" height="385" width="100%" 
+                    frameborder="0" 
+                    src="/apex/GBLite__grid?gname=Products&fpf=ActivityId__c&fpv={!Task.id}&sbb=1&sh=0&ssb=0"
+                ></iframe>
+            </div>
+            <div tab="contacts">
+                <iframe id="gridFrame" scrolling="auto" height="385" width="100%" 
+                    frameborder="0" 
+                    src="/apex/GBLite__grid?gname=Contacts&fpf=ActivityId__c&fpv={!Task.id}&sbb=1&sh=0&ssb=0"
+                ></iframe>
+            </div>
+        </div>
+
+        
+        <div id="SL_ObjectViewSFX_Bottom" />
+
+
+
+
+    <script>
+    var sRetURL = document.location.pathname + '/' + document.location.search,
+        //'{!retURL}',
+        sId = '{!Task.id}',
+        oEditCMP,
+        oViewCMP;
+    {!is_ic_inbound};
+    if (typeof(sforce) != 'undefined' && typeof(sforce.one) != 'undefined') {
+        $Lightning.use("c:SL_TaskViewAPP", function() {
+            $Lightning.createComponent("c:SL_ObjectView",
+                { 
+                    simpleObject : "Task", 
+                    'simpleTitle' : '', 
+                    simpleFieldSet : 'Lightning_Task_View', 
+                    'recordId' :  '{!Task.id}',
+                    'simpleLabels' : {'activitydate' : 'Date', 'whoid' : 'Rep/Contact', 'reminderdatetime' : 'Reminder ?', 'ownerid' : 'Owner', 'whatid' : 'Firm/Office', 'description' : 'Comments'},
+                    'simpleEnabledFields' : 'activitydate,whoid,reminderdatetime,'
+                        + '{!IF(is_ic_inbound, 'activitytype__c,activitysubtype__c,activitypoints__c' , 'type')},'
+                        + 'opportunity__c,campaign__c,campaign_names__c,campaign_ids__c,ownerid,whatid,description',
+                    'simpleAfterLoad' : function(){
+//                        turnLoading(-1);
+                    },
+                },
+                "SL_ObjectViewSFX",
+                function(cmp) {
+                    oViewCMP = cmp; 
+                }
+            );
+
+            $Lightning.createComponent("c:SL_ObjectView",
+                { simpleObject : "Task", 'simpleTitle' : '', simpleFieldSet : 'Lightning_Task_View_Bottom', 'recordId' :  '{!Task.id}',
+                    'simpleLabels' : {'usoffshoreactivityowner__c' : 'Created By (Offshore)', 'lastmodifieddate' : 'Last Modified'},
+                    'simpleAfterLoad' : function(){
+//                        turnLoading(-1);
+                    },
+                },
+                "SL_ObjectViewSFX_Bottom",
+                function(cmp) {
+                }
+            );
+        });
+    }
+
+    var js_upload = function(event){
+        var aRequest = {
+            'id' : sId,
+            'retURL' : sRetURL,
+            'event' : 'upload'
+        };
+//        turnLoading(1);
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.TaskExtension.jsRemote}',
+            aRequest, 
+            function(result, event){
+                sforce.one.navigateToURL(result.url);
+                //console.log(result);
+            }
+        );
+        return false;
+    }
+
+    var js_followup = function(){
+
+        var aRequest = {
+            'id' : sId,
+            'event' : 'followup'
+        };
+//        turnLoading(1);
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.TaskExtension.jsRemote}',
+            aRequest, 
+            function(result, event){
+                console.log(result.url);
+                sforce.one.navigateToURL(result.url);
+            },
+            {escape: false}
+        );
+    }
+ 
+    var js_edit = function(){
+        if (oEditCMP == undefined) {
+            $Lightning.createComponent("c:SL_ObjectEdit",
+                { 
+                    'simpleObject' : "Task", 
+                    'simpleTitle' : '', 
+                    'simpleFieldSet' : 'Lightning_Task_Edit', 
+                    'recordId' :  '{!Task.id}',
+                    'simpleLabels' : {'activitydate' : 'Date', 'whoid' : 'Rep/Contact', 'isreminderset' : 'Reminder ?', 'ownerid' : 'Owner', 'whatid' : 'Firm/Office', 'description' : 'Comments'},
+                    'simpleReadonly' : 'whatid,whoid',
+                    'simpleRequired' : 'activitydate,whoid,type,ownerid,description',
+                    'simpleEnabledFields' : 'activitydate,whoid,isreminderset,'
+                        + '{!IF(is_ic_inbound, 'activitytype__c,activitysubtype__c,activitypoints__c' , 'type')},'
+                        + 'opportunity__c,campaign__c,ownerid,whatid,description',
+                    'simpleSaveSuccess' : function(data) {
+                        oViewCMP.refresh();
+                        document.getElementById('SL_ObjectEditSFX').style.display = 'none';
+                        document.getElementById('SL_Edit_Buttons').style.display = 'none';
+                        document.getElementById('SL_ObjectViewSFX').style.display = 'block';
+                        document.getElementById('SL_View_Buttons').style.display = '-webkit-flex';
+                        //sforce.one.navigateToSObject(data.id);
+                    },
+                    'simpleAfterLoad' : function(){
+    //                    turnLoading(-1);
+                    },
+                    'hideButtons' : true
+                },
+                "SL_ObjectEditSFX",
+                function(cmp) {
+                    oEditCMP = cmp;
+                }
+            );
+        } else {
+            oEditCMP.refresh();
+        }
+
+        document.getElementById('SL_ObjectEditSFX').style.display = 'block';
+        document.getElementById('SL_Edit_Buttons').style.display = '-webkit-flex';
+        document.getElementById('SL_ObjectViewSFX').style.display = 'none';
+        document.getElementById('SL_View_Buttons').style.display = 'none';
+//        debugger;
+//        turnLoading(1);
+        //sforce.one.editRecord(sId);
+    }
+
+    var js_del = function(event) {
+//        turnLoading(1);
+        var aRequest = {
+            'id' : sId,
+            'event' : 'del'
+        };
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.TaskExtension.jsRemote}',
+            aRequest, 
+            function(result, event){
+                sforce.one.navigateToURL('/{!retURL}', true);
+                //sforce.one.navigateToList('', null, 'Task');
+            }
+        );
+        return false;
+    }
+
+    var js_cancel_edit = function(evt){
+        document.getElementById('SL_ObjectEditSFX').style.display = 'none';
+        document.getElementById('SL_Edit_Buttons').style.display = 'none';
+        document.getElementById('SL_ObjectViewSFX').style.display = 'block';
+        document.getElementById('SL_View_Buttons').style.display = '-webkit-flex';
+//        debugger;
+
+        evt.stopPropagation();
+        evt.cancelBubble = true;
+        return false;
+    }
+
+    var js_save = function(evt, sStatus) {
+//    turnLoading(1);
+        if (sStatus == '' || sStatus == undefined) {
+            oEditCMP.save();
+        } else {
+            oEditCMP.save({'status' : sStatus});
+        }
+        evt.stopPropagation();
+        evt.cancelBubble = true;
+        return false;
+    }
+
+    var nLoading = 2;
+    var turnLoading = function(nStep){
+        return;
+        var nPrev = nLoading;
+        nLoading += nStep;
+        if (nLoading <= 0 && nPrev > 0) {
+          document.getElementById('_sl_loading').style.display = 'none';
+        } else if (nLoading > 0 && nPrev == 0) {
+          document.getElementById('_sl_loading').style.display = 'block';
+        }
+
+    }
+    </script>
+</apex:form>
+
+<style type="text/css">
+    
+/*.sf1_buttons {
+    text-align:center;
+}
+.sf1_buttons .btn{
+    font-size: 16px;
+    color: #44596c;
+    text-shadow: none;
+    margin: 0;
+    padding: 4px 14px;
+    height: 35px;
+    font-size: 16px;
+    font-family: 'ProximaNovaSoft-Regular';
+    font-weight: normal;
+    border: 1px solid #bbc0c4;
+    border-radius: 5px;
+    background: -moz-linear-gradient(#ffffff,#f1f1f1);
+    background: -webkit-linear-gradient(#ffffff,#f1f1f1);
+    background: -ms-linear-gradient(#ffffff,#f1f1f1);
+    background: linear-gradient(#ffffff,#f1f1f1);
+    box-shadow: none;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+ 
+.sf1_buttons .btn:active {
+    background: #e9e9e9;
+
+}*/
+@media only screen and (max-device-width : 360px) {
+    .slds .slds-button-group .slds-button{
+        padding:4px;
+        font-size: 80%;
+    }
+    .slds .slds-page-header .sf1_buttons.slds-button-group{
+        margin-left:-10px;
+        margin-right:-10px;
+    }
+    .slds .slds-page-header .sf1_buttons.slds-button-group + .sf1_buttons.slds-button-group{
+        margin-left: -23px;
+        margin-right: -23px;
+    }
+}
+
+#SL_ObjectViewSFX,
+#SL_ObjectEditSFX{
+    min-height: 290px;
+}
+
+.uiDatePicker.visible{
+    position: fixed !important;
+    top: 0px !important;
+    width: 100% !important;
+}
+
+#_sl_loading{
+      /*display: block;
+      position: fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      top:0;
+      z-index:999;
+      background: url('/img/loading32.gif') center center no-repeat rgba(0,0,0,0.1);
+*/
+    }
+</style>    
+</apex:page>

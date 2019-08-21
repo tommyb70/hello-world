@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DisplayName__c</fullName>
+        <description>The name that will be displayed in the component's list item.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The name that will be displayed in the component's list item.</inlineHelpText>
+        <label>Display Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportBarUtilitySection__c</fullName>
+        <description>The Section of the Utility Bar this report will be shown in.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The Section of the Utility Bar this report will be shown in.</inlineHelpText>
+        <label>Report Bar Utility Section</label>
+        <referenceTo>ReportBarUtilitySection__mdt</referenceTo>
+        <relationshipLabel>Report Utility Bar Items</relationshipLabel>
+        <relationshipName>ReportUtilityBarItems</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportUtilityBar__c</fullName>
+        <description>The Report Utility bar this item should show up on.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The Report Utility bar this item should show up on.</inlineHelpText>
+        <label>Report Utility Bar</label>
+        <referenceTo>ReportUtilityBar__mdt</referenceTo>
+        <relationshipLabel>Report Utility Bar Items</relationshipLabel>
+        <relationshipName>ReportUtilityBarItems</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>The Order in which these objects appear in the list. Smallest to largest.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The Order in which these objects appear in the list. Smallest to largest.</inlineHelpText>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>URL__c</fullName>
+        <description>The URL this list item should direct the user to.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The URL this list item should direct the user to.</inlineHelpText>
+        <label>URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <description>An item on a report utility bar.</description>
+    <label>Report Utility Bar Item</label>
+    <pluralLabel>Report Utility Bar Items</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>DC_AccountId__c</fullName>
+        <description>`Account_Id` bigint from Table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>`Account_Id` bigint from Table audit_accounts_pda</inlineHelpText>
+        <label>DC_AccountId</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_ActionTaken__c</fullName>
+        <description>SRC : Action_Taken,  table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SRC : Action_Taken,  table audit_accounts_pda</inlineHelpText>
+        <label>DC_ActionTaken</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_AuditAccountPDAId__c</fullName>
+        <description>Audit_Account_PDA_Id from audit_accounts_pda</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Audit_Account_PDA_Id from audit_accounts_pda</inlineHelpText>
+        <label>DC_AuditAccountPDAId</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_AuditCreateDate__c</fullName>
+        <description>SRC:Audit_Create_Date, table - audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <label>DC_AuditCreateDate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DC_Comments__c</fullName>
+        <description>SRC:Comments - table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <label>DC_Comments</label>
+        <length>3000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DC_CreateDate__c</fullName>
+        <description>SRC : Create_Date, table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SRC : Create_Date, table audit_accounts_pda</inlineHelpText>
+        <label>DC_CreateDate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DC_CurrentAUM__c</fullName>
+        <description>SRC : Current_AUM - table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SRC : Current_AUM - table audit_accounts_pda</inlineHelpText>
+        <label>DC_CurrentAUM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_DistributionRate__c</fullName>
+        <description>SRC: Distribution_Rate, table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SRC: Distribution_Rate, table audit_accounts_pda</inlineHelpText>
+        <label>DC_DistributionRate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_EventType__c</fullName>
+        <description>SRC :  Event_Type from table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <label>DC_EventType</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_ModifiedBy__c</fullName>
+        <description>SRC : Modified_By, table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <label>DC_ModifiedBy</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_OldPDA__c</fullName>
+        <description>Old_PDA from Table audir_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Old_PDA</inlineHelpText>
+        <label>DC_OldPDA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_PDAResetDate__c</fullName>
+        <description>SRC : PDA_Reset_Date - table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <label>DC_PDAResetDate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DC_PDA__c</fullName>
+        <description>`PDA` decimal(18,4) from Table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current PDA</inlineHelpText>
+        <label>DC_PDA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_RequestedBy__c</fullName>
+        <description>SRC  : Requested_By - Table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SRC  : Requested_By - Table audit_accounts_pda</inlineHelpText>
+        <label>DC_RequestedBy</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DC_Version__c</fullName>
+        <description>SRC:Version,table audit_accounts_pda</description>
+        <externalId>false</externalId>
+        <label>DC_Version</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinancialAccountPDAAuditHistory__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Account</label>
+        <referenceTo>FinancialAccount__c</referenceTo>
+        <relationshipLabel>FinancialAccountPDAAudit</relationshipLabel>
+        <relationshipName>FinancialAccountPDAAudit</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object to store the PDA History</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>FinancialAccountPDAAudit</label>
+    <nameField>
+        <label>FinancialAccountPDAHistory Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>FinancialAccountPDAAudit</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

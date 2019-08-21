@@ -1,0 +1,8 @@
+<!-- TJB 20160826 - Created code to allow Affiliate Request quick action via SF1 -->
+
+<apex:page StandardController="Account" tabStyle="Account" sidebar="false" showHeader="false" lightningStylesheets="true">
+    <flow:interview name="Affiliate_Request_Process" finishLocation="/{!Account.Id}">
+        <apex:param name="varAccountId" value="{!Account.Id}"/>
+        <apex:param name="varUserId" value="{!$User.Id}"/>
+    </flow:interview>
+</apex:page>

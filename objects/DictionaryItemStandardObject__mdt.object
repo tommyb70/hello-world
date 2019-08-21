@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>APIName__c</fullName>
+        <description>The API Name of the standard object to be included in the Dictionary Item object</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>The API Name of the standard object to be included in the Dictionary Item object</inlineHelpText>
+        <label>API Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Lists all Standard Objects that should be included in the Dictionary Items object; if the standard object is not in this list, it will NOT be in the Dictionary Items object.</description>
+    <label>Dictionary Item Standard Object</label>
+    <pluralLabel>Dictionary Item Standard Objects</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

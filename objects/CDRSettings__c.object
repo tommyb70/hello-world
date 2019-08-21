@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>BusinessHoursName__c</fullName>
+        <description>Used in loading product performance data.  This should be a record that is 24-Hours, M-F, GMT.  The stock market holidays for each year must be associated with the Business Hours.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in loading product performance data.  This should be a record that is 24-Hours, M-F, GMT.  The stock market holidays for each year must be associated with the Business Hours.</inlineHelpText>
+        <label>Business Hours Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeleteFundstation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used in ProdPerfMainDeleteBatch to determine if Fundstation product performance should be deleted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in ProdPerfMainDeleteBatch to determine if Fundstation product performance should be deleted</inlineHelpText>
+        <label>Delete Fundstation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DeleteHarris__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used in ProdPerfMainDeleteBatch to determine if Harris product performance should be deleted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in ProdPerfMainDeleteBatch to determine if Harris product performance should be deleted</inlineHelpText>
+        <label>Delete Harris</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MorningstarCreateAccessCodeBody__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Body text for the HTTP POST that creates the Morningstar Access Code</inlineHelpText>
+        <label>Morningstar CreateAccessCode Body</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MorningstarCreateAccessCodeURL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>URL used to create a Morningstar Access Code via the Morningstar API Center</inlineHelpText>
+        <label>Morningstar CreateAccessCode URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MorningstarDailyRatingsAndRankingsURL__c</fullName>
+        <externalId>false</externalId>
+        <label>Morningstar DailyRatingsAndRankings URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MorningstarUniverseCode__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Universe of funds Code as setup in the Morningstar API Center</inlineHelpText>
+        <label>Morningstar Universe Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OverrideSetStatusOnCreate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Keeps the trigger from assigning a new record to Draft status on creation.  Can be used for data loading directly into a specific status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Keeps the trigger from assigning a new record to Draft status on creation.  Can be used for data loading directly into a specific status.</inlineHelpText>
+        <label>Override Set Status On Create</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OverrideTriggerValidations__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Overrides trigger validations on status changes, effective dates, etc. when editing or creating CDR Qualitative Data records</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overrides trigger validations on status changes, effective dates, etc. when editing or creating CDR Qualitative Data records</inlineHelpText>
+        <label>Override Trigger Validations</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ProdPerfBatchLASTNDAYS__c</fullName>
+        <description>In Product Peformance batches, this is used to select Product Performance records that have been modified in the "Last N Days".  This should be set to at least 7 days to catch Morningstar changes.  You must still use the date ranges for the Roll-up Batch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Product Peformance batches, this is used to select Product Performance records that have As Of Dates in the "Last N Days".  This should be set to at least 7 days to catch Morningstar changes.</inlineHelpText>
+        <label>Prod Perf Batch LAST_N_DAYS</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProdPerfMaintDeleteBatchFromDate__c</fullName>
+        <description>Used in ProdPerfMainDeleteBatch to determine the date from which product performance rows should be deleted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in ProdPerfMainDeleteBatch to determine the date from which product performance rows should be deleted.</inlineHelpText>
+        <label>Prod Perf Maint Delete Batch From Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>UseThisStaticResourceForMSXML__c</fullName>
+        <description>If not blank, MS API Batch Apex will use this static resource name for processing; otherwise, it will use a real-time call to the apicenter.  Normal processing is to leave this blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If not blank, MS API Batch Apex will use this static resource name for processing; otherwise, it will use a real-time call to the apicenter.  Normal processing is to leave this blank.</inlineHelpText>
+        <label>Use This Static Resource For MS XML</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>Settings that control CDR processes</description>
+    <enableFeeds>false</enableFeeds>
+    <label>CDR Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

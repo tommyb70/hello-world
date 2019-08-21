@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AccountTerrId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>AccountTerrId</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Account Territories</relationshipLabel>
+        <relationshipName>Account_Territories</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.Channel__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CoverageUser__c</fullName>
+        <description>Coverage User (from the territory object)</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.CoverageUser__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Coverage User</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FS__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (Territory__r.ParentTerritory__r.ParentTerritory__r.Name ='FIDUCIARY SERVICES', true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FS</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FT__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Account__r.FirmType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FT</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GroupId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.GroupId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GroupId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MarsAccountId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.MarsAccountId__c</formula>
+        <label>Mars Account Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MarsTerritoryName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.TerritoryName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mars Territory Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PROSubZone__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Territory__r.Channel__r.Name, 
+'WIREHOUSE;', TEXT(   Account__r.PRORotationWHSE__c   ),
+'IAG IND', Text(  Account__r.PRORotationIAG__c  ), 
+'IAG RIA', Text(Account__r.PRORotationIAG__c ), 
+'FIDUCIARY SERVICES', Text( Account__r.PRORotationFS__c ) , 
+'ADU', TEXT(  Account__r.RotationADU_IDU__c  ), 
+'IDU', TEXT(  Account__r.RotationADU_IDU__c  ), 
+'DC REGIONAL', TEXT(Account__r.RotationRADU__c) , 
+'DCIO', TEXT(Account__r.RotationRADU__c) , 
+'DCIO SUB ADV', TEXT(Account__r.RotationRADU__c) , 
+'No Zone')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sub-Zone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProZone__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Territory__r.Channel__r.Name, 
+'FIDUCIARY BD', TEXT( Account__r.TierFS__c ) , 
+'BANK TRUST', TEXT(Account__r.TierFS__c) , 
+'BANK TRUST WHSE', TEXT(Account__r.TierFS__c) , 
+'SUB ADV', TEXT(Account__r.TierFS__c) , 
+'RIA FIDUCIARY', TEXT(Account__r.TierFS__c) , 
+'SUB ADV', TEXT(Account__r.TierFS__c) , 
+'ADU', Account__r.ZoneADU_IDU__c , 
+'IDU', Account__r.ZoneADU_IDU__c , 
+'RADU', Account__r.ZoneRADU__c ,
+'RCDU', Account__r.ZoneRCDU__c ,
+'DC REGIONAL', Account__r.ZoneRADU__c , 
+'DCIO', Account__r.ZoneRADU__c, 
+'DCIO SUB ADV', Account__r.ZoneRADU__c , 
+'No Zone')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RoleId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.RoleId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryManager__c</fullName>
+        <description>The territory manager (from the territory object)</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.TerritoryManager__r.FirstName &amp; " " &amp;  Territory__r.TerritoryManager__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Manager</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>Territory__c.RoleId__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Territory__c</referenceTo>
+        <relationshipLabel>Account Territories</relationshipLabel>
+        <relationshipName>Account_Territories</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Zone__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Territory__r.Channel__r.Name, 
+'FIDUCIARY BD', TEXT( Account__r.TierFS__c ) , 
+'BANK TRUST', TEXT(Account__r.TierFS__c) , 
+'BANK TRUST WHSE', TEXT(Account__r.TierFS__c) , 
+'SUB ADV', TEXT(Account__r.TierFS__c) , 
+'RIA FIDUCIARY', TEXT(Account__r.TierFS__c) , 
+'SUB ADV', TEXT(Account__r.TierFS__c) , 
+'ADU',  Account__r.ZoneADU_IDU__r.Name  , 
+'IDU', Account__r.ZoneADU_IDU__r.Name , 
+'RCDU', Account__r.ZoneRCDU__r.Name ,
+'RADU', Account__r.ZoneRADU__r.Name ,
+'DC REGIONAL', Account__r.ZoneRADU__r.Name , 
+'DCIO', Account__r.ZoneRADU__r.Name, 
+'DCIO SUB ADV', Account__r.ZoneRADU__r.Name , 
+'No Zone')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores the Account Territory assignment records. 
+These records are used to drive the AccountShare table and provide visibility to corresponding Roles in the Role Hierarchy.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Account Territory</label>
+    <nameField>
+        <displayFormat>AT-{0000000000}</displayFormat>
+        <label>Account Territory Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Account Territories</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Channel__c</columns>
+        <columns>FS__c</columns>
+        <columns>FT__c</columns>
+        <columns>Territory__c</columns>
+        <columns>Territory_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Created_Today</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Channel__c</columns>
+        <columns>Territory__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Created Today</label>
+    </listViews>
+    <listViews>
+        <fullName>No_Account</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Territory__c</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>No Account</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Big Tickets</relationshipLabel>
+        <relationshipName>Trades</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetClass__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Product__r.AssetClass__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Asset Class</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AssetSubClass__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Product__r.AssetSubClass__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Asset Sub Class</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClearingFirm__c</fullName>
+        <description>Firm name that the trade cleared through</description>
+        <externalId>false</externalId>
+        <label>Clearing Firm</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Big Tickets</relationshipLabel>
+        <relationshipName>Trades</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Firm__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Firm</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Big Tickets</relationshipLabel>
+        <relationshipName>Big_Tickets_R</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GrossAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfTickets__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Tickets</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Platform__c</fullName>
+        <externalId>false</externalId>
+        <label>Platform</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProcessDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ProductType__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Product__r.ProductType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipName>Trades</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ScrubDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Scrub Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SettleCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Settle Code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TradeDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Trade Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TradeID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Trade ID</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>TransactionType__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Purchases</fullName>
+                    <default>false</default>
+                    <label>Purchases</label>
+                </value>
+                <value>
+                    <fullName>Redemptions</fullName>
+                    <default>false</default>
+                    <label>Redemptions</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>View__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/'&amp; Id, "View")</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>View</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Week_based_on_ProcessDate__c</fullName>
+        <description>Calculates the number of the weekday. Monday = 1</description>
+        <externalId>false</externalId>
+        <formula>MOD(
+ProcessDate__c -  DATE(1900,1,7) ,7
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of the Week based on Process Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ofWeek__c</fullName>
+        <description>Used in the Top 10 Big Ticket Purch All Terr Daily report to dynamically display the Previous Day process Date or Saturday, Sunday and Monday in 1 report. Monday = 1 and Sunday = 0</description>
+        <externalId>false</externalId>
+        <formula>IF( Week_based_on_ProcessDate__c  =  2  &amp;&amp; of_the_Week_Today__c  = 3, TRUE, 
+IF( Week_based_on_ProcessDate__c  =  3  &amp;&amp; of_the_Week_Today__c = 4, TRUE, 
+IF( Week_based_on_ProcessDate__c  =  4  &amp;&amp; of_the_Week_Today__c = 5, TRUE, 
+IF( Week_based_on_ProcessDate__c  =  1  &amp;&amp; of_the_Week_Today__c = 2, TRUE, 
+IF( (Week_based_on_ProcessDate__c  =  5  || Week_based_on_ProcessDate__c  =  6  || Week_based_on_ProcessDate__c  =  0) &amp;&amp; (of_the_Week_Today__c = 1  || of_the_Week_Today__c = 6  || of_the_Week_Today__c = 0), TRUE, 
+
+FALSE
+)))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Week</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>of_the_Week_Today__c</fullName>
+        <externalId>false</externalId>
+        <formula>MOD(
+ TODAY() - DATE(1900,1,7) ,7
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of the Week Today</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>30 Days worth of data based on Scrub Date (Scrub date includes manually scrubbed and auto resolved). Updated daily. Has data at the Rep Level.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Big Ticket (R)</label>
+    <nameField>
+        <displayFormat>TR-{0000000000}</displayFormat>
+        <label>Transaction Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Big Tickets (R)</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

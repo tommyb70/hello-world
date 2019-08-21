@@ -1,0 +1,156 @@
+<apex:page standardController="DictionaryItem__c" extensions="DictionaryItemExtension" sidebar="true" showHeader="true"  action="{!intialCheck}" lightningStylesheets="true">
+    
+    <style>
+        h1 { font-size: large; }
+        h1red { font-size: large; color:#fc0202; font-weight:bold}
+        .bd { font-size: medium; }
+        .red {color:#fc0202; }
+    </style>
+    
+    <apex:form >                    
+        <apex:detail rendered="{!showDetailPage}" inlineEdit="true" oncomplete="window.location.reload();"/>   
+    </apex:form>
+    <apex:form > 
+        <apex:pageBlock title="{!DIInfo.Name}" >
+            <!-- Object Header -->  
+            <apex:pageBlockSection columns="1" rendered="{!showObjUI}"> 
+                <apex:outputPanel rendered="{!DIInfo.Publish__c}">
+                    <h1><i>{!DIInfo.PluralLabel__c}</i> is an object</h1>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c}">
+                    <h1red><i>{!DIInfo.PluralLabel__c}</i></h1red><h1> is an object</h1>
+                    <br/>
+                </apex:outputPanel> 
+                    
+                <!--<p>
+An object is similar to a database table or an Excel worksheet that has columns (fields) and rows (records).  Objects often appear as tabs in Salesforce.
+</p>-->
+                <apex:outputText value="{!DIInfo.BusinessDefinition__c}" escape="false" label="" styleClass="bd"/>
+            </apex:pageBlockSection>             
+            
+            <!-- Record Type Header -->          
+            <apex:pageBlockSection columns="1" rendered="{!showRectypeUI}"> 
+
+                <apex:outputPanel rendered="{!DIInfo.Publish__c}">
+                    <h1><i>{!DIInfo.Label__c}</i> is a record type on <a href="/{!DIInfo.ParentDictionaryItem__c }">{!DIInfo.ParentDictionaryItem__r.PluralLabel__c}</a></h1>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c && !DIInfo.ParentDictionaryItem__r.Publish__c}">
+                    <h1red><i>{!DIInfo.Label__c}</i></h1red><h1> is a record type on </h1> <a href="/{!DIInfo.ParentDictionaryItem__c }"><h1red>{!DIInfo.ParentDictionaryItem__r.PluralLabel__c}</h1red></a>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c && DIInfo.ParentDictionaryItem__r.Publish__c}">
+                    <h1red><i>{!DIInfo.Label__c}</i></h1red><h1> is a record type on <a href="/{!DIInfo.ParentDictionaryItem__c }">{!DIInfo.ParentDictionaryItem__r.PluralLabel__c}</a></h1>
+                    <br/>
+                </apex:outputPanel>  
+                <!--<p>
+A record type differentiates the kind of records in an object. It controls what fields you see and the picklist values available in picklist fields, among other things.
+</p>-->
+                <apex:outputText value="{!DIInfo.BusinessDefinition__c}" escape="false" label="" styleClass="bd"/>
+            </apex:pageBlockSection> 
+            
+            
+            <!-- Field Header -->
+            <apex:pageBlockSection columns="1" rendered="{!showFieldUI}"> 
+                <apex:outputPanel rendered="{!DIInfo.Publish__c}">
+                    <h1><i>{!DIInfo.Label__c}</i> is a field on <a href="/{!DIInfo.ParentDictionaryItem__c }">{!DIInfo.ParentDictionaryItem__r.Label__c}</a></h1>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c && !DIInfo.ParentDictionaryItem__r.Publish__c}">
+                    <h1red><i>{!DIInfo.Label__c}</i></h1red><h1> is a field on </h1> <a href="/{!DIInfo.ParentDictionaryItem__c }"><h1red>{!DIInfo.ParentDictionaryItem__r.Label__c}</h1red></a>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c && DIInfo.ParentDictionaryItem__r.Publish__c}">
+                    <h1red><i>{!DIInfo.Label__c}</i></h1red><h1> is a field on <a href="/{!DIInfo.ParentDictionaryItem__c }">{!DIInfo.ParentDictionaryItem__r.Label__c}</a></h1>
+                    <br/>
+                </apex:outputPanel> 
+                <!--<p>
+A field is a specific piece of information on an individual record.  You can think of it as a column header in an Excel worksheet.
+</p>-->
+                <apex:outputText value="{!DIInfo.BusinessDefinition__c}" escape="false" label="" styleClass="bd"/>
+            </apex:pageBlockSection> 
+            
+            <!-- Picklist Value header-->
+            <apex:pageBlockSection columns="1" rendered="{!showPIcklistUI}"> 
+
+                <apex:outputPanel rendered="{!DIInfo.Publish__c}">
+                    <h1><i>{!DIInfo.Label__c}</i> is a picklist value on <a href="/{!DIInfo.ParentDictionaryItem__c }">{!DIInfo.ParentDictionaryItem__r.Label__c}</a></h1>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c && !DIInfo.ParentDictionaryItem__r.Publish__c}">
+                    <h1red><i>{!DIInfo.Label__c}</i></h1red><h1> is a picklist value on </h1> <a href="/{!DIInfo.ParentDictionaryItem__c }"><h1red>{!DIInfo.ParentDictionaryItem__r.Label__c}</h1red></a>
+                    <br/>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{! !DIInfo.Publish__c && DIInfo.ParentDictionaryItem__r.Publish__c}">
+                    <h1red><i>{!DIInfo.Label__c}</i></h1red><h1> is a picklist value on <a href="/{!DIInfo.ParentDictionaryItem__c }">{!DIInfo.ParentDictionaryItem__r.Label__c}</a></h1>
+                    <br/>
+                </apex:outputPanel> 
+                <!--<p>
+A Picklist value is a option that appears in the dropdown or select list for certain fields.
+</p>-->
+                <apex:outputText value="{!DIInfo.BusinessDefinition__c}" escape="false" label="" styleClass="bd"/>
+                
+            </apex:pageBlockSection> 
+            <p>
+                <i>You may not see this item depending on your security and other configuration options.</i>
+            </p>
+            
+            <apex:pageBlockSection title="{!RecordtypesLabel}" columns="1" rendered="{!OR(showRectypeUI == true,showObjUI == true)}">              
+                <apex:pageBlockTable value="{!recordtypesInformation}" var="rt"> 
+                    <!--<apex:column value="{!rt.Publish__c}" width="15px;"/>-->
+                    <apex:column headerValue="Record Type Name">
+                        <apex:outputLink rendered="{!!rt.Publish__c}" style="color:#fc0202" value="/{!rt.Id}">{!rt.Label__c}</apex:outputLink>
+                        <apex:outputLink rendered="{!rt.Publish__c}" value="/{!rt.Id}">{!rt.Label__c}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!rt.BusinessDefinition__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection> 
+            
+            <apex:outputPanel id="pbId">
+                <apex:pageBlockSection title="Fields" columns="1" html-style="display:{!IF(showObjUI == true, 'block','none')}">                      
+                    <apex:pageBlockTable value="{!FieldsInfoPagination}" var="rt">             
+                        <apex:column headerValue="Field Name">
+                            <apex:outputLink rendered="{!!rt.fieldsInformation.Publish__c}" style="color:#fc0202" value="/{!rt.fieldsInformation.Id}">{!rt.fieldsInformation.Label__c}</apex:outputLink>
+                            <apex:outputLink rendered="{!rt.fieldsInformation.Publish__c}" value="/{!rt.fieldsInformation.Id}">{!rt.fieldsInformation.Label__c}</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!rt.fieldsInformation.BusinessDefinition__c}"/>                    
+                    </apex:pageBlockTable>
+                    
+                    <apex:outputPanel > 
+                        <center> 
+                            <br/>                 
+                            <apex:commandButton status="fetchStatus" reRender="pbId" value="First" action="{!first}" disabled="{!!setCon.hasPrevious}" title="First Page"/>       
+                            <apex:commandButton status="fetchStatus" reRender="pbId" value="Previous" action="{!previous}" disabled="{!!setCon.hasPrevious}" title="Previous Page"/>            
+                            &nbsp;&nbsp;
+                            <apex:outputText >{!(setCon.pageNumber * size)+1-size}-{!IF((setCon.pageNumber * size)>noOfRecords, noOfRecords,
+                                (setCon.pageNumber * size))} of {!noOfRecords}
+                            </apex:outputText>
+                            &nbsp;&nbsp;
+                            <apex:commandButton status="fetchStatus" reRender="pbId" value="Next" action="{!next}" disabled="{!!setCon.hasNext}" title="Next Page"/>       
+                            <apex:commandButton status="fetchStatus" reRender="pbId" value="Last" action="{!last}" disabled="{!!setCon.hasNext}" title="Last Page"/>              
+                            
+                            <apex:outputPanel >                      
+                                <apex:actionStatus id="fetchStatus" >
+                                    <apex:facet name="start" >
+                                        <img src="/img/loading.gif" />                    
+                                    </apex:facet>
+                                </apex:actionStatus>
+                            </apex:outputPanel>   
+                        </center> 
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>        
+            
+            <apex:pageBlockSection title="{!PicklistLabel}" columns="1" rendered="{!OR(showPIcklistUI == true,DIInfo.FieldType__c == 'Picklist',DIInfo.FieldType__c =='Picklist (Multi-Select)')}">
+                <apex:pageBlockTable value="{!picklistValuesInformation}" var="rt"> 
+                    <apex:column headerValue="Picklist Value" width="30%">
+                        <apex:outputLink rendered="{!!rt.Publish__c}" style="color:#fc0202" value="/{!rt.Id}">{!rt.Label__c}</apex:outputLink>
+                        <apex:outputLink rendered="{!rt.Publish__c}" value="/{!rt.Id}">{!rt.Label__c}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!rt.BusinessDefinition__c}"/>
+                </apex:pageBlockTable>          
+            </apex:pageBlockSection>           
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>

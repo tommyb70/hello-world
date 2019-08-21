@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>IsLinkBar__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Denotes whether or not this is a custom link bar.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Denotes whether or not this is a custom link bar.</inlineHelpText>
+        <label>Is Link Bar</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Strength__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>The Strength of the utility bar in terms of how it is shown to users. If a User meets the criteria of two utility bar records the one with the higher strength will be shown to the user.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>If a User meets the criteria of two utility bar records the one with the higher strength will be shown to the user.</inlineHelpText>
+        <label>Strength</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserFieldName__c</fullName>
+        <description>The name of the field on User to check if this report list should be shown to them. If the User has the User Field Value specified on the record in the User Field Name field they will be considered a match. If left blank this will always be considered a match.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The name of the field on User to check if this report list should be shown to them. If the User has the User Field Value specified on the record in the User Field Name field they will be considered a match.</inlineHelpText>
+        <label>User Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserFieldValue__c</fullName>
+        <description>The value of the field on User to check if this report list should be shown to them. If the User has the User Field Value specified on the record in the User Field Name field they will be considered a match.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The value of the field on User to check if this report list should be shown to them. If the User has the User Field Value specified on the record in the User Field Name field they will be considered a match.</inlineHelpText>
+        <label>User Field Value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Record that determines the utility bar that a user sees and what is on it.</description>
+    <label>Report Utility Bar</label>
+    <pluralLabel>Report Utility Bars</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

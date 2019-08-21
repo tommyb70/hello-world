@@ -1,0 +1,28 @@
+<apex:page name="Home Report Links" controller="UserData" lightningStylesheets="true">
+<style>
+   .colstyle {
+   width:80%;
+   font-weight: bold;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 17px;
+  background: #f7f7f7;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+   }
+</style>
+<apex:pageBlock title="Sales Reports" >
+            <apex:panelGrid columns="1" id="theGrid" width="80%" cellspacing="2" cellpadding="2" columnClasses="colstyle">   
+            <apex:outputLink value="https://vizbi.ngam.natixis.com/views/AllTrades_0/MYRegionSalesWithGOALS?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no" id="Link11" target="_blank">Daily Sales Reports</apex:outputLink>                                
+                <apex:outputLink value="https://services.ngam.natixis.com/SalesRpt/MySalesByProduct.aspx?book={!$UserRole.Name}" id="Link51" >My Sales by Product - Contact/Rep</apex:outputLink>                              
+                <apex:outputLink value="/apex/gblite__Grid?gname=Firm Sales" id="Link61" >My Sales by Product - Firm/Office</apex:outputLink>                                              
+                <apex:outputLink value="/00OF0000006J1km" id="Link71" >Quarterly Summary by Territory</apex:outputLink>              
+                <apex:outputLink value="/00OF0000006Ii2Y" id="Link81">Top Producers - Contact/Rep</apex:outputLink>                
+                <apex:outputLink value="/00OF0000006Ii2X" id="Link91" >Top Producers - Firm/Office</apex:outputLink>      
+            </apex:panelGrid>
+            
+        </apex:pageBlock>
+</apex:page>

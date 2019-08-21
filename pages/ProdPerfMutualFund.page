@@ -1,0 +1,115 @@
+<apex:page standardController="Product2" extensions="ProdPerfProductExt" id="mainpage" docType="html-5.0" lightningStylesheets="true">
+    
+    <style>
+        .rt{
+        text-align:right;
+        }
+    </style>
+    
+    <style>
+        .lf{
+        text-align:left;
+        }
+    </style>
+    <style>
+        .ct{
+        text-align:center;
+        }
+    </style>
+    
+    <apex:pageBlock >
+        
+        <apex:form id="childform">
+            <apex:pageMessages />
+            <apex:pageBlockSection columns="3">
+                <apex:pageBlockSectionItem >        
+                    <apex:outputLabel value="As Of Date"/>
+                    <apex:input type="date" value="{!ppcd}" id="aodc" size="10" onfocus="DatePicker.pickDate(false, this, false);" />
+                </apex:pageBlockSectionItem>        
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton action="{!getChildProductPerf}" value="Go" reRender="childform" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+            <br />
+            <apex:pageBlockSection columns="3">
+                <apex:outputField label="Total Net Assets" value="{!pp.TotalNetAssets__c}" />
+                <apex:outputField label="Shares Outstanding" value="{!pp.SharesOutstanding__c}" />
+            </apex:pageBlockSection> 
+            <br />
+ 
+            <apex:pageBlockTable value="{!children}" var="pchild" id="pchild" styleClass="rt">
+                <apex:column headerValue="Product" width="300" styleClass="lf">
+                    <apex:outputLink value="{!URLFOR($Action.Product2.View, pchild.Product__c)}" target="_blank" id="pURL">
+                        <apex:outputText value="{!pchild.Product__r.Name}">
+                        </apex:outputText> 
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column width="50" headerClass="lf" headerValue="As Of Date" >
+                    <apex:outputLink value="{!URLFOR($Action.ProductPerformance__c.View, pchild.Id)}" target="_blank" id="ppURL">
+                        <apex:outputText value="{0,date,MM/dd/yyyy}">
+                        <apex:param value="{!pchild.AsOfDate__c}" />
+                    </apex:outputText>
+                    </apex:outputLink>
+                </apex:column> 
+                <apex:column width="90" styleClass="ct" value="{!pchild.Product__r.TradingSymbol__c}"/>
+                <!--<apex:column width="100" value="{!pchild.Product__r.CUSIPFormatted__c}"/>-->
+                <apex:column headerClass="rt" width="80" value="{!pchild.InceptionDate__c}"/>
+                <!--<apex:column width="100" value="{!pchild.Product__r.FundNumber__c}"/>-->
+                <apex:column headerClass="rt" width="100" headerValue="Total Net Assets">
+                    <apex:outputText value="{0,number,$###,###,##0.00}">
+                        <apex:param value="{!ROUND(pchild.TotalNetAssets__c,2)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" width="100" headerValue="Shares Outstanding">
+                    <apex:outputText value="{0,number,###,###,##0.000}">
+                        <apex:param value="{!pchild.SharesOutstanding__c}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV">
+                    <apex:outputText value="{0,number,$##0.00}">
+                        <apex:param value="{!ROUND(pchild.NAV__c,2)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="MSC">
+                    <apex:outputText value="{0,number,$###,###,##0.00}">
+                        <apex:param value="{!ROUND(pchild.MSC__c,2)}" />
+                    </apex:outputText>
+
+                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV 1 Day">
+                    <apex:outputText value="{0,number,##0.00%}">
+                        <apex:param value="{!ROUND(ROUND(pchild.NAV1Day__c/100,7),4)}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV 1 Year">
+                                        <apex:outputText value="{0,number,##0.00%}">
+                                            <apex:param value="{!ROUND(ROUND(pchild.NAV1Year__c/100,7),4)}" />
+                    </apex:outputText>
+
+                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV 3 Year">
+                                        <apex:outputText value="{0,number,##0.00%}">
+                                            <apex:param value="{!ROUND(ROUND(pchild.NAV3Year__c/100,7),4)}" />
+                    </apex:outputText>                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV 5 Year">
+                                        <apex:outputText value="{0,number,##0.00%}">
+                                            <apex:param value="{!ROUND(ROUND(pchild.NAV5Year__c/100,7),4)}" />
+                    </apex:outputText>                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV 10 Year">
+                                        <apex:outputText value="{0,number,##0.00%}">
+                                            <apex:param value="{!ROUND(ROUND(pchild.NAV10Year__c/100,7),4)}" />
+                    </apex:outputText>                </apex:column>
+                <apex:column headerClass="rt" width="90" headerValue="NAV Inception">
+                                        <apex:outputText value="{0,number,##0.00%}">
+                                            <apex:param value="{!ROUND(ROUND(pchild.NAVInception__c/100,7),4)}" />
+                    </apex:outputText>                </apex:column>
+            </apex:pageBlockTable>
+                        <br/>
+            <apex:pageBlockSection columns="1">
+                <apex:outputText value="{!threadbackPerfFN}" />
+            </apex:pageBlockSection>
+            
+        </apex:form>        
+        
+    </apex:pageBlock>
+</apex:page>

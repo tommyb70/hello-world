@@ -1,0 +1,6 @@
+<apex:page name="Report Links - PRC" controller="UserData" lightningStylesheets="true">
+            <apex:panelGrid columns="2" id="theGrid" width="100%" cellspacing="0" cellpadding="0" columnClasses="colstyle">
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/AllTrades_0/ALLTrades?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no" id="Link001" target="_blank">Daily Sales</apex:outputLink>
+                <apex:outputLink value="/00OF0000006SGiZ" id="Link002" target="_blank">Adv Portal - Advisor by Territory and Status</apex:outputLink>
+            </apex:panelGrid>
+</apex:page>

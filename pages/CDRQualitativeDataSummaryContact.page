@@ -1,0 +1,92 @@
+<apex:page standardController="Contact" extensions="CDRQualitativeDataSummaryExt" lightningStyleSheets="true" docType="html-5.0">
+    <apex:pageBlock >
+        <apex:form id="mainform">
+            <apex:pageMessages />
+            
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >        
+                    <apex:outputLabel value="Effective Date"/>
+                    <apex:input type="datetime-local" value="{!effdt}" id="ed" size="10" onfocus="DatePicker.pickDate(false, this, false);" />
+                </apex:pageBlockSectionItem>   
+                <apex:inputCheckbox label="Display Staging instead of Active/Pending Activation/Historical?" value="{!dispStaging}" id="ds"/>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton action="{!getQualitativeDataRecords}" value="Go" reRender="mainform" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+            
+            <apex:pageBlockSection columns="1" collapsible="TRUE" title="Contact">
+                <apex:pageBlockTable width="100%" columnsWidth="30%,30%,10%,15%,15%" value="{!cdrContact}" var="c" id="cdrContact">
+                    <apex:column headerValue="Contact">
+                        <apex:outputLink value="{!URLFOR($Action.Contact.View, c.Contact__c)}" target="_blank" id="aURL">
+                            <apex:outputText style="width=50%" value="{!c.Contact__r.Name}">
+                            </apex:outputText> 
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="CDR Qualitative Data">
+                        <apex:outputLink value="{!URLFOR($Action.CDRQualitativeData__c.View, c.Id)}" target="_blank" id="fURL">
+                            <apex:outputText value="{!c.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!c.Status__c}" headerValue="Status"/>
+                    <apex:column value="{!c.EffectiveDate__c}" headerValue="Effective Date"/>
+                    <apex:column value="{!c.HistoricalDate__c}" headerValue="Historical Date"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection columns="1" collapsible="TRUE" title="Contact-Additional Info">
+                <apex:pageBlockTable width="100%" columnsWidth="30%,30%,10%,15%,15%" value="{!cdrContactAdditionalInfo}" var="c" id="cdrContactAdditionalInfo">
+                    <apex:column headerValue="Additional Info">
+                        <apex:outputLink value="{!URLFOR($Action.AdditionalInfo__c.View, c.AdditionalInfo__c)}" target="_blank" id="fcfURL">
+                            <apex:outputText value="{!c.AdditionalInfo__r.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="CDR Qualitative Data">
+                        <apex:outputLink value="{!URLFOR($Action.CDRQualitativeData__c.View, c.Id)}" target="_blank" id="cfcfURL">
+                            <apex:outputText value="{!c.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!c.Status__c}" headerValue="Status"/>
+                    <apex:column value="{!c.EffectiveDate__c}" headerValue="Effective Date"/>
+                    <apex:column value="{!c.HistoricalDate__c}" headerValue="Historical Date"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" collapsible="TRUE" title="Firm-Contact">
+                <apex:pageBlockTable width="100%" columnsWidth="30%,30%,10%,15%,15%" value="{!cdrFirmContact}" var="c" id="cdrFirmContact">
+                    <apex:column headerValue="Firm">
+                        <apex:outputLink value="{!URLFOR($Action.Account.View, c.Account__c)}" target="_blank" id="fcfURL2">
+                            <apex:outputText value="{!c.Account__r.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="CDR Qualitative Data">
+                        <apex:outputLink value="{!URLFOR($Action.CDRQualitativeData__c.View, c.Id)}" target="_blank" id="cfcfURL2">
+                            <apex:outputText value="{!c.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!c.Status__c}" headerValue="Status"/>
+                    <apex:column value="{!c.EffectiveDate__c}" headerValue="Effective Date"/>
+                    <apex:column value="{!c.HistoricalDate__c}" headerValue="Historical Date"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" collapsible="TRUE" title="Product-Contact">
+                <apex:pageBlockTable width="100%" columnsWidth="30%,30%,10%,15%,15%" value="{!cdrProductContact}" var="c" id="cdrProductContact">
+                    <apex:column headerValue="Product">
+                        <apex:outputLink value="{!URLFOR($Action.Product2.View, c.Product__c)}" target="_blank" id="faURL">
+                            <apex:outputText value="{!c.Product__r.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="CDR Qualitative Data">
+                        <apex:outputLink value="{!URLFOR($Action.CDRQualitativeData__c.View, c.Id)}" target="_blank" id="cfaURL">
+                            <apex:outputText value="{!c.Name}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!c.Status__c}" headerValue="Status"/>
+                    <apex:column value="{!c.EffectiveDate__c}" headerValue="Effective Date"/>
+                    <apex:column value="{!c.HistoricalDate__c}" headerValue="Historical Date"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

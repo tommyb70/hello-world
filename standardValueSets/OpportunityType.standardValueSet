@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Existing Business</fullName>
+        <default>false</default>
+        <label>Existing Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>false</default>
+        <label>New Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRCG Comprehensive Portfolio Evaluation</fullName>
+        <default>false</default>
+        <label>PRCG Comprehensive Portfolio Evaluation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Relationship</fullName>
+        <default>false</default>
+        <label>New Relationship</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Capital Contributions</fullName>
+        <default>false</default>
+        <label>Capital Contributions</label>
+    </standardValue>
+</StandardValueSet>

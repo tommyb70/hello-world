@@ -1,0 +1,10 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabStyle="account" lightningStylesheets="true">
+<apex:form >
+ <c:UserTerritory />   
+</apex:form>
+
+   <apex:enhancedList type="Account" height="750" rowsPerPage="25" id="AccountList" />
+
+   
+
+</apex:page>

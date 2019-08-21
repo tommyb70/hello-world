@@ -1,0 +1,62 @@
+<apex:page name="Data Ops Finance Home Report Links" lightningStyleSheets="true">
+<style>
+   .colstyle {width:33.33%}
+</style>
+<apex:pageBlock title="Operational Reports">
+            <center>
+            <apex:panelGrid columns="3" id="theGrid" width="75%" cellspacing="2" cellpadding="2" columnClasses="colstyle">
+                <apex:outputText value="Data Operations" style="font-weight: bold"/>
+                <apex:outputText value="Finance" style="font-weight: bold"/>
+                <apex:outputText value="Marketing" style="font-weight: bold"/>
+                
+                <apex:outputText value="" id="Link01"/>
+                <apex:outputText value="" id="Link02"/>
+                <apex:outputText value="" id="Link03"/>
+                
+                <apex:outputLink value="/00OF0000006Ibtc" id="Link11" target="_blank">Campaign by Territory and Product</apex:outputLink>
+                <apex:outputLink value="/00OF0000006IPnf" id="Link12" target="_blank">Opportunity Report - Institutional Won</apex:outputLink>
+                <apex:outputLink value="/00O2A000006aIAE" id="Link13" target="_blank">Firm Filing Grid</apex:outputLink> 
+
+                
+                <apex:outputLink value="/00OF0000006IqJc" id="Link21" target="_blank">Rep/Contacts - Newly Added by Users</apex:outputLink>
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/AllTrades_0/MYRegionSalesWithGOALS?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no" id="Link22" target="_blank">Daily Sales Reports</apex:outputLink>
+               <apex:outputLink value="/00O2A000006aIAF" id="Link23" target="_blank">Firm Filing - Expiring</apex:outputLink> 
+                
+                <apex:outputLink value="/00OF0000006IPnT" id="Link31" target="_blank">Campaign Static List</apex:outputLink>
+                <apex:outputLink value="/00OF0000006JC5X" id="Link32" target="_blank">Fiduciary Focus Activities by Type</apex:outputLink>
+               <apex:outputLink value="/00OF0000007Cgrn" id="Link33" target="_blank">Pardot Opt-In Manually</apex:outputLink> 
+                
+                <apex:outputText value="" id="Link41"/>
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/views/ETFTracking/ETFDashboard?:embed=y&:showShareOptions=true&:display_count=no&:showVizHome=no" id="Link42" target="_blank">Natixis ETF Sales and Assets – Last Month</apex:outputLink>
+                <apex:outputLink value="/00OF0000007CirV" id="Link43" target="_blank">Pardot Remove Hard Bounce Manually</apex:outputLink>
+                
+                
+                <apex:outputText value="" id="Link51"/>
+                <apex:outputLink value="https://nportal.sharepoint.com/:x:/r/sites/BusOps/Business%20Operations/Intermediary%20Platform%20Grids/Firm%20Availability%20-%20ETFs.xlsx?d=w04bd80fd7e704b1bb2dd6723a7bbb3ae&csf=1&e=obdAXr" id="Link52" target="_blank">ETF Firm Availability</apex:outputLink>
+                <apex:outputLink value="/00OF0000007ChSU" id="Link53" target="_blank">Pardot Users</apex:outputLink> 
+                
+                <apex:outputText value="" id="Link61"/>
+                <apex:outputText value="" id="Link62"/>             
+                <apex:outputLink value="/00O2A000007C2VB" id="Link63" target="_blank">Sales Coverage</apex:outputLink>          
+                 
+                
+                <apex:outputText value="" id="Link71"/>
+                <apex:outputText value="" id="Link72"/>
+                <apex:outputLink value="/00OF0000006IPnT" id="Link73" target="_blank">Campaign Static Lists</apex:outputLink> 
+                
+                
+                <apex:outputText value="" id="Link81"/>
+                <apex:outputText value="" id="Link82"/>
+                <apex:outputLink value="/00O2A000007LbjV" id="Link83" target="_blank">Campaigns – Digital Selling</apex:outputLink>
+                
+                <apex:outputText value="" id="Link91"/>
+                <apex:outputText value="" id="Link92"/>
+                <apex:outputLink value="/00O2A000006vB1s" id="Link93" target="_blank">Campaigns – Conferences</apex:outputLink>
+                
+             
+                
+             
+            </apex:panelGrid>
+            </center>
+        </apex:pageBlock>
+</apex:page>

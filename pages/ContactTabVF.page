@@ -1,0 +1,10 @@
+<apex:page standardController="Contact" recordSetVar="contacts" tabStyle="contact" lightningStylesheets="true">
+<apex:form >
+<c:UserTerritory />   
+</apex:form>
+
+
+    
+       <apex:enhancedList customizable="true" type="Contact" height="750" rowsPerPage="25" id="ContactList" />
+
+</apex:page>

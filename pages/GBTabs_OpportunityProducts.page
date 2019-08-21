@@ -1,0 +1,41 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="OpportunityProducts">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_OpportunityProducts" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "OpportunityProducts",
+	"tabs": [
+		{
+			"name": "Strategies/Products",
+			"content": "{!gridPage}gname=Opportunity Products&amp;sh=0&amp;sfname=default",
+			"id": 1562877775456
+		},
+		{
+			"name": "Affiliates",
+			"content": "{!gridPage}gname=Opportunity Affiliates&amp;sh=0&amp;sfname=default",
+			"id": 1562877853329
+		},
+		{
+			"name": "Funding",
+			"content": "{!gridPage}gname=Funding&amp;sh=0&amp;sfname=default",
+			"id": 1562877863871
+		},
+		{
+			"name": " Fee Structure",
+			"content": "{!gridPage}gname=Fee Structure&amp;sh=0&amp;sfname=default",
+			"id": 1562877873286
+		}
+	],
+	"id": 1562877775455,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Opportunity",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

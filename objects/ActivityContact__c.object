@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AccountId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.AccountId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AccountId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>Activity_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ActivityComments__c</fullName>
+        <description>This is populated by the trigger as the first 255 characters of the Task.Description field</description>
+        <externalId>false</externalId>
+        <label>Activity Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ActivityContact__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>This Field is populated by the trigger and contains ActivityId__c + Contact__c, it is used to ensure that no duplicate contact on an activity (does not allow duplicate)</description>
+        <externalId>false</externalId>
+        <label>ActivityContact</label>
+        <length>37</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ActivityId__c</fullName>
+        <description>This fake Id field is binded to Task through the use of the "Contacts" Grid build in the GridBuddy application. It is populated by GB with Task.Id</description>
+        <externalId>true</externalId>
+        <label>ActivityId</label>
+        <length>18</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivityPoints__c</fullName>
+        <description>This field is read-only and populated by an automated process that assigns points based on criteria that can vary and is set by sales management. If you feel the points are incorrect, update the activity record and the points will recalculate when saved.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is read-only and populated by an automated process that assigns points based on criteria that can vary and is set by sales management. If you feel the points are incorrect, update the activity record and the points will recalculate when saved.</inlineHelpText>
+        <label>Activity Points</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivityProducts__c</fullName>
+        <description>This field is populated by the following DLRS rollup : https://globalplatform.my.salesforce.com/01IF000000182Ty?setupid=CustomObjects#01IF000000182Ty_CustomFieldRelatedList_target</description>
+        <externalId>false</externalId>
+        <label>Activity Products</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ActivityRelationId__c</fullName>
+        <description>Either the TaskRelation Id or EventRelation Id that is associated with this row</description>
+        <externalId>true</externalId>
+        <label>Activity Relation Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivitySource__c</fullName>
+        <description>This is populated by the trigger from Task.ActivitySource__c</description>
+        <externalId>false</externalId>
+        <label>Activity Source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivitySubType__c</fullName>
+        <description>The dependent field on Type IC to drive value visibility , Copied from Task object  in insert trigger.</description>
+        <externalId>false</externalId>
+        <label>Activity Sub Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ActivityType__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product/Promotional</fullName>
+                    <default>false</default>
+                    <label>Product/Promotional</label>
+                </value>
+                <value>
+                    <fullName>Follow-Up/Service</fullName>
+                    <default>false</default>
+                    <label>Follow-Up/Service</label>
+                </value>
+                <value>
+                    <fullName>Solutions</fullName>
+                    <default>false</default>
+                    <label>Solutions</label>
+                </value>
+                <value>
+                    <fullName>Roadshow</fullName>
+                    <default>false</default>
+                    <label>Roadshow</label>
+                </value>
+                <value>
+                    <fullName>Other/Voicemail</fullName>
+                    <default>false</default>
+                    <label>Other/Voicemail</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Research</fullName>
+                    <default>false</default>
+                    <label>Research</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Product/Promotional</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Follow-Up/Service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Solutions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Email</controllingFieldValue>
+                <valueName>Marketing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meeting</controllingFieldValue>
+                <valueName>Roadshow</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call</controllingFieldValue>
+                <valueName>Other/Voicemail</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Research</controllingFieldValue>
+                <valueName>Research</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ActivityType__c</fullName>
+        <description>Used to control the Sub Type field and not displayed in the UI. The out of box field Type is displayed in the UI.</description>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Meeting</fullName>
+                    <default>false</default>
+                    <label>Meeting</label>
+                </value>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Research</fullName>
+                    <default>false</default>
+                    <label>Research</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AffiliateContactFlag__c</fullName>
+        <description>Formula that displays the Affiliate Contact value from the Contact Object. Used in the Declarative Roll Up 'CaseActivityContactRequestedSpeakersFlag'</description>
+        <externalId>false</externalId>
+        <formula>Contact__r.AffiliateContactFlag__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Affiliate Contact Flag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Populated by the trigger from Task.Campaign__c</description>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>Activity_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>For the Affiliate Request Process</description>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>Activity_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ChannelFocusFirm__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The Source of This Field is the channel Focus Firm Field for this user's channel. Example : If the owner of the activity is in channel WIREHOUSE, then the Field used by the trigger to populate this field will be Account.FocusFirmWHSE__c.</description>
+        <externalId>false</externalId>
+        <label>Channel Focus Firm</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Populated by the trigger from Task.OwnerChannelId__c (=Owner:User.ActivityChannelId__c)</description>
+        <externalId>false</externalId>
+        <label>Channel</label>
+        <referenceTo>Channel__c</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>Activity_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactName__c</fullName>
+        <description>Affiliate Request Process text field with the Contact Name</description>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactRecordTypeAffiliate__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Contact__r.AffiliateContactFlag__c 
+, True, False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Record Type Affiliate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Firm_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Contact__r.FirmType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Firm Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>This field is entered through the Gridbuddy Form and is set to the id of the contact entered through the form. It is used by the trigger to create the TaskRelation entry to the related Task</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>ActivityContacts</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Count__c</fullName>
+        <description>This field is meant to be used in reports, just a formula field that defaults to 1</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Owner_Channel__c</fullName>
+        <description>This field shows the current Task / ActivityContact__c owner Channel, which could be different from the Channel of the Owner at the time the activity was created</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityChannelName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Owner Channel</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <description>This is populated by the trigger with Task.ActivityDate</description>
+        <externalId>false</externalId>
+        <label>Activity Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Firm__c</fullName>
+        <description>Just a Formula so that AcivityContact__c records can be reported on based on Firm__c</description>
+        <externalId>false</externalId>
+        <formula>Account__r.Firm__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Firm</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsEvent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To differentiate between the Task activity contact and event activity contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To differentiate between the Task activity contact and event activity contact</inlineHelpText>
+        <label>IsEvent</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MARS_Office_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.MarsAccountId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MARS Office ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MARS_Rep_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.MarsRepId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MARS Rep ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Populated by the trigger from Task.Opportunity__c</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>Activity_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OwnerChannelId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityChannelId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Channel Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerChannel__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Channel</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerCurrentTerritory__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityTerritoryName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Current Territory</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerCurrentZoneId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.ActivityZoneId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Current Zone Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OwnerId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerOwner__c</fullName>
+        <description>Field aggregating FirstName + LastName + Channel for reporting purposes</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName  &amp; " " &amp;  Owner:User.LastName  &amp; " - "   &amp; OwnerChannel__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerReportingTo__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Manager.FirstName + ' ' +  Owner:User.Manager.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Reporting To</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritoryId__c</fullName>
+        <description>The owner's activity territory id at the time of activity creation</description>
+        <externalId>false</externalId>
+        <label>Owner Territory Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritoryMARS__c</fullName>
+        <description>The activity territory of the owner at the time of activity creation based on MARS territory name</description>
+        <externalId>false</externalId>
+        <label>Owner Territory MARS</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritory__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Territory</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerZone__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Owner Zone</label>
+        <referenceTo>Zone__c</referenceTo>
+        <relationshipLabel>Activity Contacts</relationshipLabel>
+        <relationshipName>Activity_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RepBPL__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Rep BPL</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RepContactName__c</fullName>
+        <description>Displays contacts full name</description>
+        <externalId>false</externalId>
+        <formula>Contact__r.FirstName  &amp; " "  &amp;  Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rep/Contact Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepCurrentBPLStatus__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.BPL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rep Current BPL Status</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RepMARSRegion__c</fullName>
+        <description>The contact rep's primary territory MARS region name</description>
+        <externalId>false</externalId>
+        <label>Rep MARS Region</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepMARSTerritory__c</fullName>
+        <description>The contact rep's primary MARS Territory Name</description>
+        <externalId>false</externalId>
+        <label>Rep MARS Territory</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepRegion__c</fullName>
+        <description>Stamped with the Contact/Rep's Primary Territory's Region at time of activity creation</description>
+        <externalId>false</externalId>
+        <label>Rep Region</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepTerritory__c</fullName>
+        <description>Stamped with the Contact/Rep's Primary Territory at time of activity creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stamped with the Contact/Rep's Primary Territory at time of activity creation</inlineHelpText>
+        <label>Rep Territory</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepTier__c</fullName>
+        <externalId>false</externalId>
+        <label>Rep Tier</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepZone__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rep Zone</label>
+        <referenceTo>Zone__c</referenceTo>
+        <relationshipLabel>Activity Contacts (RepZone)</relationshipLabel>
+        <relationshipName>Activity_Contacts1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubjectURL__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/'&amp; ActivityId__c ,  Subject__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subject</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SynergyRowId__c</fullName>
+        <externalId>true</externalId>
+        <label>SynergyRowId</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TypeGroup__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( (Type__c = 'Call - Informative') , 'Call', 
+IF( (Type__c= 'Call - Substantive'),'Call' , 
+IF( (Type__c= 'Meeting - Group'),'Meeting', 
+IF( (Type__c= 'Meeting - One on One' ) ,'Meeting', 
+IF( (Type__c= 'Email - Contact' ),'Email - Contact', 
+IF( ISPICKVAL(ActivityType__c , "High Impact") ,"Call", 
+IF( ISPICKVAL(ActivityType__c,'Meeting'),'Meeting', 
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, 'Servicing'), 
+ISPICKVAL(ActivitySubType__c, 'Phone Servicing an Asset')),'Call', 
+
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, 'Servicing'), 
+ISPICKVAL(ActivitySubType__c, 'Call Scheduling Meetings for the field')),'Call', 
+
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, 'Servicing'), 
+ISPICKVAL(ActivitySubType__c, 'Email Scheduling Meetings for the field') ),'Call', 
+
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, 'Servicing'), 
+ISPICKVAL(ActivitySubType__c, "Gathering Territory/Client Intell") ),"Call", 
+
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, 'Follow Up'), 
+ISPICKVAL(ActivitySubType__c, 'Phone Call Follow up')),'Call', 
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, 'Follow Up'), 
+ISPICKVAL(ActivitySubType__c, "CPE Pre Calls")),"Call", 
+IF( 
+AND( 
+ISPICKVAL(ActivityType__c, "Follow Up"), 
+ISPICKVAL(ActivitySubType__c, "Natixis Resource Lead In or Follow U")),"Call", 
+"Other" 
+))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Type Group</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WhatIdObjectAPIName__c</fullName>
+        <externalId>true</externalId>
+        <label>WhatId Object API Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WhatIdObjectLabel__c</fullName>
+        <externalId>true</externalId>
+        <label>WhatId Object Label</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WhatId__c</fullName>
+        <description>The WhatId from the parent task/event.  Set and maintained by triggers.</description>
+        <externalId>true</externalId>
+        <label>WhatId</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Each activity will have 1 to Many contacts. These activity related contacts are stored in this object along necessary attributes to allow for advanced activity reporting. This Table is synched up with the TaskRelation standard object through the "ActivityContactTrigger" trigger and the "ActivityContactTriggerHandler" Class.
+This object is "virtually" related to Task through the use of the "ActivityId__c" field. This fake Id field is binded to Task through the use of the "Contacts" Grid build in the GridBuddy application.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <label>Activity Contact</label>
+    <nameField>
+        <displayFormat>AC-{0000000000}</displayFormat>
+        <label>Activity Contact Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Activity Contacts</pluralLabel>
+    <searchLayouts />
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ActivityId__c</columns>
+        <columns>Channel__c</columns>
+        <columns>OwnerChannel__c</columns>
+        <columns>SubjectURL__c</columns>
+        <columns>Account__c</columns>
+        <columns>Contact__c</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Date__c</columns>
+        <columns>ActivitySource__c</columns>
+        <columns>Status__c</columns>
+        <columns>Type__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Allsearch</fullName>
+        <columns>NAME</columns>
+        <columns>ActivityId__c</columns>
+        <columns>Channel__c</columns>
+        <columns>OwnerChannel__c</columns>
+        <columns>SubjectURL__c</columns>
+        <columns>Account__c</columns>
+        <columns>Contact__c</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Date__c</columns>
+        <columns>ActivitySource__c</columns>
+        <columns>Status__c</columns>
+        <columns>Type__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ActivityId__c</field>
+            <operation>startsWith</operation>
+            <value>00TF000002owtwg</value>
+        </filters>
+        <label>All - search task</label>
+    </listViews>
+    <listViews>
+        <fullName>June_Empty_Channel</fullName>
+        <columns>NAME</columns>
+        <columns>Date__c</columns>
+        <columns>OwnerOwner__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date__c</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <filters>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>June Empty Channel</label>
+    </listViews>
+    <validationRules>
+        <fullName>Can_Not_Update_Contact</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED( Contact__c )</errorConditionFormula>
+        <errorMessage>Can Not Update Contact.
+Please Delete and Insert a new record instead.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Add_To_Old_Tasks</fullName>
+        <active>true</active>
+        <description>Users cannot add records to tasks older than the days in custom setting NGAM Settings - Hierarchy.Cannot CUD Activity After Days.</description>
+        <errorConditionFormula>AND(ISNEW(),TODAY() - Date__c &gt; $Setup.NGAMSettingsHierarchy__c.CannotCUDActivityAfterDays__c)</errorConditionFormula>
+        <errorMessage>You cannot add contacts to old tasks.</errorMessage>
+    </validationRules>
+</CustomObject>

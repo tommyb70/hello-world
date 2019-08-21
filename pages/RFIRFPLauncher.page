@@ -1,0 +1,11 @@
+<!-- TJB 20160620 - Created code to allow RFI/RFP quick action via SF1 -->
+
+<apex:page StandardController="Account" tabStyle="Account" sidebar="false" showHeader="false" lightningStylesheets="true">
+    <style type="text/css"> 
+        .datePicker { display: none; } 
+    </style>
+    <flow:interview name="Request_RFI_RFP" finishLocation="/{!Account.Id}">
+        <apex:param name="varAccountId" value="{!Account.Id}"/>
+        <apex:param name="varUserId" value="{!$User.Id}"/>
+    </flow:interview>
+</apex:page>

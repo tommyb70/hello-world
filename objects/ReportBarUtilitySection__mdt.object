@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>HeaderLabel__c</fullName>
+        <description>The Label displayed to the user.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The Label displayed to the user.</inlineHelpText>
+        <label>Header Label</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportUtilityBar__c</fullName>
+        <description>The Utility Bar for this header to show up on.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The Utility Bar for this header to show up on.</inlineHelpText>
+        <label>Report Utility Bar</label>
+        <referenceTo>ReportUtilityBar__mdt</referenceTo>
+        <relationshipLabel>Report Bar Utility Sections</relationshipLabel>
+        <relationshipName>ReportBarUtilitySections</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SortOrder__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Order in which to display the Header Sections. From lowest to highest.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Order in which to display the Header Sections. From lowest to highest.</inlineHelpText>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <description>A Section Header for a Utility Bar.</description>
+    <label>Report Bar Utility Section</label>
+    <pluralLabel>Report Bar Utility Sections</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

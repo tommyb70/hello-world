@@ -1,0 +1,102 @@
+<apex:page standardController="Contact" extensions="seismic.NewPredictiveController" action="{!Init}" lightningStylesheets="true"  docType="html-5.0" applyHtmlTag="false" applyBodyTag="false" showHeader="false" sidebar="false" standardStylesheets="false" html-style="height:100%; width:100%;">
+
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__jquery_3_1_1_min_js)}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__jquery_base64_js)}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__lodash_min_js)}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__embeddedpage_js)}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__SeismicIntegratedSDK_js)}"></script>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seismic Content Viewer</title>
+    
+    <style type="text/css">
+        BODY, HTML, IFRAME { width: 100%; height: 100%; margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+    <iframe id="seismicAppContainer" frameborder="no" width="100%" height="100%" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    <script type="text/javascript">
+    
+        var appData = {!EmbeddedAppInfoJSON};
+        if (pageInfo == undefined || pageInfo == null) {
+            var pageInfo = {};
+        }
+        pageInfo.objectType = 'Contact';
+        pageInfo.objectName = '{!ObjectName}';
+        pageInfo.objectId = '{!Contact.Id}';
+        pageInfo.objectLastModifiedDate = '{!Contact.LastModifiedDate}';
+        pageInfo.objectSystemModstamp = '{!Contact.SystemModstamp}';
+        pageInfo.buttonName = 'ContentToSend';
+        var vfParameter = 'Default Embedded Application|%&|false|%&|true';
+        pageInfo.applicationName = vfParameter.split('|%&|')[0];
+        pageInfo.hideHeader = vfParameter.split('|%&|')[1];
+        pageInfo.openContentInline = vfParameter.split('|%&|')[2];
+        var isClassic = '{!isClassic}' == 'true' ? true : false;
+        pageInfo.disableFullScreenMode = isClassic && pageInfo.openContentInline == 'true';
+        
+        var backUrl = appData.ContextInfo.SFBaseUrl + '/' + pageInfo.objectId.substring(0,15);
+        
+        loadSeismicApp(appData, pageInfo);
+        
+        function loadSeismicApp(appData, pageInfo){
+            var contextInfo = appData.ContextInfo;
+            var credentialInfo = appData.CredentialInfo;
+            var iframeDom = document.getElementById('seismicAppContainer');
+            iframeDom.setAttribute('allowfullscreen', true);
+            
+            var config = {
+                    isFullPage: pageInfo.openContentInline == 'true',
+                    currentId: pageInfo.objectId,
+                    notShowGoBack: true,
+                    hideHeader: pageInfo.hideHeader == 'true',
+                    openContentInline: pageInfo.openContentInline == 'true',
+                    disableFullScreenMode: pageInfo.disableFullScreenMode
+                };
+            var loginOptions = {
+                RememberMeToken: credentialInfo.RememberMeToken,
+                DisableRememberMe : credentialInfo.DisableRememberMe,
+                DisableSSOAutoRedirection: credentialInfo.DisableSSOAutoRedirection,
+                SSOState: credentialInfo.SSOState,
+                CredentialsKey: credentialInfo.CredentialsKey
+            };
+            var context = {
+                Salesforce: {
+                    ServerBaseUrl: contextInfo.SFBaseUrl,
+                    SessionId: contextInfo.SessionId,
+                    ObjectType: pageInfo.objectType,
+                    ObjectId: pageInfo.objectId,
+                    ObjectName: pageInfo.objectName,
+                    OrganizationId: contextInfo.SFOrganizationId,
+                    UserId: credentialInfo.UserId
+                }
+            };
+            var embeddedApp = Seismic.IntegratedSDK.loadEmbeddedApplication(iframeDom,credentialInfo.ClientType,pageInfo.applicationName,contextInfo.ServerBaseUrl,null,config,loginOptions,context);
+            embeddedApp.on('action',function(data){
+                switch(data.type){
+                        case Seismic.IntegratedSDK.actions.showDetail:
+                            handleOpenDetailRequest(appData, pageInfo, data.data);
+                            break;
+                        default:
+                            break;
+                    }
+            });
+        };
+        
+        function handleOpenDetailRequest(appData, pageInfo, data){
+             var paramForDetail = {
+                            EmbeddAppName: pageInfo.applicationName,
+                            SObjectType: pageInfo.objectType,
+                            SObjectId: pageInfo.objectId,
+                            SObjectName: pageInfo.objectName,
+                            DocumentParam: JSON.stringify(data),
+                            BackUrl: backUrl
+                        }; 
+                var url = "{!DetailPageUrl}";
+                url += '#' + $.base64.encode(JSON.stringify(paramForDetail));
+                window.top.location.href = url;
+        }
+    </script>
+</body>
+</apex:page>

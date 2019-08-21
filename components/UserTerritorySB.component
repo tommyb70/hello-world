@@ -1,0 +1,11 @@
+<apex:component controller="UserTerritoryPicklist" allowDML="true">
+
+    <apex:selectList value="{!PrimaryTerritory}" size="1" id="PrimaryTerritory" rendered="{!showme}">
+        <apex:selectOptions value="{!UserTerritory}"/>
+    </apex:selectList>
+    
+    <apex:outputText rendered="{!showme ==false}">{!PrimaryTerritoryName}</apex:outputText>
+        
+    <apex:commandbutton action="{!newDef}" value="Go" rendered="{!showme}"/>
+
+</apex:component>

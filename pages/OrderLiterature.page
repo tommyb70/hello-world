@@ -1,0 +1,6 @@
+<apex:page standardcontroller="Contact" lightningStylesheets="true">
+  <script>   
+      var user = '{!$User.UserID__c}';        
+      sforce.one.navigateToURL('https://services.ngam.natixis.com/Fulfillment/Default.aspx?suid=' + user + '&action=Order&source=Synergy&repid=' + {!Contact.MarsRepId__c});
+  </script>
+</apex:page>

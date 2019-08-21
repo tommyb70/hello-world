@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AccountId__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Contact__r.AccountId)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AccountId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.Channel__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactTerrId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>ContactTerrId</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ContactTerritory__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__c +'-'+ Territory__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ContactTerritory</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact Territories</relationshipLabel>
+        <relationshipName>Contact_Territories</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CoverageUser__c</fullName>
+        <description>Coverage User from the Territory Object</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.CoverageUser__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Coverage User</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FT__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Contact__r.FirmType__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FT</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MARSTerritoryName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.TerritoryName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MARS Territory Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MarsRepId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.MarsRepId__c</formula>
+        <label>Mars Rep Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RoleId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.RoleId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubZone__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Territory__r.Channel__r.Name,
+'WIREHOUSE', TEXT(Contact__r.PRORotationWHSE__c), 
+'IAG IND', TEXT(Contact__r.PRORotationIAG__c) , 
+'IAG RIA', TEXT(Contact__r.PRORotationIAG__c) , 
+'IND ADV GRP', TEXT(Contact__r.PRORotationIAG__c) , 
+'FIDUCIARY BD', TEXT(Contact__r.PRORotationFS__c) , 
+'BANK TRUST', TEXT(Contact__r.PRORotationFS__c) , 
+'BANK TRUST WHSE', TEXT(Contact__r.PRORotationFS__c) , 
+'SUB ADV', TEXT(Contact__r.PRORotationFS__c) , 
+'RIA FIDUCIARY', TEXT(Contact__r.PRORotationFS__c) , 
+'SUB ADV', TEXT(Contact__r.PRORotationFS__c) ,  
+'ADU', TEXT(  Contact__r.RotationADU_IDU__c  ), 
+'IDU', TEXT(  Contact__r.RotationADU_IDU__c  ),   
+'DC REGIONAL', TEXT(Contact__r.RotationRADU__c) , 
+'DCIO', TEXT(Contact__r.RotationRADU__c) , 
+'DCIO SUB ADV', TEXT(Contact__r.RotationRADU__c) , 
+'No Sub-Zone')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sub-Zone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerrGroupId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.GroupId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TerrGroupId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryInternalWholesaler__c</fullName>
+        <description>Internal Wholesaler from the Territory object</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.InternalWholesaler__r.FirstName &amp; " " &amp;  Territory__r.InternalWholesaler__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Internal Wholesaler</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryManager__c</fullName>
+        <description>Territory Manager from the territory object</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.TerritoryManager__r.FirstName &amp; " " &amp;  Territory__r.TerritoryManager__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Manager</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Territory__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TerritoryName</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerritoryWholesaler1__c</fullName>
+        <description>Territory Wholesaler from the territory object</description>
+        <externalId>false</externalId>
+        <formula>Territory__r.Wholesaler1__r.FirstName &amp; " " &amp;  Territory__r.Wholesaler1__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory Wholesaler 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Territory__c.RoleId__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Territory__c</referenceTo>
+        <relationshipLabel>Contact Territories</relationshipLabel>
+        <relationshipName>Territory_Assignments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Tier__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Territory__r.Channel__r.Name,
+'WIREHOUSE', TEXT(Contact__r.PROTierWHSE__c), 
+'IAG IND', TEXT(Contact__r.PROTierIAG__c) ,
+'IAG RIA', TEXT(Contact__r.PROTierIAG__c) ,
+'IND ADV GRP', TEXT(Contact__r.PROTierIAG__c) ,
+'FIDUCIARY BD', TEXT(Contact__r.PROTierFS__c) ,
+'BANK TRUST', TEXT(Contact__r.PROTierFS__c) ,
+'BANK TRUST WHSE', TEXT(Contact__r.PROTierFS__c) ,
+'SUB ADV', TEXT(Contact__r.PROTierFS__c) ,
+'RIA FIDUCIARY', TEXT(Contact__r.PROTierFS__c) ,
+'SUB ADV', TEXT(Contact__r.PROTierFS__c) , 
+'ADU', TEXT(  Contact__r.TierADU_IDU__c  ), 
+'IDU', TEXT(  Contact__r.TierADU_IDU__c  ), 
+'DC REGIONAL', TEXT(Contact__r.TierRADU__c) ,
+'DCIO', TEXT(Contact__r.TierRADU__c) ,
+'DCIO SUB ADV', TEXT(Contact__r.TierRADU__c) ,
+'No Tier')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tier</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zone__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Territory__r.Channel__r.Name, 
+'RCDU DIRECT', Contact__r.ZoneRCDU__r.Name , 
+'RCDU BACK OFFICE', Contact__r.ZoneRCDU__r.Name , 
+'RCDU GKA', Contact__r.ZoneRCDU__r.Name , 
+'RCDU INSTL', Contact__r.ZoneRCDU__r.Name , 
+'RCDU WHSE BT', Contact__r.ZoneRCDU__r.Name , 
+'RCDU WHSE/IND', Contact__r.ZoneRCDU__r.Name , 
+'RCDU INSTL', Contact__r.ZoneRCDU__r.Name , 
+'RCDU WHSE BT', Contact__r.ZoneRCDU__r.Name , 
+'RCDU CONSULTANT', Contact__r.ZoneRCDU__r.Name , 
+'RCDU RESEARCH', Contact__r.ZoneRCDU__r.Name , 
+'RADU REGIONAL', Contact__r.ZoneRADU__r.Name , 
+'RADU', Contact__r.ZoneRADU__r.Name , 
+'No Zone')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ZoningKey__c</fullName>
+        <externalId>false</externalId>
+        <formula>upper(Contact__r.MailingState  &amp; '-'&amp;  Contact__r.MailingCity &amp;'-'&amp;  Contact__r.MailingPostalCode )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zoning Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Contact Territory</label>
+    <nameField>
+        <displayFormat>CT-{0000000000}</displayFormat>
+        <label>Contact Territory Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contact Territories</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ContactTerritory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Territory__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Forward</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>OBJECT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RoleId__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TerrGroupId__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Territory__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>Contact__c</lookupFilterFields>
+        <lookupFilterFields>Territory__c</lookupFilterFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>Territory__c</searchFilterFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RoleId__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TerrGroupId__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Territory__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Contact_Terr_ZOning</fullName>
+        <columns>NAME</columns>
+        <columns>Tier__c</columns>
+        <columns>Zone__c</columns>
+        <columns>Contact__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Contact Terr ZOning</label>
+    </listViews>
+    <listViews>
+        <fullName>No_Contact</fullName>
+        <columns>NAME</columns>
+        <columns>Territory__c</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Contact__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>No Contact</label>
+    </listViews>
+    <listViews>
+        <fullName>OVERLAY</fullName>
+        <columns>Contact__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Territory__c</field>
+            <operation>equals</operation>
+            <value>OVERLAY</value>
+        </filters>
+        <label>OVERLAY</label>
+        <sharedTo />
+    </listViews>
+</CustomObject>

@@ -1,0 +1,20 @@
+<apex:page standardController="Opportunity" sidebar="false" showHeader="false" lightningStylesheets="true">
+<!--
+old url: {!gridPage}?gname=Opportunity Products&fpf=Opportunity__c&fpv={!Opportunity.id}&sbb=1&sh=0&ssb=0"
+-->
+    <apex:variable var="gridPage" value="{!URLFOR($Page.GBLite__Grid)}" />
+    <apex:tabPanel switchType="client" selectedTab="tabDetails" tabClass="activeTab" inactiveTabClass="inactiveTab">
+        <apex:tab label="Strategies/Products">
+            <iframe id="gridFrame" scrolling="auto" height="375" width="100%" frameborder="0" src="{!URLFOR($Page.GBLite__Grid,"",[gname="Opportunity Products", fpf="Opportunity__c",fpv=Opportunity.id,sbb=1,sh=0,ssb=0])}"></iframe>     </apex:tab>
+        <apex:tab label="Affiliates">
+            <iframe id="gridFrame" scrolling="auto" height="375" width="100%" frameborder="0" src="{!URLFOR($Page.GBLite__Grid,"",[gname="Opportunity Affiliates", fpf="Opportunity__c",fpv=Opportunity.id,sbb=1,sh=0,ssb=0])}"></iframe>        </apex:tab>
+        <apex:tab label="Funding">
+            <iframe id="gridFrame" scrolling="auto" height="375" width="100%" frameborder="0" src="{!URLFOR($Page.GBLite__Grid,"",[gname="Funding", fpf="Opportunity__c",fpv=Opportunity.id,sbb=1,sh=0,ssb=0])}"></iframe>
+        </apex:tab>
+        <apex:tab label="Fee Structure">
+            <iframe id="gridFrame" scrolling="auto" height="375" width="100%" frameborder="0" src="{!URLFOR($Page.GBLite__Grid,"",[gname="Fee Structure", fpf="Opportunity__c",fpv=Opportunity.id,sbb=1,sh=0,ssb=0])}"></iframe>
+        </apex:tab>
+
+    </apex:tabPanel>
+
+</apex:page>

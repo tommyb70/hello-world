@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AccountTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Account Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ActivityContactRollupBatchFromDate__c</fullName>
+        <description>Used by ActivityContactRollupBatch as the starting date for AC roll up.  Can be set to any date within last 30 days, but must be before Activity Contact Rollup Batch To Date.  Value normally maintained automatically by batch.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used by ActivityContactRollupBatch as the starting date for AC roll up.  Can be set to any date within last 30 days, but must be before Activity Contact Rollup Batch To Date.  Value normally maintained automatically by batch.</inlineHelpText>
+        <label>Activity Contact Rollup Batch From Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ActivityContactRollupBatchToDate__c</fullName>
+        <description>Used by ActivityContactRollupBatch as the end date for AC roll up.  Can be set to any date within last 30 days, but must be after Activity Contact Rollup Batch From Date.  Value normally maintained automatically by batch.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used by ActivityContactRollupBatch as the end date for AC roll up.  Can be set to any date within last 30 days, but must be after Activity Contact Rollup Batch From Date.  Value normally maintained automatically by batch.</inlineHelpText>
+        <label>Activity Contact Rollup Batch To Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>BusinessDays__c</fullName>
+        <description>Business Days in the Current Month</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Days in the Current Month</inlineHelpText>
+        <label>BusinessDays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CaseRecurrenceLeadTime__c</fullName>
+        <description>Used in CaseRecurrenceBatch; determines the number of days before the Recurrence Due Date that a case should be cloned.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in CaseRecurrenceBatch; determines the number of days before the Recurrence Due Date that a case should be cloned.</inlineHelpText>
+        <label>Case Recurrence Lead Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CaseRecurrenceToEmail__c</fullName>
+        <description>Used in CaseRecurrenceBatch to indicate who should receive the finish email; separate multiple recipients with a single comma.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate who should receive the CaseRecurrenceBatch finish email; separate multiple recipients with a single comma.</inlineHelpText>
+        <label>Case Recurrence To Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Contact Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FailureNotificationEmailAddress__c</fullName>
+        <description>Used in apex to notify via email when processes fail. Separate multiple email addresses with semi-colons.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in apex to notify via email when processes fail. Separate multiple email addresses with semi-colons.</inlineHelpText>
+        <label>Failure Notification Email Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastBatchJobErrorNotificationCompletion__c</fullName>
+        <description>The last time the apex batch job error notification job completed.  Used in query to make sure we sweep all batches that may have failed since last run.</description>
+        <externalId>false</externalId>
+        <label>Last Batch Job Error Notification Compl</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LastProcess__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Process</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>NumberofBusinessDays__c</fullName>
+        <description>Number of Business Days in Current Month</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Business Days in Current Month</inlineHelpText>
+        <label>Number of Business Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileCventIntegration__c</fullName>
+        <externalId>false</externalId>
+        <label>Profile: Cvent Integration</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileDataOps__c</fullName>
+        <description>Indicates the profile that should be used for Data Ops in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the profile that should be used for Data Ops in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</inlineHelpText>
+        <label>Profile: Data Ops</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileForInactiveUsers__c</fullName>
+        <description>Used in the UserTriggerHandler to assign this profile when user status is inactive.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile or test classes and functionality will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in the UserTriggerHandler to assign this profile when user status is inactive.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile or test classes and functionality will fail.</inlineHelpText>
+        <label>Profile For Inactive Users</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileIntegration__c</fullName>
+        <description>Indicates the profile that should be used for Integration User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the profile that should be used for Integration User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</inlineHelpText>
+        <label>Profile: Integration</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfilePardot__c</fullName>
+        <description>Indicates the profile that should be used for Pardot User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the profile that should be used for Pardot User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</inlineHelpText>
+        <label>Profile: Pardot</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileSales__c</fullName>
+        <description>Indicates the profile that should be used for Sales User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the profile that should be used for Sales User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</inlineHelpText>
+        <label>Profile: Sales</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileStandardUser__c</fullName>
+        <description>Indicates the profile that should be used for Standard User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the profile that should be used for Standard User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</inlineHelpText>
+        <label>Profile: Standard User</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileSystemAdministrator__c</fullName>
+        <description>Indicates the profile that should be used for System Admin User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the profile that should be used for System Admin User in Apex.  This prevents the hard-coding of profile names into Apex classes.  This value must be an existing profile and cannot be null or Apex test classes will fail.</inlineHelpText>
+        <label>Profile: System Administrator</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepService__c</fullName>
+        <externalId>false</externalId>
+        <label>RepService</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>SFDCDomain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The first part of the Salesforce URL.  This is always "https://globalplatform.my.salesforce.com/" for production.  Used for Tableau SFID record pointing.  Update to the appropriate domain in CRMStage after refreshes.</inlineHelpText>
+        <label>SFDC Domain</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>SuccessNotificationEmailAddress__c</fullName>
+        <description>Used in apex to notify via email when processes are successful.  Separate multiple email addresses with semi-colons.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in apex to notify via email when processes are successful.  Separate multiple email addresses with semi-colons.</inlineHelpText>
+        <label>Success Notification Email Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TableauParametersNotAvailableMsg__c</fullName>
+        <description>Message that displays on visualforce pages when EDW Durable Key or Visualization Name is not available on the given record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Message that displays on visualforce pages when EDW Durable Key or Visualization Name is not available on the given record.</inlineHelpText>
+        <label>Tableau Parameters Not Available Msg</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TableauProductionDomain__c</fullName>
+        <description>The production Domain for Tableau reports.  VF pages use this URL in the product org (vizbi.ngam.natixis.com)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The production Domain for Tableau reports.  VF pages use this URL in the product org (vizbi.ngam.natixis.com)</inlineHelpText>
+        <label>Tableau Production Domain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TableauQADomain__c</fullName>
+        <description>Tableau QA Domain.  VF pages use this URL in all sandbox orgs. (vizbiqa.ngam.natixis.com)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tableau QA Domain.  VF pages use this URL in all sandbox orgs. (vizbiqa.ngam.natixis.com)</inlineHelpText>
+        <label>Tableau QA Domain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaskRelationOutlookSyncQuery__c</fullName>
+        <description>TaskRelationOutlookSyncQuery for TaskSyncBatch for outlook outlook pluging job that runs every 15 minutes</description>
+        <externalId>false</externalId>
+        <label>TaskRelationOutlookSyncQuery</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WorkDays__c</fullName>
+        <description>Number of Work Days past this month</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Work Days past this month</inlineHelpText>
+        <label>WorkDays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>Holds the NGAM settings</description>
+    <enableFeeds>false</enableFeeds>
+    <label>NGAM Settings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

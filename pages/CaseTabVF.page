@@ -1,0 +1,5 @@
+<apex:page standardController="Case" tabStyle="Case" recordSetVar="cases" lightningStylesheets="true">
+
+   <apex:enhancedList type="Case" height="750" rowsPerPage="25" id="CaseList" />
+
+</apex:page>

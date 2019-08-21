@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ContactName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.LastName &amp; ", " &amp; Contact__r.FirstName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Contact related to the Financial Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact related to the Financial Account</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Financial Account Contact</relationshipLabel>
+        <relationshipName>Financial_Account_Contact</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Account__c</fullName>
+        <description>Financial Account to which this contact is related</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Account to which this contact is related</inlineHelpText>
+        <label>Financial Account</label>
+        <referenceTo>FinancialAccount__c</referenceTo>
+        <relationshipLabel>Financial Account Contact</relationshipLabel>
+        <relationshipName>Financial_Account_Contact</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this contact is the primary contact for the Financial Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the contact the primary contact for the Financial Account?</inlineHelpText>
+        <label>Primary?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Indicates the status of the contact's relationship to the Financial Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate the status of the contact's relationship to the Financial Account</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Current</fullName>
+                    <default>true</default>
+                    <label>Current</label>
+                </value>
+                <value>
+                    <fullName>Former</fullName>
+                    <default>false</default>
+                    <label>Former</label>
+                </value>
+                <value>
+                    <fullName>Inactivated</fullName>
+                    <default>false</default>
+                    <label>Inactivated</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Indicates the type of relationship this contact has to the Financial Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate the type of relationship this contact has to the Financial Account</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>End Client</fullName>
+                    <default>false</default>
+                    <label>End Client</label>
+                </value>
+                <value>
+                    <fullName>Financial Advisor</fullName>
+                    <default>true</default>
+                    <label>Financial Advisor</label>
+                </value>
+                <value>
+                    <fullName>Interested 3rd Party</fullName>
+                    <default>false</default>
+                    <label>Interested 3rd Party</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>View_Financial_Account_in_Community__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if this contact should see the Financial Account in the community.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, the contact will be able to see the Financial Account in the community</inlineHelpText>
+        <label>View Financial Account in Community?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tracks contacts associated with a Financial Account.  Dictates which contacts (community users) can see a particular Financial Account in the community.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Financial Account Contact</label>
+    <nameField>
+        <displayFormat>FAC-{000000}</displayFormat>
+        <label>Reference #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Financial Account Contacts</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Forward</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Financial_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Financial_Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Financial_Account__c</searchFilterFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>View_Financial_Account_in_Community__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
