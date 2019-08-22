@@ -3629,6 +3629,7 @@ varchar(255)</description>
         <customTabListAdditionalFields>CASES.STATUS</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>NewCase</excludedStandardButtons>
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>Forward</excludedStandardButtons>
         <excludedStandardButtons>MassMergeCase</excludedStandardButtons>
@@ -3665,7 +3666,7 @@ varchar(255)</description>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OWNER_NAME</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel><enableHistory>true</enableHistory>
+    <sharingModel>Private</sharingModel>
     <fieldSets>
         <fullName>RKExportToExcel__Export_To_Excel</fullName>
         <description>This Field Set is used to specify the fields in the Export To Excel button on the Case List Views</description>

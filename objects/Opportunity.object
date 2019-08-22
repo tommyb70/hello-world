@@ -2342,23 +2342,6 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
         <label>Export To Excel</label>
     </fieldSets>
     <listViews>
-        <fullName>AllOpportunities</fullName>
-        <columns>OPPORTUNITY.RECORDTYPE</columns>
-        <columns>OPPORTUNITY.NAME</columns>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>OPPORTUNITY.STAGE_NAME</columns>
-        <columns>OPPORTUNITY.PROBABILITY</columns>
-        <columns>CORE.USERS.FULL_NAME</columns>
-        <columns>OPPORTUNITY.CREATED_DATE</columns>
-        <columns>ModifiedDate__c</columns>
-        <columns>Product__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Opportunities</label>
-        <sharedTo>
-            <roleAndSubordinates>a02F000000DHHopIAH</roleAndSubordinates>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>All_Closed_Opportunities</fullName>
         <columns>OPPORTUNITY.NAME</columns>
         <columns>ACCOUNT.NAME</columns>
@@ -2379,38 +2362,6 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
             <value>1</value>
         </filters>
         <label>All Closed Opportunities</label>
-    </listViews>
-    <listViews>
-        <fullName>All_Inst_Open</fullName>
-        <booleanFilter>1 AND 2</booleanFilter>
-        <columns>OPPORTUNITY.NAME</columns>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>OPPORTUNITY.STAGE_NAME</columns>
-        <columns>CORE.USERS.FULL_NAME</columns>
-        <columns>ExpectedFlows__c</columns>
-        <columns>Affiliate__c</columns>
-        <columns>Strategy__c</columns>
-        <columns>CapitalContributions__c</columns>
-        <columns>Product__c</columns>
-        <columns>OPPORTUNITY.LAST_UPDATE</columns>
-        <columns>OPPORTUNITY.CLOSE_DATE</columns>
-        <columns>OPPORTUNITY.AMOUNT</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>OPPORTUNITY.CLOSED</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>OPPORTUNITY.RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Opportunity.InstSubAdv</value>
-        </filters>
-        <label>All Open Institutional</label>
-        <sharedTo>
-            <group>SFDC_Admins</group>
-            <group>Sales_Institutional</group>
-        </sharedTo>
     </listViews>
     <listViews>
         <fullName>All_Inst_Won_Unfunded</fullName>
@@ -2828,6 +2779,58 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
             <value>0</value>
         </filters>
         <label>All Open Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.RECORDTYPE</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>ModifiedDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+        <sharedTo>
+            <roleAndSubordinates>a02F000000DHHopIAH</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Inst_Open</fullName>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>AssetClass__c</columns>
+        <columns>ExpectedFlows__c</columns>
+        <columns>CapitalContributions__c</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OpportunityTerritory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OpportunityRegionDept__c</field>
+            <operation>startsWith</operation>
+            <value>INSTL</value>
+        </filters>
+        <filters>
+            <field>OpportunityRegionDept__c</field>
+            <operation>equals</operation>
+            <value>INSTITUTIONAL</value>
+        </filters>
+        <label>All Open Institutional</label>
+        <sharedTo>
+            <group>SFDC_Admins</group>
+            <group>Sales_Institutional</group>
+        </sharedTo>
     </listViews>
     <recordTypes>
         <fullName>AIA</fullName>
