@@ -3529,2091 +3529,6 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>Empower_Leads</fullName>
-        <active>true</active>
-        <businessProcess>Empower Leads</businessProcess>
-        <compactLayoutAssignment>Oppty_Empower_Leads</compactLayoutAssignment>
-        <description>This record type tracks leads passed from ADU to RADU</description>
-        <label>Empower Leads</label>
-        <picklistValues>
-            <picklist>AffiliateCopiedValue__c</picklist>
-            <values>
-                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ALPHA SIMPLEX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AURORA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MIROVA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>AffiliatePicklist__c</picklist>
-            <values>
-                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ALPHA SIMPLEX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AURORA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MANAGED ACCOUNT ADVISORS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MIROVA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>AssetClass__c</picklist>
-            <values>
-                <fullName>ALTERNATIVE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>EQUITY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>EQUITY-FIXED INCOME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME-MUNICIPAL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME-TAXABLE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MMF</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OTHER</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>BlendedBenchmark__c</picklist>
-            <values>
-                <fullName>FA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRC</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Case_Type__c</picklist>
-            <values>
-                <fullName>Concentrated Stock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Passive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prospecting</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>External Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Public Relations</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminar - Internal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminar - Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Word of mouth</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Opportunity_Type__c</picklist>
-            <values>
-                <fullName>Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Natixis Models</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retirement</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PlatformName__c</picklist>
-            <values>
-                <fullName>Access IPS Zero</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Access OFA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Alliance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Aviator</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction Custom</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction Select</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Key</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Easy Start 401%28k%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Emerging Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee-Based</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee-Based with Vanguard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity Advisor %28FIIS%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Flexible Advantage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Framework</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Group Annuity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Innovator Advantage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Institutional - Open Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Institutional Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Key 401%28k%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Legacy NY Life</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Maps Select</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mid Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Open Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Premier Key</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Securian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Single Source</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Smart Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Info</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Total Retirement Services %28TPS%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PlatformProvider__c</picklist>
-            <values>
-                <fullName>ADP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ascensus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CPI%2FCUNA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Daily Access%2FVerasite%2FNewport</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Empower</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>John Hancock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lincoln</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mass Mutual %28legacy Hartford%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nationwide</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Principal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prudential</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Securian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>The Standard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TransAmerica</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voya</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wells Fargo</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ProductType__c</picklist>
-            <values>
-                <fullName>Institutional US</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>RecordKeeper__c</picklist>
-            <values>
-                <fullName>ADP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ascensus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Empower</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>John Hancock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lincoln</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mass Mutual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Merrill Lynch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Paychex</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Principal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prudential</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Schwab</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Social K</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TIAA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transamerica</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voya</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ReferralMethod__c</picklist>
-            <values>
-                <fullName>Call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voicemail</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Request_Type__c</picklist>
-            <values>
-                <fullName>Follow-up</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Request</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Sales_Method_Translation__c</picklist>
-            <values>
-                <fullName>Global Relations Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IAG%2FFiduciary Sales Stage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Overlay Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Pipeline</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retirement Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sales Stage</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Strategy__c</picklist>
-            <values>
-                <fullName>AIO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Active Vol%2E Mgmt%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>BXM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Alternatives</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Equity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Macro</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Green Bond</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Index%2FRA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>International</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Managed Futures</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transition Energy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>US Tactical Asset Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Water %26 Agribusiness</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Capital Contributions</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Relationship</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Comprehensive Portfolio Evaluation</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>InstSubAdv</fullName>
-        <active>true</active>
-        <businessProcess>Instututional Sub Advised</businessProcess>
-        <compactLayoutAssignment>Oppty_InstSubAdv</compactLayoutAssignment>
-        <description>Associated to the Institutional Sub Advised Sales Process</description>
-        <label>InstSubAdv</label>
-        <picklistValues>
-            <picklist>AffiliateCopiedValue__c</picklist>
-            <values>
-                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ALPHA SIMPLEX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AURORA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MIROVA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>AffiliatePicklist__c</picklist>
-            <values>
-                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ALPHA SIMPLEX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AURORA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MANAGED ACCOUNT ADVISORS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MIROVA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>AssetClass__c</picklist>
-            <values>
-                <fullName>ALTERNATIVE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>EQUITY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>EQUITY-FIXED INCOME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME-MUNICIPAL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME-TAXABLE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MMF</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OTHER</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>BlendedBenchmark__c</picklist>
-            <values>
-                <fullName>FA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRC</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Case_Type__c</picklist>
-            <values>
-                <fullName>Concentrated Stock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Passive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prospecting</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>External Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Public Relations</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminar - Internal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminar - Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Word of mouth</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Opportunity_Type__c</picklist>
-            <values>
-                <fullName>Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Natixis Models</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retirement</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PlatformName__c</picklist>
-            <values>
-                <fullName>Access IPS Zero</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Access OFA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Alliance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Aviator</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction Custom</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction Select</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Key</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Easy Start 401%28k%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Emerging Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee-Based</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee-Based with Vanguard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity Advisor %28FIIS%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Flexible Advantage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Framework</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Group Annuity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Innovator Advantage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Institutional - Open Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Institutional Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Key 401%28k%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Legacy NY Life</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Maps Select</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mid Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Open Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Premier Key</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Securian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Single Source</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Smart Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Info</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Total Retirement Services %28TPS%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PlatformProvider__c</picklist>
-            <values>
-                <fullName>ADP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ascensus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CPI%2FCUNA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Daily Access%2FVerasite%2FNewport</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Empower</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>John Hancock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lincoln</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mass Mutual %28legacy Hartford%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nationwide</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Principal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prudential</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Securian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>The Standard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TransAmerica</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voya</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wells Fargo</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ProductType__c</picklist>
-            <values>
-                <fullName>Institutional US</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>RecordKeeper__c</picklist>
-            <values>
-                <fullName>ADP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Alerus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ascensus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Empower</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>John Hancock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lincoln</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mass Mutual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Merrill Lynch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Paychex</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Principal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prudential</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Schwab</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Social K</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TIAA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transamerica</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voya</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ReferralMethod__c</picklist>
-            <values>
-                <fullName>Call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voicemail</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Request_Type__c</picklist>
-            <values>
-                <fullName>Follow-up</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Request</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Sales_Method_Translation__c</picklist>
-            <values>
-                <fullName>Global Relations Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IAG%2FFiduciary Sales Stage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Overlay Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Pipeline</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retirement Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sales Stage</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Strategy__c</picklist>
-            <values>
-                <fullName>AIO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Active Vol%2E Mgmt%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>BXM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Alternatives</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Equity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Macro</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Green Bond</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Index%2FRA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>International</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Managed Futures</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transition Energy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>US Tactical Asset Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Water %26 Agribusiness</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Capital Contributions</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Relationship</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>NSFF</fullName>
-        <active>true</active>
-        <businessProcess>NSFF</businessProcess>
-        <compactLayoutAssignment>Oppty_NSFF</compactLayoutAssignment>
-        <description>To support RADU with the NSFF Opportunity process</description>
-        <label>NSFF</label>
-        <picklistValues>
-            <picklist>AffiliateCopiedValue__c</picklist>
-            <values>
-                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ALPHA SIMPLEX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AURORA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MIROVA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>AffiliatePicklist__c</picklist>
-            <values>
-                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ALPHA SIMPLEX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AURORA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MANAGED ACCOUNT ADVISORS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MIROVA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>AssetClass__c</picklist>
-            <values>
-                <fullName>ALTERNATIVE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>EQUITY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>EQUITY-FIXED INCOME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME-MUNICIPAL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FIXED INCOME-TAXABLE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MMF</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OTHER</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>BlendedBenchmark__c</picklist>
-            <values>
-                <fullName>FA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRC</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Case_Type__c</picklist>
-            <values>
-                <fullName>Advisor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Direct to Plan Sponsor</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>External Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Public Relations</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminar - Internal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminar - Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Word of mouth</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Opportunity_Type__c</picklist>
-            <values>
-                <fullName>Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Natixis Models</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retirement</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PlatformName__c</picklist>
-            <values>
-                <fullName>Access IPS Zero</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Access OFA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Alliance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Aviator</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction Custom</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Clear Direction Select</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Key</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Easy Start 401%28k%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Emerging Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee-Based</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee-Based with Vanguard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity Advisor %28FIIS%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Flexible Advantage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Framework</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Group Annuity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Innovator Advantage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Institutional - Open Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Institutional Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Key 401%28k%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Legacy NY Life</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Maps Select</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mid Market</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Open Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Premier Key</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Securian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Single Source</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Smart Architecture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Info</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Total Retirement Services %28TPS%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PlatformProvider__c</picklist>
-            <values>
-                <fullName>ADP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ascensus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CPI%2FCUNA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Daily Access%2FVerasite%2FNewport</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Empower</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>John Hancock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lincoln</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mass Mutual %28legacy Hartford%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nationwide</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Principal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prudential</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Securian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>The Standard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TransAmerica</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voya</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wells Fargo</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ProductType__c</picklist>
-            <values>
-                <fullName>Institutional US</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>RecordKeeper__c</picklist>
-            <values>
-                <fullName>ADP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Alerus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ascensus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Big Green</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Fiduciary</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Empower</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fidelity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>John Hancock</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lincoln</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mass Mutual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Merrill Lynch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Paychex</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Principal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prudential</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Schwab</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Social K</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TIAA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transamerica</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voya</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ReferralMethod__c</picklist>
-            <values>
-                <fullName>Call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Voicemail</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Request_Type__c</picklist>
-            <values>
-                <fullName>Follow-up</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Request</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Sales_Method_Translation__c</picklist>
-            <values>
-                <fullName>Global Relations Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IAG%2FFiduciary Sales Stage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Overlay Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Pipeline</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retirement Sales Stages</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sales Stage</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Strategy__c</picklist>
-            <values>
-                <fullName>AIO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Active Vol%2E Mgmt%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>BXM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Alternatives</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Equity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Global Macro</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Green Bond</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Index%2FRA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>International</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Managed Futures</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transition Energy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>US Tactical Asset Allocation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Water %26 Agribusiness</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Capital Contributions</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Relationship</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PRCG Comprehensive Portfolio Evaluation</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
         <fullName>Sales_PRCG_CPE_Request</fullName>
         <active>true</active>
         <businessProcess>PRCG CPE Request</businessProcess>
@@ -6300,10 +4215,2030 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
         </picklistValues>
     </recordTypes>
     <recordTypes>
+        <fullName>Empower_Leads</fullName>
+        <active>true</active>
+        <businessProcess>Empower Leads</businessProcess>
+        <compactLayoutAssignment>Oppty_Empower_Leads</compactLayoutAssignment>
+        <description>Used to track leads passed from ADU to RADU</description>
+        <label>Empower Leads</label>
+        <picklistValues>
+            <picklist>AffiliateCopiedValue__c</picklist>
+            <values>
+                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ALPHA SIMPLEX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIROVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AffiliatePicklist__c</picklist>
+            <values>
+                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ALPHA SIMPLEX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MANAGED ACCOUNT ADVISORS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIROVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AssetClass__c</picklist>
+            <values>
+                <fullName>ALTERNATIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUITY-FIXED INCOME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME-MUNICIPAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME-TAXABLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BlendedBenchmark__c</picklist>
+            <values>
+                <fullName>FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Type__c</picklist>
+            <values>
+                <fullName>Concentrated Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Passive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natixis Models</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PlatformName__c</picklist>
+            <values>
+                <fullName>Access IPS Zero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access OFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aviator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction Select</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Easy Start 401%28k%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee-Based</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee-Based with Vanguard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity Advisor %28FIIS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Innovator Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional - Open Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key 401%28k%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legacy NY Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maps Select</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premier Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Source</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smart Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Retirement Services %28TPS%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PlatformProvider__c</picklist>
+            <values>
+                <fullName>ADP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ascensus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2FCUNA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily Access%2FVerasite%2FNewport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Empower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Hancock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass Mutual %28legacy Hartford%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nationwide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prudential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TransAmerica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voya</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProductType__c</picklist>
+            <values>
+                <fullName>Institutional US</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RecordKeeper__c</picklist>
+            <values>
+                <fullName>ADP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ascensus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Empower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Hancock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass Mutual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merrill Lynch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paychex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prudential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schwab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social K</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transamerica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voya</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReferralMethod__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Type__c</picklist>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Method_Translation__c</picklist>
+            <values>
+                <fullName>Global Relations Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAG%2FFiduciary Sales Stage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overlay Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Stage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategy__c</picklist>
+            <values>
+                <fullName>AIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Active Vol%2E Mgmt%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BXM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Alternatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Macro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Index%2FRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Tactical Asset Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water %26 Agribusiness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Capital Contributions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Comprehensive Portfolio Evaluation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>InstSubAdv</fullName>
+        <active>true</active>
+        <businessProcess>Instututional Sub Advised</businessProcess>
+        <compactLayoutAssignment>Oppty_InstSubAdv</compactLayoutAssignment>
+        <description>Sales process specific to Institutional Sub Advised opportunities</description>
+        <label>InstSubAdv</label>
+        <picklistValues>
+            <picklist>AffiliateCopiedValue__c</picklist>
+            <values>
+                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ALPHA SIMPLEX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIROVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AffiliatePicklist__c</picklist>
+            <values>
+                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ALPHA SIMPLEX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MANAGED ACCOUNT ADVISORS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIROVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AssetClass__c</picklist>
+            <values>
+                <fullName>ALTERNATIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUITY-FIXED INCOME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME-MUNICIPAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME-TAXABLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BlendedBenchmark__c</picklist>
+            <values>
+                <fullName>FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Type__c</picklist>
+            <values>
+                <fullName>Concentrated Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Passive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natixis Models</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PlatformName__c</picklist>
+            <values>
+                <fullName>Access IPS Zero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access OFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aviator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction Select</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Easy Start 401%28k%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee-Based</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee-Based with Vanguard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity Advisor %28FIIS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Innovator Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional - Open Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key 401%28k%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legacy NY Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maps Select</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premier Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Source</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smart Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Retirement Services %28TPS%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PlatformProvider__c</picklist>
+            <values>
+                <fullName>ADP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ascensus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2FCUNA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily Access%2FVerasite%2FNewport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Empower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Hancock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass Mutual %28legacy Hartford%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nationwide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prudential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TransAmerica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voya</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProductType__c</picklist>
+            <values>
+                <fullName>Institutional US</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RecordKeeper__c</picklist>
+            <values>
+                <fullName>ADP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alerus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ascensus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Empower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Hancock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass Mutual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merrill Lynch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paychex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prudential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schwab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social K</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transamerica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voya</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReferralMethod__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Type__c</picklist>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Method_Translation__c</picklist>
+            <values>
+                <fullName>Global Relations Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAG%2FFiduciary Sales Stage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overlay Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Stage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategy__c</picklist>
+            <values>
+                <fullName>AIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Active Vol%2E Mgmt%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BXM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Alternatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Macro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Index%2FRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Tactical Asset Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water %26 Agribusiness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Capital Contributions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Relationship</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>NSFF</fullName>
+        <active>true</active>
+        <businessProcess>NSFF</businessProcess>
+        <compactLayoutAssignment>Oppty_NSFF</compactLayoutAssignment>
+        <description>Sales process specific to RADU NSFF opportunities</description>
+        <label>NSFF</label>
+        <picklistValues>
+            <picklist>AffiliateCopiedValue__c</picklist>
+            <values>
+                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ALPHA SIMPLEX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIROVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AffiliatePicklist__c</picklist>
+            <values>
+                <fullName>ABSOLUTE ASIA ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AEW CAPITAL MANAGEMENT%2C L%2EP%2E%2C TWO SEAPORT LANE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ALPHA SIMPLEX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAPITAL GROWTH MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPIAN CAPITAL MANAGEMENT%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GATEWAY INVESTMENT ADVISERS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HARRIS ASSOCIATES L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOOMIS%2C SAYLES %26 COMPANY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MANAGED ACCOUNT ADVISORS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCDONNELL INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIROVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATIXIS ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REICH AND TANG ASSET MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SNYDER CAPITAL MANAGEMENT%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAUGHAN NELSON INVESTMENT MANAGEMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AssetClass__c</picklist>
+            <values>
+                <fullName>ALTERNATIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUITY-FIXED INCOME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME-MUNICIPAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FIXED INCOME-TAXABLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BlendedBenchmark__c</picklist>
+            <values>
+                <fullName>FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Type__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct to Plan Sponsor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natixis Models</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PlatformName__c</picklist>
+            <values>
+                <fullName>Access IPS Zero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access OFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aviator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clear Direction Select</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Easy Start 401%28k%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emerging Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee-Based</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee-Based with Vanguard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity Advisor %28FIIS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Innovator Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional - Open Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key 401%28k%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legacy NY Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maps Select</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premier Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Source</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smart Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Retirement Services %28TPS%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PlatformProvider__c</picklist>
+            <values>
+                <fullName>ADP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ascensus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2FCUNA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily Access%2FVerasite%2FNewport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Empower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Hancock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass Mutual %28legacy Hartford%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nationwide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prudential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TransAmerica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voya</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProductType__c</picklist>
+            <values>
+                <fullName>Institutional US</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RecordKeeper__c</picklist>
+            <values>
+                <fullName>ADP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alerus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ascensus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Big Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Fiduciary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Empower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Hancock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass Mutual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merrill Lynch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paychex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prudential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schwab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social K</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transamerica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voya</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReferralMethod__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Type__c</picklist>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Method_Translation__c</picklist>
+            <values>
+                <fullName>Global Relations Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAG%2FFiduciary Sales Stage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overlay Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement Sales Stages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Stage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategy__c</picklist>
+            <values>
+                <fullName>AIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Active Vol%2E Mgmt%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BXM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Alternatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Macro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Index%2FRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Futures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Tactical Asset Allocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water %26 Agribusiness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Capital Contributions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRCG Comprehensive Portfolio Evaluation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
         <fullName>Standard</fullName>
         <active>true</active>
         <businessProcess>Standard</businessProcess>
         <compactLayoutAssignment>Oppty_Manually_Created</compactLayoutAssignment>
+        <description>Sales process specific to general sales process</description>
         <label>Standard</label>
         <picklistValues>
             <picklist>AffiliateCopiedValue__c</picklist>
@@ -6496,29 +6431,7 @@ Natixis Models - Morgan Stanley models, or Risk Efficient portfolios</inlineHelp
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
+        
         <picklistValues>
             <picklist>LeadSource</picklist>
             <values>
