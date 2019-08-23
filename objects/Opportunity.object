@@ -7174,20 +7174,6 @@ CF00NF000000CuGo0={!Contact.Name}
 &amp;opp9=12/31/{!YEAR( TODAY() )}</url>
     </webLinks>
     <webLinks>
-        <fullName>New_Opp_Account</fullName>
-        <availability>online</availability>
-        <description>Create a new Opportunity record from an Account record.</description>
-        <displayType>massActionButton</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>New Opportunity for Account</masterLabel>
-        <openType>sidebar</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>/flow/New_Opp_Flow?recordId={!Account.Id}</url>
-    </webLinks>
-    <webLinks>
         <fullName>New_Opp_Contact</fullName>
         <availability>online</availability>
         <description>Create a new Opportunity record from a Contact record.</description>
@@ -7200,5 +7186,19 @@ CF00NF000000CuGo0={!Contact.Name}
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
         <url>/flow/New_Opp_Flow?recordId={!Contact.FirmId__c}&amp;contactRecordId={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Opp_Account</fullName>
+        <availability>online</availability>
+        <description>Create a new Opportunity record from a Firm Office record.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Opportunity for Firm Office</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/flow/New_Opp_Flow?recordId={!Account.Id}</url>
     </webLinks>
 </CustomObject>

@@ -4589,38 +4589,6 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
         <sharedTo />
     </listViews>
     <listViews>
-        <fullName>Key_Insights</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
-        <columns>FirmType__c</columns>
-        <columns>PotentialScore__c</columns>
-        <columns>PotentialReason__c</columns>
-        <columns>RiskReason__c</columns>
-        <columns>RiskScore__c</columns>
-        <columns>NatixisAUM__c</columns>
-        <columns>TranYTDPurchases__c</columns>
-        <columns>TranYTDRedemptions__c</columns>
-        <columns>NatixisPYPurchases__c</columns>
-        <columns>NatixisPYRedemptions__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Channel__c</field>
-            <operation>notEqual</operation>
-            <value>DCIO</value>
-        </filters>
-        <filters>
-            <field>ACCOUNT.ADDRESS1_STATE_CODE</field>
-            <operation>equals</operation>
-            <value>CA</value>
-        </filters>
-        <filters>
-            <field>MktOppIndustryAUM__c</field>
-            <operation>greaterOrEqual</operation>
-            <value>50000</value>
-        </filters>
-        <label>Key Insights</label>
-    </listViews>
-    <listViews>
         <fullName>Key_Insights_F_l</fullName>
         <columns>ACCOUNT.NAME</columns>
         <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
@@ -6040,6 +6008,38 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
         <sharedTo>
             <group>SFDC_Admins</group>
         </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Key_Insights</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+        <columns>FirmType__c</columns>
+        <columns>PotentialScore__c</columns>
+        <columns>PotentialReason__c</columns>
+        <columns>RiskReason__c</columns>
+        <columns>RiskScore__c</columns>
+        <columns>NatixisAUM__c</columns>
+        <columns>NatixisYTDPurchases__c</columns>
+        <columns>NatixisYTDRedemptions__c</columns>
+        <columns>NatixisPYPurchases__c</columns>
+        <columns>NatixisPYRedemptions__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Channel__c</field>
+            <operation>notEqual</operation>
+            <value>DCIO</value>
+        </filters>
+        <filters>
+            <field>ACCOUNT.ADDRESS1_STATE_CODE</field>
+            <operation>equals</operation>
+            <value>CA</value>
+        </filters>
+        <filters>
+            <field>MktOppIndustryAUM__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>50000</value>
+        </filters>
+        <label>Key Insights</label>
     </listViews>
     <recordTypes>
         <fullName>Affiliate</fullName>
