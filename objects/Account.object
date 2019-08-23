@@ -4668,28 +4668,6 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Test_QA</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
-        <columns>ACCOUNT.PHONE1</columns>
-        <columns>ACCOUNT.TYPE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Channel__c</field>
-            <operation>notEqual</operation>
-            <value>DCIO</value>
-        </filters>
-        <filters>
-            <field>ACCOUNT.ADDRESS1_CITY</field>
-            <operation>notEqual</operation>
-        </filters>
-        <label>Key Insights-Test QA</label>
-        <sharedTo>
-            <group>Key_Insights_Test_QA</group>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>USTRUSTCOOFNY</fullName>
         <columns>ACCOUNT.NAME</columns>
         <columns>ACCOUNT.TYPE</columns>
@@ -6040,6 +6018,24 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             <value>50000</value>
         </filters>
         <label>Key Insights</label>
+    </listViews>
+    <listViews>
+        <fullName>Test_QA</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCOUNT.ADDRESS1_STATE_CODE</field>
+            <operation>equals</operation>
+            <value>AZ,CA</value>
+        </filters>
+        <label>Key Insights-Test QA</label>
+        <sharedTo>
+            <group>Key_Insights_Test_QA</group>
+        </sharedTo>
     </listViews>
     <recordTypes>
         <fullName>Affiliate</fullName>

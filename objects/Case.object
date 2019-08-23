@@ -3666,7 +3666,7 @@ varchar(255)</description>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OWNER_NAME</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel><enableHistory>true</enableHistory>
+    <sharingModel>Private</sharingModel>
     <fieldSets>
         <fullName>RKExportToExcel__Export_To_Excel</fullName>
         <description>This Field Set is used to specify the fields in the Export To Excel button on the Case List Views</description>
@@ -4488,36 +4488,6 @@ varchar(255)</description>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>PrivateWealthCasesAllOpen</fullName>
-        <columns>CASES.CASE_NUMBER</columns>
-        <columns>PWCaseID__c</columns>
-        <columns>CASES.SUBJECT</columns>
-        <columns>CASES.STATUS</columns>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>NAME</columns>
-        <columns>PWParentCase__c</columns>
-        <columns>PARENT.CASE_NUMBER</columns>
-        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>AttachmentNumber__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CASES.RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Case.PrivateWealthPortal</value>
-        </filters>
-        <filters>
-            <field>CASES.CLOSED</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <label>Private Wealth Cases All Open</label>
-        <sharedTo>
-            <group>MPA_and_Client_Services_PW_Portal_Users</group>
-            <group>SFDC_Admins</group>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>PrivateWealthCasesMyOpen</fullName>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>PWCaseID__c</columns>
@@ -4540,28 +4510,6 @@ varchar(255)</description>
             <value>1</value>
         </filters>
         <label>Private Wealth Cases My Open</label>
-        <sharedTo>
-            <group>MPA_and_Client_Services_PW_Portal_Users</group>
-            <group>SFDC_Admins</group>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>PrivateWealthCases_Case</fullName>
-        <columns>CASES.CASE_NUMBER</columns>
-        <columns>PWCaseID__c</columns>
-        <columns>CASES.SUBJECT</columns>
-        <columns>CASES.STATUS</columns>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>NAME</columns>
-        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>IsPrivateWealthCase__c</field>
-            <operation>equals</operation>
-            <value>1</value>
-        </filters>
-        <label>Private Wealth Cases</label>
         <sharedTo>
             <group>MPA_and_Client_Services_PW_Portal_Users</group>
             <group>SFDC_Admins</group>
@@ -4802,6 +4750,54 @@ varchar(255)</description>
             <value>Assigned</value>
         </filters>
         <label>Unassigned Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>PrivateWealthCasesAllOpen</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>PWCaseID__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>PWParentCase__c</columns>
+        <columns>PARENT.CASE_NUMBER</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>AttachmentNumber__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.Account_Investment_Change,Case.Account_Opening,Case.Ad_Hoc_Request,Case.Bulk_Investment_Strategy_Swap,Case.Model_Update_Request,Case.New_Model_Request,Case.New_Requestor,Case.PrivateWealthPortal,Case.Restriction_Update,Case.Tax_Harvest,Case.Termination,Case.Update_to_Requestor,Case.Withdrawal</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Private Wealth Cases All Open</label>
+        <sharedTo>
+            <group>MPA_and_Client_Services_PW_Portal_Users</group>
+            <group>SFDC_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>PrivateWealthCases_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>PWCaseID__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Private Wealth Cases</label>
+        <queue>PrivateWealthCases</queue>
+        <sharedTo>
+            <group>MPA_and_Client_Services_PW_Portal_Users</group>
+            <group>SFDC_Admins</group>
+        </sharedTo>
     </listViews>
     <recordTypes>
         <fullName>Account_Investment_Change</fullName>
