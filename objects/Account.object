@@ -6037,6 +6037,41 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             <group>Key_Insights_Test_QA</group>
         </sharedTo>
     </listViews>
+    <listViews>
+        <fullName>View_00G2f000000YeYUEA0</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+        <columns>FirmType__c</columns>
+        <columns>PotentialScore__c</columns>
+        <columns>PotentialReason__c</columns>
+        <columns>RiskReason__c</columns>
+        <columns>RiskScore__c</columns>
+        <columns>NatixisAUM__c</columns>
+        <columns>NatixisYTDPurchases__c</columns>
+        <columns>NatixisYTDRedemptions__c</columns>
+        <columns>NatixisPYPurchases__c</columns>
+        <columns>NatixisPYRedemptions__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Channel__c</field>
+            <operation>notEqual</operation>
+            <value>DCIO</value>
+        </filters>
+        <filters>
+            <field>ACCOUNT.ADDRESS1_STATE_CODE</field>
+            <operation>equals</operation>
+            <value>CA</value>
+        </filters>
+        <filters>
+            <field>MktOppIndustryAUM__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>50000</value>
+        </filters>
+        <label>Key Insights-TEST TEST</label>
+        <sharedTo>
+            <group>Key_Insights_TEST_TEST</group>
+        </sharedTo>
+    </listViews>
     <recordTypes>
         <fullName>Affiliate</fullName>
         <active>true</active>
