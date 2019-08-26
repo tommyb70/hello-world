@@ -151,7 +151,16 @@ public  class SL_ctrl_ListViewHomePage {
 	}
     
     public PageReference Redirect() {
-        PageReference newRef = new PageReference('/lightning/o/Account/list?filterName=00B5C000001d86MUAQ');
+        
+        PageReference newRef = null;
+        User UserRec = [select ID,KeyInsightListViewId__c from User where ID=:UserInfo.getUserId() limit 1];
+
+        if(String.isBlank(UserRec.KeyInsightListViewId__c)){
+            newRef = new PageReference('/lightning/o/Account/list');
+        }
+        else {
+            newRef = new PageReference('/lightning/o/Account/list?filterName='+UserRec.KeyInsightListViewId__c);
+        }
         newRef.setRedirect(true);
         if(recordIds.size() > 0){
             createTaskRecords(recordIds);

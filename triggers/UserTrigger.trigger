@@ -4,15 +4,16 @@ trigger UserTrigger on User (before update, after update, after insert) {
     if(trigger.isUpdate && trigger.isBefore) {
         UserTriggerHandler.SetUserRoleId(trigger.new);
         UserTriggerHandler.SetReactivatedDatetime(trigger.new,trigger.oldMap);
-        UserTriggerHandler.userInactiveFunctionalities(trigger.new,trigger.oldMap); 
+        UserTriggerHandler.userInactiveFunctionalities(trigger.new,trigger.oldMap);
     } 
 
     if(trigger.isUpdate && trigger.isAfter) {
-       UserTriggerHandler.setUserPicture(trigger.newMap, trigger.oldMap);
+        UserTriggerHandler.setUserPicture(trigger.newMap, trigger.oldMap);
+        UserTriggerHandler.handleAfterInsertOrUpdate(trigger.new);
     }
 
     if(trigger.isInsert && trigger.isAfter){
-        UserTriggerHandler.handleAfterInsert(trigger.new);
+        UserTriggerHandler.handleAfterInsertOrUpdate(trigger.new);
     }
     
 }

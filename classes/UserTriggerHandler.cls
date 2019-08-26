@@ -1,4 +1,4 @@
-public without sharing class UserTriggerHandler { 
+public without sharing class UserTriggerHandler {
     /* In this method, when user record changes and the base-64 encoded Picture__c field is not null, convert the 
 * base-64 Picture__c field back to an image blob and post the picture to the user's record.  The base-64 encoded
 * data comes from an Informatica cloud integration that pulls add pictures into SFDC.  Note that I tried to do this
@@ -121,19 +121,23 @@ public without sharing class UserTriggerHandler {
         }
     } 
     
-    public static void handleAfterInsert(List<User> lstUsersAll){
+    public static void handleAfterInsertOrUpdate(List<User> lstUsersAll){
+        if (System.isFuture()) {
+            return;
+        }
         
         Set<Id> setIds = new Set<Id>();
         for (Integer i = 0; i < lstUsersAll.size(); i++) {
             setIds.add(lstUsersAll[i].Id);
         }
-        List<User> lstFullVersion = [SELECT id, Name, Profile.Name, FirstName, LastName FROM User WHERE id IN :setIds];
+        List<User> lstFullVersion = [SELECT id, Name, Alias, Profile.Name, FirstName, LastName, KeyInsightListViewId__c FROM User WHERE id IN :setIds];
         List<User> lstUsers = new List<User>();
         for (Integer i = 0; i < lstFullVersion.size(); i++) {
 
-            if(lstFullVersion[i].Profile.Name == 'Natixis Retail External' ||
+            if( String.isBlank(lstFullVersion[i].KeyInsightListViewId__c) && 
+                (lstFullVersion[i].Profile.Name == 'Natixis Retail External' ||
                 lstFullVersion[i].Profile.Name == 'Natixis Retail Internal' ||
-                lstFullVersion[i].Profile.Name == 'Natixis Institutional' 
+                lstFullVersion[i].Profile.Name == 'Natixis Institutional' )
             ){
                 lstUsers.add(lstFullVersion[i]);
             }
@@ -180,8 +184,9 @@ public without sharing class UserTriggerHandler {
                 
         if(!Test.isRunningTest()){
             upsert groupMemberList;
+            ListView lwRecord = [select ID,Name,SobjectType,DeveloperName from ListView where SobjectType='Account' and DeveloperName='Key_Insights' limit 1];
             for (Integer i = 0; i < groupsIds.size(); i++) {
-                SL_CloneListView.cloneListView(groupsIds[i], '00B2f000000V6p3EAC');
+                SL_CloneListView.cloneListView(groupsIds[i], lwRecord.ID);
             }
         }
     }

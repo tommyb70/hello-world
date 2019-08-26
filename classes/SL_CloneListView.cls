@@ -37,8 +37,11 @@ public without sharing class SL_CloneListView {
         listViewNew.sharedTo = shr;
 
         List<MetadataService.SaveResult> results;
+        System.debug('>>> Full Name: ' + ('Account.' + groupId).trim());
+        System.debug('>>> Full Name: ' + fullName);
         if(!Test.isRunningTest()){
             results = service.createMetadata(new MetadataService.Metadata[] { listViewNew });
+            System.debug('>>> Results: ' + results);
         }
 
         if (results != null && !results.isEmpty()) {
@@ -89,6 +92,7 @@ public without sharing class SL_CloneListView {
                 service.listMetadata(queries, 25);
 
         for(MetadataService.FileProperties fileProperty : fileProperties){
+            System.debug('>>> Full Name: ' + fileProperty.fullName);
             if(fullName == fileProperty.fullName){
                 return fileProperty.Id;
             }

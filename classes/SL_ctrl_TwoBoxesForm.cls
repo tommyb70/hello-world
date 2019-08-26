@@ -9,7 +9,7 @@ public class SL_ctrl_TwoBoxesForm {
    
 
    @AuraEnabled
-   public static String getSearchValues(String objectApiName, String inSearchTxt, List<ID> inRecIDs){
+   public static String getSearchValues(String objectApiName, String inQuery, String inSearchTxt, List<ID> inRecIDs){
        
        List<RecordsWrapper> lstWrappers = new List<RecordsWrapper>();
        if(inRecIDs==null){ inRecIDs = new List<ID>();}
@@ -20,25 +20,56 @@ public class SL_ctrl_TwoBoxesForm {
        if(objectApiName=='Product2'){
             if(inSearchTxt!=null && inSearchTxt.trim()!='' && inSearchTxt.trim().length()>1)
             {
-                List<List<sObject>> searchList=[Find :inSearchTxt IN ALL FIELDS RETURNING  Product2(ProductCode,Name,TradingSymbol__c WHERE ID not in :inRecIDs limit :limitOfLecord)];
+                String searchQuery = 'Find  \'' + inSearchTxt + '\' IN ALL FIELDS RETURNING  Product2(ProductCode,Name,TradingSymbol__c WHERE ';
+                if(String.isNotBlank(inQuery)){
+                    searchQuery += '('+inQuery+') and ';
+                }
+                searchQuery += 'ID not in :inRecIDs limit '+limitOfLecord+')';
+
+                //List<List<sObject>> searchList = [Find :inSearchTxt IN ALL FIELDS RETURNING  Product2(ProductCode,Name,TradingSymbol__c WHERE ID not in :inRecIDs limit :limitOfLecord)];
+                List<List<sObject>> searchList = search.query(searchQuery);
                 if(searchList!=null && searchList.size()==1 && searchList.get(0)!=null && searchList.get(0).size()>0){
                     lstRecords = searchList.get(0);
                 }
             }
             else if(inSearchTxt!=null && inSearchTxt.trim()!='' && inSearchTxt.trim().length()==1){
-                lstRecords = Database.query('select ID,Name from '+objectApiName+' where (Name like \''+inSearchTxt+'%\' or TradingSymbol__c like \''+inSearchTxt+'%\') and ID not in :inRecIDs ORDER BY Name limit '+limitOfLecord);
+                String searchQuery = 'select ID,Name from '+objectApiName+' where ';
+                if(String.isNotBlank(inQuery)){
+                    searchQuery += '('+inQuery+') and ';
+                }
+                searchQuery += '(Name like \''+inSearchTxt+'%\' or TradingSymbol__c like \''+inSearchTxt+'%\') and ID not in :inRecIDs ORDER BY Name limit '+limitOfLecord;
+
+                lstRecords = Database.query(searchQuery);
             }
             else{
-                lstRecords = Database.query('select ID,Name from '+objectApiName+' where ID not in :inRecIDs order by Name limit '+limitOfLecord);
+                String searchQuery = 'select ID,Name from '+objectApiName+' where ';
+                if(String.isNotBlank(inQuery)){
+                    searchQuery += '('+inQuery+') and ';
+                }
+                searchQuery += 'ID not in :inRecIDs order by Name limit '+limitOfLecord;
+
+                lstRecords = Database.query(searchQuery);
             }
 
        }
        else{
            if(inSearchTxt!=null && inSearchTxt.trim()!='' && inSearchTxt.trim().length()>0){
-            lstRecords = Database.query('select ID,Name from '+objectApiName+' where Name like \''+inSearchTxt+'%\' and ID not in :inRecIDs order by Name limit '+limitOfLecord);
+                String searchQuery = 'select ID,Name from '+objectApiName+' where ';
+                if(String.isNotBlank(inQuery)){
+                    searchQuery += '('+inQuery+') and ';
+                }
+                searchQuery += 'Name like \''+inSearchTxt+'%\' and ID not in :inRecIDs order by Name limit '+limitOfLecord;
+
+                lstRecords = Database.query(searchQuery);
            }
            else{
-                lstRecords = Database.query('select ID,Name from '+objectApiName+' where ID not in :inRecIDs order by Name limit '+limitOfLecord);
+                String searchQuery = 'select ID,Name from '+objectApiName+' where ';
+                if(String.isNotBlank(inQuery)){
+                    searchQuery += '('+inQuery+') and ';
+                }
+                searchQuery += 'ID not in :inRecIDs order by Name limit '+limitOfLecord;
+
+                lstRecords = Database.query(searchQuery);
             }
        }
 
@@ -52,9 +83,14 @@ public class SL_ctrl_TwoBoxesForm {
    }
 
    @AuraEnabled
-   public static String getPicklistValues(String objectApiName,String query, String listOfRecords){ 
+   public static String getPicklistValues(String objectApiName, String inQuery, String listOfRecords){ 
 
-        List<sObject> lstRecords = Database.query(query);
+        Integer limitOfLecord = 30;
+        String SOQLQuery = 'select ID,Name from '+objectApiName+' order by Name limit '+limitOfLecord;
+        if(String.isNotBlank(inQuery)){
+            SOQLQuery = 'select ID,Name from '+objectApiName+' where '+inQuery+' order by Name limit '+limitOfLecord;
+        }
+        List<sObject> lstRecords = Database.query(SOQLQuery);
 
         List<RecordsWrapper> lstWrappers = new List<RecordsWrapper>();
 

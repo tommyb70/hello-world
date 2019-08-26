@@ -521,16 +521,6 @@ IF( ActivityZoneId__c = "a1bF00000053btoIAA", "Inbound", NULL ))))))))))))))))))
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>KeyInsightListViewId__c</fullName>
-        <externalId>false</externalId>
-        <label>Key Insight List View Id</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>LegacyId__c</fullName>
         <externalId>false</externalId>
         <label>Legacy Id</label>
@@ -1218,6 +1208,18 @@ IF( ActivityZoneId__c = "a1bF00000053btoIAA", "Inbound", NULL ))))))))))))))))))
         <fullName>ZonesCovered__c</fullName>
         <externalId>false</externalId>
         <label>Zones Covered</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>KeyInsightListViewId__c</fullName>
+        <description>Id of this user's private key insight list view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of this user's private key insight list view.</inlineHelpText>
+        <label>Key Insight List View Id</label>
         <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
