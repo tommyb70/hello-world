@@ -32,12 +32,13 @@ public  class SL_ctrl_ListViewHomePage {
     public static string getAllRecordsThrougthColumns(String objName, String listOfHeaderElements, String numberOfRecords, 
                                                     String defaultOrder,  Boolean isAsc){
 
-        String strAsc = '';
+// TJB 20190827                                                       
+/*        String strAsc = '';
         if (isAsc) {
             strAsc = ' desc';
         } else {
             strAsc = ' asc';
-        }
+        } */
 
         List<String> lstDeserialize = (List<String>)JSON.deserialize(listOfHeaderElements, List<String>.class);
         String elementsToSlect = '';
@@ -51,10 +52,12 @@ public  class SL_ctrl_ListViewHomePage {
         }
         //elementsToSlect +=  ' ,PotentialReason__c,RiskReason__c ';
         
-        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + /*' WHERE '+ defaultOrder + ' != null  ' +*/ ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
-        System.debug('------------query' + query);
+// TJB 20190827                                                       
+//        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
+        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' LIMIT 2000' ;              System.debug('------------query' + query);
         List<sObject> lstObject = Database.query(query);
-        /*List<Id> lstAccountIds = new List<Id>();
+
+                                                        /*List<Id> lstAccountIds = new List<Id>();
         for (Integer i = 0; i < lstObject.size(); i++) {
             lstAccountIds.add((id)lstObject[i].get(taskParam));
         }
