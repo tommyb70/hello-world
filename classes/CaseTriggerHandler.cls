@@ -134,6 +134,7 @@ public class CaseTriggerHandler {
         PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('Model Update Request').getRecordTypeId());
         PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('New Model Request').getRecordTypeId());
         PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('New Requestor').getRecordTypeId());
+        PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('Restriction Update').getRecordTypeId());
         PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('Tax Harvest').getRecordTypeId());
         PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('Termination').getRecordTypeId());
         PwCaseRecIds.add(Schema.SObjectType.Case.getRecordTypeInfosByName().get('Update to Requestor').getRecordTypeId());

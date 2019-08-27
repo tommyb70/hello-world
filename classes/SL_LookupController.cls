@@ -22,7 +22,7 @@ public class SL_LookupController {
 	public static List<SObject> searchProduct( String searchString, String pricebookId, String soslParams, Integer limitOfRecords) {
 
 		String query = 'SELECT product2id, product2.name FROM pricebookentry ' + 
-					   ' WHERE  pricebook2id =: pricebookId AND product2.name LIKE \'%' + searchString +'%\' ' ;
+					   ' WHERE  IsActive = TRUE AND pricebook2id =: pricebookId AND product2.name LIKE \'%' + searchString +'%\' ' ;
 		if(soslParams != null){
 			query += ' AND ' + soslParams;
 		}
