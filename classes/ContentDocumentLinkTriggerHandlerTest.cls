@@ -14,7 +14,7 @@ public class ContentDocumentLinkTriggerHandlerTest {
         
         Id recTypeIdCase = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Private Wealth Portal').getRecordTypeId(); 
         
-        Case cas = new Case(AccountId=acc.Id,ContactId=con.Id,RecordTypeId=recTypeIdCase,Status='Needs Signature',Type='Account Opening'); 
+        Case cas = new Case(AccountId=acc.Id,ContactId=con.Id,RecordTypeId=recTypeIdCase,IsPrivateWealthCase__c=TRUE, Status='Needs Signature',Type='Account Opening'); 
         insert cas; 
         
         Signers__c sing = new Signers__c(Name='Natixis',EmailAddress__c='natixis@natixis.com',Case__c=cas.Id); insert sing; 

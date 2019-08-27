@@ -25,7 +25,8 @@ public class ContentDocumentLinkTriggerHandler {
             if (!CaseCVIdMap.isEmpty()) {
                 for (Case pwc : [SELECT Id
                                  FROM Case
-                                 WHERE RecordTypeId = :PWRecordTypeId
+                                 //WHERE RecordTypeId = :PWRecordTypeId
+                                 WHERE IsPrivateWealthCase__c = TRUE
                                  AND Id IN :CaseCVIdMap.keySet()
                                  AND Status = 'Needs Signature']) {
                                      Id docId = CaseCVIdMap.get(pwc.Id);
