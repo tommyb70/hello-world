@@ -10,8 +10,10 @@ global class ProdPerfMaintSched implements System.Schedulable{
     global static String scheduleMe() 
 
     {
+        String jobname = !Test.isRunningTest() ? 'Product Performance Maintenance' : 'Product Performance Maintenance' + DateTime.now();
+        
         ProdPerfMaintSched SC = new ProdPerfMaintSched(); 
-        System.schedule('Product Performance Maintenance', '0 0 5 * * ?', SC);
+        System.schedule(jobname, '0 0 5 * * ?', SC);
         return 'Done';    
     }
     
