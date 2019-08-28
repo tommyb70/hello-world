@@ -35,11 +35,14 @@ public class SL_LookupController {
 
     @AuraEnabled
 	public static SObject getRecord(String recordId, String objectName, String mainField, String subField) {
+
+		//if(String.isBlank(recordId) || recordId=='null' || String.isBlank(objectName) || objectName=='null'){ return null;}
         Set<String> fieldsToQuery = new Set<string>();
         fieldsToQuery.add('Id');
         fieldsToQuery.add(mainField);
         fieldsToQuery.add(subField);
 	    String query = 'SELECT ' + String.join(new List<String> (fieldsToQuery), ', ') +  ' FROM ' + objectName + ' WHERE Id = :recordId';
+        System.debug('query >>>>>>>> '+query);
         List<sObject> resultList = Database.query(query);
         return resultList[0];
 	}

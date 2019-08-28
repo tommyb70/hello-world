@@ -6218,6 +6218,86 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             <group>Natixis_Institutional</group>
         </sharedTo>
     </listViews>
+    <listViews>
+        <fullName>Key_Insights_Retail_External_Default</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>MktOppNatixisAUM__c</columns>
+        <columns>MktOppMarketShareAUM__c</columns>
+        <columns>PotentialScore__c</columns>
+        <columns>PotentialModel__c</columns>
+        <columns>RiskScore__c</columns>
+        <columns>RiskModel__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PotentialScore__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>RiskScore__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>MktOppNatixisAUM__c</field>
+            <operation>lessOrEqual</operation>
+            <value>100000</value>
+        </filters>
+        <filters>
+            <field>RiskModel__c</field>
+            <operation>includes</operation>
+            <value>Firm is on FinSearches Watch List,Risk Model 2,Risk Model 3</value>
+        </filters>
+        <filters>
+            <field>PotentialModel__c</field>
+            <operation>includes</operation>
+            <value>Firm is on FinSearches Firm Watch List,Firm has high Institutional Plan Size</value>
+        </filters>
+        <label>Key Insights - Retail External Default</label>
+        <sharedTo>
+            <group>Natixis_Retail_External</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Key_Insights_Retail_Internal_Default</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>MktOppNatixisAUM__c</columns>
+        <columns>MktOppMarketShareAUM__c</columns>
+        <columns>PotentialScore__c</columns>
+        <columns>PotentialModel__c</columns>
+        <columns>RiskScore__c</columns>
+        <columns>RiskModel__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PotentialScore__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>RiskScore__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>MktOppNatixisAUM__c</field>
+            <operation>lessOrEqual</operation>
+            <value>100000</value>
+        </filters>
+        <filters>
+            <field>RiskModel__c</field>
+            <operation>includes</operation>
+            <value>Firm is on FinSearches Watch List,Risk Model 2,Risk Model 3</value>
+        </filters>
+        <filters>
+            <field>PotentialModel__c</field>
+            <operation>includes</operation>
+            <value>Firm is on FinSearches Firm Watch List,Firm has high Institutional Plan Size</value>
+        </filters>
+        <label>Key Insights - Retail Internal Default</label>
+        <sharedTo>
+            <group>Natixis_Retail_Internal</group>
+        </sharedTo>
+    </listViews>
     <recordTypes>
         <fullName>Affiliate</fullName>
         <active>true</active>
