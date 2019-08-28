@@ -6177,6 +6177,47 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             <group>Key_Insights_Joseph_Dellaperuta</group>
         </sharedTo>
     </listViews>
+    <listViews>
+        <fullName>Key_Insights_Institutional_Default</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>InstitutionalPlanSize__c</columns>
+        <columns>InstitutionalPlanType__c</columns>
+        <columns>MktOppMarketShareAUM__c</columns>
+        <columns>PotentialScore__c</columns>
+        <columns>PotentialModel__c</columns>
+        <columns>RiskScore__c</columns>
+        <columns>RiskModel__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PotentialScore__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>RiskScore__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>InstitutionalPlanSize__c</field>
+            <operation>greaterThan</operation>
+            <value>20000000</value>
+        </filters>
+        <filters>
+            <field>RiskModel__c</field>
+            <operation>includes</operation>
+            <value>Firm is on FinSearches Watch List,Risk Model 2,Risk Model 3</value>
+        </filters>
+        <filters>
+            <field>PotentialModel__c</field>
+            <operation>includes</operation>
+            <value>Firm is on FinSearches Firm Watch List,Firm has high Institutional Plan Size</value>
+        </filters>
+        <label>Key Insights - Institutional Default</label>
+        <sharedTo>
+            <group>Natixis_Institutional</group>
+        </sharedTo>
+    </listViews>
     <recordTypes>
         <fullName>Affiliate</fullName>
         <active>true</active>
