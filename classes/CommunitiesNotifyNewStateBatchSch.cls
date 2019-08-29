@@ -2,8 +2,11 @@ global class CommunitiesNotifyNewStateBatchSch implements Schedulable {
     
     global static String scheduleMe() 
     {
+        
+        String jobname = !Test.isRunningTest() ? 'Communities Notify New Statements Batch' : 'Communities Notify New Statements Batch' + DateTime.now();
+        
         CommunitiesNotifyNewStateBatchSch SC = new CommunitiesNotifyNewStateBatchSch();         
-        System.schedule('Communities Notify New Statements Batch', '0 30 23 * * ?', SC);		
+        System.schedule(jobname, '0 30 23 * * ?', SC);		
         return 'Done';    
     }
     

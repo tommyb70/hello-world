@@ -2,8 +2,11 @@ global class CommunitiesReactivateUserBatchSch implements Schedulable{
     
     global static String scheduleMe() 
     {
-        CommunitiesReactivateUserBatchSch SC = new CommunitiesReactivateUserBatchSch();         
-        System.schedule('Communities Reactivate User Batch', '0 0 23 * * ?', SC);		
+        CommunitiesReactivateUserBatchSch SC = new CommunitiesReactivateUserBatchSch();   
+
+        String jobname = !Test.isRunningTest() ? 'Communities Reactivate User Batch' : 'Communities Reactivate User Batch' + DateTime.now();
+        
+        System.schedule(jobname, '0 0 23 * * ?', SC);		
         return 'Done';    
     }
     

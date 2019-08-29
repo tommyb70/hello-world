@@ -10,8 +10,11 @@ global class CaseRecurrenceBatchSched implements System.Schedulable{
     global static String scheduleMe() 
 
     {
+        
+        String jobname = !Test.isRunningTest() ? 'Case Recurrence Batch' : 'Case Recurrence Batch' + DateTime.now();        
+        
         CaseRecurrenceBatchSched SC = new CaseRecurrenceBatchSched(); 
- 		System.schedule('Case Recurrence Batch', '0 0 0 * * ?', SC);
+ 		System.schedule(jobname, '0 0 0 * * ?', SC);
         return 'Done';    
     }
     

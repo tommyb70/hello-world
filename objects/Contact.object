@@ -9289,11 +9289,12 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
         <excludedStandardButtons>NewContact</excludedStandardButtons>
         <excludedStandardButtons>AddToCampaign</excludedStandardButtons>
-        <excludedStandardButtons>SendListEmailAction</excludedStandardButtons>
+        <excludedStandardButtons>Forward</excludedStandardButtons>
         <excludedStandardButtons>Invite</excludedStandardButtons>
         <excludedStandardButtons>MassAddToCampaign</excludedStandardButtons>
         <excludedStandardButtons>MassCreateCallList</excludedStandardButtons>
-        <excludedStandardButtons>Forward</excludedStandardButtons>
+        <excludedStandardButtons>SendListEmailAction</excludedStandardButtons>
+        <listViewButtons>pi__Send_Pardot_Emails</listViewButtons>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CONTACT.ADDRESS2_CITY</lookupDialogsAdditionalFields>

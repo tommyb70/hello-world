@@ -2,8 +2,11 @@ global class RollupBatchSched implements Schedulable{
     
     global static String scheduleMe() 
     {
+        
+        String jobname = !Test.isRunningTest() ? 'Natixis Rollup Batch' : 'Natixis Rollup Batch' + DateTime.now();        
+        
         RollupBatchSched SC = new RollupBatchSched(); 
-        System.schedule('Natixis Rollup Batch', '0 0 5-19 * * ?', SC);
+        System.schedule(jobname, '0 0 5-19 * * ?', SC);
         return 'Done';    
     }
     

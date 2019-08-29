@@ -1,18 +1,18 @@
 global class TaskFormatingSched implements Schedulable{
     
-    //public static String sched = '0 0 * * * ?';  
-    
-    global static String scheduleMe() 
-    {
+    global static String scheduleMe() {
+        
+        String jobname1 = !Test.isRunningTest() ? 'Hourly TaskFormatingSched 1' : 'Hourly TaskFormatingSched 1' + Datetime.now();
+        String jobname2 = !Test.isRunningTest() ? 'Hourly TaskFormatingSched 2' : 'Hourly TaskFormatingSched 2' + Datetime.now();
+        String jobname3 = !Test.isRunningTest() ? 'Hourly TaskFormatingSched 3' : 'Hourly TaskFormatingSched 3' + Datetime.now();
+        String jobname4 = !Test.isRunningTest() ? 'Hourly TaskFormatingSched 4' : 'Hourly TaskFormatingSched 4' + Datetime.now();
+        
         TaskFormatingSched SC = new TaskFormatingSched(); 
-        //return System.schedule('Hourly TaskFormatingSched', sched, SC);
-        System.schedule('Hourly TaskFormatingSched 1', '0 0 8-19 * * ?', SC);
-        if (!test.isRunningTest())
-        {
-            System.schedule('Hourly TaskFormatingSched 2', '0 15 8-19 * * ?', SC);
-            System.schedule('Hourly TaskFormatingSched 3', '0 30 8-19 * * ?', SC);
-            System.schedule('Hourly TaskFormatingSched 4', '0 45 8-19 * * ?', SC); 
-        }
+        System.schedule(jobname1, '0 0 8-19 * * ?', SC);
+        System.schedule(jobname2, '0 15 8-19 * * ?', SC);
+        System.schedule(jobname3, '0 30 8-19 * * ?', SC);
+        System.schedule(jobname4, '0 45 8-19 * * ?', SC); 
+        
         return 'Done';    
     }
     
@@ -25,10 +25,6 @@ global class TaskFormatingSched implements Schedulable{
         // ActivityContact__c rollup (where ActivityContact__c is child)
         ActivityContactRollupBatch myACRollups = new ActivityContactRollupBatch();
         Database.executeBatch(myACRollups,100);
-        
-        // TaskDeleteBatch
-        /*TaskDeleteBatch batch = new TaskDeleteBatch();
-        ID batchId = database.executeBatch(batch);    */
         
     }
 }
