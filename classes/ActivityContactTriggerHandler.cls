@@ -151,9 +151,11 @@ public without sharing class ActivityContactTriggerHandler {
                                                     FROM Event
                                                     WHERE Id IN :eventIdSet]); 
             for (Event e : lstEvent) {
-                String strWhatId = e.WhatId;
-                if (strWhatId.startsWith('500')) {
-                    caseIdSet.add(e.WhatId);
+                if(e.WhatId != null) {
+                	String strWhatId = e.WhatId;
+                    if (strWhatId.startsWith('500')) {
+                        caseIdSet.add(e.WhatId);
+                    }
                 }
             }
         }
@@ -214,6 +216,8 @@ public without sharing class ActivityContactTriggerHandler {
                     mapContacts.put(objContact.Id,objContact);
                 }
             }
+            system.debug('lstEventRelation -->'+lstEventRelation);
+            system.debug('lstAllEvents -->'+lstAllEvents);
             if(!lstAllEvents.isEmpty()) {
                 for(Event objEvent: lstAllEvents){
                     for(EventRelation objER : lstEventRelation) {

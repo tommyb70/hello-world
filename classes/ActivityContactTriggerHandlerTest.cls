@@ -14,14 +14,14 @@ public class ActivityContactTriggerHandlerTest {
         List<Account> myAccounts = DataFactory.createTestAccounts(1);
         insert myAccounts;
         
-        List<Contact> myContacts = DataFactory.createTestContacts(4, myAccounts, false);
+        List<Contact> myContacts = DataFactory.createTestContacts(2, myAccounts, false);
         insert myContacts;     
         
         List<Task> myTasks = DataFactory.createTestTasks_outlookPlugin(3,myContacts,'Email');  
         insert myTasks; 
         
         //Added by Prabhpreet
-        List<Event> myEvents = DataFactory.createTestEvents(3,myContacts,'Call');  
+        List<Event> myEvents = DataFactory.createTestEvents(2,myContacts,'Call');  
         insert myEvents; 
 
         //Added by Prabhpreet
@@ -61,41 +61,77 @@ public class ActivityContactTriggerHandlerTest {
         
     }
 
-    // Added by Prabhpreet
+    // Test for new method in ActivityContactTriggerHandler to update Case's Requested Speakers field
     @isTest
     public static void testCaseSpeakersUpdate() {
         
+        Test.startTest();
         List<Contact> lstContacts = [SELECT Name, AffiliateContactFlag__c
                                           FROM Contact];
-
-        
         lstContacts[0].AffiliateContactFlag__c = true;
-        
         update lstContacts[0];
 
         List<Case> lstCase = [SELECT Id
                                           FROM Case];
-
         List<Event> lstEvent = [SELECT WhatId, WhoId
                                           FROM Event];
 
-
         lstEvent[0].WhatId = lstCase[0].Id;
-        lstEvent[0].WhoId = lstContacts[0].Id;
-
         update lstEvent[0];
 
         List<ActivityContact__c> myACs = [SELECT ActivityId__c
                                           FROM ActivityContact__c];
+        update myACs;
         
-        myACs[0].ActivityId__c = lstEvent[0].Id;
-        update myACs[0];
+        Case objCase = [SELECT Id,RequestedSpeakers__c
+                                          FROM Case WHERE Id =: lstCase[0].Id ];
+        System.assertEquals(lstContacts[0].Name, objCase.RequestedSpeakers__c);
+        
+        
+        Test.stopTest();
+
+
+
+    }
+    
+
+    // Test for new method in ActivityContactTriggerHandler to update Case's Requested Speakers field
+    @isTest
+    public static void testCaseSpeakersBulkUpdate() {
+        
+        Test.startTest();
+        List<Contact> lstContacts = [SELECT Id, Name, AffiliateContactFlag__c
+                                          FROM Contact];
+        List<Contact> lstToUpdateContacts = new List<Contact>();
+        List<Event> lstToUpdateEvents = new List<Event>();
+        List<ActivityContact__c> lstActContacts = new List<ActivityContact__c>();
+
+        for(Contact objContact: lstContacts) {
+            objContact.AffiliateContactFlag__c = true;
+            lstToUpdateContacts.add(objContact);
+        }
+
+        update lstToUpdateContacts;
+        List<Case> lstCase = [SELECT Id
+                                          FROM Case];
+        List<Event> lstEvent = [SELECT Id, WhatId, WhoId
+                                          FROM Event];
+        for(Event objEvent: lstEvent) {
+            objEvent.WhatId = lstCase[0].Id;
+            lstToUpdateEvents.add(objEvent);
+        }
+       
+        update lstToUpdateEvents;
+
+        List<ActivityContact__c> myACs = [SELECT ActivityId__c
+                                          FROM ActivityContact__c];
+        update myACs;
 
         Case objCase = [SELECT Id,RequestedSpeakers__c
                                           FROM Case WHERE Id =: lstCase[0].Id ];
+        System.assertEquals(lstContacts[0].Name +'; '+ lstContacts[1].Name,objCase.RequestedSpeakers__c);
 
-        
-       System.assertEquals(lstContacts[0].Name, objCase.RequestedSpeakers__c);
+        Test.stopTest();
+
     }
-    
 }

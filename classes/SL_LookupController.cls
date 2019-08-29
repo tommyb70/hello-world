@@ -22,7 +22,7 @@ public class SL_LookupController {
 	public static List<SObject> searchProduct( String searchString, String pricebookId, String soslParams, Integer limitOfRecords) {
 
 		String query = 'SELECT product2id, product2.name FROM pricebookentry ' + 
-					   ' WHERE  IsActive = TRUE AND pricebook2id =: pricebookId AND product2.name LIKE \'%' + searchString +'%\' ' ;
+					   ' WHERE  pricebook2id =: pricebookId AND product2.name LIKE \'%' + searchString +'%\' ' ;
 		if(soslParams != null){
 			query += ' AND ' + soslParams;
 		}
@@ -36,13 +36,13 @@ public class SL_LookupController {
     @AuraEnabled
 	public static SObject getRecord(String recordId, String objectName, String mainField, String subField) {
 
-		//if(String.isBlank(recordId) || recordId=='null' || String.isBlank(objectName) || objectName=='null'){ return null;}
-        Set<String> fieldsToQuery = new Set<string>();
+        if(String.isBlank(recordId) || recordId=='null' || String.isBlank(objectName) || objectName=='null'){ return null;}
+		Set<String> fieldsToQuery = new Set<string>();
         fieldsToQuery.add('Id');
         fieldsToQuery.add(mainField);
         fieldsToQuery.add(subField);
 	    String query = 'SELECT ' + String.join(new List<String> (fieldsToQuery), ', ') +  ' FROM ' + objectName + ' WHERE Id = :recordId';
-        System.debug('query >>>>>>>> '+query);
+		System.debug('query >>>>>>>> '+query);
         List<sObject> resultList = Database.query(query);
         return resultList[0];
 	}

@@ -86,7 +86,10 @@ public class EventTriggerHandler {
         List<Case> casesToUpdate = new List<Case>();
         Set<Id> relatedCasesSet = new Set<Id>();
         for(Event eId : myEvents){
-            if ('Case' == eId.WhatId.getSObjectType().getDescribe().getName()) relatedCasesSet.add(eId.WhatId);
+            //null check added by Prabhpreet
+            if(eId.WhatId !=null) {
+                if ('Case' == eId.WhatId.getSObjectType().getDescribe().getName()) relatedCasesSet.add(eId.WhatId);
+            }
         }
         
         if(!relatedCasesSet.isEmpty()){
@@ -163,6 +166,70 @@ public class EventTriggerHandler {
         }
         
         update activityContactToUpdate;
+
+    }
+
+    
+    /*
+        Method Name: updateCaseSpeakerNames
+        Purpose: Method for Updating the Speaker Name field on Case associated with the Event whenever WhatId is changed.
+        Parameters: List<Event> myNewEvents, Map<Id,Event> myNewEventMap, Map<Id,Event> myOldEventMap
+        Return Type: void
+        */
+    public static void updateCaseSpeakerNames( List<Event> myNewEvents, Map<Id,Event> myNewEventMap, Map<Id,Event> myOldEventMap) {
+            Set<Id> caseIdSet = new Set<Id>();
+            List<Case> lstCaseToUpdate = new List<Case>();
+            Map<Event,List<Contact>> mapEventContacts = new Map<Event,List<Contact>>();
+            Map<Id,Case> caseEventMap = new Map<Id,Case>();
+
+            for (Event e : myNewEvents) {
+                if(myNewEventMap.get(e.Id).WhatId != myOldEventMap.get(e.Id).WhatId) {
+                    String strNew = myNewEventMap.get(e.Id).WhatId;
+                    String strOld = myOldEventMap.get(e.Id).WhatId;
+
+                    if(String.isNotBlank(strNew)) {
+                        if (strNew.startsWith('500')) {
+                            caseIdSet.add(myNewEventMap.get(e.Id).WhatId);
+                        }
+                    }
+                    if(String.isNotBlank(strOld)) {
+                        if (strOld.startsWith('500')) {
+                            caseIdSet.add(myOldEventMap.get(e.Id).WhatId);
+                        }
+                    }
+
+                }
+            }
+
+            System.debug('Here Cases are '+ caseIdSet);
+
+            if(!caseIdSet.isEmpty()) {  
+                List<Case> lstCases = [SELECT Id, Subject, RequestedSpeakers__c
+                                                        FROM Case
+                                                        WHERE Id =:caseIdSet ];
+                List<Event> lstAllCaseEvents = [Select Id,WhatId from Event WHERE WhatId IN:caseIdSet];
+
+                 System.debug('Here Cases Events are '+ lstAllCaseEvents);
+
+                Set<Id> eventsAllIds = new Set<Id>();
+                for (Event e : lstAllCaseEvents) {
+                    eventsAllIds.add(e.Id);
+                    for(Case objCase: lstCases) {
+                        if (e.WhatId == objCase.Id) {
+                            caseEventMap.put(e.Id, objCase);
+                        }
+                    }
+                }
+                System.debug('caseEventMap'+ caseEventMap);
+                System.debug('eventsAllIds'+ eventsAllIds);
+                mapEventContacts = ActivityContactTriggerHandler.getEventContactRepsDetails(eventsAllIds);
+                System.debug('mapEventContacts'+ mapEventContacts);
+                lstCaseToUpdate = ActivityContactTriggerHandler.getCaseToUpdateDetails( mapEventContacts, caseEventMap);
+            }
+            if (!lstCaseToUpdate.isEmpty()) {
+                update lstCaseToUpdate;
+            } 
+
 
     } 
     

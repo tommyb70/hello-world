@@ -122,6 +122,9 @@ public without sharing class UserTriggerHandler {
     } 
     
     public static void handleAfterInsertOrUpdate(List<User> lstUsersAll){
+        /**
+         * Removed code from Silverline for automating group / list view creation.
+         **
         if (System.isFuture()) {
             return;
         }
@@ -188,6 +191,6 @@ public without sharing class UserTriggerHandler {
             for (Integer i = 0; i < groupsIds.size(); i++) {
                 SL_CloneListView.cloneListView(groupsIds[i], lwRecord.ID);
             }
-        }
+        }**/
     }
 }

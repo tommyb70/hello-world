@@ -13,6 +13,8 @@ trigger EventTrigger on Event (before delete, before insert, before update, afte
         WHEN AFTER_UPDATE {
             EventTriggerHandler.EventTriggerAfterUpdate(trigger.new, trigger.newMap, trigger.oldMap);
             
+            EventTriggerHandler.updateCaseSpeakerNames(trigger.new, trigger.newMap, trigger.oldMap);
+            
         }
         WHEN AFTER_DELETE {
             EventTriggerHandler.EventTriggerAfterDelete(trigger.oldMap);

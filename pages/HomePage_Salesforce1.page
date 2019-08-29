@@ -16,12 +16,15 @@
 </style>
 <apex:pageBlock title="Sales Reports" >
             <apex:panelGrid columns="1" id="theGrid" width="80%" cellspacing="2" cellpadding="2" columnClasses="colstyle">   
-            <apex:outputLink value="https://vizbi.ngam.natixis.com/views/AllTrades_0/MYRegionSalesWithGOALS?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no" id="Link11" target="_blank">Daily Sales Reports</apex:outputLink>                                
+            <apex:outputLink value="https://vizbi.ngam.natixis.com/#/signin?externalRedirect=%2Fviews%2FAllTrades_0%2FAllTerritorySalesWithGOALS%3FiframeSizedToWindow%3Dtrue%26%253Aembed%3Dy%26%253AshowAppBanner%3Dfalse%26%253Adisplay_count%3Dno%26%253AshowVizHome%3Dno&site=" id="Link11" target="_blank">Daily Sales Reports</apex:outputLink>                                
                 <apex:outputLink value="https://services.ngam.natixis.com/SalesRpt/MySalesByProduct.aspx?book={!$UserRole.Name}" id="Link51" >My Sales by Product - Contact/Rep</apex:outputLink>                              
-                <apex:outputLink value="/apex/gblite__Grid?gname=Firm Sales" id="Link61" >My Sales by Product - Firm/Office</apex:outputLink>                                              
-                <apex:outputLink value="/00OF0000006J1km" id="Link71" >Quarterly Summary by Territory</apex:outputLink>              
-                <apex:outputLink value="/00OF0000006Ii2Y" id="Link81">Top Producers - Contact/Rep</apex:outputLink>                
-                <apex:outputLink value="/00OF0000006Ii2X" id="Link91" >Top Producers - Firm/Office</apex:outputLink>      
+                <apex:outputLink value="https://vizbi.ngam.natixis.com/#/signin?externalRedirect=%2Fviews%2FETFTracking%2FETFDashboard%3F%253Aembed%3Dy%26%253AshowShareOptions%3Dtrue%26%253Adisplay_count%3Dno%26%253AshowVizHome%3Dno&site=" id="Link61" >Natixis ETF Sales and Assets – Last Month</apex:outputLink>   
+                <apex:outputLink value="/00OF0000006Ii2Y" id="Link71" >Top Producers - Contact/Rep</apex:outputLink>  
+                <apex:outputLink value="/00OF0000006Ii2X" id="Link81" >Top Producers - Firm/Office</apex:outputLink>  
+                <br/>
+                <apex:outputLink value="/00O2f000000JnpREAS" id="Link91" >Activity Sales Team</apex:outputLink>                                              
+                <apex:outputLink value="/00O2f000000JnpSEAS" id="Link101" >Activity Sales Team - Open</apex:outputLink>              
+                <apex:outputLink value="/https://vizbi.ngam.natixis.com/#/signin?externalRedirect=%2Fviews%2FDialsandContacts-AveragesandPoints%2FICsandRDsCurrentMonth%3F%253Aembed%3Dyes&site=" id="Link111">Average Dials,Contacts &amp; Points Report</apex:outputLink>                
             </apex:panelGrid>
             
         </apex:pageBlock>
