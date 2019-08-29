@@ -36,9 +36,9 @@ private class UtilActivityTest {
         
         List<Task> myTasks = new List<Task>();
         myTasks.add(new Task());
-        myTasks.add(new Task(ActivityType__c='Follow Up'));
-        myTasks.add(new Task(ActivityType__c='Follow Up',ActivitySubType__c='Phone Call Follow up'));
-        myTasks.add(new Task(ActivityType__c='Follow Up',ActivitySubType__c='Email Follow Up',ActivitySource__c='Process CPE'));
+        myTasks.add(new Task(ActivityType__c='Follow Up', Status= 'Completed'));
+        myTasks.add(new Task(ActivityType__c='Follow Up',ActivitySubType__c='Phone Call Follow up', Status= 'Completed'));
+        myTasks.add(new Task(ActivityType__c='Follow Up',ActivitySubType__c='Email Follow Up',ActivitySource__c='Process CPE', Status= 'Completed'));
         
         myTasks = UtilActivity.setActivityPoints(myTasks);
                

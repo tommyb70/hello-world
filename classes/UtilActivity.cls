@@ -17,6 +17,17 @@ public class UtilActivity {
             t.OwnerTerritoryMARS__c = userMap.get(t.OwnerId).ActivityTerritoryMARSName__c;
             t.OwnerTerritory__c = userMap.get(t.OwnerId).ActivityTerritoryName__c;
             t.OwnerTerritoryId__c = userMap.get(t.OwnerId).ActivityTerritoryId__c;
+            
+            SWITCH ON userMap.get(t.OwnerId).ActivityTerritoryType__c {
+                
+                WHEN 'Territory' {
+                    t.OwnerRegionMARS__c = userMap.get(t.OwnerId).ActivityTerritoryMARSName__c;
+                }
+                WHEN 'Region' {
+                    t.OwnerRegionMARS__c = userMap.get(t.OwnerId).ActivityTerritoryParentMARSName__c;
+                }
+                
+            }
         }
         
         return t;
@@ -38,9 +49,9 @@ public class UtilActivity {
         }
         
         Map<Id, Product2> productMap = new Map<Id, Product2>([SELECT Id, Name 
-                                                                      FROM Product2
-                                                                      WHERE Id IN :productIdSet
-                                                                      AND Name != null]);
+                                                              FROM Product2
+                                                              WHERE Id IN :productIdSet
+                                                              AND Name != null]);
         
         return productMap;
         
@@ -49,7 +60,7 @@ public class UtilActivity {
     public static String convertProductListToProducts(String productList, Map<Id,Product2> productMap) {
         
         List<String> productNameList = new List<String>();
-		String productNames;
+        String productNames;
         
         if (productList != null) {
             List<String> productIds = new List<String>();
@@ -75,6 +86,18 @@ public class UtilActivity {
             e.OwnerTerritoryMARS__c = userMap.get(e.OwnerId).ActivityTerritoryMARSName__c;
             e.OwnerTerritory__c = userMap.get(e.OwnerId).ActivityTerritoryName__c;
             e.OwnerTerritoryId__c = userMap.get(e.OwnerId).ActivityTerritoryId__c;
+            
+            SWITCH ON userMap.get(e.OwnerId).ActivityTerritoryType__c {
+                
+                WHEN 'Territory' {
+                    e.OwnerRegionMARS__c = userMap.get(e.OwnerId).ActivityTerritoryMARSName__c;
+                }
+                WHEN 'Region' {
+                    e.OwnerRegionMARS__c = userMap.get(e.OwnerId).ActivityTerritoryParentMARSName__c;
+                }
+                
+            }
+
         }
         
         return e;
@@ -105,33 +128,35 @@ public class UtilActivity {
         
         for (Task t : myTasks) {        
             if (t.Status == 'Completed') {
-            
-            String PointLookUp = t.ActivityType__c + t.ActivitySubType__c + t.ActivitySource__c;
-            if (PointsTypeSubTypeSourceMap.containsKey(PointLookUp)) {
-                t.ActivityPoints__c = PointsTypeSubTypeSourceMap.get(PointLookUp);
-            } else {
-                PointLookUp = t.ActivityType__c + t.ActivitySubType__c+'null';
-                if (PointsTypeSubTypeMap.containsKey(PointLookUp)) {
-                    t.ActivityPoints__c = PointsTypeSubTypeMap.get(PointLookUp);
-                } else {
-                    PointLookUp = t.ActivityType__c+'null'+'null';
-                    if (PointsTypeMap.containsKey(PointLookUp)) {
-                        t.ActivityPoints__c = PointsTypeMap.get(PointLookUp);
-                    } else {
-                        t.ActivityPoints__c = 0;
-                    }
-                }
                 
-            }
+                String PointLookUp = t.ActivityType__c + t.ActivitySubType__c + t.ActivitySource__c;
+                if (PointsTypeSubTypeSourceMap.containsKey(PointLookUp)) {
+                    t.ActivityPoints__c = PointsTypeSubTypeSourceMap.get(PointLookUp);
+                } else {
+                    PointLookUp = t.ActivityType__c + t.ActivitySubType__c+'null';
+                    if (PointsTypeSubTypeMap.containsKey(PointLookUp)) {
+                        t.ActivityPoints__c = PointsTypeSubTypeMap.get(PointLookUp);
+                    } else {
+                        PointLookUp = t.ActivityType__c+'null'+'null';
+                        if (PointsTypeMap.containsKey(PointLookUp)) {
+                            t.ActivityPoints__c = PointsTypeMap.get(PointLookUp);
+                        } else {
+                            t.ActivityPoints__c = 0;
+                        }
+                    }
+                    
+                }
+            } else {
+                t.ActivityPoints__c = 0;
             }
         }
         
         return myTasks;
         
     }
-
-
-
+    
+    
+    
     
     public static List<Event> setActivityPoints(List<Event> myEvents) {
         
@@ -441,7 +466,7 @@ public class UtilActivity {
         myAC.OwnerTerritoryMARS__c = myTask.OwnerTerritoryMARS__c;
         myAC.OwnerTerritoryId__c = myTask.OwnerTerritoryId__c;
         myAC.OwnerZone__c = (id)myTask.OwnerZoneFormula__c; 
-		myAC.ActivityComments__c = myTask.Description != null ? myTask.Description.left(254) : null;        
+        myAC.ActivityComments__c = myTask.Description != null ? myTask.Description.left(254) : null;        
         myAC.OwnerId = myTask.ownerid;                       
         
         return myAC;

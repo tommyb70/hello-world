@@ -55,7 +55,7 @@ public class Util {
         
         String query = 'SELECT Id, Username, ActivityTerritoryParentId__c, ActivityTerritoryType__c, ActivityTerritoryName__c, ';
         query = query + ' ActivityTerritoryId__c,ActivityTerritoryMARSName__c,ActivityTerritoryRoleGroupId__c, ';
-        query = query + ' ActivityTerritoryRoleId__c, ActivityChannelId__c,ActivityRegionDept__c, ActivityChannelName__c  FROM User ';
+        query = query + ' ActivityTerritoryRoleId__c, ActivityChannelId__c,ActivityRegionDept__c, ActivityChannelName__c, ActivityTerritoryParentMARSName__c FROM User ';
         return query;
     }
     

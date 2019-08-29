@@ -42,7 +42,7 @@ public class TaskTriggerHandler {
             
             eachTask = UtilActivity.setUserFields(eachTask, userMap);
             eachTask = UtilActivity.syncWhatIdToLookupFields(eachTask);
-            eachTask.Status = eachTask.Status == null ? 'Open' : eachTask.Status;
+            eachTask.Status = eachTask.Status == null ? 'Completed' : eachTask.Status;
             eachTask.ActivityComments__c = String.isBlank(eachTask.Description) ? null : eachTask.Description.left(255).trim();
             eachTask.ActivityDateProxy__c = eachTask.ActivityDate;
             eachTask = UtilActivity.getTaskTypeSubtype(eachTask);

@@ -552,15 +552,6 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>My_Region__c</fullName>
-        <description>The logged in users' ActivityTerritoryMARSName__c  or ActivityRegionDept__c are equal to the region on the task.</description>
-        <externalId>false</externalId>
-        <formula>OR($User.ActivityRegionDept__c = OwnerRegionMARS__c, $User.ActivityTerritoryMARSName__c = OwnerRegionMARS__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>My Region</label>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>NewBusiness__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -955,6 +946,15 @@ IF( ISPICKVAL(ActivityType__c , "Meeting") ,"Meeting","Other"
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>My_Region__c</fullName>
+        <description>The logged in users' ActivityTerritoryMARSName__c  or ActivityRegionDept__c are equal to the region on the task.</description>
+        <externalId>false</externalId>
+        <formula>if( ($User.ActivityTerritoryType__c = 'Region' &amp;&amp;  OwnerRegionMARS__c = $User.ActivityTerritoryMARSName__c) || ($User.ActivityTerritoryType__c = 'Territory' &amp;&amp;  OwnerRegionMARS__c = $User.ActivityTerritoryParentMARSName__c), TRUE, FALSE )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>My Region</label>
+        <type>Checkbox</type>
     </fields>
     <enableFeeds>false</enableFeeds>
     <searchLayouts>
