@@ -21,10 +21,10 @@ public class UtilActivity {
             SWITCH ON userMap.get(t.OwnerId).ActivityTerritoryType__c {
                 
                 WHEN 'Territory' {
-                    t.OwnerRegionMARS__c = userMap.get(t.OwnerId).ActivityTerritoryMARSName__c;
+                    t.OwnerRegionMARS__c = userMap.get(t.OwnerId).ActivityTerritoryParentMARSName__c;
                 }
                 WHEN 'Region' {
-                    t.OwnerRegionMARS__c = userMap.get(t.OwnerId).ActivityTerritoryParentMARSName__c;
+                    t.OwnerRegionMARS__c = userMap.get(t.OwnerId).ActivityTerritoryMARSName__c;
                 }
                 
             }
