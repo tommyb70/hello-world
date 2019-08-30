@@ -3666,7 +3666,7 @@ varchar(255)</description>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OWNER_NAME</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>Private</sharingModel><enableHistory>true</enableHistory>
     <fieldSets>
         <fullName>RKExportToExcel__Export_To_Excel</fullName>
         <description>This Field Set is used to specify the fields in the Export To Excel button on the Case List Views</description>
@@ -18792,18 +18792,6 @@ if (result[0].success=='false') {
         <url>/00O2A000006aOMk?pv0={!Case.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>Create_Action_Plan</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>Create Action Plan</masterLabel>
-        <openType>sidebar</openType>
-        <protected>false</protected>
-        <url>/apex/ActionPlanCreation?refType=Case&amp;refId={!Case.Id}</url>
-    </webLinks>
-    <webLinks>
         <fullName>Create_Action_Plans</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
@@ -18907,5 +18895,17 @@ else{
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
         <url>/flow/AcceptCaseFlow?recordId={!Case.Id}&amp;retURL={!Case.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Action_Plan</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Action Plan</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/ActionPlanCreation?refType=Case&amp;refId={!Case.Id}&amp;retURL=/{!Case.Id}</url>
     </webLinks>
 </CustomObject>

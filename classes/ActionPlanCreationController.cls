@@ -226,6 +226,16 @@ public with sharing class ActionPlanCreationController{
             Apexpages.addMessages( e );
         }
         
+        String retURL = ApexPages.currentPage().getParameters().get( 'retURL' );
+
+        if( retURL != null){
+
+            PageReference previousPage = new PageReference( retURL );
+            previousPage.setRedirect( true );
+
+            return previousPage;
+        }
+
         return pageRef;
     }
     

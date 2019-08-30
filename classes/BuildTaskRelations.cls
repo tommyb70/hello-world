@@ -1,4 +1,4 @@
-public without sharing class BuildTaskRelations {
+public class BuildTaskRelations {
 
     @InvocableMethod(label='Build Task Relations' description='Takes a semi-colon list of contacts with the task Id being the first id and associates them to that task.')
     public static void buildTaskRelations(List<String> taskAndContactIds) {

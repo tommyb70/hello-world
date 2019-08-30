@@ -178,6 +178,8 @@ public class EventTriggerHandler {
         */
     public static void updateCaseSpeakerNames( List<Event> myNewEvents, Map<Id,Event> myNewEventMap, Map<Id,Event> myOldEventMap) {
             Set<Id> caseIdSet = new Set<Id>();
+            Set<Id> caseIdSetOld = new Set<Id>();
+
             List<Case> lstCaseToUpdate = new List<Case>();
             Map<Event,List<Contact>> mapEventContacts = new Map<Event,List<Contact>>();
             Map<Id,Case> caseEventMap = new Map<Id,Case>();
@@ -194,6 +196,7 @@ public class EventTriggerHandler {
                     }
                     if(String.isNotBlank(strOld)) {
                         if (strOld.startsWith('500')) {
+                            caseIdSetOld.add(myOldEventMap.get(e.Id).WhatId);
                             caseIdSet.add(myOldEventMap.get(e.Id).WhatId);
                         }
                     }
@@ -202,6 +205,23 @@ public class EventTriggerHandler {
             }
 
             System.debug('Here Cases are '+ caseIdSet);
+            System.debug('Here Cases are '+ caseIdSetOld);
+          
+            if(!caseIdSetOld.isEmpty()) {
+                 List<Case> lstCases = [SELECT Id, Subject, RequestedSpeakers__c
+                                                        FROM Case
+                                                        WHERE Id =:caseIdSetOld ];
+                List<Event> lstAllCaseEvents = [Select Id,WhatId from Event WHERE WhatId IN:caseIdSetOld];
+
+                 System.debug('Here Cases Old Events are '+ lstAllCaseEvents);
+
+                if(lstAllCaseEvents.isEmpty()) {
+                    for(Case objCase: lstCases) {
+                        objCase.RequestedSpeakers__c = '';
+                        lstCaseToUpdate.add(objCase);
+                    }
+                }
+            }
 
             if(!caseIdSet.isEmpty()) {  
                 List<Case> lstCases = [SELECT Id, Subject, RequestedSpeakers__c
@@ -209,22 +229,30 @@ public class EventTriggerHandler {
                                                         WHERE Id =:caseIdSet ];
                 List<Event> lstAllCaseEvents = [Select Id,WhatId from Event WHERE WhatId IN:caseIdSet];
 
-                 System.debug('Here Cases Events are '+ lstAllCaseEvents);
+                System.debug('Here Cases Events are '+ lstAllCaseEvents);
 
                 Set<Id> eventsAllIds = new Set<Id>();
-                for (Event e : lstAllCaseEvents) {
-                    eventsAllIds.add(e.Id);
-                    for(Case objCase: lstCases) {
-                        if (e.WhatId == objCase.Id) {
-                            caseEventMap.put(e.Id, objCase);
+                if(! lstAllCaseEvents.isEmpty()) {
+                    for (Event e : lstAllCaseEvents) {
+                        eventsAllIds.add(e.Id);
+                        for(Case objCase: lstCases) {
+                            if (e.WhatId == objCase.Id) {
+                                caseEventMap.put(e.Id, objCase);
+                            }
                         }
                     }
+                    System.debug('caseEventMap'+ caseEventMap);
+                    System.debug('eventsAllIds'+ eventsAllIds);
+                    mapEventContacts = ActivityContactTriggerHandler.getEventContactRepsDetails(eventsAllIds);
+                    System.debug('mapEventContacts'+ mapEventContacts);
+                    if(lstCaseToUpdate.isEmpty()) {
+                        lstCaseToUpdate = ActivityContactTriggerHandler.getCaseToUpdateDetails( mapEventContacts, caseEventMap);
+                    }
+                    else {
+                        lstCaseToUpdate.addAll(ActivityContactTriggerHandler.getCaseToUpdateDetails( mapEventContacts, caseEventMap));
+                    }
                 }
-                System.debug('caseEventMap'+ caseEventMap);
-                System.debug('eventsAllIds'+ eventsAllIds);
-                mapEventContacts = ActivityContactTriggerHandler.getEventContactRepsDetails(eventsAllIds);
-                System.debug('mapEventContacts'+ mapEventContacts);
-                lstCaseToUpdate = ActivityContactTriggerHandler.getCaseToUpdateDetails( mapEventContacts, caseEventMap);
+                
             }
             if (!lstCaseToUpdate.isEmpty()) {
                 update lstCaseToUpdate;

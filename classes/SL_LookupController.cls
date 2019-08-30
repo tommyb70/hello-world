@@ -1,4 +1,4 @@
-public with sharing class SL_LookupController {
+public class SL_LookupController {
 	@AuraEnabled(cacheable=true)
 	public static List<SObject> search(String searchString, String objectName, String fields, 
 	String soslParams, Integer limitOfRecords, List<Id> excludeIds) {

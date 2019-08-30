@@ -1,4 +1,4 @@
-public without sharing class TaskRelationQueryAction {
+public class TaskRelationQueryAction {
 
     @InvocableMethod(label='Get Task Relations' description='Takes each task and returns a list of contacts with TaskRelation records.')
     public static List<String> buildTaskRelations(List<Id> taskIds) {
