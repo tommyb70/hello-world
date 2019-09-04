@@ -1,4 +1,4 @@
-public class SL_RecordTypeSelection {
+public with sharing class SL_RecordTypeSelection {
 
     @AuraEnabled
 	public static List<Map<String,String>> getRecordTypeList(String objectName) {

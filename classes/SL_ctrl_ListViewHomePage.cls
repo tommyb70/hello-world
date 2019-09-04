@@ -4,7 +4,7 @@
 *  Created on  :   7/18/2019
 *  Description :   apex class for SL_ListViewHomePage and all inner components
 **/
-public  class SL_ctrl_ListViewHomePage {
+public with sharing class SL_ctrl_ListViewHomePage {
     
     @AuraEnabled
     public static String getListOfColumns(String metadataRecordName){

@@ -5,7 +5,7 @@
 *  Created on  :   07/05/2019
 *  Description :   Apex class for SL_TwoBoxesForm component
 **/
-public class SL_ctrl_TwoBoxesForm {
+public with sharing class SL_ctrl_TwoBoxesForm {
    
 
    @AuraEnabled

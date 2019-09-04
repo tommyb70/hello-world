@@ -1,4 +1,4 @@
-public class SL_PickListFlowController {
+public with sharing class SL_PickListFlowController {
 
 	@AuraEnabled(cacheable=true)
     public static List<String> getPickListValuesIntoList(String objectType, String selectedField) {

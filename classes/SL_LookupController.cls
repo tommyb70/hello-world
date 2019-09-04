@@ -1,4 +1,4 @@
-public class SL_LookupController {
+public with sharing class SL_LookupController {
 	@AuraEnabled(cacheable=true)
 	public static List<SObject> search(String searchString, String objectName, String fields, 
 	String soslParams, Integer limitOfRecords, List<Id> excludeIds) {
@@ -40,7 +40,7 @@ public class SL_LookupController {
 		Set<String> fieldsToQuery = new Set<string>();
         fieldsToQuery.add('Id');
         fieldsToQuery.add(mainField);
-        fieldsToQuery.add(subField);
+        //fieldsToQuery.add(subField);
 	    String query = 'SELECT ' + String.join(new List<String> (fieldsToQuery), ', ') +  ' FROM ' + objectName + ' WHERE Id = :recordId';
 		System.debug('query >>>>>>>> '+query);
         List<sObject> resultList = Database.query(query);
