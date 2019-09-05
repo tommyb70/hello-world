@@ -1246,18 +1246,6 @@ If(LastCallDate__c &gt; LastMeetingDate__c, LastCallDate__c, LastMeetingDate__c)
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>MktOppMarketShareAUM__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp Market Share AUM</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
         <fullName>MktOppNatixisAUM__c</fullName>
         <description>Integrated from EDW</description>
         <externalId>false</externalId>
@@ -1316,54 +1304,6 @@ If(LastCallDate__c &gt; LastMeetingDate__c, LastCallDate__c, LastMeetingDate__c)
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>MktOppPYMarketShareAUM__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY Market Share AUM</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppPYMarketShareNetSales__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY Market Share Net Sales</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppPYMarketSharePurchases__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY Market Share Purchases</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppPYMarketShareRedemptions__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY Market Share Redemptions</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
     </fields>
     <fields>
         <fullName>MktOppPYNatixisAUM__c</fullName>
@@ -1438,42 +1378,6 @@ If(LastCallDate__c &gt; LastMeetingDate__c, LastCallDate__c, LastMeetingDate__c)
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>MktOppPYR4QMarketShareNetSales__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY R4Q Market Share Net Sales</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppPYR4QMarketSharePurchases__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY R4Q Market Share Purchases</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppPYR4QMarketShareRedemptions__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp PY R4Q Market Share Redemptions</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
         <fullName>MktOppPYR4QNatixisNetSales__c</fullName>
         <description>Integrated from EDW</description>
         <externalId>false</externalId>
@@ -1546,42 +1450,6 @@ If(LastCallDate__c &gt; LastMeetingDate__c, LastCallDate__c, LastMeetingDate__c)
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>MktOppR4QMarketShareNetSales__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp R4Q Market Share Net Sales</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppR4QMarketSharePurchases__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp R4Q Market Share Purchases</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppR4QMarketShareRedemptions__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp R4Q Market Share Redemptions</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
         <fullName>MktOppR4QNatixisNetSales__c</fullName>
         <description>Integrated from EDW</description>
         <externalId>false</externalId>
@@ -1640,30 +1508,6 @@ If(LastCallDate__c &gt; LastMeetingDate__c, LastCallDate__c, LastMeetingDate__c)
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>MktOppYTDMarketShareNetSales__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp YTD Market Share Net Sales</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>MktOppYTDMarketSharePurchases__c</fullName>
-        <description>Integrated from EDW</description>
-        <externalId>false</externalId>
-        <label>Mkt Opp YTD Market Share Purchases</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>4</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Percent</type>
     </fields>
     <fields>
         <fullName>MktOppYTDNatixisNetSales__c</fullName>
@@ -4080,6 +3924,162 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MktOppMarketShareAUM__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp Market Share AUM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYMarketShareAUM__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY Market Share AUM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYMarketShareNetSales__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY Market Share Net Sales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYMarketSharePurchases__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY Market Share Purchases</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYMarketShareRedemptions__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY Market Share Redemptions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYR4QMarketShareNetSales__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY R4Q Market Share Net Sales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYR4QMarketSharePurchases__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY R4Q Market Share Purchases</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppPYR4QMarketShareRedemptions__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp PY R4Q Market Share Redemptions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppR4QMarketShareNetSales__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp R4Q Market Share Net Sales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppR4QMarketSharePurchases__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp R4Q Market Share Purchases</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppR4QMarketShareRedemptions__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp R4Q Market Share Redemptions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppYTDMarketShareNetSales__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp YTD Market Share Net Sales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MktOppYTDMarketSharePurchases__c</fullName>
+        <description>Integrated from EDW</description>
+        <externalId>false</externalId>
+        <label>Mkt Opp YTD Market Share Purchases</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
     </fields>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableEnhancedLookup>true</enableEnhancedLookup>

@@ -9272,6 +9272,69 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>EmailEDS__c</fullName>
+        <description>Email from external data source (EDW)</description>
+        <externalId>false</externalId>
+        <label>Email (External Data Source)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PersonalWebsiteEDS__c</fullName>
+        <description>Personal website from external data source (EDW)</description>
+        <externalId>false</externalId>
+        <label>Personal Website (External Data Source)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>RoleEDS__c</fullName>
+        <description>Role from external data source (EDW)</description>
+        <externalId>false</externalId>
+        <label>Role (External Data Source)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Placeholder</fullName>
+                    <default>false</default>
+                    <label>Placeholder</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TitleEDS__c</fullName>
+        <description>Title per external data source (via EDW)</description>
+        <externalId>false</externalId>
+        <label>Title (External Data Source)</label>
+        <length>180</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WebsiteEDS__c</fullName>
+        <description>Website from external data source (EDW)</description>
+        <externalId>false</externalId>
+        <label>Website (External Data Source)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
     <compactLayoutAssignment>Contact</compactLayoutAssignment>
     <enableEnhancedLookup>true</enableEnhancedLookup>
     <enableFeeds>true</enableFeeds>
@@ -11779,29 +11842,7 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
+        
         <picklistValues>
             <picklist>NatixisSegmentation__c</picklist>
             <values>
@@ -12982,6 +13023,13 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             </values>
             <values>
                 <fullName>Remove Advisor Portal License</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RoleEDS__c</picklist>
+            <values>
+                <fullName>Placeholder</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -14683,29 +14731,7 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
+        
         <picklistValues>
             <picklist>NatixisSegmentation__c</picklist>
             <values>
@@ -16058,6 +16084,13 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             </values>
             <values>
                 <fullName>Remove Advisor Portal License</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RoleEDS__c</picklist>
+            <values>
+                <fullName>Placeholder</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -17827,29 +17860,7 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
+        
         <picklistValues>
             <picklist>NatixisSegmentation__c</picklist>
             <values>
@@ -18782,6 +18793,13 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             </values>
             <values>
                 <fullName>Remove Advisor Portal License</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RoleEDS__c</picklist>
+            <values>
+                <fullName>Placeholder</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -20777,29 +20795,7 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
+        
         <picklistValues>
             <picklist>NatixisSegmentation__c</picklist>
             <values>
@@ -21624,6 +21620,13 @@ IF(ABS(TranYTDPurchases__c) &gt;= 1000000000, TEXT(FLOOR(TranYTDPurchases__c/ 10
             </values>
             <values>
                 <fullName>Remove Advisor Portal License</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RoleEDS__c</picklist>
+            <values>
+                <fullName>Placeholder</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
