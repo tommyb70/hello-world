@@ -1161,4 +1161,17 @@ who_id={!Opportunity.RepContactId__c}
 &amp;save_new=1
 &amp;sfdc.override=1</url>
     </webLinks>
+    <webLinks>
+        <fullName>New_Task_RL</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Task</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/flow/CreateEditTask</url>
+    </webLinks>
 </CustomObject>
