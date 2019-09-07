@@ -40,14 +40,15 @@
         <type>Default</type>
     </actionOverrides>
     <fields>
-        <fullName>DuplicateRecordSetId</fullName>
-        <type>MasterDetail</type>
-    </fields>
-    <fields>
         <fullName>RecordId</fullName>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>DuplicateRecordSetId</fullName>
+        <type>MasterDetail</type>
+    </fields>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

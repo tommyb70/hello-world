@@ -111,11 +111,6 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>OpportunityId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>MasterDetail</type>
-    </fields>
-    <fields>
         <fullName>OwnerId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
@@ -153,8 +148,14 @@
         <fullName>TotalPrice</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MasterDetail</type>
+    </fields>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <searchLayouts>
         <customTabListAdditionalFields>QUOTE.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
