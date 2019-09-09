@@ -1,4 +1,4 @@
-public with sharing class SL_LookupController {
+public class SL_LookupController {
 	@AuraEnabled(cacheable=true)
 	public static List<SObject> search(String searchString, String objectName, String fields, 
 	String soslParams, Integer limitOfRecords, List<Id> excludeIds) {
@@ -12,7 +12,7 @@ public with sharing class SL_LookupController {
 		if(excludeIds.size() > 0){
 			query += ' AND Id NOT IN   : excludeIds ';
 		}
-		query += ' ORDER BY  ' + fields + ' LIMIT '  + limitOfRecords;
+		query += ' ORDER BY Name LIMIT '  + limitOfRecords;
 
 		List<sObject> resultList = Database.query(query);
 		return resultList;  
@@ -35,14 +35,11 @@ public with sharing class SL_LookupController {
 
     @AuraEnabled
 	public static SObject getRecord(String recordId, String objectName, String mainField, String subField) {
-
-        if(String.isBlank(recordId) || recordId=='null' || String.isBlank(objectName) || objectName=='null'){ return null;}
-		Set<String> fieldsToQuery = new Set<string>();
+        Set<String> fieldsToQuery = new Set<string>();
         fieldsToQuery.add('Id');
         fieldsToQuery.add(mainField);
-        //fieldsToQuery.add(subField);
+        fieldsToQuery.add(subField);
 	    String query = 'SELECT ' + String.join(new List<String> (fieldsToQuery), ', ') +  ' FROM ' + objectName + ' WHERE Id = :recordId';
-		System.debug('query >>>>>>>> '+query);
         List<sObject> resultList = Database.query(query);
         return resultList[0];
 	}
