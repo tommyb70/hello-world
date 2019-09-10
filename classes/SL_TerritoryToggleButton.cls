@@ -1,4 +1,4 @@
-global class SL_TerritoryToggleButton {
+global without sharing class SL_TerritoryToggleButton {
 
     @AuraEnabled global static List<UserTerritory__c> getUserTerritory() {
         List<UserTerritory__c> retVal = new List<UserTerritory__c>();
@@ -40,6 +40,15 @@ global class SL_TerritoryToggleButton {
             try {
                 UserTerritory__c ut = new UserTerritory__c(id=inPrimaryTerritory, PrimaryTerritory__c=true) ;
                 update ut;
+
+                // Update User Role
+                /*
+                UserTerritory__c uTerRec = [select ID,Territory__c, Territory__r.RoleId__c from UserTerritory__c where ID=:inPrimaryTerritory limit 1];
+                if(uTerRec!=null && uTerRec.Territory__c!=null && uTerRec.Territory__r.RoleId__c!=null){
+                    User uRec = new User(id=UserInfo.getUserId(),UserRoleId=uTerRec.Territory__r.RoleId__c);
+                    update uRec;
+                }
+                */
             }
             catch (Exception ex) {
                 throw new AuraHandledException('Something went wrong: ' + ex.getMessage());   

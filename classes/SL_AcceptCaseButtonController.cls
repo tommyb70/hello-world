@@ -4,7 +4,7 @@
     *  ModifiedBy     : Privlad 
     *  Description    : This is the Controller for LC SL_AcceptCaseButton.
 */
-global class SL_AcceptCaseButtonController {
+global with sharing class SL_AcceptCaseButtonController {
 
     @AuraEnabled
     public static void updateCaseLEX(Id caseId)

@@ -143,12 +143,13 @@ public class SL_ctrl_ListViewHomePage_test {
     private static String getAllRecordsThrougthColumns(String objName, String listOfHeaderElements, String numberOfRecords, 
                                                     String defaultOrder,  Boolean isAsc){
 
-        String strAsc = '';
+// TJB 20190827                                                       
+/*        String strAsc = '';
         if (isAsc) {
             strAsc = ' desc';
         } else {
             strAsc = ' asc';
-        }
+        } */
 
         List<String> lstDeserialize = (List<String>)JSON.deserialize(listOfHeaderElements, List<String>.class);
         String elementsToSlect = '';
@@ -160,9 +161,10 @@ public class SL_ctrl_ListViewHomePage_test {
                 elementsToSlect +=  ',';
             }
         }
-        
-        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
-        
+
+// TJB 20190827                                                       
+//        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
+        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' LIMIT 2000' ;        
         List<sObject> lstObject = Database.query(query);
 
         List<SL_ctrl_ListViewHomePage.ListSerachWrapper> lstWrappers = new List<SL_ctrl_ListViewHomePage.ListSerachWrapper>();

@@ -4,7 +4,7 @@
 *  Created on  :   7/18/2019
 *  Description :   apex class for SL_ListViewHomePage and all inner components
 **/
-public  class SL_ctrl_ListViewHomePage {
+public with sharing class SL_ctrl_ListViewHomePage {
     
     @AuraEnabled
     public static String getListOfColumns(String metadataRecordName){
@@ -32,12 +32,13 @@ public  class SL_ctrl_ListViewHomePage {
     public static string getAllRecordsThrougthColumns(String objName, String listOfHeaderElements, String numberOfRecords, 
                                                     String defaultOrder,  Boolean isAsc){
 
+// TJB 20190827                                                       
         String strAsc = '';
         if (isAsc) {
             strAsc = ' desc';
         } else {
             strAsc = ' asc';
-        }
+        } 
 
         List<String> lstDeserialize = (List<String>)JSON.deserialize(listOfHeaderElements, List<String>.class);
         String elementsToSlect = '';
@@ -49,12 +50,15 @@ public  class SL_ctrl_ListViewHomePage {
                 elementsToSlect +=  ',';
             }
         }
-        elementsToSlect +=  ' ,PotentialReason__c,RiskReason__c ';
+        //elementsToSlect +=  ' ,PotentialReason__c,RiskReason__c ';
         
-        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + /*' WHERE '+ defaultOrder + ' != null  ' +*/ ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
-        System.debug('------------query' + query);
+// TJB 20190827                                                       
+//        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
+ //       String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' LIMIT 2000' ;              System.debug('------------query' + query);
+        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST LIMIT ' + numberOfRecords; 
         List<sObject> lstObject = Database.query(query);
-        /*List<Id> lstAccountIds = new List<Id>();
+
+                                                        /*List<Id> lstAccountIds = new List<Id>();
         for (Integer i = 0; i < lstObject.size(); i++) {
             lstAccountIds.add((id)lstObject[i].get(taskParam));
         }
@@ -88,8 +92,8 @@ public  class SL_ctrl_ListViewHomePage {
         List<Task> lstTasks = new List<Task>();
         for (Integer i = 0; i < listOfTaskId.size(); i++) {
             lstTasks.add(new Task(WhatId = listOfTaskId[i], WhoId = null, OwnerId = UserInfo.getUserId(), ActivityDate = Date.today(), 
-                                  Type = 'Call', Priority = 'Normal', Status = 'Open', 
-                                  Subject='Follow Up Call - Key Insights', ActivitySubType__c = 'Follow-Up/Service'));
+                                  ActivityType__c = 'Research', Priority = 'Normal', Status = 'Open', 
+                                  Subject='Follow Up Call - Key Insights', ActivitySubType__c = 'Research'));
         }
 
         try{
@@ -99,6 +103,12 @@ public  class SL_ctrl_ListViewHomePage {
             return 'Error ' + e;
         }
         
+    }
+
+    @AuraEnabled
+    public static String getUserKeyInsightsUrl(){
+        User userToGetUrlFor = [SELECT KeyInsightListViewId__c FROM User WHERE Id = :UserInfo.getUserId() LIMIT 1];
+        return '/lightning/o/Account/list?filterName=' + userToGetUrlFor.KeyInsightListViewId__c;
     }
 
     public class ListSerachWrapper {
@@ -145,7 +155,16 @@ public  class SL_ctrl_ListViewHomePage {
 	}
     
     public PageReference Redirect() {
-        PageReference newRef = new PageReference('/lightning/o/Account/list?filterName=00B5C000001d86MUAQ');
+        
+        PageReference newRef = null;
+        User UserRec = [select ID,KeyInsightListViewId__c from User where ID=:UserInfo.getUserId() limit 1];
+
+        if(String.isBlank(UserRec.KeyInsightListViewId__c)){
+            newRef = new PageReference('/lightning/o/Account/list');
+        }
+        else {
+            newRef = new PageReference('/lightning/o/Account/list?filterName='+UserRec.KeyInsightListViewId__c);
+        }
         newRef.setRedirect(true);
         if(recordIds.size() > 0){
             createTaskRecords(recordIds);
