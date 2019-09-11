@@ -32,13 +32,16 @@ public with sharing class SL_ctrl_ListViewHomePage {
     public static string getAllRecordsThrougthColumns(String objName, String listOfHeaderElements, String numberOfRecords, 
                                                     String defaultOrder,  Boolean isAsc){
 
-// TJB 20190827                                                       
+// TJB 20190827          
+                                                     
         String strAsc = '';
-        if (isAsc) {
-            strAsc = ' desc';
-        } else {
-            strAsc = ' asc';
-        } 
+        if(!defaultOrder.toLowerCase().contains('asc') && !defaultOrder.toLowerCase().contains('desc')){
+            if (isAsc) {
+                strAsc = ' desc NULLS LAST';
+            } else {
+                strAsc = ' asc NULLS LAST';
+            } 
+        }
 
         List<String> lstDeserialize = (List<String>)JSON.deserialize(listOfHeaderElements, List<String>.class);
         String elementsToSlect = '';
@@ -54,8 +57,9 @@ public with sharing class SL_ctrl_ListViewHomePage {
         
 // TJB 20190827                                                       
 //        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST  LIMIT 2000' ;
- //       String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' LIMIT 2000' ;              System.debug('------------query' + query);
-        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + ' NULLS LAST LIMIT ' + numberOfRecords; 
+ //       String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' LIMIT 2000' ;             
+        String query = 'SELECT ' + elementsToSlect +' FROM ' + objName + ' ORDER By ' + defaultOrder + ' '+ strAsc + '  LIMIT ' + numberOfRecords; 
+         System.debug('------------query' + query);
         List<sObject> lstObject = Database.query(query);
 
                                                         /*List<Id> lstAccountIds = new List<Id>();
