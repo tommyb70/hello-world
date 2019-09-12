@@ -6,50 +6,74 @@ public class TaskTriggerHandler {
     public static void taskFieldsPreset(List<Task> myTasks, Map<Id,Task> taskMap){
         
         if (runningLEXConversion != TRUE) {
-        if (trigger.IsUpdate) myTasks = taskMap.values();
-        
-        Id pardotUserId;
-        Map<Id,User> userMap = Util.getUserTerritoryMap();
-        for (User u : userMap.values()) {
-            if (u.Username.startsWith('pnatixis')) pardotUserId = u.Id;
-        }
-        
-        Map<Id, ActivityContact__c> activityContactMap = new Map<Id, ActivityContact__c>();
-        
-        if (trigger.IsUpdate) activityContactMap = UtilActivity.getActivityContactMap(taskMap);
-        
-        Set<Id> contactIdSet = new Set<Id>();
-        for (ActivityContact__c ac : activityContactMap.values()) {
-            contactIdSet.add(ac.Contact__c);
-        }
-        
-        Map<Id,Contact> contactMap = UtilActivity.getContactPrimaryTerritoryMap(contactIdSet);
 
-        Map<Id, Product2> productMap = UtilActivity.getProductMapFromProductList(myTasks);
-        system.debug('productMap: ' + productMap);
+             system.debug(taskMap);
+            if (trigger.IsUpdate) myTasks = taskMap.values();
+            
+            Id pardotUserId;
+            Map<Id,User> userMap = Util.getUserTerritoryMap();
+            for (User u : userMap.values()) {
+                if (u.Username.startsWith('pnatixis')) pardotUserId = u.Id;
+            }
+            
+            Map<Id, ActivityContact__c> activityContactMap = new Map<Id, ActivityContact__c>();
+            
+            if (trigger.IsUpdate) activityContactMap = UtilActivity.getActivityContactMap(taskMap);
+            
+            Set<Id> contactIdSet = new Set<Id>();
+            for (ActivityContact__c ac : activityContactMap.values()) {
+                contactIdSet.add(ac.Contact__c);
+            }
+            
+            Map<Id,Contact> contactMap = UtilActivity.getContactPrimaryTerritoryMap(contactIdSet);
 
-        system.debug('Number of Tasks coming in: ' + myTasks.size());
-        
-        for (Task eachTask : myTasks) {
-            system.debug('-- Start new Task Iteration in TaskFieldsPreset');
-            system.debug('---- Owner: ' + eachTask.OwnerId);
-            system.debug('---- Subject: ' + eachTask.Subject);
-            system.debug('---- Type: ' + eachTask.Type);
-            system.debug('---- WhoId: ' + eachTask.WhoId);
-            system.debug('---- WhatId: ' + eachTask.WhatId);
-            system.debug('---- WhoCount: ' + eachTask.WhoCount);
-            system.debug('---- Description: ' + eachTask.Description);
+            Map<Id, Product2> productMap = UtilActivity.getProductMapFromProductList(myTasks);
+            system.debug('productMap: ' + productMap);
+
+            system.debug('Number of Tasks coming in: ' + myTasks.size());
             
-            eachTask = UtilActivity.setUserFields(eachTask, userMap);
-            eachTask = UtilActivity.syncWhatIdToLookupFields(eachTask);
-            eachTask.Status = eachTask.Status == null ? 'Completed' : eachTask.Status;
-            eachTask.ActivityComments__c = String.isBlank(eachTask.Description) ? null : eachTask.Description.left(255).trim();
-            eachTask.ActivityDateProxy__c = eachTask.ActivityDate;
-            eachTask = UtilActivity.getTaskTypeSubtype(eachTask);
-            system.debug('ProductList__c: ' + eachTask.ProductList__c);
-            eachTask.Products__c = UtilActivity.convertProductListToProducts(eachTask.ProductList__c, productMap);
             
-        }
+            // LEX-767
+            Set<ID> setContactIDs = new Set<ID>();
+
+            for (Task eachTask : myTasks) {
+                system.debug('-- Start new Task Iteration in TaskFieldsPreset');
+                system.debug('---- Owner: ' + eachTask.OwnerId);
+                system.debug('---- Subject: ' + eachTask.Subject);
+                system.debug('---- Type: ' + eachTask.Type);
+                system.debug('---- WhoId: ' + eachTask.WhoId);
+                system.debug('---- WhatId: ' + eachTask.WhatId);
+                system.debug('---- WhoCount: ' + eachTask.WhoCount);
+                system.debug('---- Description: ' + eachTask.Description);
+                
+
+                // LEX-767
+                if(eachTask.WhoId!=null && eachTask.WhatId==null && (''+eachTask.WhoId).substring(0,3)=='003'){
+                    setContactIDs.add(eachTask.WhoId);
+                }
+                
+                eachTask = UtilActivity.setUserFields(eachTask, userMap);
+                eachTask = UtilActivity.syncWhatIdToLookupFields(eachTask);
+                eachTask.Status = eachTask.Status == null ? 'Completed' : eachTask.Status;
+                eachTask.ActivityComments__c = String.isBlank(eachTask.Description) ? null : eachTask.Description.left(255).trim();
+                eachTask.ActivityDateProxy__c = eachTask.ActivityDate;
+                eachTask = UtilActivity.getTaskTypeSubtype(eachTask);
+                system.debug('ProductList__c: ' + eachTask.ProductList__c);
+                eachTask.Products__c = UtilActivity.convertProductListToProducts(eachTask.ProductList__c, productMap);
+            }
+
+            // LEX-767
+            if(setContactIDs.size()>0){
+                Map<ID, Contact> mapContactInfo = new Map<ID, Contact>([SELECT ID, AccountID  FROM Contact where ID in :setContactIDs LIMIT 2000]);
+                for (Task eachTask : myTasks) {
+                    if(eachTask.WhoId!=null && eachTask.WhatId==null && (''+eachTask.WhoId).substring(0,3)=='003' && mapContactInfo.containsKey(eachTask.WhoId)){
+                        eachTask.WhatId = mapContactInfo.get(eachTask.WhoId).AccountID;
+                    }
+                }
+
+            }
+
+
         }
 
         myTasks = UtilActivity.setActivityPoints(myTasks);

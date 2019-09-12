@@ -1130,6 +1130,61 @@ INACTIVATING with LEX</description>
 || (ISCHANGED( ActivitySubType__c  )  &amp;&amp;  ISPICKVAL( ActivitySubType__c , "Email")) &amp;&amp;  (  NOT (ISPICKVAL(PRIORVALUE( ActivitySubType__c), "")))</errorConditionFormula>
         <errorMessage>You can not select Email as an Activity Type or Activity Sub Type.  They are only created through the Outlook Integration</errorMessage>
     </validationRules>
+    <validationRules>
+        <fullName>Task_Required_Field_Assigned_To</fullName>
+        <active>true</active>
+        <description>All tasks require the Assigned To field to be populated</description>
+        <errorConditionFormula>ISBLANK(  OwnerId  )</errorConditionFormula>
+        <errorMessage>All Activities require the Assigned To field to be populated</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Required_Field_Comments</fullName>
+        <active>true</active>
+        <description>All tasks require the Comments field to be populated</description>
+        <errorConditionFormula>ISBLANK(  Description )</errorConditionFormula>
+        <errorMessage>All Activities require the Comments field to be populated</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Required_Field_Date</fullName>
+        <active>true</active>
+        <description>All tasks require the Date field to be populated</description>
+        <errorConditionFormula>ISBLANK( ActivityDate )</errorConditionFormula>
+        <errorMessage>All Activities require the Date field to be populated</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Required_Field_Product</fullName>
+        <active>true</active>
+        <description>All tasks with Sub-type = 'Product/Promotional' require a product</description>
+        <errorConditionFormula>ISPICKVAL( ActivitySubType__c , 'Product/Promotional') 
+ &amp;&amp; 
+ ISBLANK( ProductList__c )</errorConditionFormula>
+        <errorMessage>For Sub-Type 'Product/Promotional', please select a Product</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Required_Field_Subject</fullName>
+        <active>true</active>
+        <description>All tasks require the Subject field to be populated</description>
+        <errorConditionFormula>ISBLANK(   Subject  )</errorConditionFormula>
+        <errorMessage>All Activities require the Subject field to be populated</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Required_Fields_TypeSubType_Contact</fullName>
+        <active>true</active>
+        <description>All tasks require a Type &amp; Sub-type and a Contact/Rep for all Type/Sub-types, other than Research/Research</description>
+        <errorConditionFormula>(
+ISBLANK( TEXT( ActivityType__c ) ) 
+||    
+ISBLANK( TEXT( ActivitySubType__c  ) )  
+)
+|| 
+(
+NOT(ISPICKVAL(ActivityType__c, 'Research') ) 
+&amp;&amp;   
+(ISBLANK( WhoId ))
+)</errorConditionFormula>
+        <errorMessage>All Activities require a Type and Sub-Type
+For Types other than 'Research', a Contact is required.</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>CompletedTask</fullName>
         <availability>online</availability>
